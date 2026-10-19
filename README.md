@@ -1,91 +1,98 @@
-# Skills Prompt Hub
+# Vector Agentic Skills
 
+**Ready-to-install Agent Skills for Claude Code and other AI agents, organised by category.**
 
-**A community-driven collection of detailed, skill-specific prompts designed to enhance AI model capabilities.**
+Each skill is a folder with a `SKILL.md` (YAML frontmatter + instructions), plus optional `references/` for detailed docs and `scripts/` for helper tools the agent can run. This is the [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) format, so the folders work as-is in Claude Code, the Claude apps, the Claude Agent SDK and any agent that loads `SKILL.md` folders.
 
-## Overview
+## Categories
 
-Skills Prompt Hub is an open-source repository dedicated to creating, curating, and sharing high quality prompts that target specific skills for AI models. Whether you're working with coding assistants, writing tools, data analysis, or any other AI-powered application, this hub provides structured prompts that help models perform better at specialized tasks.
+| Category | Skills | What's inside |
+|----------|--------|---------------|
+| [Programming](skills/programming/README.md) | 12 | SQL: writing, syntax checking, explaining, optimising, debugging, window functions, performance tuning, analytics, dialect translation, data quality, reporting |
+| [Productivity](skills/productivity/README.md) | 3 | Excel: formulas, advanced formulas (LAMBDA, LET, dynamic arrays, regex), workbook fundamentals |
 
-### The Problem
+See [SITEMAP.md](SITEMAP.md) for every skill and file, or [catalog.json](catalog.json) for a machine-readable index.
 
-Prompts are scattered across the internet with inconsistent quality, formatting, and documentation. Developers and users spend countless hours crafting prompts from scratch or searching for ones that work.
+## Install
 
-### Our Solution
+### Claude Code plugin marketplace
 
-A centralized, well-organized collection of prompts that are:
-- **Skill-focused**: Each prompt targets a specific capability
-- **Detailed**: Clear instructions with context and examples
-- **Community-tested**: Improved through real-world usage and feedback
-- **Well-documented**: Easy to understand and adapt
+```bash
+/plugin marketplace add MuhammadHusnainAli/vector-agentic-skills
+/plugin install programming-skills@vector-agentic-skills
+/plugin install productivity-skills@vector-agentic-skills
+```
 
-## Features
+### Copy skills manually
 
-- **Skill-Categorized Prompts**: Browse prompts organized by skill area (coding, writing, analysis, creativity, and more)
-- **Detailed Templates**: Each prompt includes purpose, usage instructions, and examples
-- **Version History**: Track improvements and iterations of prompts
-- **Community Contributions**: Benefit from prompts tested and refined by developers worldwide
+```bash
+git clone https://github.com/MuhammadHusnainAli/vector-agentic-skills.git
+cd vector-agentic-skills
 
-## Getting Started
+./scripts/install.sh --list                          # see what's available
+./scripts/install.sh --all                           # everything -> ~/.claude/skills
+./scripts/install.sh --category programming          # one category
+./scripts/install.sh sql-query-writer excel-formulas # specific skills
+./scripts/install.sh --project /path/to/repo --all   # -> /path/to/repo/.claude/skills
+./scripts/install.sh --link --all                    # symlink, so git pull updates them
+./scripts/install.sh --dest ~/.other-agent/skills --all
+```
 
-### Using Prompts
+Restart your agent session after installing. Skills load automatically when a request matches their `description`; in Claude Code you can also call one directly, e.g. `/sql-query-writer`.
 
-1. Browse by skill category folder (e.g., `coding/`, `writing/`, `analysis/`)
-2. Find the specific prompt file by its purpose (e.g., `coding/code-review.md`)
-3. Read the prompt file to understand its purpose and usage
-4. Copy the prompt and adapt it to your specific use case
-5. Share feedback or improvements via issues or pull requests
+## Skill layout
 
-Prompts are organized as: `skill-category/skill-purpose.md`
+```
+skills/
+└── <category>/
+    ├── category.json            # title, description, display order
+    ├── README.md                # generated category index
+    └── <skill-name>/
+        ├── SKILL.md             # frontmatter + core instructions (required)
+        ├── references/          # detailed docs, loaded only when needed
+        └── scripts/             # helper scripts the agent can run
+```
 
-### Prompt Format
+`SKILL.md` frontmatter:
 
-Each prompt follows a consistent structure:
-- **Title**: Clear, descriptive name
-- **Purpose**: What the prompt helps accomplish
-- **Prompt Content**: The actual prompt text
-- **Usage Examples**: Real-world examples of the prompt in action
-- **Tips**: Best practices for getting optimal results
+```yaml
+---
+name: sql-query-writer          # lowercase-hyphenated, matches the folder name
+description: What the skill does and when to use it (max 1024 chars).
+metadata:
+  category: programming         # matches the category folder
+  version: "1.0.0"
+---
+```
+
+### Bundled scripts
+
+| Skill | Script | Purpose |
+|-------|--------|---------|
+| sql-syntax-checker | `scripts/check_sql.py` | Structural SQL checks, plus full grammar parsing when `sqlglot` is installed |
+| sql-dialect-translator | `scripts/translate_sql.py` | Translate SQL between dialects with `sqlglot` |
+| excel-formulas | `scripts/check_formula.py` | Lint formulas: parentheses, strings, unknown functions, volatile functions, lookup pitfalls |
+| excel-advanced-formulas | `scripts/check_compat.py` | Report the minimum Excel version a formula needs |
 
 ## Contributing
 
-We welcome contributions from developers, prompt engineers, and AI enthusiasts of all skill levels. Your contributions help build a valuable resource for the entire community.
+1. Pick a category under `skills/`, or create a new one with a `category.json`:
+   ```json
+   { "title": "Design", "description": "Skills for UI, UX and visual design.", "order": 3 }
+   ```
+2. Copy [templates/skill](templates/skill/SKILL.md) to `skills/<category>/<skill-name>/` and fill it in. Keep `SKILL.md` under ~500 lines and move long material into `references/`.
+3. Validate and regenerate the indexes:
+   ```bash
+   pip install pyyaml
+   python scripts/validate_skills.py
+   python scripts/build_catalog.py
+   ```
+4. Test the skill with at least one agent, then open a pull request.
 
-### Ways to Contribute
-
-- **Submit New Prompts**: Share prompts you've crafted and tested
-- **Improve Existing Prompts**: Refine prompts based on your experience
-- **Report Issues**: Help identify prompts that need improvement
-- **Documentation**: Improve guides and explanations
-- **Review PRs**: Help review and test submitted prompts
-
-### How to Submit a Prompt
-
-1. **Fork** this repository
-2. **Create a branch** for your contribution (`git checkout -b add-new-prompt`)
-3. **Add your prompt** in the appropriate skill folder as `skill-category/skill-purpose.md`
-4. **Test your prompt** with at least one AI model
-5. **Submit a pull request** with a clear description
-
-### Prompt Quality Guidelines
-
-To maintain high quality, submitted prompts should:
-- Be clear and unambiguous
-- Include specific instructions and context
-- Provide at least one usage example
-- Be tested and verified to work effectively
-- Follow the standard prompt format structure
+`build_catalog.py` regenerates `catalog.json`, `SITEMAP.md`, `sitemap.xml`, the category READMEs and `.claude-plugin/marketplace.json`, so don't edit those by hand. CI fails if they are out of date. To point the sitemap at your website, set `SITE_URL=https://your-site.com` when you run it.
 
 ## Community
 
-- **Discussions**: Use [GitHub Discussions](https://github.com/MuhammadHusnainAli/skills-prompt-hub/discussions) for questions and ideas
-- **Issues**: Report bugs or suggest improvements via [GitHub Issues](https://github.com/MuhammadHusnainAli/skills-prompt-hub/issues)
-- **Pull Requests**: Contribute directly via [Pull Requests](https://github.com/MuhammadHusnainAli/skills-prompt-hub/pulls)
-
-## Acknowledgments
-
-Thank you to all contributors who help make this resource valuable for the AI community. Every prompt, improvement, and piece of feedback makes a difference.
-
----
-
-**Ready to contribute?** Check out the [open issues](https://github.com/MuhammadHusnainAli/skills-prompt-hub/issues) or submit your first prompt today.
+- **Discussions**: [GitHub Discussions](https://github.com/MuhammadHusnainAli/vector-agentic-skills/discussions) for questions and ideas
+- **Issues**: [GitHub Issues](https://github.com/MuhammadHusnainAli/vector-agentic-skills/issues) for bugs and skill requests
+- **Pull Requests**: [contribute directly](https://github.com/MuhammadHusnainAli/vector-agentic-skills/pulls)

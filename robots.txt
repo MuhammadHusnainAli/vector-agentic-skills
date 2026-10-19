@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sitemap.xml
+Sitemap: https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/sitemap.xml
 
 User-agent: Googlebot
 Allow: /

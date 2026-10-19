@@ -1,0 +1,43 @@
+{
+  "name": "vector-agentic-skills",
+  "owner": {
+    "name": "MuhammadHusnainAli"
+  },
+  "metadata": {
+    "description": "Agent Skills for Claude Code and other agents, grouped by category.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "programming-skills",
+      "description": "Skills for writing, reviewing, debugging and optimising code and queries — starting with a complete SQL suite.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/programming/sql",
+        "./skills/programming/sql-analytics",
+        "./skills/programming/sql-data-quality",
+        "./skills/programming/sql-debugger",
+        "./skills/programming/sql-dialect-translator",
+        "./skills/programming/sql-optimizer",
+        "./skills/programming/sql-performance-tuning",
+        "./skills/programming/sql-query-explainer",
+        "./skills/programming/sql-query-writer",
+        "./skills/programming/sql-reporting",
+        "./skills/programming/sql-syntax-checker",
+        "./skills/programming/sql-window-functions"
+      ]
+    },
+    {
+      "name": "productivity-skills",
+      "description": "Skills for office and business tools — spreadsheets, documents and everyday data work, starting with Excel.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/productivity/excel-advanced-formulas",
+        "./skills/productivity/excel-formulas",
+        "./skills/productivity/excel-fundamentals"
+      ]
+    }
+  ]
+}

@@ -1,279 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/</loc>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/README.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/SITEMAP.md</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- SQL Skills -->
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/catalog.json</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/query-writer/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/README.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/README.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-advanced-formulas/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/query-writer/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-advanced-formulas/references/advanced-patterns.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/syntax-checker/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-advanced-formulas/references/array-manipulation.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/syntax-checker/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-advanced-formulas/references/lambda-functions.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/query-explainer/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-advanced-formulas/references/text-parsing.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/query-explainer/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/optimizer/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-formulas/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/optimizer/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-formulas/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/debugger/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-formulas/references/formulas.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/debugger/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-formulas/references/functions-reference.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/window-functions/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-fundamentals/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/window-functions/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-fundamentals/references/cells-and-ranges.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/performance-tuning/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-fundamentals/references/formatting-and-styles.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/performance-tuning/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-fundamentals/references/sheets-and-views.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/analytics-sql/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-fundamentals/references/sorting-filtering-tables.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/analytics-sql/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/dialect-translator/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/dialect-translator/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/data-quality/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-analytics/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/data-quality/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-analytics/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/reporting/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-data-quality/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/sql/reporting/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-data-quality/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-
-  <!-- XLSX Skills -->
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/formulas/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-debugger/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/formulas/Formulas.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-debugger/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/formulas/examples.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/formulas/functions-reference.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/advanced-formulas/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-dialect-translator/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/advanced-formulas/lambda-functions.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-dialect-translator/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/advanced-formulas/array-manipulation.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/advanced-formulas/text-parsing.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/advanced-formulas/advanced-patterns.md</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/fundamentals/SKILL.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-optimizer/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/fundamentals/cells-and-ranges.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-optimizer/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/fundamentals/formatting-and-styles.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-performance-tuning/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/fundamentals/sheets-and-views.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-performance-tuning/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
   <url>
-    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/skills-prompt-hub/main/Xlsx/fundamentals/sorting-filtering-tables.md</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-query-explainer/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-query-explainer/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-query-writer/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-query-writer/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-reporting/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-reporting/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-syntax-checker/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-syntax-checker/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-window-functions/SKILL.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-window-functions/references/examples.md</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

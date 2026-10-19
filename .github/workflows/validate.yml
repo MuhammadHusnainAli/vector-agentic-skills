@@ -1,0 +1,25 @@
+name: Validate skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate SKILL.md files
+        run: python scripts/validate_skills.py
+      - name: Generated files are up to date
+        run: python scripts/build_catalog.py --check
+      - name: Skill scripts run
+        run: |
+          for f in skills/*/*/scripts/*.py; do python "$f" --help > /dev/null; done

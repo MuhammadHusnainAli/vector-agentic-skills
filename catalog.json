@@ -1,0 +1,352 @@
+{
+  "name": "vector-agentic-skills",
+  "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
+  "skill_count": 15,
+  "categories": [
+    {
+      "name": "programming",
+      "title": "Programming",
+      "description": "Skills for writing, reviewing, debugging and optimising code and queries — starting with a complete SQL suite.",
+      "plugin": "programming-skills",
+      "skill_count": 12,
+      "skills": [
+        "sql",
+        "sql-analytics",
+        "sql-data-quality",
+        "sql-debugger",
+        "sql-dialect-translator",
+        "sql-optimizer",
+        "sql-performance-tuning",
+        "sql-query-explainer",
+        "sql-query-writer",
+        "sql-reporting",
+        "sql-syntax-checker",
+        "sql-window-functions"
+      ]
+    },
+    {
+      "name": "productivity",
+      "title": "Productivity",
+      "description": "Skills for office and business tools — spreadsheets, documents and everyday data work, starting with Excel.",
+      "plugin": "productivity-skills",
+      "skill_count": 3,
+      "skills": [
+        "excel-advanced-formulas",
+        "excel-formulas",
+        "excel-fundamentals"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "excel-advanced-formulas",
+      "title": "Advanced XLSX Formulas",
+      "description": "Modern Excel 365/2021+ formulas — LAMBDA and LAMBDA helpers (MAP, REDUCE, SCAN, BYROW, BYCOL), LET, dynamic arrays (FILTER, SORT, UNIQUE, HSTACK, VSTACK, TAKE, DROP), TEXTSPLIT, REGEX functions, GROUPBY and PIVOTBY. Use when the user needs custom reusable functions, array reshaping, regex text parsing, or formulas beyond classic Excel.",
+      "category": "productivity",
+      "version": "1.0.0",
+      "path": "skills/productivity/excel-advanced-formulas",
+      "files": [
+        "SKILL.md",
+        "references/advanced-patterns.md",
+        "references/array-manipulation.md",
+        "references/lambda-functions.md",
+        "references/text-parsing.md",
+        "scripts/check_compat.py"
+      ],
+      "references": [
+        "references/advanced-patterns.md",
+        "references/array-manipulation.md",
+        "references/lambda-functions.md",
+        "references/text-parsing.md"
+      ],
+      "scripts": [
+        "scripts/check_compat.py"
+      ],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-advanced-formulas/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/productivity/excel-advanced-formulas",
+      "install": "./scripts/install.sh excel-advanced-formulas"
+    },
+    {
+      "name": "excel-formulas",
+      "title": "XLSX Formulas",
+      "description": "Write error-free Excel formulas — syntax rules, cell references, math, logical, lookup (VLOOKUP, INDEX/MATCH, XLOOKUP), text, date/time and conditional aggregation (SUMIFS, COUNTIFS) with error handling. Use when the user asks for an Excel or spreadsheet formula, a calculation in a workbook, or help fixing",
+      "category": "productivity",
+      "version": "1.0.0",
+      "path": "skills/productivity/excel-formulas",
+      "files": [
+        "SKILL.md",
+        "references/examples.md",
+        "references/formulas.md",
+        "references/functions-reference.md",
+        "scripts/check_formula.py"
+      ],
+      "references": [
+        "references/examples.md",
+        "references/formulas.md",
+        "references/functions-reference.md"
+      ],
+      "scripts": [
+        "scripts/check_formula.py"
+      ],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-formulas/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/productivity/excel-formulas",
+      "install": "./scripts/install.sh excel-formulas"
+    },
+    {
+      "name": "excel-fundamentals",
+      "title": "XLSX Fundamentals",
+      "description": "Excel workbook fundamentals — cells, ranges, absolute/relative references, named ranges, number formats, conditional formatting, sheets and views, sorting, filtering, tables and keyboard shortcuts. Use when the user asks how to organise, format, sort, filter or navigate spreadsheet data rather than write a formula.",
+      "category": "productivity",
+      "version": "1.0.0",
+      "path": "skills/productivity/excel-fundamentals",
+      "files": [
+        "SKILL.md",
+        "references/cells-and-ranges.md",
+        "references/formatting-and-styles.md",
+        "references/sheets-and-views.md",
+        "references/sorting-filtering-tables.md"
+      ],
+      "references": [
+        "references/cells-and-ranges.md",
+        "references/formatting-and-styles.md",
+        "references/sheets-and-views.md",
+        "references/sorting-filtering-tables.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/productivity/excel-fundamentals/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/productivity/excel-fundamentals",
+      "install": "./scripts/install.sh excel-fundamentals"
+    },
+    {
+      "name": "sql",
+      "title": "SQL Skills",
+      "description": "General SQL reference and router for PostgreSQL, MySQL, SQL Server, Oracle and SQLite — clause order, JOIN types, aggregation, best practices and a pre-output validation checklist. Use for broad SQL questions, and to pick the right specialised sql-* skill (writing, debugging, optimising, translating, analytics, reporting, data quality).",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql",
+      "files": [
+        "SKILL.md"
+      ],
+      "references": [],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql",
+      "install": "./scripts/install.sh sql"
+    },
+    {
+      "name": "sql-analytics",
+      "title": "Analytics SQL",
+      "description": "Analytical and aggregation SQL — GROUP BY, ROLLUP, CUBE, GROUPING SETS, pivots, cohorts, funnels, retention, percentiles and statistical functions. Use when the user needs metrics, business analysis, OLAP-style summaries, or customer/revenue/product analytics in SQL.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-analytics",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-analytics/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-analytics",
+      "install": "./scripts/install.sh sql-analytics"
+    },
+    {
+      "name": "sql-data-quality",
+      "title": "SQL Data Quality",
+      "description": "Profile and validate data with SQL — NULL analysis, duplicate detection, referential integrity, range and format checks, outliers, constraints and cleansing queries. Use when the user wants to audit data quality, find duplicates or bad records, or add validation rules to a database.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-data-quality",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-data-quality/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-data-quality",
+      "install": "./scripts/install.sh sql-data-quality"
+    },
+    {
+      "name": "sql-debugger",
+      "title": "SQL Debugger",
+      "description": "Debug failing SQL or queries returning wrong results — interpret error messages, find causes of duplicates, missing rows, NULL surprises, fan-out joins and type mismatches, and produce a fixed query. Use when SQL throws an error, returns unexpected results, or the user asks why a query is failing.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-debugger",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-debugger/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-debugger",
+      "install": "./scripts/install.sh sql-debugger"
+    },
+    {
+      "name": "sql-dialect-translator",
+      "title": "SQL Dialect Translator",
+      "description": "Translate SQL between dialects — PostgreSQL, MySQL, SQL Server (T-SQL), Oracle, SQLite — covering data types, functions, pagination, date handling, upserts and identity columns. Use when migrating queries between databases or the user asks to convert SQL to another dialect. Includes a sqlglot-based translation script.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-dialect-translator",
+      "files": [
+        "SKILL.md",
+        "references/examples.md",
+        "scripts/translate_sql.py"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [
+        "scripts/translate_sql.py"
+      ],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-dialect-translator/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-dialect-translator",
+      "install": "./scripts/install.sh sql-dialect-translator"
+    },
+    {
+      "name": "sql-optimizer",
+      "title": "SQL Query Optimizer",
+      "description": "Rewrite slow SQL queries for performance — read execution plans (EXPLAIN / EXPLAIN ANALYZE), remove anti-patterns, make predicates sargable, choose JOIN/EXISTS strategies and suggest indexes. Use when the user says a query is slow, times out, or asks to optimise or speed up specific SQL.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-optimizer",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-optimizer/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-optimizer",
+      "install": "./scripts/install.sh sql-optimizer"
+    },
+    {
+      "name": "sql-performance-tuning",
+      "title": "SQL Performance Tuning",
+      "description": "Database-level SQL performance tuning — index design and maintenance, query profiling, statistics, partitioning, schema design, locking and configuration bottlenecks. Use when the problem is the database or workload as a whole rather than one query, or when the user asks about indexing strategy or profiling.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-performance-tuning",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-performance-tuning/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-performance-tuning",
+      "install": "./scripts/install.sh sql-performance-tuning"
+    },
+    {
+      "name": "sql-query-explainer",
+      "title": "SQL Query Explainer",
+      "description": "Explain what an existing SQL query does in plain language — logical execution order, step-by-step breakdown of joins, filters, grouping and window logic, and the shape of the result. Use when the user asks what a query does, how it works, or wants complex/legacy SQL documented.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-query-explainer",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-query-explainer/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-query-explainer",
+      "install": "./scripts/install.sh sql-query-explainer"
+    },
+    {
+      "name": "sql-query-writer",
+      "title": "SQL Query Writer",
+      "description": "Write correct, readable SQL from natural-language requirements — SELECT, INSERT, UPDATE, DELETE, JOINs, subqueries, CTEs and DDL (CREATE/ALTER/DROP). Use when the user asks to write, create or generate a query, describes data they want to retrieve, or provides a schema and wants queries against it.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-query-writer",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-query-writer/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-query-writer",
+      "install": "./scripts/install.sh sql-query-writer"
+    },
+    {
+      "name": "sql-reporting",
+      "title": "SQL Reporting",
+      "description": "Build business reporting SQL — KPIs, dashboard datasets, period comparisons (MoM/YoY), executive, sales and financial reports and scheduled-report queries. Use when the user asks for a report, KPI query, dashboard feed or recurring business summary in SQL.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-reporting",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-reporting/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-reporting",
+      "install": "./scripts/install.sh sql-reporting"
+    },
+    {
+      "name": "sql-syntax-checker",
+      "title": "SQL Syntax Checker",
+      "description": "Validate SQL syntax and structure before execution and point out errors with corrected versions, dialect-aware (PostgreSQL, MySQL, SQL Server, Oracle, SQLite). Use when the user asks to check, lint, validate or review a SQL statement, or pastes SQL that may not parse. Includes a script that parses SQL with sqlglot.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-syntax-checker",
+      "files": [
+        "SKILL.md",
+        "references/examples.md",
+        "scripts/check_sql.py"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [
+        "scripts/check_sql.py"
+      ],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-syntax-checker/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-syntax-checker",
+      "install": "./scripts/install.sh sql-syntax-checker"
+    },
+    {
+      "name": "sql-window-functions",
+      "title": "SQL Window Functions",
+      "description": "Write window/analytic SQL — ROW_NUMBER, RANK, DENSE_RANK, NTILE, LAG/LEAD, FIRST_VALUE/LAST_VALUE, running totals, moving averages and frame clauses (ROWS/RANGE). Use for rankings, top-N per group, period-over-period comparisons, cumulative sums or deduplication with window functions.",
+      "category": "programming",
+      "version": "1.0.0",
+      "path": "skills/programming/sql-window-functions",
+      "files": [
+        "SKILL.md",
+        "references/examples.md"
+      ],
+      "references": [
+        "references/examples.md"
+      ],
+      "scripts": [],
+      "skill_url": "https://raw.githubusercontent.com/MuhammadHusnainAli/vector-agentic-skills/main/skills/programming/sql-window-functions/SKILL.md",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/sql-window-functions",
+      "install": "./scripts/install.sh sql-window-functions"
+    }
+  ]
+}
