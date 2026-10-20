@@ -3,7 +3,8 @@ name: Deploy website
 # Every push to main validates and tests the skills, builds the site from
 # skills/ and deploys it to Cloudflare Pages (agenticskills.vector-ai-lab.com).
 #
-# Required repository secrets:
+# Required secrets, in the "vector-agentic-skills" environment (Settings > Environments)
+# or as repository secrets:
 #   CLOUDFLARE_API_TOKEN   API token with "Cloudflare Pages: Edit" permission
 #   CLOUDFLARE_ACCOUNT_ID  your Cloudflare account ID
 # Optional repository variable:
@@ -33,7 +34,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: production
+      name: vector-agentic-skills # must match the GitHub environment that holds the Cloudflare secrets
       url: https://agenticskills.vector-ai-lab.com
     steps:
       - uses: actions/checkout@v4
