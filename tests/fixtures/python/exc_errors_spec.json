@@ -1,0 +1,12 @@
+{
+  "package": "ragkit",
+  "http": true,
+  "errors": [
+    "ProviderError:retryable,provider=str,http=502",
+    "RateLimitError(ProviderError):retryable,retry_after=float,http=429",
+    "ContextLengthError(ProviderError):tokens=int,limit=int,http=413",
+    {"name": "StructuredOutputError", "doc": "The model's output did not match the expected schema.",
+     "retryable": true, "attrs": {"raw_output": "str"}, "http": 502},
+    {"name": "VectorStoreError", "retryable": true, "http": 503}
+  ]
+}

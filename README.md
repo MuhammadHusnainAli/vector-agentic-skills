@@ -11,6 +11,7 @@ Each skill is a folder with a `SKILL.md` (YAML frontmatter + instructions), `ref
 | Category | Sub-category | Skills | What's inside |
 |----------|--------------|--------|---------------|
 | [Programming](skills/programming/README.md) | [SQL](skills/programming/sql/README.md) | 11 | Writing, syntax checking, explaining, optimising, performance tuning, debugging, window functions, analytics, reporting, data quality, dialect translation |
+| [Programming](skills/programming/README.md) | [Python](skills/programming/python/README.md) | 7 | Idiomatic code review, comprehensions, type hints, dataclasses, exception design, context managers, beginner tutoring (for AI engineers) |
 | [Productivity](skills/productivity/README.md) | [Excel](skills/productivity/excel/README.md) | 3 | Formulas, advanced formulas (LAMBDA, LET, dynamic arrays, regex), workbook fundamentals |
 
 Every skill ships at least one helper script, smoke-tested in CI:
@@ -28,6 +29,14 @@ Every skill ships at least one helper script, smoke-tested in CI:
 | sql-reporting | `date_ranges.py` | Index-friendly date filters for MTD, YTD, previous period and more |
 | sql-data-quality | `profile_data.py` | Profiling SQL, or a CSV profile that can gate a pipeline |
 | sql-dialect-translator | `translate_sql.py` | Translates SQL between dialects with `sqlglot` |
+| python-idiomatic-code-reviewer | `review_idioms.py` | 46 rules for unpythonic and risky code, incl. hardcoded API keys and blocking calls in async |
+| python-comprehension-refactorer | `find_comprehension_candidates.py` | Prints the exact comprehension for loops that build lists, dicts and sets; flags over-complex ones |
+| python-type-hints-annotator | `annotation_audit.py` | Annotation coverage with a CI gate, legacy-typing rewrites and inferred types |
+| python-dataclass-converter | `to_dataclass.py` | Converts boilerplate classes to dataclasses; generates dataclass/pydantic/TypedDict from a JSON sample |
+| python-exception-handling-designer | `audit_exceptions.py` | 14 rules: swallowed errors, missing `from`, swallowed cancellation, bad handler order |
+| python-exception-handling-designer | `scaffold_exceptions.py` | Generates an `errors.py` hierarchy with retryable flags and HTTP mapping (`--preset llm-app`) |
+| python-context-manager-writer | `ctx_tool.py` | Finds leaked resources and broken `@contextmanager`s; scaffolds 8 recipes (timer, atomic write, GPU inference...) |
+| python-beginner-concept-tutor | `explain_concepts.py` | Lists the concepts a file uses in learning order; traces a snippet step by step like Python Tutor |
 | excel-formulas | `check_formula.py` | Lints formulas: parentheses, strings, unknown and volatile functions |
 | excel-advanced-formulas | `check_compat.py` | Reports the minimum Excel version a formula needs |
 | excel-fundamentals | `inspect_workbook.py` | Reports an .xlsx's sheets, tables, names, validation and links |
@@ -52,6 +61,7 @@ Each sub-category is a plugin:
 ```bash
 /plugin marketplace add MuhammadHusnainAli/vector-agentic-skills
 /plugin install sql-skills@vector-agentic-skills
+/plugin install python-skills@vector-agentic-skills
 /plugin install excel-skills@vector-agentic-skills
 ```
 

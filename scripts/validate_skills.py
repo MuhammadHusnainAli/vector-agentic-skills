@@ -31,6 +31,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = ROOT / "skills"
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)#\s]+)(#[^)]*)?\)")
+# Fenced blocks and inline code spans, removed before link checking so code
+# such as `class Store[T](Protocol)` isn't read as a Markdown link.
+CODE_RE = re.compile(r"^(```|~~~).*?^\1[ \t]*$|`[^`\n]+`", re.M | re.S)
 MAX_SKILL_LINES = 500
 
 
@@ -126,7 +129,7 @@ def validate():
             warnings.append(f"{rel}: {lines} lines; move detail into references/ (< {MAX_SKILL_LINES} recommended)")
 
         for doc in skill_dir.rglob("*.md"):
-            for target, _ in LINK_RE.findall(doc.read_text(encoding="utf-8")):
+            for target, _ in LINK_RE.findall(CODE_RE.sub("", doc.read_text(encoding="utf-8"))):
                 if re.match(r"^[a-z]+:", target):
                     continue
                 if not (doc.parent / target).resolve().exists():

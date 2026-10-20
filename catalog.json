@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 14,
+  "skill_count": 21,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 11,
+      "skill_count": 18,
       "subcategories": [
         {
           "name": "sql",
@@ -28,6 +28,22 @@
             "sql-reporting",
             "sql-syntax-checker",
             "sql-window-functions"
+          ]
+        },
+        {
+          "name": "python",
+          "title": "Python",
+          "description": "Write, review and teach idiomatic modern Python for AI engineers: idioms, comprehensions, type hints, dataclasses, exception design, context managers and beginner tutoring.",
+          "plugin": "python-skills",
+          "skill_count": 7,
+          "skills": [
+            "python-beginner-concept-tutor",
+            "python-comprehension-refactorer",
+            "python-context-manager-writer",
+            "python-dataclass-converter",
+            "python-exception-handling-designer",
+            "python-idiomatic-code-reviewer",
+            "python-type-hints-annotator"
           ]
         }
       ]
@@ -144,6 +160,249 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/excel-fundamentals.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/productivity/excel/excel-fundamentals",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill excel-fundamentals"
+    },
+    {
+      "name": "python-beginner-concept-tutor",
+      "title": "Python Beginner Concept Tutor",
+      "description": "Teach Python concepts to beginners heading into AI engineering (data scientists, analysts, students, career switchers): plain-language definitions, analogies, minimal examples, line-by-line walkthroughs, common mistakes, check-your-understanding questions and mini exercises; Socratic hints before solutions; explaining tracebacks; mutable vs immutable, references and aliasing, is vs ==, integer division, floating point, slicing and off-by-one, indentation errors; a staged learning path from variables to calling an LLM API, embeddings and a tiny RAG. Ships a script that lists the concepts a snippet uses in learning order and traces execution step by step like Python Tutor. Use when someone says they are new to Python, asks what a piece of code does line by line, asks to explain a concept or an error message simply, wants exercises or a study plan, or is learning Python to build LLM apps.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-beginner-concept-tutor",
+      "files": [
+        "SKILL.md",
+        "faq.json",
+        "prompts.txt",
+        "references/common-beginner-errors.md",
+        "references/concept-explanations.md",
+        "references/curriculum-to-ai-engineer.md",
+        "references/exercises-with-solutions.md",
+        "references/faq.json",
+        "references/prompts.txt",
+        "references/teaching-playbook.md",
+        "scripts/explain_concepts.py"
+      ],
+      "references": [
+        "references/common-beginner-errors.md",
+        "references/concept-explanations.md",
+        "references/curriculum-to-ai-engineer.md",
+        "references/exercises-with-solutions.md",
+        "references/faq.json",
+        "references/prompts.txt",
+        "references/teaching-playbook.md"
+      ],
+      "scripts": [
+        "scripts/explain_concepts.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-beginner-concept-tutor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-beginner-concept-tutor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-beginner-concept-tutor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-beginner-concept-tutor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-beginner-concept-tutor"
+    },
+    {
+      "name": "python-comprehension-refactorer",
+      "title": "Python Comprehension Refactorer",
+      "description": "Refactor Python loops into list, dict and set comprehensions and generator expressions, and unroll comprehensions that are too clever: filtering, mapping, nested-loop flattening, conditional expressions, walrus in comprehensions, dict inversion, grouping with defaultdict/Counter, lazy generators for sum/any/all/max, streaming large files, itertools (chain, islice, groupby, batched, pairwise, accumulate, product), scoping rules, side-effect anti-patterns and performance (when map/filter or numpy/pandas vectorization win). AI-engineering focus: building prompt lists, batching texts for embeddings, filtering retrieved chunks by score, id->embedding dicts, flattening tool-call results, lazy dataset streaming and token counting. Use when the user asks to make a loop more Pythonic, convert a for loop to a comprehension, simplify or explain a nested comprehension, reduce memory with generators, batch or chunk an iterable, or review .py code for comprehension anti-patterns.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-comprehension-refactorer",
+      "files": [
+        "SKILL.md",
+        "references/ai-data-pipeline-patterns.md",
+        "references/comprehension-patterns.md",
+        "references/generators-and-itertools.md",
+        "references/performance-notes.md",
+        "references/when-not-to-use.md",
+        "scripts/find_comprehension_candidates.py"
+      ],
+      "references": [
+        "references/ai-data-pipeline-patterns.md",
+        "references/comprehension-patterns.md",
+        "references/generators-and-itertools.md",
+        "references/performance-notes.md",
+        "references/when-not-to-use.md"
+      ],
+      "scripts": [
+        "scripts/find_comprehension_candidates.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-comprehension-refactorer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-comprehension-refactorer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-comprehension-refactorer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-comprehension-refactorer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-comprehension-refactorer"
+    },
+    {
+      "name": "python-context-manager-writer",
+      "title": "Python Context Manager Writer",
+      "description": "Write correct Python context managers and find resource-handling bugs — __enter__/__exit__ semantics and exception suppression, contextlib (contextmanager, asynccontextmanager, ExitStack, AsyncExitStack, closing, aclosing, suppress, redirect_stdout, nullcontext, chdir), async with, re-entrancy, leaked files/connections/clients/pools/locks, and AI-engineering recipes: torch.no_grad/inference_mode/autocast, eval()/train() switches, GPU cache cleanup, token and latency meters, tracing spans, temp env vars, rate-limit semaphores, httpx/aiohttp client lifecycle, FastAPI lifespan, DB/vector-store transactions, atomic checkpoint writes, seeds and agent sandboxes. Use when writing or reviewing a with statement or context manager, when files/sockets/clients/sessions/locks are opened without with, when an error is silently swallowed by __exit__ or a @contextmanager, on ResourceWarning, Too many open files, deadlocks, or generator didn't stop errors, or when wiring setup/teardown for models, clients and transactions.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-context-manager-writer",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-recipes.md",
+        "references/async-context-managers.md",
+        "references/contextlib-reference.md",
+        "references/pitfalls-and-testing.md",
+        "references/protocol-reference.md",
+        "references/recipes.md",
+        "scripts/ctx_tool.py"
+      ],
+      "references": [
+        "references/ai-engineering-recipes.md",
+        "references/async-context-managers.md",
+        "references/contextlib-reference.md",
+        "references/pitfalls-and-testing.md",
+        "references/protocol-reference.md",
+        "references/recipes.md"
+      ],
+      "scripts": [
+        "scripts/ctx_tool.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-context-manager-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-context-manager-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-context-manager-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-context-manager-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-context-manager-writer"
+    },
+    {
+      "name": "python-dataclass-converter",
+      "title": "Python Dataclass Converter",
+      "description": "Convert boilerplate Python classes, dicts, tuples and JSON payloads into dataclasses, or into pydantic v2 BaseModel, TypedDict, NamedTuple, attrs or msgspec when that fits better. Covers every @dataclass option (frozen, slots, kw_only, order, unsafe_hash, match_args, weakref_slot), field() (default_factory, init=False, repr, compare, hash, metadata), __post_init__, InitVar, KW_ONLY, inheritance and default ordering, replace(), asdict deep-copy pitfalls, hashing/equality, serialization and validation. AI focus: LLM request/response and chat Message types, RAG chunks with embeddings (numpy eq gotcha), eval records, configs, typed OpenAI/Anthropic JSON. Use when the user asks to convert a class or dict to a dataclass, remove __init__/__repr__/__eq__ boilerplate, model a JSON/API response with types, pick dataclass vs pydantic vs TypedDict, or fix dataclass errors (mutable default, non-default argument follows default argument, FrozenInstanceError, unhashable type).",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-dataclass-converter",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-models.md",
+        "references/choosing-a-data-container.md",
+        "references/conversion-examples.md",
+        "references/dataclass-reference.md",
+        "references/serialization-and-validation.md",
+        "scripts/to_dataclass.py"
+      ],
+      "references": [
+        "references/ai-engineering-models.md",
+        "references/choosing-a-data-container.md",
+        "references/conversion-examples.md",
+        "references/dataclass-reference.md",
+        "references/serialization-and-validation.md"
+      ],
+      "scripts": [
+        "scripts/to_dataclass.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-dataclass-converter/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-dataclass-converter/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-dataclass-converter.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-dataclass-converter",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-dataclass-converter"
+    },
+    {
+      "name": "python-exception-handling-designer",
+      "title": "Python Exception Handling Designer",
+      "description": "Design and review Python exception handling: custom exception hierarchies with retryable flags, what to catch where, EAFP vs LBYL, chaining with raise ... from, else/finally, logger.exception, add_note, ExceptionGroup and except* with asyncio.TaskGroup, warnings, asserts vs validation, FastAPI error translation, retries with backoff and jitter, timeouts, cancellation, pytest.raises, plus LLM-app failures: 429 rate limits with retry-after, 5xx overloaded, context-length exceeded, content filters, broken streams, malformed JSON repair loops, tool-call errors fed back to the model, partial embedding batch failures, CUDA OOM batch halving, vector DB outages, circuit breakers and model fallbacks. Use when the user writes or reviews try/except code, designs an errors.py, asks how to retry or handle LLM/API errors, sees swallowed or lost tracebacks, maps exceptions to HTTP status codes, or tests exceptions in .py files.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-exception-handling-designer",
+      "files": [
+        "SKILL.md",
+        "references/ai-error-handling.md",
+        "references/anti-patterns.md",
+        "references/async-and-groups.md",
+        "references/exception-hierarchy.md",
+        "references/patterns.md",
+        "references/testing-exceptions.md",
+        "scripts/audit_exceptions.py",
+        "scripts/scaffold_exceptions.py"
+      ],
+      "references": [
+        "references/ai-error-handling.md",
+        "references/anti-patterns.md",
+        "references/async-and-groups.md",
+        "references/exception-hierarchy.md",
+        "references/patterns.md",
+        "references/testing-exceptions.md"
+      ],
+      "scripts": [
+        "scripts/audit_exceptions.py",
+        "scripts/scaffold_exceptions.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-exception-handling-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-exception-handling-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-exception-handling-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-exception-handling-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-exception-handling-designer"
+    },
+    {
+      "name": "python-idiomatic-code-reviewer",
+      "title": "Python Idiomatic Code Reviewer",
+      "description": "Review Python code for non-idiomatic, unpythonic or risky patterns and rewrite it into clean modern Python: PEP 8 / PEP 20, EAFP vs LBYL, iteration idioms (enumerate, zip, comprehensions, any/all), unpacking, f-strings, pathlib, truthiness, `is None`, mutable defaults, walrus, match statements, collections / itertools / functools, logging instead of print, with-blocks and resource handling. Includes AI-engineering checks: hardcoded API keys, time.sleep or requests inside async def, missing HTTP timeouts, unbounded retry loops, model clients built at import time, prompt string concatenation, sequential awaits, eval() on LLM output. Ships a 46-rule AST reviewer with severities and suggested rewrites. Use when the user asks to review, clean up, modernise, make pythonic or idiomatic, refactor or code-review a .py file, LLM / RAG / agent / FastAPI / training code, a pull request diff, or asks 'is this good Python?' or 'how would a senior Python dev write this?'.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-idiomatic-code-reviewer",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-idioms.md",
+        "references/idioms-catalog.md",
+        "references/modern-python-by-version.md",
+        "references/review-checklist.md",
+        "references/stdlib-power-tools.md",
+        "scripts/review_idioms.py"
+      ],
+      "references": [
+        "references/ai-engineering-idioms.md",
+        "references/idioms-catalog.md",
+        "references/modern-python-by-version.md",
+        "references/review-checklist.md",
+        "references/stdlib-power-tools.md"
+      ],
+      "scripts": [
+        "scripts/review_idioms.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-idiomatic-code-reviewer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-idiomatic-code-reviewer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-idiomatic-code-reviewer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-idiomatic-code-reviewer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-idiomatic-code-reviewer"
+    },
+    {
+      "name": "python-type-hints-annotator",
+      "title": "Python Type Hints Annotator",
+      "description": "Add accurate, modern type hints to Python and fix mypy / pyright (pyrefly, ty) errors: builtin generics, X | None, TypeAlias and the 3.12 type statement, TypeVar and PEP 695 generics, Protocol, Callable / ParamSpec / Concatenate, TypedDict (Required, NotRequired, ReadOnly), Literal, Final, ClassVar, overload, Annotated, TypeGuard / TypeIs, Self, Never, TypeVarTuple, async types, Iterable vs Sequence vs Mapping, TYPE_CHECKING, stubs, py.typed, gradual strictness. AI-engineering focus: typed LLM message dicts and tool schemas, pydantic vs TypedDict, numpy NDArray, torch / jaxtyping shapes, streaming generators, async clients, callbacks, generic VectorStore protocols, typed config. Ships an AST audit: coverage gate, legacy-typing rewrites, inferred types. Use when the user asks to add type hints, annotate or type a module, fix a mypy or pyright error, modernise typing imports (List, Optional, Union), set up strict type checking or a coverage gate in CI, or type LLM, RAG, agent, FastAPI or ML code.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-type-hints-annotator",
+      "files": [
+        "SKILL.md",
+        "references/advanced-typing.md",
+        "references/ai-ml-typing.md",
+        "references/migration-strategy.md",
+        "references/type-checker-setup.md",
+        "references/typing-cheatsheet.md",
+        "scripts/annotation_audit.py"
+      ],
+      "references": [
+        "references/advanced-typing.md",
+        "references/ai-ml-typing.md",
+        "references/migration-strategy.md",
+        "references/type-checker-setup.md",
+        "references/typing-cheatsheet.md"
+      ],
+      "scripts": [
+        "scripts/annotation_audit.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-type-hints-annotator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-type-hints-annotator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-type-hints-annotator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-type-hints-annotator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-type-hints-annotator"
     },
     {
       "name": "sql-analytics",

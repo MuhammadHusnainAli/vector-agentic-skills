@@ -7,3 +7,4 @@ Skills for writing, reviewing, debugging and optimising code and queries, groupe
 | Sub-category | Skills | Covers |
 |--------------|--------|--------|
 | [SQL](sql/README.md) | 11 | Write, check, explain, optimise, debug and translate SQL across PostgreSQL, MySQL, SQL Server, Oracle and SQLite, plus analytics, reporting and data-quality work. |
+| [Python](python/README.md) | 7 | Write, review and teach idiomatic modern Python for AI engineers: idioms, comprehensions, type hints, dataclasses, exception design, context managers and beginner tutoring. |

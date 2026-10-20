@@ -1,0 +1,10 @@
+[
+  {
+    "q": "What is RAG?",
+    "a": "Retrieval-augmented generation."
+  },
+  {
+    "q": "What is an embedding?",
+    "a": "A vector representing meaning."
+  }
+]

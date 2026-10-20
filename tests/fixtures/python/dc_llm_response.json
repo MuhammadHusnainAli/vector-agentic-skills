@@ -1,0 +1,39 @@
+{
+  "id": "chatcmpl-9x2",
+  "object": "chat.completion",
+  "created": 1760950000,
+  "model": "gpt-4o-mini",
+  "choices": [
+    {
+      "index": 0,
+      "message": {"role": "assistant", "content": "The capital of France is Paris.", "refusal": null},
+      "finish_reason": "stop",
+      "logprobs": null
+    },
+    {
+      "index": 1,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {"id": "call_1", "type": "function",
+           "function": {"name": "search_docs", "arguments": "{\"query\": \"paris\"}"}}
+        ]
+      },
+      "finish_reason": "tool_calls",
+      "logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 42,
+    "completion_tokens": 18,
+    "total_tokens": 60,
+    "completion_tokens_details": {"reasoning_tokens": 0}
+  },
+  "gateway": {
+    "x-request-id": "req_abc123",
+    "latencyMs": 812.5,
+    "receivedAt": "2026-10-20T09:15:00Z",
+    "class": "standard"
+  }
+}
