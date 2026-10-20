@@ -1,9 +1,9 @@
 name: Validate skills
 
+# Pull-request checks. Pushes to main run the same checks inside deploy.yml.
 on:
-  push:
-    branches: [main]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -20,6 +20,23 @@ jobs:
         run: python scripts/validate_skills.py
       - name: Generated files are up to date
         run: python scripts/build_catalog.py --check
-      - name: Skill scripts run
+      - name: Skill scripts pass their smoke tests
+        run: python scripts/test_skill_scripts.py
+
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: agenticskill-portfolio/package-lock.json
+      - name: Lint and build website
+        working-directory: agenticskill-portfolio
         run: |
-          for f in skills/*/*/scripts/*.py; do python "$f" --help > /dev/null; done
+          npm ci
+          npm run lint
+          npm run build

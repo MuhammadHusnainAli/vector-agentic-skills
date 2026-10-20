@@ -1,0 +1,5 @@
+{
+  "title": "SQL",
+  "description": "Write, check, explain, optimise, debug and translate SQL across PostgreSQL, MySQL, SQL Server, Oracle and SQLite, plus analytics, reporting and data-quality work.",
+  "order": 1
+}

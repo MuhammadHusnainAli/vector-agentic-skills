@@ -1,0 +1,135 @@
+name: Deploy website
+
+# Every push to main validates and tests the skills, builds the site from
+# skills/ and deploys it to Cloudflare Pages (agenticskills.vector-ai-lab.com).
+#
+# Required repository secrets:
+#   CLOUDFLARE_API_TOKEN   API token with "Cloudflare Pages: Edit" permission
+#   CLOUDFLARE_ACCOUNT_ID  your Cloudflare account ID
+# Optional repository variable:
+#   WEB3FORMS_ACCESS_KEY   lets the contact form send email directly (otherwise it opens the visitor's mail app)
+#
+# Versioning: major.minor come from the VERSION file (edit it by hand, e.g.
+# 0.1 -> 1.0). The patch number goes up by one on every deploy and is recorded
+# as a git tag (v0.1.0, v0.1.1, ...). It restarts at 0 when VERSION changes.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write # push the version tag
+
+# One deploy at a time so version numbers never collide.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+env:
+  CF_PROJECT: agenticskills
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://agenticskills.vector-ai-lab.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history + tags: needed for version numbers and per-skill "updated" dates
+
+      - name: Check Cloudflare secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in Settings > Secrets and variables > Actions"
+            exit 1
+          fi
+
+      - name: Compute version
+        id: version
+        run: |
+          base="$(tr -d '[:space:]' < VERSION)"
+          if ! [[ "$base" =~ ^[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::VERSION must look like MAJOR.MINOR (e.g. 0.1), got '$base'"
+            exit 1
+          fi
+          last="$(git tag --list "v$base.*" --sort=-v:refname | head -n1)"
+          if [ -z "$last" ]; then patch=0; else patch=$(( ${last##*.} + 1 )); fi
+          version="v$base.$patch"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Deploying $version (previous: ${last:-none})"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate skills, test scripts, refresh catalog
+        run: |
+          pip install pyyaml
+          python scripts/validate_skills.py
+          python scripts/test_skill_scripts.py
+          python scripts/build_catalog.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: agenticskill-portfolio/package-lock.json
+
+      - name: Install dependencies
+        working-directory: agenticskill-portfolio
+        run: npm ci
+
+      - name: Lint
+        working-directory: agenticskill-portfolio
+        run: npm run lint
+
+      - name: Build site (sync skills, prerender pages, sitemap.xml, robots.txt)
+        working-directory: agenticskill-portfolio
+        env:
+          SITE_VERSION: ${{ steps.version.outputs.version }}
+          # Contact form: Web3Forms access key for agenticskills@vector-ai-lab.com (repo variable, public by design).
+          NEXT_PUBLIC_WEB3FORMS_KEY: ${{ vars.WEB3FORMS_ACCESS_KEY }}
+          NEXT_TELEMETRY_DISABLED: 1
+        run: |
+          export BUILD_DATE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          npm run build
+
+      - name: Check build output
+        working-directory: agenticskill-portfolio/out
+        run: |
+          for f in index.html 404.html sitemap.xml robots.txt catalog.json _headers dl/all-skills.tar.gz; do
+            test -f "$f" || { echo "::error::missing $f"; exit 1; }
+          done
+          skills=$(find ../../skills -mindepth 4 -maxdepth 4 -name SKILL.md | wc -l)
+          pages=$(grep -c "/skills/[^/<]*/</loc>" sitemap.xml)
+          echo "skills: $skills, skill pages in sitemap: $pages"
+          test "$skills" -eq "$pages"
+          echo "${{ steps.version.outputs.version }}" > version.txt
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          if ! npx --yes wrangler@4 pages project list | grep -qw "$CF_PROJECT"; then
+            npx --yes wrangler@4 pages project create "$CF_PROJECT" --production-branch=main
+          fi
+          npx --yes wrangler@4 pages deploy agenticskill-portfolio/out \
+            --project-name="$CF_PROJECT" --branch=main \
+            --commit-hash="$GITHUB_SHA" --commit-message="$VERSION" --commit-dirty=true
+
+      - name: Tag release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          gh api "repos/${{ github.repository }}/git/refs" \
+            -f ref="refs/tags/$VERSION" -f sha="$GITHUB_SHA"
+          echo "### Deployed $VERSION to https://agenticskills.vector-ai-lab.com" >> "$GITHUB_STEP_SUMMARY"

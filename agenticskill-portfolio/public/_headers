@@ -1,0 +1,27 @@
+# Cloudflare Pages response headers.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Fingerprinted build assets never change.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Skill files and downloads change on every deploy; revalidate quickly.
+/raw/*
+  Cache-Control: public, max-age=300
+  Access-Control-Allow-Origin: *
+/dl/*
+  Cache-Control: public, max-age=300
+  Access-Control-Allow-Origin: *
+/catalog.json
+  Cache-Control: public, max-age=300
+  Access-Control-Allow-Origin: *
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/.well-known/*
+  Cache-Control: public, max-age=300
+  Access-Control-Allow-Origin: *

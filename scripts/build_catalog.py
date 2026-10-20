@@ -1,35 +1,36 @@
 #!/usr/bin/env python3
-"""Generate the catalog, indexes and sitemap from the skills/ tree.
+"""Generate the catalog and indexes from the skills/ tree.
 
-Outputs (all derived from SKILL.md frontmatter and category.json):
-  catalog.json                      machine-readable index for the website
-  SITEMAP.md                        human-readable index of every skill
-  sitemap.xml                       search-engine sitemap
-  skills/<category>/README.md       per-category index
-  .claude-plugin/marketplace.json   Claude Code plugin marketplace (one plugin per category)
+Layout: skills/<category>/<subcategory>/<skill>/SKILL.md
+
+Outputs (all derived from SKILL.md frontmatter, category.json and subcategory.json):
+  catalog.json                              machine-readable index for the website
+  SITEMAP.md                                human-readable index of every skill
+  skills/<category>/README.md               per-category index
+  skills/<category>/<subcategory>/README.md per-sub-category index
+  .claude-plugin/marketplace.json           Claude Code marketplace (one plugin per sub-category)
 
 Usage:
     python scripts/build_catalog.py            # write files
     python scripts/build_catalog.py --check    # fail if generated files are stale (CI)
-    SITE_URL=https://example.com python scripts/build_catalog.py
+
+The website (agenticskill-portfolio/) builds its own sitemap.xml and robots.txt
+from the same skills/ folder on every deploy.
 
 Requires: PyYAML (pip install pyyaml).
 """
 
 import argparse
-import datetime
 import json
 import os
 import re
-import subprocess
 import sys
-from xml.sax.saxutils import escape
 
 from validate_skills import ROOT, SKILLS_DIR, load_categories, load_skills, validate
 
 REPO = "MuhammadHusnainAli/vector-agentic-skills"
 BRANCH = "main"
-SITE_URL = os.environ.get("SITE_URL", f"https://raw.githubusercontent.com/{REPO}/{BRANCH}").rstrip("/")
+SITE_URL = os.environ.get("SITE_URL", "https://agenticskills.vector-ai-lab.com").rstrip("/")
 GITHUB_TREE = f"https://github.com/{REPO}/tree/{BRANCH}"
 MARKETPLACE = "vector-agentic-skills"
 OWNER = "MuhammadHusnainAli"
@@ -41,166 +42,173 @@ def title_of(body, fallback):
     return m.group(1).strip() if m else fallback
 
 
+def summary(desc):
+    return desc.split(". Use")[0].rstrip(".") + "."
+
+
 def build_catalog():
-    categories = load_categories()
     skills = []
-    for cat, skill_dir, meta, body in load_skills():
+    for cat, sub, skill_dir, meta, body in load_skills():
         rel = skill_dir.relative_to(ROOT).as_posix()
         files = sorted(p.relative_to(skill_dir).as_posix() for p in skill_dir.rglob("*")
                        if p.is_file() and "__pycache__" not in p.parts)
+        name = meta["name"]
         skills.append({
-            "name": meta["name"],
-            "title": title_of(body, meta["name"]),
+            "name": name,
+            "title": title_of(body, name),
             "description": meta["description"],
             "category": cat,
+            "subcategory": sub,
             "version": str((meta.get("metadata") or {}).get("version", "1.0.0")),
             "path": rel,
             "files": files,
             "references": [f for f in files if f.startswith("references/")],
             "scripts": [f for f in files if f.startswith("scripts/")],
-            "skill_url": f"{SITE_URL}/{rel}/SKILL.md",
+            "url": f"{SITE_URL}/skills/{name}/",
+            "raw_url": f"{SITE_URL}/raw/{rel}/SKILL.md",
+            "download_url": f"{SITE_URL}/dl/{name}.tar.gz",
             "source_url": f"{GITHUB_TREE}/{rel}",
-            "install": f"./scripts/install.sh {meta['name']}",
+            "install": f"npx skills add {SITE_URL} --skill {name}",
         })
-    cats = []
-    for name, info in sorted(categories.items(), key=lambda kv: (kv[1] or {}).get("order", 99)):
-        members = [s["name"] for s in skills if s["category"] == name]
-        cats.append({
-            "name": name,
-            "title": info["title"],
-            "description": info["description"],
-            "plugin": f"{name}-skills",
-            "skill_count": len(members),
-            "skills": members,
-        })
+
+    categories = []
+    for cat, data in sorted(load_categories().items(), key=lambda kv: kv[1]["info"].get("order", 99)):
+        subs = []
+        for sub, info in sorted(data["subcategories"].items(), key=lambda kv: kv[1].get("order", 99)):
+            members = [s["name"] for s in skills if s["category"] == cat and s["subcategory"] == sub]
+            subs.append({"name": sub, "title": info["title"], "description": info["description"],
+                         "plugin": f"{sub}-skills", "skill_count": len(members), "skills": members})
+        categories.append({"name": cat, "title": data["info"]["title"], "description": data["info"]["description"],
+                           "skill_count": sum(s["skill_count"] for s in subs), "subcategories": subs})
     return {
         "name": MARKETPLACE,
         "repository": f"https://github.com/{REPO}",
+        "site": SITE_URL,
         "skill_count": len(skills),
-        "categories": cats,
+        "categories": categories,
         "skills": skills,
     }
+
+
+def iter_subs(catalog):
+    for c in catalog["categories"]:
+        for s in c["subcategories"]:
+            yield c, s
+
+
+def by_name(catalog):
+    return {s["name"]: s for s in catalog["skills"]}
 
 
 def render_marketplace(catalog):
     return {
         "name": MARKETPLACE,
         "owner": {"name": OWNER},
-        "metadata": {
-            "description": "Agent Skills for Claude Code and other agents, grouped by category.",
-            "version": "1.0.0",
-        },
+        "metadata": {"description": "Agent Skills for Claude Code and other agents, grouped by category.",
+                     "version": "1.0.0"},
         "plugins": [{
-            "name": c["plugin"],
-            "description": c["description"],
+            "name": s["plugin"],
+            "description": s["description"],
+            "category": c["name"],
             "source": "./",
             "strict": False,
-            "skills": [f"./skills/{c['name']}/{s}" for s in c["skills"]],
-        } for c in catalog["categories"]],
+            "skills": [f"./skills/{c['name']}/{s['name']}/{n}" for n in s["skills"]],
+        } for c, s in iter_subs(catalog)],
     }
 
 
-def file_list(skill):
-    links = [f"[SKILL.md]({skill['name']}/SKILL.md)"]
-    links += [f"[{f.split('/', 1)[1]}]({skill['name']}/{f})" for f in skill["references"] + skill["scripts"]]
-    return ", ".join(links)
-
-
-def render_category_readme(cat, skills):
-    rows = "\n".join(f"| [{s['name']}]({s['name']}/SKILL.md) | {s['description'].split('. Use')[0]}. |"
-                     for s in skills)
+def render_category_readme(cat):
+    rows = "\n".join(f"| [{s['title']}]({s['name']}/README.md) | {s['skill_count']} | {s['description']} |"
+                     for s in cat["subcategories"])
     return f"""{GENERATED_NOTE}
 
-# {cat['title']} Skills
+# {cat['title']}
 
 {cat['description']}
 
-| Skill | What it does |
-|-------|--------------|
+| Sub-category | Skills | Covers |
+|--------------|--------|--------|
+{rows}
+"""
+
+
+def render_sub_readme(cat, sub, skills):
+    rows = "\n".join(f"| [{n}]({n}/SKILL.md) | {summary(skills[n]['description'])} | "
+                     f"{', '.join('`' + f.split('/', 1)[1] + '`' for f in skills[n]['scripts'])} |" for n in sub["skills"])
+    return f"""{GENERATED_NOTE}
+
+# {cat['title']} / {sub['title']}
+
+{sub['description']}
+
+| Skill | What it does | Scripts |
+|-------|--------------|---------|
 {rows}
 
 ## Install
 
 ```bash
-# Claude Code plugin (all {cat['title'].lower()} skills)
-/plugin marketplace add {REPO}
-/plugin install {cat['plugin']}@{MARKETPLACE}
+# Any agent (Claude Code, Codex, Cursor, ...)
+npx skills add {SITE_URL} {' '.join('--skill ' + n for n in sub['skills'])}
 
-# Or copy individual skills into ~/.claude/skills
-./scripts/install.sh --category {cat['name']}
+# Claude Code plugin with every {sub['title']} skill
+/plugin marketplace add {REPO}
+/plugin install {sub['plugin']}@{MARKETPLACE}
+
+# From a clone
+./scripts/install.sh --subcategory {sub['name']}
 ```
 """
 
 
 def render_sitemap_md(catalog):
-    out = [GENERATED_NOTE, "", "# Sitemap", "", "Index of every skill in this repository.", "",
-           "| Category | Skills | Plugin |", "|----------|--------|--------|"]
-    for c in catalog["categories"]:
-        out.append(f"| [{c['title']}](skills/{c['name']}/README.md) | {c['skill_count']} | `{c['plugin']}` |")
-    for c in catalog["categories"]:
-        out += ["", f"## {c['title']}", "", c["description"], "",
+    skills = by_name(catalog)
+    out = [GENERATED_NOTE, "", "# Sitemap", "", f"Index of all {catalog['skill_count']} skills. "
+           f"Browse them at [{SITE_URL.split('//')[1]}]({SITE_URL}).", "",
+           "| Category | Sub-category | Skills | Plugin |", "|----------|--------------|--------|--------|"]
+    for c, s in iter_subs(catalog):
+        out.append(f"| [{c['title']}](skills/{c['name']}/README.md) | [{s['title']}](skills/{c['name']}/{s['name']}/README.md)"
+                   f" | {s['skill_count']} | `{s['plugin']}` |")
+    for c, s in iter_subs(catalog):
+        out += ["", f"## {c['title']} / {s['title']}", "", s["description"], "",
                 "| Skill | Description | Files |", "|-------|-------------|-------|"]
-        for s in (s for s in catalog["skills"] if s["category"] == c["name"]):
-            short = s["description"].split(". Use")[0]
-            files = file_list(s).replace("](", f"](skills/{c['name']}/")
-            out.append(f"| **{s['name']}** | {short}. | {files} |")
+        for n in s["skills"]:
+            k = skills[n]
+            base = f"skills/{c['name']}/{s['name']}/{n}"
+            files = [f"[SKILL.md]({base}/SKILL.md)"] + [f"[{f.split('/', 1)[1]}]({base}/{f})"
+                                                       for f in k["references"] + k["scripts"]]
+            out.append(f"| **{n}** | {summary(k['description'])} | {', '.join(files)} |")
     out += ["", "## Tree", "", "```", "skills/"]
-    for i, c in enumerate(catalog["categories"]):
-        last_cat = i == len(catalog["categories"]) - 1
-        out.append(f"{'└──' if last_cat else '├──'} {c['name']}/")
-        pad = "    " if last_cat else "│   "
-        for j, name in enumerate(c["skills"]):
-            s = next(x for x in catalog["skills"] if x["name"] == name)
-            last = j == len(c["skills"]) - 1
-            extras = [d for d in ("references", "scripts") if s[d]]
-            out.append(f"{pad}{'└──' if last else '├──'} {name}/  SKILL.md{''.join(' + ' + d + '/' for d in extras)}")
+    cats = catalog["categories"]
+    for i, c in enumerate(cats):
+        lc = i == len(cats) - 1
+        out.append(f"{'└──' if lc else '├──'} {c['name']}/")
+        p1 = "    " if lc else "│   "
+        for j, s in enumerate(c["subcategories"]):
+            ls = j == len(c["subcategories"]) - 1
+            out.append(f"{p1}{'└──' if ls else '├──'} {s['name']}/")
+            p2 = p1 + ("    " if ls else "│   ")
+            for k, n in enumerate(s["skills"]):
+                extras = [d for d in ("references", "scripts") if skills[n][d]]
+                out.append(f"{p2}{'└──' if k == len(s['skills']) - 1 else '├──'} {n}/  SKILL.md"
+                           + "".join(f" + {d}/" for d in extras))
     out += ["```", ""]
     return "\n".join(out)
 
 
-def lastmod(path):
-    try:
-        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(path)], cwd=ROOT,
-                             capture_output=True, text=True, check=True).stdout.strip()
-    except (OSError, subprocess.CalledProcessError):
-        out = ""
-    return out or datetime.date.today().isoformat()
-
-
-def render_sitemap_xml(catalog):
-    entries = [("", "README.md", "weekly", "1.0"), ("SITEMAP.md", "SITEMAP.md", "weekly", "0.9"),
-               ("catalog.json", "catalog.json", "weekly", "0.9")]
-    for c in catalog["categories"]:
-        p = f"skills/{c['name']}/README.md"
-        entries.append((p, p, "weekly", "0.9"))
-    for s in catalog["skills"]:
-        entries.append((f"{s['path']}/SKILL.md", f"{s['path']}/SKILL.md", "monthly", "0.8"))
-        for ref in s["references"]:
-            entries.append((f"{s['path']}/{ref}", f"{s['path']}/{ref}", "monthly", "0.6"))
-    urls = "\n".join(
-        f"  <url>\n    <loc>{escape(f'{SITE_URL}/{loc}')}</loc>\n    <lastmod>{lastmod(ROOT / src)}</lastmod>\n"
-        f"    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>"
-        for loc, src, freq, prio in entries)
-    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "\n</urlset>\n")
-
-
 def outputs():
     catalog = build_catalog()
+    skills = by_name(catalog)
     files = {
         ROOT / "catalog.json": json.dumps(catalog, indent=2, ensure_ascii=False) + "\n",
         ROOT / ".claude-plugin" / "marketplace.json": json.dumps(render_marketplace(catalog), indent=2, ensure_ascii=False) + "\n",
         ROOT / "SITEMAP.md": render_sitemap_md(catalog),
-        ROOT / "sitemap.xml": render_sitemap_xml(catalog),
     }
     for c in catalog["categories"]:
-        members = [s for s in catalog["skills"] if s["category"] == c["name"]]
-        files[SKILLS_DIR / c["name"] / "README.md"] = render_category_readme(c, members)
+        files[SKILLS_DIR / c["name"] / "README.md"] = render_category_readme(c)
+        for s in c["subcategories"]:
+            files[SKILLS_DIR / c["name"] / s["name"] / "README.md"] = render_sub_readme(c, s, skills)
     return files
-
-
-def strip_lastmod(text):
-    return re.sub(r"<lastmod>[^<]*</lastmod>", "", text)
 
 
 def main():
@@ -216,10 +224,11 @@ def main():
     stale = []
     for path, content in outputs().items():
         current = path.read_text(encoding="utf-8") if path.exists() else None
+        if current == content:
+            continue
         if args.check:
-            if current is None or strip_lastmod(current) != strip_lastmod(content):
-                stale.append(path.relative_to(ROOT))
-        elif current != content:
+            stale.append(path.relative_to(ROOT))
+        else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(content, encoding="utf-8")
             print(f"wrote {path.relative_to(ROOT)}")

@@ -4,6 +4,7 @@
 # Usage:
 #   ./scripts/install.sh --all                      # every skill -> ~/.claude/skills
 #   ./scripts/install.sh --category programming     # one category
+#   ./scripts/install.sh --subcategory sql           # one sub-category
 #   ./scripts/install.sh sql-query-writer excel-formulas
 #   ./scripts/install.sh --project . --all          # -> ./.claude/skills (shared with your team via git)
 #   ./scripts/install.sh --dest ~/.codex/skills --all   # any agent that reads SKILL.md folders
@@ -20,16 +21,17 @@ DEST="$HOME/.claude/skills"
 MODE=copy
 SELECTED=()
 
-usage() { sed -n '2,13p' "$0" | sed 's/^# \{0,1\}//'; exit "${1:-0}"; }
+usage() { sed -n '2,14p' "$0" | sed 's/^# \{0,1\}//'; exit "${1:-0}"; }
 
 # Portable to macOS bash 3.2: no mapfile, no GNU-only find flags.
-all_skills() { for f in "$SKILLS_DIR"/*/*/SKILL.md; do [[ -e "$f" ]] && dirname "$f"; done; }
+# Layout: skills/<category>/<subcategory>/<skill>/SKILL.md
+all_skills() { for f in "$SKILLS_DIR"/*/*/*/SKILL.md; do [[ -e "$f" ]] && dirname "$f"; done; }
 
 add_skills() { while IFS= read -r dir; do SELECTED+=("$dir"); done; }
 
 add_skill() {
   local match
-  for match in "$SKILLS_DIR"/*/"$1"; do
+  for match in "$SKILLS_DIR"/*/*/"$1"; do
     [[ -f "$match/SKILL.md" ]] && { SELECTED+=("$match"); return; }
   done
   echo "error: unknown skill '$1' (try --list)" >&2
@@ -43,12 +45,17 @@ while [[ $# -gt 0 ]]; do
       [[ -d "$SKILLS_DIR/${2:-}" ]] || { echo "error: unknown category '${2:-}'" >&2; exit 1; }
       add_skills < <(all_skills | grep "^$SKILLS_DIR/$2/")
       shift ;;
+    --subcategory)
+      matches=("$SKILLS_DIR"/*/"${2:-}")
+      [[ -n "${2:-}" && -d "${matches[0]}" ]] || { echo "error: unknown sub-category '${2:-}'" >&2; exit 1; }
+      add_skills < <(all_skills | grep "^${matches[0]}/")
+      shift ;;
     --project)  DEST="$(cd "${2:?--project needs a directory}" && pwd)/.claude/skills"; shift ;;
     --dest)     DEST="${2:?--dest needs a directory}"; shift ;;
     --link)     MODE=link ;;
     --list)
       all_skills | while read -r dir; do
-        printf '%-14s %s\n' "$(basename "$(dirname "$dir")")" "$(basename "$dir")"
+        printf '%-14s %-8s %s\n' "$(basename "$(dirname "$(dirname "$dir")")")" "$(basename "$(dirname "$dir")")" "$(basename "$dir")"
       done
       exit 0 ;;
     -h|--help)  usage ;;

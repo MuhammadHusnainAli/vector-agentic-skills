@@ -1,0 +1,7 @@
+id,email,country,signup_date,score
+1,a@x.com,US,2026-01-02,10
+2,b@x.com, PK ,2026-01-03,
+3,bad-email,US,2026-01-04,7.5
+3,c@x.com,,2026-13-01,9
+4,d@x.com,UK,2026-02-01,NULL
+4,d@x.com,UK,2026-02-01,NULL

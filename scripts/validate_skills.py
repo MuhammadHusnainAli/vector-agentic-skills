@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
-"""Validate every skill in skills/<category>/<skill>/SKILL.md.
+"""Validate every skill in skills/<category>/<subcategory>/<skill>/SKILL.md.
 
-Checks the Agent Skills format used by Claude Code and other agents:
+Checks the Agent Skills format used by Claude Code and other agents, plus this
+repo's quality bar:
+  - every category has category.json and every sub-category has subcategory.json
+    (each with "title" and "description")
   - SKILL.md starts with YAML frontmatter containing `name` and `description`
   - `name` is lowercase-hyphenated, <= 64 chars, matches its folder, and is unique
   - `description` is non-empty and <= 1024 chars
-  - `metadata.category` matches the category folder, which has a category.json
+  - `metadata.category` / `metadata.subcategory` match the folders
+  - each skill ships at least one script in scripts/ and every script parses
   - every relative Markdown link inside the skill resolves to a file
+  - SKILL.md stays under 500 lines (warning) and has references/ (warning)
 
 Usage:
     python scripts/validate_skills.py
@@ -14,6 +19,7 @@ Usage:
 Requires: PyYAML (pip install pyyaml). Exit code 1 if any check fails.
 """
 
+import ast
 import json
 import re
 import sys
@@ -40,43 +46,47 @@ def parse_skill(path):
     return meta, m.group(2)
 
 
+def read_json(path):
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+
+
 def load_categories():
+    """{category: {"info": dict|None, "subcategories": {sub: dict|None}}} in folder order."""
     cats = {}
     for cat_dir in sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir()):
-        info_path = cat_dir / "category.json"
-        info = json.loads(info_path.read_text(encoding="utf-8")) if info_path.exists() else None
-        cats[cat_dir.name] = info
+        subs = {s.name: read_json(s / "subcategory.json") for s in sorted(cat_dir.iterdir()) if s.is_dir()}
+        cats[cat_dir.name] = {"info": read_json(cat_dir / "category.json"), "subcategories": subs}
     return cats
 
 
 def load_skills():
-    """Yield (category, skill_dir, meta, body) for every skill, sorted by path."""
-    for skill_md in sorted(SKILLS_DIR.glob("*/*/SKILL.md")):
+    """Yield (category, subcategory, skill_dir, meta, body) for every skill, sorted by path."""
+    for skill_md in sorted(SKILLS_DIR.glob("*/*/*/SKILL.md")):
         meta, body = parse_skill(skill_md)
-        yield skill_md.parent.parent.name, skill_md.parent, meta, body
+        yield skill_md.parents[2].name, skill_md.parents[1].name, skill_md.parent, meta, body
 
 
 def validate():
     errors, warnings = [], []
-    categories = load_categories()
-    for cat, info in categories.items():
-        if info is None:
-            errors.append(f"skills/{cat}: missing category.json")
-        elif not {"title", "description"} <= info.keys():
-            errors.append(f"skills/{cat}/category.json: needs 'title' and 'description'")
+    for cat, data in load_categories().items():
+        if not data["info"] or not {"title", "description"} <= data["info"].keys():
+            errors.append(f"skills/{cat}/category.json: missing, or lacks 'title' and 'description'")
+        for sub, info in data["subcategories"].items():
+            if not info or not {"title", "description"} <= info.keys():
+                errors.append(f"skills/{cat}/{sub}/subcategory.json: missing, or lacks 'title' and 'description'")
 
     seen = {}
-    for skill_md in sorted(SKILLS_DIR.glob("*/*/SKILL.md")):
+    for skill_md in sorted(SKILLS_DIR.glob("*/*/*/SKILL.md")):
         rel = skill_md.relative_to(ROOT)
-        cat, folder = skill_md.parent.parent.name, skill_md.parent.name
+        skill_dir = skill_md.parent
+        cat, sub, folder = skill_md.parents[2].name, skill_md.parents[1].name, skill_dir.name
         try:
             meta, body = parse_skill(skill_md)
         except (ValueError, yaml.YAMLError) as e:
             errors.append(f"{rel}: {e}")
             continue
 
-        name = meta.get("name")
-        desc = meta.get("description")
+        name, desc = meta.get("name"), meta.get("description")
         if not isinstance(name, str) or not NAME_RE.match(name) or len(name) > 64:
             errors.append(f"{rel}: name {name!r} must be lowercase letters/digits/hyphens, <= 64 chars")
         elif name != folder:
@@ -90,24 +100,43 @@ def validate():
         elif len(desc) > 1024:
             errors.append(f"{rel}: description is {len(desc)} chars (max 1024)")
 
-        meta_cat = (meta.get("metadata") or {}).get("category")
-        if meta_cat != cat:
-            errors.append(f"{rel}: metadata.category {meta_cat!r} must be {cat!r}")
+        md = meta.get("metadata") or {}
+        if md.get("category") != cat:
+            errors.append(f"{rel}: metadata.category {md.get('category')!r} must be {cat!r}")
+        if md.get("subcategory") != sub:
+            errors.append(f"{rel}: metadata.subcategory {md.get('subcategory')!r} must be {sub!r}")
+
+        scripts = sorted((skill_dir / "scripts").glob("*")) if (skill_dir / "scripts").is_dir() else []
+        scripts = [s for s in scripts if s.is_file() and s.suffix in (".py", ".sh", ".js", ".mjs")]
+        if not scripts:
+            errors.append(f"{rel}: skill must ship at least one helper script in scripts/")
+        for s in scripts:
+            if s.suffix == ".py":
+                try:
+                    ast.parse(s.read_text(encoding="utf-8"), filename=str(s))
+                except SyntaxError as e:
+                    errors.append(f"{s.relative_to(ROOT)}: syntax error: {e}")
+            if f"scripts/{s.name}" not in body:
+                warnings.append(f"{rel}: scripts/{s.name} is not documented in SKILL.md")
+        if not (skill_dir / "references").is_dir():
+            warnings.append(f"{rel}: no references/ folder")
 
         lines = body.count("\n") + 1
         if lines > MAX_SKILL_LINES:
-            warnings.append(f"{rel}: {lines} lines; consider moving detail into references/ (< {MAX_SKILL_LINES} recommended)")
+            warnings.append(f"{rel}: {lines} lines; move detail into references/ (< {MAX_SKILL_LINES} recommended)")
 
-        for md in skill_md.parent.rglob("*.md"):
-            for target, _ in LINK_RE.findall(md.read_text(encoding="utf-8")):
+        for doc in skill_dir.rglob("*.md"):
+            for target, _ in LINK_RE.findall(doc.read_text(encoding="utf-8")):
                 if re.match(r"^[a-z]+:", target):
                     continue
-                if not (md.parent / target).resolve().exists():
-                    errors.append(f"{md.relative_to(ROOT)}: broken link -> {target}")
+                if not (doc.parent / target).resolve().exists():
+                    errors.append(f"{doc.relative_to(ROOT)}: broken link -> {target}")
 
-    for skill_dir in sorted(p for p in SKILLS_DIR.glob("*/*") if p.is_dir()):
-        if not (skill_dir / "SKILL.md").exists():
-            errors.append(f"{skill_dir.relative_to(ROOT)}: folder has no SKILL.md")
+    for d in sorted(p for p in SKILLS_DIR.glob("*/*/*") if p.is_dir()):
+        if not (d / "SKILL.md").exists():
+            errors.append(f"{d.relative_to(ROOT)}: folder has no SKILL.md")
+    for stray in sorted(SKILLS_DIR.glob("*/*/SKILL.md")):
+        errors.append(f"{stray.relative_to(ROOT)}: skills must live in skills/<category>/<subcategory>/<skill>/")
     return errors, warnings, len(seen)
 
 

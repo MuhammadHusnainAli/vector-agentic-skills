@@ -1,0 +1,11 @@
+[{"Plan": {"Node Type": "Sort", "Actual Total Time": 950.5, "Actual Loops": 1, "Actual Rows": 120, "Plan Rows": 100,
+  "Sort Key": ["o.created_at DESC"], "Sort Method": "external merge", "Sort Space Type": "Disk", "Sort Space Used": 51200,
+  "Plans": [{"Node Type": "Nested Loop", "Parent Relationship": "Outer", "Actual Total Time": 900.0, "Actual Loops": 1, "Actual Rows": 120, "Plan Rows": 5,
+    "Plans": [
+      {"Node Type": "Seq Scan", "Relation Name": "orders", "Parent Relationship": "Outer", "Actual Total Time": 400.0, "Actual Loops": 1,
+       "Actual Rows": 5000, "Plan Rows": 40, "Rows Removed by Filter": 2000000, "Filter": "(status = 'paid'::text)",
+       "Shared Read Blocks": 40000, "Shared Hit Blocks": 100},
+      {"Node Type": "Index Scan", "Relation Name": "customers", "Index Name": "customers_pkey", "Parent Relationship": "Inner",
+       "Actual Total Time": 0.09, "Actual Loops": 5000, "Actual Rows": 1, "Plan Rows": 1}
+    ]}]},
+  "Planning Time": 1.2, "Execution Time": 955.1}]

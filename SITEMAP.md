@@ -2,61 +2,61 @@
 
 # Sitemap
 
-Index of every skill in this repository.
+Index of all 14 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
 
-| Category | Skills | Plugin |
-|----------|--------|--------|
-| [Programming](skills/programming/README.md) | 12 | `programming-skills` |
-| [Productivity](skills/productivity/README.md) | 3 | `productivity-skills` |
+| Category | Sub-category | Skills | Plugin |
+|----------|--------------|--------|--------|
+| [Programming](skills/programming/README.md) | [SQL](skills/programming/sql/README.md) | 11 | `sql-skills` |
+| [Productivity](skills/productivity/README.md) | [Excel](skills/productivity/excel/README.md) | 3 | `excel-skills` |
 
-## Programming
+## Programming / SQL
 
-Skills for writing, reviewing, debugging and optimising code and queries — starting with a complete SQL suite.
-
-| Skill | Description | Files |
-|-------|-------------|-------|
-| **sql** | General SQL reference and router for PostgreSQL, MySQL, SQL Server, Oracle and SQLite — clause order, JOIN types, aggregation, best practices and a pre-output validation checklist. | [SKILL.md](skills/programming/sql/SKILL.md) |
-| **sql-analytics** | Analytical and aggregation SQL — GROUP BY, ROLLUP, CUBE, GROUPING SETS, pivots, cohorts, funnels, retention, percentiles and statistical functions. | [SKILL.md](skills/programming/sql-analytics/SKILL.md), [examples.md](skills/programming/sql-analytics/references/examples.md) |
-| **sql-data-quality** | Profile and validate data with SQL — NULL analysis, duplicate detection, referential integrity, range and format checks, outliers, constraints and cleansing queries. | [SKILL.md](skills/programming/sql-data-quality/SKILL.md), [examples.md](skills/programming/sql-data-quality/references/examples.md) |
-| **sql-debugger** | Debug failing SQL or queries returning wrong results — interpret error messages, find causes of duplicates, missing rows, NULL surprises, fan-out joins and type mismatches, and produce a fixed query. | [SKILL.md](skills/programming/sql-debugger/SKILL.md), [examples.md](skills/programming/sql-debugger/references/examples.md) |
-| **sql-dialect-translator** | Translate SQL between dialects — PostgreSQL, MySQL, SQL Server (T-SQL), Oracle, SQLite — covering data types, functions, pagination, date handling, upserts and identity columns. | [SKILL.md](skills/programming/sql-dialect-translator/SKILL.md), [examples.md](skills/programming/sql-dialect-translator/references/examples.md), [translate_sql.py](skills/programming/sql-dialect-translator/scripts/translate_sql.py) |
-| **sql-optimizer** | Rewrite slow SQL queries for performance — read execution plans (EXPLAIN / EXPLAIN ANALYZE), remove anti-patterns, make predicates sargable, choose JOIN/EXISTS strategies and suggest indexes. | [SKILL.md](skills/programming/sql-optimizer/SKILL.md), [examples.md](skills/programming/sql-optimizer/references/examples.md) |
-| **sql-performance-tuning** | Database-level SQL performance tuning — index design and maintenance, query profiling, statistics, partitioning, schema design, locking and configuration bottlenecks. | [SKILL.md](skills/programming/sql-performance-tuning/SKILL.md), [examples.md](skills/programming/sql-performance-tuning/references/examples.md) |
-| **sql-query-explainer** | Explain what an existing SQL query does in plain language — logical execution order, step-by-step breakdown of joins, filters, grouping and window logic, and the shape of the result. | [SKILL.md](skills/programming/sql-query-explainer/SKILL.md), [examples.md](skills/programming/sql-query-explainer/references/examples.md) |
-| **sql-query-writer** | Write correct, readable SQL from natural-language requirements — SELECT, INSERT, UPDATE, DELETE, JOINs, subqueries, CTEs and DDL (CREATE/ALTER/DROP). | [SKILL.md](skills/programming/sql-query-writer/SKILL.md), [examples.md](skills/programming/sql-query-writer/references/examples.md) |
-| **sql-reporting** | Build business reporting SQL — KPIs, dashboard datasets, period comparisons (MoM/YoY), executive, sales and financial reports and scheduled-report queries. | [SKILL.md](skills/programming/sql-reporting/SKILL.md), [examples.md](skills/programming/sql-reporting/references/examples.md) |
-| **sql-syntax-checker** | Validate SQL syntax and structure before execution and point out errors with corrected versions, dialect-aware (PostgreSQL, MySQL, SQL Server, Oracle, SQLite). | [SKILL.md](skills/programming/sql-syntax-checker/SKILL.md), [examples.md](skills/programming/sql-syntax-checker/references/examples.md), [check_sql.py](skills/programming/sql-syntax-checker/scripts/check_sql.py) |
-| **sql-window-functions** | Write window/analytic SQL — ROW_NUMBER, RANK, DENSE_RANK, NTILE, LAG/LEAD, FIRST_VALUE/LAST_VALUE, running totals, moving averages and frame clauses (ROWS/RANGE). | [SKILL.md](skills/programming/sql-window-functions/SKILL.md), [examples.md](skills/programming/sql-window-functions/references/examples.md) |
-
-## Productivity
-
-Skills for office and business tools — spreadsheets, documents and everyday data work, starting with Excel.
+Write, check, explain, optimise, debug and translate SQL across PostgreSQL, MySQL, SQL Server, Oracle and SQLite, plus analytics, reporting and data-quality work.
 
 | Skill | Description | Files |
 |-------|-------------|-------|
-| **excel-advanced-formulas** | Modern Excel 365/2021+ formulas — LAMBDA and LAMBDA helpers (MAP, REDUCE, SCAN, BYROW, BYCOL), LET, dynamic arrays (FILTER, SORT, UNIQUE, HSTACK, VSTACK, TAKE, DROP), TEXTSPLIT, REGEX functions, GROUPBY and PIVOTBY. | [SKILL.md](skills/productivity/excel-advanced-formulas/SKILL.md), [advanced-patterns.md](skills/productivity/excel-advanced-formulas/references/advanced-patterns.md), [array-manipulation.md](skills/productivity/excel-advanced-formulas/references/array-manipulation.md), [lambda-functions.md](skills/productivity/excel-advanced-formulas/references/lambda-functions.md), [text-parsing.md](skills/productivity/excel-advanced-formulas/references/text-parsing.md), [check_compat.py](skills/productivity/excel-advanced-formulas/scripts/check_compat.py) |
-| **excel-formulas** | Write error-free Excel formulas — syntax rules, cell references, math, logical, lookup (VLOOKUP, INDEX/MATCH, XLOOKUP), text, date/time and conditional aggregation (SUMIFS, COUNTIFS) with error handling. | [SKILL.md](skills/productivity/excel-formulas/SKILL.md), [examples.md](skills/productivity/excel-formulas/references/examples.md), [formulas.md](skills/productivity/excel-formulas/references/formulas.md), [functions-reference.md](skills/productivity/excel-formulas/references/functions-reference.md), [check_formula.py](skills/productivity/excel-formulas/scripts/check_formula.py) |
-| **excel-fundamentals** | Excel workbook fundamentals — cells, ranges, absolute/relative references, named ranges, number formats, conditional formatting, sheets and views, sorting, filtering, tables and keyboard shortcuts. | [SKILL.md](skills/productivity/excel-fundamentals/SKILL.md), [cells-and-ranges.md](skills/productivity/excel-fundamentals/references/cells-and-ranges.md), [formatting-and-styles.md](skills/productivity/excel-fundamentals/references/formatting-and-styles.md), [sheets-and-views.md](skills/productivity/excel-fundamentals/references/sheets-and-views.md), [sorting-filtering-tables.md](skills/productivity/excel-fundamentals/references/sorting-filtering-tables.md) |
+| **sql-analytics** | Analytical and aggregation SQL — GROUP BY, ROLLUP, CUBE, GROUPING SETS, pivots, cohorts, funnels, retention, percentiles and statistical functions. | [SKILL.md](skills/programming/sql/sql-analytics/SKILL.md), [examples.md](skills/programming/sql/sql-analytics/references/examples.md), [analytics_sql.py](skills/programming/sql/sql-analytics/scripts/analytics_sql.py) |
+| **sql-data-quality** | Profile and validate data with SQL — NULL analysis, duplicate detection, referential integrity, range and format checks, outliers, constraints and cleansing queries. | [SKILL.md](skills/programming/sql/sql-data-quality/SKILL.md), [examples.md](skills/programming/sql/sql-data-quality/references/examples.md), [monitoring-queries.md](skills/programming/sql/sql-data-quality/references/monitoring-queries.md), [quality-reports.md](skills/programming/sql/sql-data-quality/references/quality-reports.md), [profile_data.py](skills/programming/sql/sql-data-quality/scripts/profile_data.py) |
+| **sql-debugger** | Debug failing SQL or queries returning wrong results — interpret error messages, find causes of duplicates, missing rows, NULL surprises, fan-out joins and type mismatches, and produce a fixed query. | [SKILL.md](skills/programming/sql/sql-debugger/SKILL.md), [examples.md](skills/programming/sql/sql-debugger/references/examples.md), [diagnose_error.py](skills/programming/sql/sql-debugger/scripts/diagnose_error.py) |
+| **sql-dialect-translator** | Translate SQL between dialects — PostgreSQL, MySQL, SQL Server (T-SQL), Oracle, SQLite — covering data types, functions, pagination, date handling, upserts and identity columns. | [SKILL.md](skills/programming/sql/sql-dialect-translator/SKILL.md), [examples.md](skills/programming/sql/sql-dialect-translator/references/examples.md), [translate_sql.py](skills/programming/sql/sql-dialect-translator/scripts/translate_sql.py) |
+| **sql-optimizer** | Rewrite slow SQL queries for performance — read execution plans (EXPLAIN / EXPLAIN ANALYZE), remove anti-patterns, make predicates sargable, choose JOIN/EXISTS strategies and suggest indexes. | [SKILL.md](skills/programming/sql/sql-optimizer/SKILL.md), [examples.md](skills/programming/sql/sql-optimizer/references/examples.md), [find_antipatterns.py](skills/programming/sql/sql-optimizer/scripts/find_antipatterns.py) |
+| **sql-performance-tuning** | Database-level SQL performance tuning — index design and maintenance, query profiling, statistics, partitioning, schema design, locking and configuration bottlenecks. | [SKILL.md](skills/programming/sql/sql-performance-tuning/SKILL.md), [examples.md](skills/programming/sql/sql-performance-tuning/references/examples.md), [analyze_plan.py](skills/programming/sql/sql-performance-tuning/scripts/analyze_plan.py) |
+| **sql-query-explainer** | Explain what an existing SQL query does in plain language — logical execution order, step-by-step breakdown of joins, filters, grouping and window logic, and the shape of the result. | [SKILL.md](skills/programming/sql/sql-query-explainer/SKILL.md), [examples.md](skills/programming/sql/sql-query-explainer/references/examples.md), [outline_query.py](skills/programming/sql/sql-query-explainer/scripts/outline_query.py) |
+| **sql-query-writer** | Write correct, readable SQL from natural-language requirements — SELECT, INSERT, UPDATE, DELETE, JOINs, subqueries, CTEs and DDL (CREATE/ALTER/DROP). | [SKILL.md](skills/programming/sql/sql-query-writer/SKILL.md), [examples.md](skills/programming/sql/sql-query-writer/references/examples.md), [sql-quick-reference.md](skills/programming/sql/sql-query-writer/references/sql-quick-reference.md), [plan_joins.py](skills/programming/sql/sql-query-writer/scripts/plan_joins.py) |
+| **sql-reporting** | Build business reporting SQL — KPIs, dashboard datasets, period comparisons (MoM/YoY), executive, sales and financial reports and scheduled-report queries. | [SKILL.md](skills/programming/sql/sql-reporting/SKILL.md), [examples.md](skills/programming/sql/sql-reporting/references/examples.md), [formatting.md](skills/programming/sql/sql-reporting/references/formatting.md), [operational-reports.md](skills/programming/sql/sql-reporting/references/operational-reports.md), [date_ranges.py](skills/programming/sql/sql-reporting/scripts/date_ranges.py) |
+| **sql-syntax-checker** | Validate SQL syntax and structure before execution and point out errors with corrected versions, dialect-aware (PostgreSQL, MySQL, SQL Server, Oracle, SQLite). | [SKILL.md](skills/programming/sql/sql-syntax-checker/SKILL.md), [examples.md](skills/programming/sql/sql-syntax-checker/references/examples.md), [check_sql.py](skills/programming/sql/sql-syntax-checker/scripts/check_sql.py) |
+| **sql-window-functions** | Write window/analytic SQL — ROW_NUMBER, RANK, DENSE_RANK, NTILE, LAG/LEAD, FIRST_VALUE/LAST_VALUE, running totals, moving averages and frame clauses (ROWS/RANGE). | [SKILL.md](skills/programming/sql/sql-window-functions/SKILL.md), [examples.md](skills/programming/sql/sql-window-functions/references/examples.md), [sql_sandbox.py](skills/programming/sql/sql-window-functions/scripts/sql_sandbox.py) |
+
+## Productivity / Excel
+
+Write error-free Excel formulas, use modern LAMBDA and dynamic-array functions, and organise, format and inspect workbooks.
+
+| Skill | Description | Files |
+|-------|-------------|-------|
+| **excel-advanced-formulas** | Modern Excel 365/2021+ formulas — LAMBDA and LAMBDA helpers (MAP, REDUCE, SCAN, BYROW, BYCOL), LET, dynamic arrays (FILTER, SORT, UNIQUE, HSTACK, VSTACK, TAKE, DROP), TEXTSPLIT, REGEX functions, GROUPBY and PIVOTBY. | [SKILL.md](skills/productivity/excel/excel-advanced-formulas/SKILL.md), [advanced-patterns.md](skills/productivity/excel/excel-advanced-formulas/references/advanced-patterns.md), [array-manipulation.md](skills/productivity/excel/excel-advanced-formulas/references/array-manipulation.md), [lambda-functions.md](skills/productivity/excel/excel-advanced-formulas/references/lambda-functions.md), [text-parsing.md](skills/productivity/excel/excel-advanced-formulas/references/text-parsing.md), [check_compat.py](skills/productivity/excel/excel-advanced-formulas/scripts/check_compat.py) |
+| **excel-formulas** | Write error-free Excel formulas — syntax rules, cell references, math, logical, lookup (VLOOKUP, INDEX/MATCH, XLOOKUP), text, date/time and conditional aggregation (SUMIFS, COUNTIFS) with error handling. | [SKILL.md](skills/productivity/excel/excel-formulas/SKILL.md), [examples.md](skills/productivity/excel/excel-formulas/references/examples.md), [formulas.md](skills/productivity/excel/excel-formulas/references/formulas.md), [functions-reference.md](skills/productivity/excel/excel-formulas/references/functions-reference.md), [check_formula.py](skills/productivity/excel/excel-formulas/scripts/check_formula.py) |
+| **excel-fundamentals** | Excel workbook fundamentals — cells, ranges, absolute/relative references, named ranges, number formats, conditional formatting, sheets and views, sorting, filtering, tables and keyboard shortcuts. | [SKILL.md](skills/productivity/excel/excel-fundamentals/SKILL.md), [cells-and-ranges.md](skills/productivity/excel/excel-fundamentals/references/cells-and-ranges.md), [formatting-and-styles.md](skills/productivity/excel/excel-fundamentals/references/formatting-and-styles.md), [sheets-and-views.md](skills/productivity/excel/excel-fundamentals/references/sheets-and-views.md), [sorting-filtering-tables.md](skills/productivity/excel/excel-fundamentals/references/sorting-filtering-tables.md), [inspect_workbook.py](skills/productivity/excel/excel-fundamentals/scripts/inspect_workbook.py) |
 
 ## Tree
 
 ```
 skills/
 ├── programming/
-│   ├── sql/  SKILL.md
-│   ├── sql-analytics/  SKILL.md + references/
-│   ├── sql-data-quality/  SKILL.md + references/
-│   ├── sql-debugger/  SKILL.md + references/
-│   ├── sql-dialect-translator/  SKILL.md + references/ + scripts/
-│   ├── sql-optimizer/  SKILL.md + references/
-│   ├── sql-performance-tuning/  SKILL.md + references/
-│   ├── sql-query-explainer/  SKILL.md + references/
-│   ├── sql-query-writer/  SKILL.md + references/
-│   ├── sql-reporting/  SKILL.md + references/
-│   ├── sql-syntax-checker/  SKILL.md + references/ + scripts/
-│   └── sql-window-functions/  SKILL.md + references/
+│   └── sql/
+│       ├── sql-analytics/  SKILL.md + references/ + scripts/
+│       ├── sql-data-quality/  SKILL.md + references/ + scripts/
+│       ├── sql-debugger/  SKILL.md + references/ + scripts/
+│       ├── sql-dialect-translator/  SKILL.md + references/ + scripts/
+│       ├── sql-optimizer/  SKILL.md + references/ + scripts/
+│       ├── sql-performance-tuning/  SKILL.md + references/ + scripts/
+│       ├── sql-query-explainer/  SKILL.md + references/ + scripts/
+│       ├── sql-query-writer/  SKILL.md + references/ + scripts/
+│       ├── sql-reporting/  SKILL.md + references/ + scripts/
+│       ├── sql-syntax-checker/  SKILL.md + references/ + scripts/
+│       └── sql-window-functions/  SKILL.md + references/ + scripts/
 └── productivity/
-    ├── excel-advanced-formulas/  SKILL.md + references/ + scripts/
-    ├── excel-formulas/  SKILL.md + references/ + scripts/
-    └── excel-fundamentals/  SKILL.md + references/
+    └── excel/
+        ├── excel-advanced-formulas/  SKILL.md + references/ + scripts/
+        ├── excel-formulas/  SKILL.md + references/ + scripts/
+        └── excel-fundamentals/  SKILL.md + references/ + scripts/
 ```

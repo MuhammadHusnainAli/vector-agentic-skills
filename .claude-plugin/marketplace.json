@@ -9,34 +9,35 @@
   },
   "plugins": [
     {
-      "name": "programming-skills",
-      "description": "Skills for writing, reviewing, debugging and optimising code and queries — starting with a complete SQL suite.",
+      "name": "sql-skills",
+      "description": "Write, check, explain, optimise, debug and translate SQL across PostgreSQL, MySQL, SQL Server, Oracle and SQLite, plus analytics, reporting and data-quality work.",
+      "category": "programming",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/programming/sql",
-        "./skills/programming/sql-analytics",
-        "./skills/programming/sql-data-quality",
-        "./skills/programming/sql-debugger",
-        "./skills/programming/sql-dialect-translator",
-        "./skills/programming/sql-optimizer",
-        "./skills/programming/sql-performance-tuning",
-        "./skills/programming/sql-query-explainer",
-        "./skills/programming/sql-query-writer",
-        "./skills/programming/sql-reporting",
-        "./skills/programming/sql-syntax-checker",
-        "./skills/programming/sql-window-functions"
+        "./skills/programming/sql/sql-analytics",
+        "./skills/programming/sql/sql-data-quality",
+        "./skills/programming/sql/sql-debugger",
+        "./skills/programming/sql/sql-dialect-translator",
+        "./skills/programming/sql/sql-optimizer",
+        "./skills/programming/sql/sql-performance-tuning",
+        "./skills/programming/sql/sql-query-explainer",
+        "./skills/programming/sql/sql-query-writer",
+        "./skills/programming/sql/sql-reporting",
+        "./skills/programming/sql/sql-syntax-checker",
+        "./skills/programming/sql/sql-window-functions"
       ]
     },
     {
-      "name": "productivity-skills",
-      "description": "Skills for office and business tools — spreadsheets, documents and everyday data work, starting with Excel.",
+      "name": "excel-skills",
+      "description": "Write error-free Excel formulas, use modern LAMBDA and dynamic-array functions, and organise, format and inspect workbooks.",
+      "category": "productivity",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/productivity/excel-advanced-formulas",
-        "./skills/productivity/excel-formulas",
-        "./skills/productivity/excel-fundamentals"
+        "./skills/productivity/excel/excel-advanced-formulas",
+        "./skills/productivity/excel/excel-formulas",
+        "./skills/productivity/excel/excel-fundamentals"
       ]
     }
   ]
