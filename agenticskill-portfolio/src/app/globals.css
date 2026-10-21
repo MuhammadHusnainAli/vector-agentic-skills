@@ -1024,6 +1024,12 @@ a.badge:hover {
   margin: 0;
   color: var(--on-green-2);
   font-size: 15.5px;
+  /* long descriptions stop at three lines so cards in a row stay the same size */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
 }
 .sub-meta {
   display: flex;
@@ -1106,16 +1112,17 @@ a.badge:hover {
 
 .cards {
   display: grid;
+  grid-auto-rows: 1fr;
   gap: 16px;
 }
 @media (min-width: 680px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 1040px) {
   .cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 .card {
@@ -1140,19 +1147,37 @@ a.badge:hover {
   letter-spacing: -0.02em;
   color: var(--on-green);
   word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
 }
+/* Fixed-size skill cards: the summary is capped at three lines and the badges at one row. */
 .card p {
-  flex: 1;
   margin: 0;
   color: var(--on-green-2);
   font-size: 14.5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
 }
 .card .meta {
+  /* pinned to the bottom; the summary can't flex to fill, or line-clamp would show the hidden lines */
+  margin-top: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 6px;
   padding-top: 12px;
   border-top: 1px solid var(--green-line);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+  mask-image: linear-gradient(to right, #000 85%, transparent);
+}
+.card .meta .badge {
+  flex-shrink: 0;
 }
 .card .badge {
   background: var(--green-fill);
@@ -1192,6 +1217,7 @@ a.badge:hover {
   order: 3;
   border: 0;
   padding: 0;
+  margin-top: 0;
 }
 
 /* Install */

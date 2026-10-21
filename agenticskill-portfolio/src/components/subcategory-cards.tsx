@@ -2,10 +2,11 @@ import Link from "next/link";
 import type { Subcategory } from "@/lib/skills";
 import { ArrowRight, SubcategoryIcon } from "./icons";
 
-/** Mint cards, one per sub-category, listing every skill inside it. */
-export function SubcategoryCards({ subcategories, categoryTitles }: {
+/** Mint cards, one per sub-category. With showSkills, each card also lists every skill inside it. */
+export function SubcategoryCards({ subcategories, categoryTitles, showSkills = true }: {
   subcategories: Subcategory[];
   categoryTitles: Record<string, string>;
+  showSkills?: boolean;
 }) {
   return (
     <div className="sub-grid">
@@ -22,7 +23,7 @@ export function SubcategoryCards({ subcategories, categoryTitles }: {
             <h3>
               <Link href={`/categories/${sub.category}/${sub.slug}/`}>{sub.title}</Link>
             </h3>
-            <p>{sub.description}</p>
+            <p title={sub.description}>{sub.description}</p>
             <div className="sub-meta">
               <span>
                 <b>{sub.skills.length}</b> skills
@@ -31,13 +32,15 @@ export function SubcategoryCards({ subcategories, categoryTitles }: {
                 <b>{scripts}</b> tested scripts
               </span>
             </div>
-            <ul className="skill-chips">
-              {sub.skills.map((k) => (
-                <li key={k.name}>
-                  <Link href={`/skills/${k.name}/`}>{k.name}</Link>
-                </li>
-              ))}
-            </ul>
+            {showSkills && (
+              <ul className="skill-chips">
+                {sub.skills.map((k) => (
+                  <li key={k.name}>
+                    <Link href={`/skills/${k.name}/`}>{k.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
             <Link href={`/categories/${sub.category}/${sub.slug}/`} className="text-link">
               Explore {sub.title} skills <ArrowRight />
             </Link>

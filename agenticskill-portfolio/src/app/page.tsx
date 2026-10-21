@@ -98,9 +98,9 @@ export default function Home() {
             <h2>
               Browse by <span className="hl">category</span>
             </h2>
-            <p>Skills are grouped by domain, then by tool. Every sub-category lists the skills inside it.</p>
+            <p>Skills are grouped by domain, then by tool. Open a sub-category to see the skills inside it.</p>
           </div>
-          <SubcategoryCards subcategories={getSubcategories()} categoryTitles={categoryTitles} />
+          <SubcategoryCards subcategories={getSubcategories()} categoryTitles={categoryTitles} showSkills={false} />
         </div>
       </section>
 
