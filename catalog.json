@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 21,
+  "skill_count": 34,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 18,
+      "skill_count": 31,
       "subcategories": [
         {
           "name": "sql",
@@ -33,17 +33,39 @@
         {
           "name": "python",
           "title": "Python",
-          "description": "Write, review and teach idiomatic modern Python for AI engineers: idioms, comprehensions, type hints, dataclasses, exception design, context managers and beginner tutoring.",
+          "description": "Write, review and teach idiomatic modern Python for AI engineers: idioms, comprehensions, type hints, dataclasses, exception design, context managers, concurrency (asyncio, threads, processes, the GIL, deadlocks, Trio/AnyIO) and beginner tutoring.",
           "plugin": "python-skills",
-          "skill_count": 7,
+          "skill_count": 13,
           "skills": [
+            "python-async-deadlock-debugger",
+            "python-asyncio-pattern-advisor",
             "python-beginner-concept-tutor",
             "python-comprehension-refactorer",
             "python-context-manager-writer",
             "python-dataclass-converter",
             "python-exception-handling-designer",
+            "python-gil-bottleneck-analyzer",
             "python-idiomatic-code-reviewer",
+            "python-multiprocessing-pool-designer",
+            "python-threadpool-executor-builder",
+            "python-trio-anyio-migrator",
             "python-type-hints-annotator"
+          ]
+        },
+        {
+          "name": "rust",
+          "title": "Rust",
+          "description": "Explain borrow-checker and lifetime errors, design traits, error types and Cargo workspaces, audit unsafe code and build Tokio async services in idiomatic modern Rust.",
+          "plugin": "rust-skills",
+          "skill_count": 7,
+          "skills": [
+            "rust-borrow-checker-error-explainer",
+            "rust-cargo-workspace-designer",
+            "rust-error-handling-thiserror-anyhow-designer",
+            "rust-lifetime-annotation-advisor",
+            "rust-tokio-async-service-builder",
+            "rust-trait-design-reviewer",
+            "rust-unsafe-block-auditor"
           ]
         }
       ]
@@ -160,6 +182,80 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/excel-fundamentals.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/productivity/excel/excel-fundamentals",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill excel-fundamentals"
+    },
+    {
+      "name": "python-async-deadlock-debugger",
+      "title": "Python Async Deadlock Debugger",
+      "description": "Diagnose and fix hangs, deadlocks, livelocks and starvation in asyncio, threaded and multiprocessing Python: classify CPU spin vs blocked IO vs deadlock vs lost wakeup vs event loop blocked by sync code, collect evidence with faulthandler, py-spy dump, gdb py-bt, asyncio.all_tasks, python -m asyncio ps/pstree, debug mode and sys._current_frames, then fix lock-order cycles, non-reentrant asyncio.Lock re-acquisition, run_coroutine_threadsafe().result() on the loop thread, Queue.join without task_done, Condition lost wakeups, semaphore leaks, futures nobody resolves, nested event loops, thread pool exhaustion, multiprocessing Queue/fork deadlocks and shutdown hangs. Ships a static hang scanner and a watchdog that dumps every thread and asyncio task. Use when a Python program, agent loop, eval harness, embedding job, FastAPI service or GPU worker hangs, freezes, stops making progress, gets stuck at 99%, ignores Ctrl+C, never exits, or a test times out.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-async-deadlock-debugger",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-hangs.md",
+        "references/asyncio-deadlocks.md",
+        "references/hang-triage-playbook.md",
+        "references/prevention-and-testing.md",
+        "references/threading-and-multiprocessing-deadlocks.md",
+        "references/tools-for-live-processes.md",
+        "scripts/hang_scan.py",
+        "scripts/hang_watchdog.py"
+      ],
+      "references": [
+        "references/ai-engineering-hangs.md",
+        "references/asyncio-deadlocks.md",
+        "references/hang-triage-playbook.md",
+        "references/prevention-and-testing.md",
+        "references/threading-and-multiprocessing-deadlocks.md",
+        "references/tools-for-live-processes.md"
+      ],
+      "scripts": [
+        "scripts/hang_scan.py",
+        "scripts/hang_watchdog.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-async-deadlock-debugger/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-async-deadlock-debugger/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-async-deadlock-debugger.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-async-deadlock-debugger",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-async-deadlock-debugger"
+    },
+    {
+      "name": "python-asyncio-pattern-advisor",
+      "title": "Python Asyncio Pattern Advisor",
+      "description": "Recommend, implement and review Python asyncio patterns: async vs threads vs processes (IO vs CPU-bound), coroutines vs tasks vs futures, TaskGroup, gather and return_exceptions, wait and as_completed, Semaphore and Queue worker pools with backpressure, asyncio.timeout vs wait_for, cancellation, shield and cleanup, token-bucket RPM/TPM rate limits for LLM APIs, retries with backoff and jitter, async generators and SSE token streaming, to_thread/run_in_executor, background task references, eager tasks, asyncio.run/Runner, uvloop, Jupyter, FastAPI async vs def routes, httpx.AsyncClient lifespan, async DB/vector-store clients, debug mode and pytest-asyncio. Use when the user writes or reviews async def code, fans out LLM/embedding/scraping calls, hits 429s, sees 'coroutine was never awaited', 'Task exception was never retrieved', 'asyncio.run() cannot be called from a running event loop', 'This event loop is already running', hangs, slow callbacks or tasks that will not cancel, or asks gather vs TaskGroup.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-asyncio-pattern-advisor",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-async.md",
+        "references/cancellation-timeouts-and-errors.md",
+        "references/concurrency-limits-and-rate-limiting.md",
+        "references/debugging-asyncio.md",
+        "references/patterns-catalog.md",
+        "references/testing-async-code.md",
+        "references/version-history.md",
+        "scripts/async_lint.py"
+      ],
+      "references": [
+        "references/ai-engineering-async.md",
+        "references/cancellation-timeouts-and-errors.md",
+        "references/concurrency-limits-and-rate-limiting.md",
+        "references/debugging-asyncio.md",
+        "references/patterns-catalog.md",
+        "references/testing-async-code.md",
+        "references/version-history.md"
+      ],
+      "scripts": [
+        "scripts/async_lint.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-asyncio-pattern-advisor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-asyncio-pattern-advisor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-asyncio-pattern-advisor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-asyncio-pattern-advisor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-asyncio-pattern-advisor"
     },
     {
       "name": "python-beginner-concept-tutor",
@@ -339,6 +435,45 @@
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-exception-handling-designer"
     },
     {
+      "name": "python-gil-bottleneck-analyzer",
+      "title": "Python GIL Bottleneck Analyzer",
+      "description": "Find out why Python code does not scale across cores and pick the right fix: what the GIL does and does not block (I/O, numpy, hashlib, zlib, re, json, Rust tokenizers, switch interval), classify workloads as pure-Python CPU, GIL-releasing native, I/O-bound, memory-bandwidth-bound or lock-contended, measure wall vs CPU time and speedup curves, profile with cProfile, py-spy (--gil, --idle, --native), Scalene, perf -X perf, viztracer, line_profiler, tracemalloc and sys.monitoring, free-threaded 3.13t/3.14t (PEP 703/779, PYTHON_GIL, sys._is_gil_enabled), subinterpreters and InterpreterPoolExecutor, processes, numpy/polars vectorisation, numba nogil, Cython, mypyc, pyo3, OMP_NUM_THREADS oversubscription. Use when threads give no speedup, CPU sits at 100% of one core, a FastAPI endpoint stalls under CPU work, tokenization, JSON parsing, regex cleaning, pandas apply, reranking or data loading is slow, or someone asks whether the GIL is the bottleneck.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-gil-bottleneck-analyzer",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-performance.md",
+        "references/escape-hatches.md",
+        "references/free-threading-and-subinterpreters.md",
+        "references/gil-fundamentals.md",
+        "references/measuring-and-profiling.md",
+        "references/testing-and-benchmarking.md",
+        "references/troubleshooting-oversubscription-and-contention.md",
+        "scripts/gil_probe.py",
+        "scripts/profile_classify.py"
+      ],
+      "references": [
+        "references/ai-engineering-performance.md",
+        "references/escape-hatches.md",
+        "references/free-threading-and-subinterpreters.md",
+        "references/gil-fundamentals.md",
+        "references/measuring-and-profiling.md",
+        "references/testing-and-benchmarking.md",
+        "references/troubleshooting-oversubscription-and-contention.md"
+      ],
+      "scripts": [
+        "scripts/gil_probe.py",
+        "scripts/profile_classify.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-gil-bottleneck-analyzer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-gil-bottleneck-analyzer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-gil-bottleneck-analyzer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-gil-bottleneck-analyzer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-gil-bottleneck-analyzer"
+    },
+    {
       "name": "python-idiomatic-code-reviewer",
       "title": "Python Idiomatic Code Reviewer",
       "description": "Review Python code for non-idiomatic, unpythonic or risky patterns and rewrite it into clean modern Python: PEP 8 / PEP 20, EAFP vs LBYL, iteration idioms (enumerate, zip, comprehensions, any/all), unpacking, f-strings, pathlib, truthiness, `is None`, mutable defaults, walrus, match statements, collections / itertools / functools, logging instead of print, with-blocks and resource handling. Includes AI-engineering checks: hardcoded API keys, time.sleep or requests inside async def, missing HTTP timeouts, unbounded retry loops, model clients built at import time, prompt string concatenation, sequential awaits, eval() on LLM output. Ships a 46-rule AST reviewer with severities and suggested rewrites. Use when the user asks to review, clean up, modernise, make pythonic or idiomatic, refactor or code-review a .py file, LLM / RAG / agent / FastAPI / training code, a pull request diff, or asks 'is this good Python?' or 'how would a senior Python dev write this?'.",
@@ -372,6 +507,117 @@
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-idiomatic-code-reviewer"
     },
     {
+      "name": "python-multiprocessing-pool-designer",
+      "title": "Python Multiprocessing Pool Designer",
+      "description": "Design correct, fast process-based parallelism in Python: when processes beat threads/asyncio for CPU-bound code (and when free-threaded 3.13t/3.14t wins), multiprocessing.Pool (map, imap_unordered, starmap, apply_async callbacks), ProcessPoolExecutor (as_completed, max_tasks_per_child, mp_context, initializer), InterpreterPoolExecutor, fork vs spawn vs forkserver (3.14 Linux default), the __main__ guard, pickling rules, chunksize and IPC math, sizing workers to cores, cgroups and memory, per-worker model loading, copy-on-write and gc.freeze, shared_memory with numpy, Manager proxies, worker tracebacks, BrokenProcessPool, timeouts, Ctrl-C, worker logging, seeds, joblib/Ray/Dask/DataLoader. Ships a linter and a capacity planner. Use when parallelizing PDF/HTML parsing, chunking, tokenization, CPU embedding, image preprocessing, eval scoring or minhash dedup, or on PicklingError, BrokenProcessPool, 'bootstrapping phase', 'Cannot re-initialize CUDA in forked subprocess', or a pool slower than serial.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-multiprocessing-pool-designer",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-multiprocessing.md",
+        "references/debugging-and-failure-modes.md",
+        "references/pool-api-reference.md",
+        "references/sharing-data-between-processes.md",
+        "references/sizing-chunksize-and-memory.md",
+        "references/start-methods-and-pickling.md",
+        "references/testing-multiprocessing.md",
+        "scripts/pool_tool.py"
+      ],
+      "references": [
+        "references/ai-engineering-multiprocessing.md",
+        "references/debugging-and-failure-modes.md",
+        "references/pool-api-reference.md",
+        "references/sharing-data-between-processes.md",
+        "references/sizing-chunksize-and-memory.md",
+        "references/start-methods-and-pickling.md",
+        "references/testing-multiprocessing.md"
+      ],
+      "scripts": [
+        "scripts/pool_tool.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-multiprocessing-pool-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-multiprocessing-pool-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-multiprocessing-pool-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-multiprocessing-pool-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-multiprocessing-pool-designer"
+    },
+    {
+      "name": "python-threadpool-executor-builder",
+      "title": "Python ThreadPool Executor Builder",
+      "description": "Build correct, production-grade thread-based concurrency for I/O-bound Python: ThreadPoolExecutor submit/map/as_completed/wait (FIRST_COMPLETED, FIRST_EXCEPTION), Future callbacks, shutdown(cancel_futures), default max_workers (min(32, cpu+4), process_cpu_count in 3.13), initializer, BrokenThreadPool, Little's-law sizing, bounded submission and sliding windows, map buffersize (3.14), token-bucket RPM limiting, retries with backoff and jitter, cooperative cancellation, Ctrl-C, progress, thread-safe clients (requests.Session per thread, httpx, boto3, sqlite3), locks, queues, contextvars propagation, asyncio.to_thread and run_coroutine_threadsafe, free-threading, and testing. Ships a 19-rule linter and recipes. Use when fanning out LLM, embedding, scraping, S3 or vector-store calls from sync code, building an eval harness, or on lost exceptions, 429s, memory blowups from submit loops, hangs at exit, Ctrl-C ignored, 'cannot schedule new futures after shutdown' or 'Connection pool is full'.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-threadpool-executor-builder",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-threadpools.md",
+        "references/bounding-backpressure-and-rate-limits.md",
+        "references/debugging-thread-pools.md",
+        "references/executor-api-reference.md",
+        "references/reliability-timeouts-retries-cancellation.md",
+        "references/testing-threaded-code.md",
+        "references/thread-safety-and-shared-state.md",
+        "scripts/executor_tool.py"
+      ],
+      "references": [
+        "references/ai-engineering-threadpools.md",
+        "references/bounding-backpressure-and-rate-limits.md",
+        "references/debugging-thread-pools.md",
+        "references/executor-api-reference.md",
+        "references/reliability-timeouts-retries-cancellation.md",
+        "references/testing-threaded-code.md",
+        "references/thread-safety-and-shared-state.md"
+      ],
+      "scripts": [
+        "scripts/executor_tool.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-threadpool-executor-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-threadpool-executor-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-threadpool-executor-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-threadpool-executor-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-threadpool-executor-builder"
+    },
+    {
+      "name": "python-trio-anyio-migrator",
+      "title": "Python Trio / AnyIO Migrator",
+      "description": "Migrate asyncio code to AnyIO (runs on asyncio or trio) or to trio, and decide whether to migrate at all: structured concurrency (nurseries, task groups, cancel scopes, level-triggered cancellation, checkpoints), a complete asyncio -> anyio -> trio API map (run, sleep, gather/TaskGroup -> create_task_group/start_soon, tg.start and task_status, wait_for/timeout -> fail_after/move_on_after, shield, Event/Lock/Semaphore/CapacityLimiter, Queue -> memory object streams, to_thread, from_thread and blocking portals, run_process, signals), ExceptionGroup and except*, pytest anyio plugin, trio MockClock, httpx/Starlette/FastAPI vs asyncpg/aiohttp compatibility. Ships an AST rewriter with diff/write/check modes. Use when someone asks to port asyncio to anyio or trio, make a library backend-agnostic, replace gather/create_task/Queue/wait_for, or hits ExceptionGroup surprises, swallowed get_cancelled_exc_class, hangs on await in finally, or pytest-asyncio to anyio test migration.",
+      "category": "programming",
+      "subcategory": "python",
+      "version": "1.0.0",
+      "path": "skills/programming/python/python-trio-anyio-migrator",
+      "files": [
+        "SKILL.md",
+        "references/ai-engineering-anyio.md",
+        "references/api-mapping-asyncio-anyio-trio.md",
+        "references/cancellation-and-exception-groups.md",
+        "references/migration-playbook.md",
+        "references/structured-concurrency-concepts.md",
+        "references/testing-with-anyio-and-trio.md",
+        "references/troubleshooting-migration.md",
+        "scripts/migrate_async.py"
+      ],
+      "references": [
+        "references/ai-engineering-anyio.md",
+        "references/api-mapping-asyncio-anyio-trio.md",
+        "references/cancellation-and-exception-groups.md",
+        "references/migration-playbook.md",
+        "references/structured-concurrency-concepts.md",
+        "references/testing-with-anyio-and-trio.md",
+        "references/troubleshooting-migration.md"
+      ],
+      "scripts": [
+        "scripts/migrate_async.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/python-trio-anyio-migrator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/python/python-trio-anyio-migrator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-trio-anyio-migrator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-trio-anyio-migrator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-trio-anyio-migrator"
+    },
+    {
       "name": "python-type-hints-annotator",
       "title": "Python Type Hints Annotator",
       "description": "Add accurate, modern type hints to Python and fix mypy / pyright (pyrefly, ty) errors: builtin generics, X | None, TypeAlias and the 3.12 type statement, TypeVar and PEP 695 generics, Protocol, Callable / ParamSpec / Concatenate, TypedDict (Required, NotRequired, ReadOnly), Literal, Final, ClassVar, overload, Annotated, TypeGuard / TypeIs, Self, Never, TypeVarTuple, async types, Iterable vs Sequence vs Mapping, TYPE_CHECKING, stubs, py.typed, gradual strictness. AI-engineering focus: typed LLM message dicts and tool schemas, pydantic vs TypedDict, numpy NDArray, torch / jaxtyping shapes, streaming generators, async clients, callbacks, generic VectorStore protocols, typed config. Ships an AST audit: coverage gate, legacy-typing rewrites, inferred types. Use when the user asks to add type hints, annotate or type a module, fix a mypy or pyright error, modernise typing imports (List, Optional, Union), set up strict type checking or a coverage gate in CI, or type LLM, RAG, agent, FastAPI or ML code.",
@@ -403,6 +649,347 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/python-type-hints-annotator.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/python/python-type-hints-annotator",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill python-type-hints-annotator"
+    },
+    {
+      "name": "rust-borrow-checker-error-explainer",
+      "title": "Rust Borrow Checker Error Explainer",
+      "description": "Explain and fix Rust borrow-checker, ownership, move and lifetime compiler errors: E0382 use of moved value, E0499 cannot borrow as mutable more than once, E0502 also borrowed as immutable, E0505, E0506, E0503, E0507 cannot move out of index/Rc/reference, E0515 return reference to local, E0597 does not live long enough, E0716 temporary value dropped while borrowed, E0373 closure may outlive (spawn needs move), E0521 borrowed data escapes, E0384, E0596, E0594, E0381, E0713, 'lifetime may not live long enough', RefCell 'already borrowed: BorrowMutError' panics. Ranks fixes from restructuring (split borrows, entry API, split_at_mut, get_disjoint_mut, mem::take, Option::take, indices, thread::scope) down to clone and Rc<RefCell>/Arc<Mutex>; never unsafe. Covers NLL limits (get-or-insert), iterator invalidation, closure captures, self-referential structs. Ships std-only Rust triage tools. Use when Rust fails to compile with a borrow/ownership error or the user is fighting the borrow checker.",
+      "category": "programming",
+      "subcategory": "rust",
+      "version": "1.0.0",
+      "path": "skills/programming/rust/rust-borrow-checker-error-explainer",
+      "files": [
+        "SKILL.md",
+        "references/error-code-catalog.md",
+        "references/nll-limitations-and-polonius.md",
+        "references/ownership-and-borrowing-model.md",
+        "references/restructuring-patterns.md",
+        "references/shared-ownership-and-interior-mutability.md",
+        "references/threads-async-and-closures.md",
+        "references/version-history-and-testing.md",
+        "scripts/catalog.rs",
+        "scripts/common.rs",
+        "scripts/explain_code.rs",
+        "scripts/parse_diagnostics.rs",
+        "scripts/runtime_panic.rs"
+      ],
+      "references": [
+        "references/error-code-catalog.md",
+        "references/nll-limitations-and-polonius.md",
+        "references/ownership-and-borrowing-model.md",
+        "references/restructuring-patterns.md",
+        "references/shared-ownership-and-interior-mutability.md",
+        "references/threads-async-and-closures.md",
+        "references/version-history-and-testing.md"
+      ],
+      "scripts": [
+        "scripts/catalog.rs",
+        "scripts/common.rs",
+        "scripts/explain_code.rs",
+        "scripts/parse_diagnostics.rs",
+        "scripts/runtime_panic.rs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rust-borrow-checker-error-explainer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/rust/rust-borrow-checker-error-explainer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rust-borrow-checker-error-explainer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/rust/rust-borrow-checker-error-explainer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rust-borrow-checker-error-explainer"
+    },
+    {
+      "name": "rust-cargo-workspace-designer",
+      "title": "Rust Cargo Workspace Designer",
+      "description": "Design, review and fix Cargo workspaces: when to split a crate (compile time, boundaries, publishing, proc-macros), crates/* vs apps/ + crates/ layouts, virtual manifest vs root package, members/exclude/default-members, resolver 2 vs 3 (MSRV-aware, edition 2024), [workspace.package] and [workspace.dependencies] inheritance, [workspace.lints], root-only profiles (lto, codegen-units), additive features with dep: and weak ?/ syntax, feature unification pitfalls, internal path + version deps, publish = false, Cargo.lock and MSRV policy, xtask, CI with --locked, nextest, rust-cache, sccache, cargo-hack/deny/machete/udeps/semver-checks, and cargo build --timings. Ships a workspace auditor and crate-graph tool. Use when the user creates or restructures a Rust monorepo, asks how to organise crates, sees 'profiles for the non root package will be ignored', 'cyclic package dependency', 'believes it's in a workspace when it's not', resolver warnings, duplicate dependency versions, slow builds or failed publishes.",
+      "category": "programming",
+      "subcategory": "rust",
+      "version": "1.0.0",
+      "path": "skills/programming/rust/rust-cargo-workspace-designer",
+      "files": [
+        "SKILL.md",
+        "references/build-performance.md",
+        "references/ci-and-tooling.md",
+        "references/crate-boundaries-and-layouts.md",
+        "references/features-and-unification.md",
+        "references/manifest-and-inheritance.md",
+        "references/publishing-msrv-and-lockfiles.md",
+        "references/version-history.md",
+        "scripts/cli.rs",
+        "scripts/crate_graph.rs",
+        "scripts/dep_audit.rs",
+        "scripts/manifest_lint.rs",
+        "scripts/toml.rs",
+        "scripts/workspace.rs"
+      ],
+      "references": [
+        "references/build-performance.md",
+        "references/ci-and-tooling.md",
+        "references/crate-boundaries-and-layouts.md",
+        "references/features-and-unification.md",
+        "references/manifest-and-inheritance.md",
+        "references/publishing-msrv-and-lockfiles.md",
+        "references/version-history.md"
+      ],
+      "scripts": [
+        "scripts/cli.rs",
+        "scripts/crate_graph.rs",
+        "scripts/dep_audit.rs",
+        "scripts/manifest_lint.rs",
+        "scripts/toml.rs",
+        "scripts/workspace.rs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rust-cargo-workspace-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/rust/rust-cargo-workspace-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rust-cargo-workspace-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/rust/rust-cargo-workspace-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rust-cargo-workspace-designer"
+    },
+    {
+      "name": "rust-error-handling-thiserror-anyhow-designer",
+      "title": "Rust Error Handling Designer (thiserror + anyhow)",
+      "description": "Design and review Rust error handling with thiserror 2 and anyhow 1: library vs application split, typed error enums with #[from], #[source], #[error(transparent)] and #[non_exhaustive], ErrorKind patterns, context via .context()/.with_context(), bail!/ensure!, source() chains, {:#} and {:?} reports, RUST_BACKTRACE/RUST_LIB_BACKTRACE, Box<dyn Error + Send + Sync>, main -> anyhow::Result or ExitCode, unwrap/expect/panic policy, Option to Result, collecting iterators of Results, axum IntoResponse mapping, retryable errors, tracing, async Send bounds, testing with matches! and downcast_ref, no_std core::error::Error, and snafu, eyre/color-eyre, miette, error-stack. Use when the user writes an error.rs, asks thiserror vs anyhow or how to add context, wants to stop unwrap/panic, or hits \"`?` couldn't convert the error\", \"conflicting implementations of trait `From`\", \"`dyn std::error::Error` cannot be sent between threads safely\" or a message printed twice in .rs code.",
+      "category": "programming",
+      "subcategory": "rust",
+      "version": "1.0.0",
+      "path": "skills/programming/rust/rust-error-handling-thiserror-anyhow-designer",
+      "files": [
+        "SKILL.md",
+        "references/anti-patterns.md",
+        "references/anyhow-context-reporting.md",
+        "references/boundaries-async-http.md",
+        "references/library-vs-application.md",
+        "references/testing-errors.md",
+        "references/thiserror-design.md",
+        "references/version-history.md",
+        "scripts/cli.rs",
+        "scripts/errgen.rs",
+        "scripts/error_flow.rs",
+        "scripts/error_types.rs",
+        "scripts/json.rs",
+        "scripts/rsparse.rs",
+        "scripts/scaffold_errors.rs",
+        "scripts/scope.rs",
+        "scripts/unwrap_audit.rs"
+      ],
+      "references": [
+        "references/anti-patterns.md",
+        "references/anyhow-context-reporting.md",
+        "references/boundaries-async-http.md",
+        "references/library-vs-application.md",
+        "references/testing-errors.md",
+        "references/thiserror-design.md",
+        "references/version-history.md"
+      ],
+      "scripts": [
+        "scripts/cli.rs",
+        "scripts/errgen.rs",
+        "scripts/error_flow.rs",
+        "scripts/error_types.rs",
+        "scripts/json.rs",
+        "scripts/rsparse.rs",
+        "scripts/scaffold_errors.rs",
+        "scripts/scope.rs",
+        "scripts/unwrap_audit.rs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rust-error-handling-thiserror-anyhow-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/rust/rust-error-handling-thiserror-anyhow-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rust-error-handling-thiserror-anyhow-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/rust/rust-error-handling-thiserror-anyhow-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rust-error-handling-thiserror-anyhow-designer"
+    },
+    {
+      "name": "rust-lifetime-annotation-advisor",
+      "title": "Rust Lifetime Annotation Advisor",
+      "description": "Decide when Rust lifetime annotations are needed and which ones: the three elision rules, structs holding references (struct Parser<'a>), owned vs borrowed (String, &str, Cow<'a, str>, Arc<str>), one vs several lifetimes, 'a: 'b bounds, T: 'static misconceptions, Box<dyn Trait + 'a> default object lifetimes, impl Trait + '_ and edition 2024 capture rules with use<..>, variance and PhantomData, HRTB for<'a> Fn(&'a T), GATs and lending iterators, async fn and tokio::spawn 'static, self-referential structs (ouroboros, self_cell, indices, arenas), Rc/Arc to escape lifetime soup. Ships std-only Rust checkers for redundant, missing, unused and over-restrictive lifetimes. Use when rustc reports E0106 missing lifetime specifier, E0621, E0310 parameter type `T` may not live long enough, E0392, E0700, E0521 borrowed data escapes, E0597, E0515, E0373, older E0495/E0623/E0759/E0772, 'lifetime may not live long enough', or when designing structs, iterators and APIs that borrow.",
+      "category": "programming",
+      "subcategory": "rust",
+      "version": "1.0.0",
+      "path": "skills/programming/rust/rust-lifetime-annotation-advisor",
+      "files": [
+        "SKILL.md",
+        "references/advanced-lifetimes.md",
+        "references/async-lifetimes.md",
+        "references/elision-and-errors.md",
+        "references/owned-vs-borrowed.md",
+        "references/self-referential-and-escape-hatches.md",
+        "references/trait-objects-and-impl-trait.md",
+        "references/versions-and-testing.md",
+        "scripts/cli.rs",
+        "scripts/elision_check.rs",
+        "scripts/lifetime_smells.rs",
+        "scripts/missing_lifetime.rs",
+        "scripts/rsparse.rs",
+        "scripts/static_bounds.rs"
+      ],
+      "references": [
+        "references/advanced-lifetimes.md",
+        "references/async-lifetimes.md",
+        "references/elision-and-errors.md",
+        "references/owned-vs-borrowed.md",
+        "references/self-referential-and-escape-hatches.md",
+        "references/trait-objects-and-impl-trait.md",
+        "references/versions-and-testing.md"
+      ],
+      "scripts": [
+        "scripts/cli.rs",
+        "scripts/elision_check.rs",
+        "scripts/lifetime_smells.rs",
+        "scripts/missing_lifetime.rs",
+        "scripts/rsparse.rs",
+        "scripts/static_bounds.rs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rust-lifetime-annotation-advisor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/rust/rust-lifetime-annotation-advisor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rust-lifetime-annotation-advisor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/rust/rust-lifetime-annotation-advisor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rust-lifetime-annotation-advisor"
+    },
+    {
+      "name": "rust-tokio-async-service-builder",
+      "title": "Rust Tokio Async Service Builder",
+      "description": "Build and review production async Rust services on Tokio 1.x and axum 0.8: runtime choice (#[tokio::main] multi_thread vs current_thread, Builder), axum routing with /{id} paths, State, extractors, IntoResponse error types, axum::serve with_graceful_shutdown, tower/tower-http middleware (TraceLayer, TimeoutLayer, CorsLayer, ConcurrencyLimitLayer, RequestBodyLimitLayer), Arc<AppState>, std vs tokio Mutex, JoinSet, TaskTracker, CancellationToken, select! cancel safety, bounded mpsc, oneshot, broadcast, watch, actors, Semaphore, timeouts, retries, spawn_blocking, sqlx PgPool, reqwest Client reuse, tracing, tests with start_paused and oneshot, Dockerfile. Fixes 'future cannot be sent between threads safely', E0373, Rc or MutexGuard held across await, 'Cannot start a runtime from within a runtime', 'Path segments must not start with :'. Ships std-only Rust scanners and a compiling axum 0.8 scaffold. Use when writing, reviewing or debugging a Tokio, axum, tower, hyper or reqwest service, worker or async Rust code.",
+      "category": "programming",
+      "subcategory": "rust",
+      "version": "1.0.0",
+      "path": "skills/programming/rust/rust-tokio-async-service-builder",
+      "files": [
+        "SKILL.md",
+        "references/axum-and-tower.md",
+        "references/observability-config-and-deploy.md",
+        "references/runtime-tasks-and-shutdown.md",
+        "references/send-static-and-compile-errors.md",
+        "references/state-channels-and-backpressure.md",
+        "references/testing-tokio-services.md",
+        "references/versions-and-migration.md",
+        "scripts/async_ctx.rs",
+        "scripts/await_holding.rs",
+        "scripts/blocking_in_async.rs",
+        "scripts/cli.rs",
+        "scripts/rsparse.rs",
+        "scripts/scaffold_service.rs",
+        "scripts/service_hygiene.rs",
+        "scripts/task_hygiene.rs"
+      ],
+      "references": [
+        "references/axum-and-tower.md",
+        "references/observability-config-and-deploy.md",
+        "references/runtime-tasks-and-shutdown.md",
+        "references/send-static-and-compile-errors.md",
+        "references/state-channels-and-backpressure.md",
+        "references/testing-tokio-services.md",
+        "references/versions-and-migration.md"
+      ],
+      "scripts": [
+        "scripts/async_ctx.rs",
+        "scripts/await_holding.rs",
+        "scripts/blocking_in_async.rs",
+        "scripts/cli.rs",
+        "scripts/rsparse.rs",
+        "scripts/scaffold_service.rs",
+        "scripts/service_hygiene.rs",
+        "scripts/task_hygiene.rs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rust-tokio-async-service-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/rust/rust-tokio-async-service-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rust-tokio-async-service-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/rust/rust-tokio-async-service-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rust-tokio-async-service-builder"
+    },
+    {
+      "name": "rust-trait-design-reviewer",
+      "title": "Rust Trait Design Reviewer",
+      "description": "Review and design Rust traits and generic APIs: generics vs impl Trait vs dyn Trait (static vs dynamic dispatch), dyn compatibility / object safety (generic methods, Self returns, where Self: Sized, error[E0038] not dyn compatible / cannot be made into an object), associated types vs generic parameters, blanket impls, coherence and orphan rule (E0117, E0119, E0210), newtype, extension, sealed and marker traits, supertraits and trait upcasting (1.86), async fn in traits (1.75) and the Send bound problem (trait_variant, async-trait), RPITIT, GATs, From/Into/TryFrom/AsRef/Borrow, std trait checklist (Debug, Clone, PartialEq, Hash, Default, Display, Error, Send/Sync, serde feature), #[must_use], #[non_exhaustive], semver hazards, Deref abuse, builders, typestate, PhantomData, Box<dyn Error + Send + Sync>, Fn traits, mockall. Use when designing a public Rust trait or API, reviewing a PR adding traits/impls, or fixing E0038, E0117, E0119, E0210, E0277, E0599 or 'future cannot be sent between threads safely'.",
+      "category": "programming",
+      "subcategory": "rust",
+      "version": "1.0.0",
+      "path": "skills/programming/rust/rust-trait-design-reviewer",
+      "files": [
+        "SKILL.md",
+        "references/async-and-advanced-generics.md",
+        "references/coherence-and-trait-patterns.md",
+        "references/dispatch-and-dyn-compatibility.md",
+        "references/semver-and-evolution.md",
+        "references/std-traits-and-api-guidelines.md",
+        "references/testing-trait-designs.md",
+        "references/version-history.md",
+        "scripts/api_signatures.rs",
+        "scripts/api_traits.rs",
+        "scripts/cli.rs",
+        "scripts/dyn_compat.rs",
+        "scripts/rsparse.rs",
+        "scripts/scaffold_trait.rs",
+        "scripts/trait_shape.rs"
+      ],
+      "references": [
+        "references/async-and-advanced-generics.md",
+        "references/coherence-and-trait-patterns.md",
+        "references/dispatch-and-dyn-compatibility.md",
+        "references/semver-and-evolution.md",
+        "references/std-traits-and-api-guidelines.md",
+        "references/testing-trait-designs.md",
+        "references/version-history.md"
+      ],
+      "scripts": [
+        "scripts/api_signatures.rs",
+        "scripts/api_traits.rs",
+        "scripts/cli.rs",
+        "scripts/dyn_compat.rs",
+        "scripts/rsparse.rs",
+        "scripts/scaffold_trait.rs",
+        "scripts/trait_shape.rs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rust-trait-design-reviewer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/rust/rust-trait-design-reviewer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rust-trait-design-reviewer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/rust/rust-trait-design-reviewer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rust-trait-design-reviewer"
+    },
+    {
+      "name": "rust-unsafe-block-auditor",
+      "title": "Rust Unsafe Block Auditor",
+      "description": "Audit unsafe Rust for soundness: inventory every unsafe block, unsafe fn, unsafe impl/trait, extern block and unsafe attribute, check // SAFETY: comments and # Safety docs, and classify each as sound, needs-justification or likely UB, proposing safe alternatives first. Covers the five unsafe superpowers, aliasing (Stacked/Tree Borrows), invalid values, MaybeUninit vs mem::zeroed/uninitialized, transmute, slice::from_raw_parts, Vec::set_len/from_raw_parts, get_unchecked, CString::as_ptr dangling, unsafe impl Send/Sync, Pin projection, FFI (extern \"C\", repr(C), C-unwind, Box::into_raw/from_raw), strict provenance, static mut and &raw, edition 2024 (unsafe extern, #[unsafe(no_mangle)], unsafe_op_in_unsafe_fn, env::set_var), Miri, sanitizers, cargo-fuzz, loom, cargo-geiger and clippy safety lints. Use when reviewing or writing unsafe code or FFI bindings, debugging a segfault, heap corruption or Miri error, migrating to edition 2024, or asked whether unsafe code is sound.",
+      "category": "programming",
+      "subcategory": "rust",
+      "version": "1.0.0",
+      "path": "skills/programming/rust/rust-unsafe-block-auditor",
+      "files": [
+        "SKILL.md",
+        "references/ffi-boundaries.md",
+        "references/raw-pointers-and-provenance.md",
+        "references/tooling-and-testing.md",
+        "references/undefined-behavior-catalog.md",
+        "references/unsafe-superpowers-and-contracts.md",
+        "references/version-history.md",
+        "scripts/cli.rs",
+        "scripts/ffi_and_globals.rs",
+        "scripts/risky_calls.rs",
+        "scripts/rsparse.rs",
+        "scripts/safety_comments.rs",
+        "scripts/ub_patterns.rs",
+        "scripts/unsafe_inventory.rs",
+        "scripts/unsafe_items.rs"
+      ],
+      "references": [
+        "references/ffi-boundaries.md",
+        "references/raw-pointers-and-provenance.md",
+        "references/tooling-and-testing.md",
+        "references/undefined-behavior-catalog.md",
+        "references/unsafe-superpowers-and-contracts.md",
+        "references/version-history.md"
+      ],
+      "scripts": [
+        "scripts/cli.rs",
+        "scripts/ffi_and_globals.rs",
+        "scripts/risky_calls.rs",
+        "scripts/rsparse.rs",
+        "scripts/safety_comments.rs",
+        "scripts/ub_patterns.rs",
+        "scripts/unsafe_inventory.rs",
+        "scripts/unsafe_items.rs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rust-unsafe-block-auditor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/rust/rust-unsafe-block-auditor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rust-unsafe-block-auditor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/rust/rust-unsafe-block-auditor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rust-unsafe-block-auditor"
     },
     {
       "name": "sql-analytics",

@@ -2,6 +2,8 @@ name: Deploy website
 
 # Every push to main validates and tests the skills, builds the site from
 # skills/ and deploys it to Cloudflare Pages (agenticskills.vector-ai-lab.com).
+# Deploys run without manual approval: the "vector-agentic-skills" environment
+# has no required reviewers. Don't add any, or every push will wait for a click.
 #
 # Required secrets, in the "vector-agentic-skills" environment (Settings > Environments)
 # or as repository secrets:
@@ -9,6 +11,7 @@ name: Deploy website
 #   CLOUDFLARE_ACCOUNT_ID  your Cloudflare account ID
 # Optional repository variable:
 #   WEB3FORMS_ACCESS_KEY   lets the contact form send email directly (otherwise it opens the visitor's mail app)
+#   ADSENSE_SLOT           AdSense ad unit id for the display slot above the footer (Auto ads work without it)
 #
 # Versioning: major.minor come from the VERSION file (edit it by hand, e.g.
 # 0.1 -> 1.0). The patch number goes up by one on every deploy and is recorded
@@ -68,12 +71,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: dtolnay/rust-toolchain@stable # compiles the Rust skills' .rs scripts for tests/run_tests.sh
 
       - name: Validate skills, test scripts, refresh catalog
         run: |
           pip install pyyaml
           python scripts/validate_skills.py
-          python scripts/test_skill_scripts.py
+          bash tests/run_tests.sh
           python scripts/build_catalog.py
 
       - uses: actions/setup-node@v4
@@ -96,6 +100,8 @@ jobs:
           SITE_VERSION: ${{ steps.version.outputs.version }}
           # Contact form: Web3Forms access key for agenticskills@vector-ai-lab.com (repo variable, public by design).
           NEXT_PUBLIC_WEB3FORMS_KEY: ${{ vars.WEB3FORMS_ACCESS_KEY }}
+          # AdSense display unit id (repo variable ADSENSE_SLOT). Without it only Auto ads run.
+          NEXT_PUBLIC_ADSENSE_SLOT: ${{ vars.ADSENSE_SLOT }}
           NEXT_TELEMETRY_DISABLED: 1
         run: |
           export BUILD_DATE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
@@ -104,7 +110,7 @@ jobs:
       - name: Check build output
         working-directory: agenticskill-portfolio/out
         run: |
-          for f in index.html 404.html sitemap.xml robots.txt catalog.json _headers dl/all-skills.tar.gz; do
+          for f in index.html 404.html sitemap.xml robots.txt ads.txt catalog.json _headers dl/all-skills.tar.gz; do
             test -f "$f" || { echo "::error::missing $f"; exit 1; }
           done
           skills=$(find ../../skills -mindepth 4 -maxdepth 4 -name SKILL.md | wc -l)

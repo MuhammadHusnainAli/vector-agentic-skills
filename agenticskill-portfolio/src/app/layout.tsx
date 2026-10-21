@@ -5,8 +5,9 @@ import { CommandPalette } from "@/components/command-palette";
 import { Effects } from "@/components/effects";
 import { Header } from "@/components/header";
 import { PageFade } from "@/components/page-fade";
+import { AdSlot } from "@/components/ad-slot";
 import { ArrowRight, ArrowUpRight, Logo } from "@/components/icons";
-import { BUILT_BY, CONTACT_EMAIL, REPO_URL, SITE_NAME, buildDate, formatDate, siteUrl, siteVersion } from "@/lib/site";
+import { ADSENSE_CLIENT, BUILT_BY, CONTACT_EMAIL, REPO_URL, SITE_NAME, buildDate, formatDate, siteUrl, siteVersion } from "@/lib/site";
 import { getCategories, searchIndex, stats } from "@/lib/skills";
 import "./globals.css";
 
@@ -62,6 +63,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${sans.variable} ${mono.variable} ${serif.variable}`}
     >
+      <head>
+        {/* Google AdSense. A plain script tag, since next/script adds a data-nscript attribute AdSense warns about. */}
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <a href="#main" className="sr-only">
           Skip to content
@@ -70,6 +79,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main">
           <PageFade>{children}</PageFade>
         </main>
+        <AdSlot />
         <footer className="footer">
           <div className="container">
             <div className="footer-hero">

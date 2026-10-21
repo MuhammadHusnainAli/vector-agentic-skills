@@ -1,0 +1,20 @@
+# Deliberately broken workspace used by the rust-cargo-workspace-designer script tests.
+[workspace]
+members = ["crates/*", "tools/codegen"]
+default-members = ["crates/api", "apps/server"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/acme/shop"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+uuid = "1"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[dependencies]
+log = "0.4"

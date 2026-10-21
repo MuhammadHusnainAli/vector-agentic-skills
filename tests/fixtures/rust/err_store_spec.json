@@ -1,0 +1,17 @@
+{
+  "crate_kind": "lib",
+  "name": "StoreError",
+  "http": true,
+  "variants": [
+    {"name": "NotFound", "fields": {"id": "u64"}, "message": "item {id} not found",
+     "doc": "No item with this id exists."},
+    {"name": "Conflict", "fields": {"id": "u64", "expected_version": "u64", "actual_version": "u64"},
+     "message": "item {id} was modified (expected version {expected_version}, found {actual_version})"},
+    {"name": "InvalidKey", "fields": {"key": "String", "type": "&'static str"},
+     "message": "invalid {type} key {key:?}"},
+    {"name": "Busy", "message": "storage engine is busy", "retryable": true},
+    {"name": "Io", "from": "std::io::Error", "message": "storage i/o failed"},
+    {"name": "Decode", "fields": {"offset": "u64"}, "source": "serde_json::Error",
+     "message": "cannot decode record at byte {offset}", "http": 500}
+  ]
+}

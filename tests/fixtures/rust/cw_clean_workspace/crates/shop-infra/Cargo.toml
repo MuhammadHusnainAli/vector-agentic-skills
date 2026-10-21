@@ -1,0 +1,16 @@
+[package]
+name = "shop-infra"
+description = "Adapters: database and HTTP implementations of shop-app ports"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+shop-app.workspace = true
+shop-domain = { workspace = true, features = ["serde"] }
+tokio = { workspace = true, features = ["fs", "rt-multi-thread"] }
+
+[lints]
+workspace = true

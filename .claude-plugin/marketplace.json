@@ -1,0 +1,82 @@
+{
+  "name": "vector-agentic-skills",
+  "owner": {
+    "name": "MuhammadHusnainAli"
+  },
+  "metadata": {
+    "description": "Agent Skills for Claude Code and other agents, grouped by category.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "sql-skills",
+      "description": "Write, check, explain, optimise, debug and translate SQL across PostgreSQL, MySQL, SQL Server, Oracle and SQLite, plus analytics, reporting and data-quality work.",
+      "category": "programming",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/programming/sql/sql-analytics",
+        "./skills/programming/sql/sql-data-quality",
+        "./skills/programming/sql/sql-debugger",
+        "./skills/programming/sql/sql-dialect-translator",
+        "./skills/programming/sql/sql-optimizer",
+        "./skills/programming/sql/sql-performance-tuning",
+        "./skills/programming/sql/sql-query-explainer",
+        "./skills/programming/sql/sql-query-writer",
+        "./skills/programming/sql/sql-reporting",
+        "./skills/programming/sql/sql-syntax-checker",
+        "./skills/programming/sql/sql-window-functions"
+      ]
+    },
+    {
+      "name": "python-skills",
+      "description": "Write, review and teach idiomatic modern Python for AI engineers: idioms, comprehensions, type hints, dataclasses, exception design, context managers, concurrency (asyncio, threads, processes, the GIL, deadlocks, Trio/AnyIO) and beginner tutoring.",
+      "category": "programming",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/programming/python/python-async-deadlock-debugger",
+        "./skills/programming/python/python-asyncio-pattern-advisor",
+        "./skills/programming/python/python-beginner-concept-tutor",
+        "./skills/programming/python/python-comprehension-refactorer",
+        "./skills/programming/python/python-context-manager-writer",
+        "./skills/programming/python/python-dataclass-converter",
+        "./skills/programming/python/python-exception-handling-designer",
+        "./skills/programming/python/python-gil-bottleneck-analyzer",
+        "./skills/programming/python/python-idiomatic-code-reviewer",
+        "./skills/programming/python/python-multiprocessing-pool-designer",
+        "./skills/programming/python/python-threadpool-executor-builder",
+        "./skills/programming/python/python-trio-anyio-migrator",
+        "./skills/programming/python/python-type-hints-annotator"
+      ]
+    },
+    {
+      "name": "rust-skills",
+      "description": "Explain borrow-checker and lifetime errors, design traits, error types and Cargo workspaces, audit unsafe code and build Tokio async services in idiomatic modern Rust.",
+      "category": "programming",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/programming/rust/rust-borrow-checker-error-explainer",
+        "./skills/programming/rust/rust-cargo-workspace-designer",
+        "./skills/programming/rust/rust-error-handling-thiserror-anyhow-designer",
+        "./skills/programming/rust/rust-lifetime-annotation-advisor",
+        "./skills/programming/rust/rust-tokio-async-service-builder",
+        "./skills/programming/rust/rust-trait-design-reviewer",
+        "./skills/programming/rust/rust-unsafe-block-auditor"
+      ]
+    },
+    {
+      "name": "excel-skills",
+      "description": "Write error-free Excel formulas, use modern LAMBDA and dynamic-array functions, and organise, format and inspect workbooks.",
+      "category": "productivity",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/productivity/excel/excel-advanced-formulas",
+        "./skills/productivity/excel/excel-formulas",
+        "./skills/productivity/excel/excel-fundamentals"
+      ]
+    }
+  ]
+}

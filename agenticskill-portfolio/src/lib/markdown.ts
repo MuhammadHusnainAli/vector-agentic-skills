@@ -4,8 +4,8 @@ import { Marked, type Tokens } from "marked";
 import { createHighlighter, type Highlighter } from "shiki";
 import { REPO_URL } from "./site";
 
-const LANGS = ["sql", "bash", "python", "vb", "json", "yaml", "markdown", "typescript"] as const;
-const ALIASES: Record<string, string> = { vba: "vb", sh: "bash", shell: "bash", py: "python", ts: "typescript", md: "markdown", yml: "yaml" };
+const LANGS = ["sql", "bash", "python", "rust", "toml", "vb", "json", "yaml", "markdown", "typescript"] as const;
+const ALIASES: Record<string, string> = { vba: "vb", sh: "bash", shell: "bash", py: "python", rs: "rust", ts: "typescript", md: "markdown", yml: "yaml" };
 
 let highlighter: Promise<Highlighter> | null = null;
 function getHighlighter() {
@@ -85,7 +85,8 @@ export async function renderMarkdown(md: string, fromFile: string): Promise<{ ht
         return `<a href="${url}"${title ? ` title="${title}"` : ""}${external ? ' target="_blank" rel="noopener"' : ""}>${text}</a>`;
       },
       code({ text, lang }: Tokens.Code) {
-        const raw = (lang ?? "").trim().toLowerCase();
+        // Fences may carry rustdoc attributes: ```rust,ignore / ```rust,compile_fail
+        const raw = (lang ?? "").trim().toLowerCase().split(",")[0];
         const language = ALIASES[raw] ?? raw;
         const label = raw || (text.trimStart().startsWith("=") ? "excel" : "text");
         const body = (LANGS as readonly string[]).includes(language)

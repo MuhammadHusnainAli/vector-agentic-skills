@@ -2195,6 +2195,45 @@ figure.code .copy[data-copied="true"] {
 
 /* ───────────────────────── Footer: premium green ───────────────────────── */
 
+/* ───────────────────────── Ads ───────────────────────── */
+
+/* One display unit between the page and the footer, on the same 1200px container as the content.
+   The min-height reserves space so the page does not shift when the ad arrives. The <ins> itself is
+   never styled beyond size and centring: AdSense policy forbids clipping or decorating creatives. */
+.ad-slot {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.ad-slot .ad-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.ad-slot ins.adsbygoogle {
+  width: 100%;
+  min-height: 100px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .ad-slot ins.adsbygoogle {
+    min-height: 90px;
+  }
+}
+/* A filled ad brings its own size. */
+.ad-slot ins.adsbygoogle[data-ad-status="filled"] {
+  min-height: 0;
+}
+/* No ad available (or blocked): remove the whole slot, label included. */
+.ad-slot:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
+  display: none;
+}
+
 .footer {
   background: var(--card-green);
   color: var(--on-green);

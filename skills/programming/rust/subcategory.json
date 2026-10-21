@@ -1,0 +1,5 @@
+{
+  "title": "Rust",
+  "description": "Explain borrow-checker and lifetime errors, design traits, error types and Cargo workspaces, audit unsafe code and build Tokio async services in idiomatic modern Rust.",
+  "order": 3
+}

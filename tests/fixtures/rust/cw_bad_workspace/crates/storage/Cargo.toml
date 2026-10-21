@@ -1,0 +1,14 @@
+[package]
+name = "shop-storage"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+shop-core = { path = "../core" }
+tokio = { version = "1.38", features = ["fs"] }
+rand = "*"

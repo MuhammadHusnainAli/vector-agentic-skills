@@ -35,14 +35,17 @@ What the answer should look like.
 
 ## Scripts
 
-Every skill ships at least one tested helper script (standard library only,
-`--help`, `--json` where useful, meaningful exit codes):
+Every skill ships at least one tested helper script, written in the skill's own
+language (Python skills: `.py`; Rust skills: std-only `.rs` compiled with
+`rustc -O scripts/my_tool.rs -o /tmp/my_tool`). Keep each script small and
+focused; split work across several scripts rather than one big file. Standard
+library only, `--help`, `--json` where useful, meaningful exit codes:
 
 ```bash
 python scripts/my_script.py --help
 ```
 
-Add a test case for it in scripts/test_skill_scripts.py.
+Add test cases for it in tests/cases/<subcategory>.sh and run tests/run_tests.sh.
 
 ## Additional Resources
 

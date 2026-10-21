@@ -1,0 +1,18 @@
+   Compiling proc-macro2 v1.0.95
+   Compiling unicode-ident v1.0.18
+   Compiling quote v1.0.40
+   Compiling syn v2.0.101
+   Compiling serde_derive v1.0.219
+   Compiling serde v1.0.219
+   Compiling tokio v1.45.1
+   Compiling order-api v0.4.1 (/home/dev/order-api)
+warning: unused variable: `started`
+  --> src/main.rs:24:9
+   |
+24 |     let started = std::time::Instant::now();
+   |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_started`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: `order-api` (bin "order-api") generated 1 warning (run `cargo fix --bin "order-api"` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 41.87s

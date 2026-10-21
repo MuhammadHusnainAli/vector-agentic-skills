@@ -110,7 +110,7 @@ def validate():
             errors.append(f"{rel}: metadata.subcategory {md.get('subcategory')!r} must be {sub!r}")
 
         scripts = sorted((skill_dir / "scripts").glob("*")) if (skill_dir / "scripts").is_dir() else []
-        scripts = [s for s in scripts if s.is_file() and s.suffix in (".py", ".sh", ".js", ".mjs")]
+        scripts = [s for s in scripts if s.is_file() and s.suffix in (".py", ".sh", ".js", ".mjs", ".rs")]
         if not scripts:
             errors.append(f"{rel}: skill must ship at least one helper script in scripts/")
         for s in scripts:

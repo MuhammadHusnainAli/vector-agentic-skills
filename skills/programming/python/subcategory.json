@@ -1,5 +1,5 @@
 {
   "title": "Python",
-  "description": "Write, review and teach idiomatic modern Python for AI engineers: idioms, comprehensions, type hints, dataclasses, exception design, context managers and beginner tutoring.",
+  "description": "Write, review and teach idiomatic modern Python for AI engineers: idioms, comprehensions, type hints, dataclasses, exception design, context managers, concurrency (asyncio, threads, processes, the GIL, deadlocks, Trio/AnyIO) and beginner tutoring.",
   "order": 2
 }

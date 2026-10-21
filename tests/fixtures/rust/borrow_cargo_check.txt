@@ -1,0 +1,132 @@
+    Checking inventory-svc v0.3.0 (/home/dev/inventory-svc)
+warning: unused import: `std::collections::BTreeMap`
+ --> src/report.rs:3:5
+  |
+3 | use std::collections::BTreeMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+error[E0502]: cannot borrow `self.orders` as mutable because it is also borrowed as immutable
+  --> src/inventory.rs:42:17
+   |
+40 |         for order in self.orders.iter() {
+   |                      ------------------
+   |                      |
+   |                      immutable borrow occurs here
+   |                      immutable borrow later used here
+41 |             if order.needs_split() {
+42 |                 self.orders.push(order.split_remainder());
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ mutable borrow occurs here
+
+error[E0499]: cannot borrow `self.items` as mutable more than once at a time
+  --> src/cache.rs:26:9
+   |
+19 |     pub fn get_or_load(&mut self, sku: &str) -> &mut Item {
+   |                        - let's call the lifetime of this reference `'1`
+20 |         if let Some(item) = self.items.get_mut(sku) {
+   |                             ----------------------- first mutable borrow occurs here
+21 |             return item;
+   |                    ---- returning this value requires that `self.items` is borrowed for `'1`
+...
+26 |         self.items.insert(sku.to_owned(), loaded);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ second mutable borrow occurs here
+
+error[E0382]: borrow of moved value: `batch`
+  --> src/sync.rs:58:32
+   |
+51 |     pub fn flush(&mut self, batch: Vec<Order>) -> usize {
+   |                             ----- move occurs because `batch` has type `Vec<Order>`, which does not implement the `Copy` trait
+52 |         for order in batch {
+   |                      ----- `batch` moved due to this implicit call to `.into_iter()`
+...
+58 |         tracing::info!(count = batch.len(), "flushed batch");
+   |                                ^^^^^^^^^^^ value borrowed here after move
+   |
+note: `into_iter` takes ownership of the receiver `self`, which moves `batch`
+  --> /rustc/17067e9ac6d7e98f18d4a6b3f0b1d55e2f9d1b1a/library/core/src/iter/traits/collect.rs:313:18
+help: consider iterating over a slice of the `Vec<Order>`'s content to avoid moving into the `for` loop
+   |
+52 |         for order in &batch {
+   |                      +
+
+error[E0507]: cannot move out of index of `Vec<Order>`
+  --> src/report.rs:14:21
+   |
+14 |         let first = orders[0];
+   |                     ^^^^^^^^^ move occurs because value has type `Order`, which does not implement the `Copy` trait
+   |
+help: consider borrowing here
+   |
+14 |         let first = &orders[0];
+   |                     +
+
+error[E0373]: closure may outlive the current function, but it borrows `config`, which is owned by the current function
+  --> src/main.rs:31:32
+   |
+31 |     let handle = thread::spawn(|| {
+   |                                ^^ may outlive borrowed value `config`
+32 |         reporter::run(&config);
+   |                        ------ `config` is borrowed here
+   |
+note: function requires argument type to outlive `'static`
+  --> src/main.rs:31:18
+   |
+31 |       let handle = thread::spawn(|| {
+   |  __________________^
+32 | |         reporter::run(&config);
+33 | |     });
+   | |______^
+help: to force the closure to take ownership of `config` (and any other referenced variables), use the `move` keyword
+   |
+31 |     let handle = thread::spawn(move || {
+   |                                ++++
+
+error[E0716]: temporary value dropped while borrowed
+  --> src/metrics.rs:22:21
+   |
+22 |         let names = self.registry.lock().unwrap().names();
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        - temporary value is freed at the end of this statement
+   |                     |
+   |                     creates a temporary value which is freed while still in use
+23 |         for name in names {
+   |                     ----- borrow later used here
+   |
+   = note: consider using a `let` binding to create a longer lived value
+
+error[E0596]: cannot borrow `self.stats` as mutable, as it is behind a `&` reference
+  --> src/metrics.rs:35:9
+   |
+35 |         self.stats.record(latency);
+   |         ^^^^^^^^^^ `self` is a `&` reference, so the data it refers to cannot be borrowed as mutable
+   |
+help: consider changing this to be a mutable reference
+   |
+33 |     pub fn observe(&mut self, latency: Duration) {
+   |                     +++
+
+error[E0515]: cannot return value referencing local variable `line`
+  --> src/report.rs:30:5
+   |
+30 |     line.as_str()
+   |     ----^^^^^^^^^
+   |     |
+   |     returns a value referencing data owned by the current function
+   |     `line` is borrowed here
+
+error[E0499]: cannot borrow `accounts` as mutable more than once at a time
+  --> src/ledger.rs:12:19
+   |
+11 |     let from = &mut accounts[from_idx];
+   |                     -------- first mutable borrow occurs here
+12 |     let to = &mut accounts[to_idx];
+   |                   ^^^^^^^^ second mutable borrow occurs here
+13 |     from.balance -= amount;
+   |     ---------------------- first borrow later used here
+   |
+   = help: use `.split_at_mut(position)` to obtain two mutable non-overlapping sub-slices
+
+Some errors have detailed explanations: E0373, E0382, E0499, E0502, E0507, E0515, E0596, E0716.
+For more information about an error, try `rustc --explain E0373`.
+warning: `inventory-svc` (bin "inventory-svc") generated 1 warning
+error: could not compile `inventory-svc` (bin "inventory-svc") due to 9 previous errors; 1 warning emitted

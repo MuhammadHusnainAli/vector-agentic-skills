@@ -1,0 +1,42 @@
+# Clean virtual workspace: layered domain <- app <- infra <- server, plus xtask.
+[workspace]
+members = ["crates/*", "apps/*", "xtask"]
+default-members = ["apps/shop-server"]
+resolver = "3"
+
+[workspace.package]
+version = "0.3.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/acme/shop"
+
+[workspace.dependencies]
+# internal crates: path + version so they can be published
+shop-domain = { path = "crates/shop-domain", version = "0.3.0" }
+shop-app = { path = "crates/shop-app", version = "0.3.0" }
+shop-infra = { path = "crates/shop-infra", version = "0.3.0" }
+shop-macros = { path = "crates/shop-macros", version = "0.3.0" }
+# external crates: defaults off at the root, members add features
+serde = { version = "1.0.200", default-features = false }
+thiserror = "2"
+tokio = { version = "1.38", default-features = false }
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unreachable_pub = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+unwrap_used = "warn"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
+
+[profile.dev.package."*"]
+opt-level = 2

@@ -1,0 +1,15 @@
+[package]
+name = "shop-core"
+version = "0.1.0"
+edition = "2018"
+license.workspace = true
+description = "Domain types"
+
+[dependencies]
+serde = "1.0.200"
+tokio = { version = "1.28", features = ["sync"] }
+shop-storage = { path = "../storage" }
+money = { git = "https://github.com/acme/money" }
+
+[profile.release]
+lto = true

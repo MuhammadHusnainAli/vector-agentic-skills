@@ -1,0 +1,33 @@
+   Compiling event-bus v0.2.0 (/home/dev/event-bus)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.31s
+     Running unittests src/lib.rs (target/debug/deps/event_bus-5f0d2c7a9b8e4c13)
+
+running 4 tests
+test tests::subscribe_and_emit ... ok
+test tests::unsubscribe_removes_listener ... ok
+test tests::listener_can_resubscribe_while_handling ... FAILED
+test tests::shared_counter_is_poisoned_after_panic ... FAILED
+
+failures:
+
+---- tests::listener_can_resubscribe_while_handling stdout ----
+
+thread 'tests::listener_can_resubscribe_while_handling' panicked at src/bus.rs:41:38:
+already borrowed: BorrowMutError
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- tests::shared_counter_is_poisoned_after_panic stdout ----
+
+thread '<unnamed>' panicked at src/stats.rs:18:13:
+counter overflow while recording latency
+thread 'tests::shared_counter_is_poisoned_after_panic' panicked at src/stats.rs:27:40:
+called `Result::unwrap()` on an `Err` value: PoisonError { .. }
+
+
+failures:
+    tests::listener_can_resubscribe_while_handling
+    tests::shared_counter_is_poisoned_after_panic
+
+test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `--lib`
