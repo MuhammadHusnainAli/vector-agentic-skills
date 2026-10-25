@@ -1,0 +1,6 @@
+part,phase,op,process,char_no,product_char,process_char,special,spec,method,sample_size,frequency,control_method,reaction_plan
+VB-2210,production,OP20,Bore,1,Bore diameter,,SC,12.000 +0.018/-0.000 mm,Air gauge AG-07 every 10th part,1,every 10 parts,X-bar/R chart,Stop; quarantine parts since the last good check; 100% inspect; adjust offset; record on NCR
+VB-2210,production,OP20,Bore,2,,Insert life,SC,220 parts max,Tool-life interlock at 220 parts,100%,continuous,Error-proofing,Stop; change insert; verify next part
+VB-2210,production,OP30,Thread,3,Thread M8 depth,,,12 mm min,Thread presence sensor (automatic),100%,continuous,Error-proofing,Machine stops; remove part to red bin
+VB-2210,production,OP45,Crimp,4,Pull-out force,,CC,>= 250 N,Pull test,1,per shift,Check sheet,Notify supervisor
+VB-2210,production,OP50,Pack,5,Surface face A,,,No scratches > 2 mm,Visual audit,5,,Check sheet,Quarantine pallet; sort

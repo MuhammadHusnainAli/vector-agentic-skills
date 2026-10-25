@@ -1,0 +1,11 @@
+supplier,period,received,rejected,deliveries,on_time,scars,scars_on_time
+MetalCo,2026-Q1,40000,8,60,60,0,0
+MetalCo,2026-Q2,42000,10,62,61,0,0
+MetalCo,2026-Q3,41000,6,60,60,0,0
+CastCorp,2026-Q1,12000,9,30,29,1,1
+CastCorp,2026-Q2,11500,30,30,27,2,1
+CastCorp,2026-Q3,12500,95,32,26,3,1
+PlastiForm,2026-Q1,80000,30,90,86,0,0
+PlastiForm,2026-Q2,82000,45,92,89,0,0
+PlastiForm,2026-Q3,79000,70,88,85,0,0
+FastenAll,2026-Q3,150000,40,40,40,0,0

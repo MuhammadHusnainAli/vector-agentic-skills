@@ -1,0 +1,23 @@
+Gage R&R Study - ANOVA Method
+
+Two-Way ANOVA Table With Interaction
+
+Source             DF        SS         MS        F      P
+Part                9  0.0024018  0.0002669  1097.1  0.000
+Operator            2  0.0000037  0.0000018     7.6  0.004
+Part * Operator    18  0.0000044  0.0000002     1.2  0.314
+Repeatability      60  0.0000125  0.0000002
+Total              89  0.0024224
+
+Gage R&R
+
+                              Study Var  %Study Var  %Tolerance
+Source              StdDev (SD)  (6 * SD)       (%SV)  (SV/Toler)
+Total Gage R&R        0.0005535  0.0033207       10.11       18.45
+  Repeatability       0.0005004  0.0030022        9.14       16.68
+  Reproducibility     0.0002364  0.0014182        4.32        7.88
+    Operator          0.0002364  0.0014182        4.32        7.88
+Part-To-Part          0.0054445  0.0326669       99.49      181.48
+Total Variation       0.0054726  0.0328355      100.00      182.42
+
+Number of Distinct Categories = 13

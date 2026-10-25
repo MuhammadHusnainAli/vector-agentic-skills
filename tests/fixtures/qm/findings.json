@@ -1,0 +1,14 @@
+[
+  {"id": "NC-01", "grade": "minor", "clause": "7.1.5.2", "requirement": "Measuring equipment shall be calibrated at specified intervals against traceable standards (ISO 9001 7.1.5.2 a).",
+   "evidence": "At lathe 4, micrometer M-112 was in use with calibration due 2026-08-01 (calibration register CAL-REG). 1 of 8 gauges sampled at the station was overdue.",
+   "statement": "Measuring equipment used for product acceptance was not always within its calibration interval."},
+  {"id": "NC-02", "grade": "minor", "clause": "9.2", "requirement": "The organization shall conduct internal audits at planned intervals.",
+   "evidence": "No internal audits have been carried out since certification in 2024; the audit programme shows 0 of 9 audits completed.",
+   "statement": "The internal audit programme has not been implemented."},
+  {"id": "NC-03", "grade": "major", "clause": "", "requirement": "",
+   "evidence": "Some training records were poor and Mr. Smith could not find them.",
+   "statement": "Training could be improved; the company should implement an LMS."},
+  {"id": "OFI-01", "grade": "ofi", "clause": "9.1.3", "requirement": "",
+   "evidence": "Scrap Pareto for Q3 2026 (QF-31) is produced monthly but shows no actions on the top defect.",
+   "statement": "Consider linking the monthly scrap Pareto to the CAPA log so top defects get an owner."}
+]

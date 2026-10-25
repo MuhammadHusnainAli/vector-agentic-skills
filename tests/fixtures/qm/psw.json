@@ -1,0 +1,11 @@
+{
+  "part_number": "VB-2210", "part_name": "Valve body", "drawing_rev": "C", "eng_change_level": "ECN-4471", "po_number": "PO-88120",
+  "weight_kg": 0.4125, "submission_level": 3, "reason": "Initial submission",
+  "results": {"dimensional": true, "material": true, "appearance": true, "statistical": true},
+  "imds": "IMDS 1234567/1 submitted 2027-07-02", "signed_by": "Quality manager", "signed_date": "2027-07-20",
+  "studies": [
+    {"characteristic": "Bore 12.000 +0.018", "special": true, "ppk": 1.92, "n": 125, "stable": true},
+    {"characteristic": "Flange thickness 8.0 +/-0.1", "special": true, "ppk": 1.41, "n": 125, "stable": true},
+    {"characteristic": "Thread M8 position", "special": false, "ppk": 1.21, "n": 60, "stable": true}
+  ]
+}

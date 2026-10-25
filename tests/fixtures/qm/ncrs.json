@@ -1,0 +1,14 @@
+[
+  {"ncr_id": "NCR-2611", "date": "2026-10-02", "detected_by": "Final inspector", "detection_point": "final",
+   "part_number": "VB-2210", "revision": "C", "lot": "L2609-14", "quantity_affected": 40, "quantity_checked": 200,
+   "requirement": "Bore 12.000 +0.018/-0.000 mm (drawing VB-2210 rev C, item 7)", "actual": "Bore 12.021-12.030 mm on 40 of 200 parts",
+   "containment": [{"location": "final inspection WIP", "action": "100% bore check", "qty": 200, "by": "Inspector", "date": "2026-10-02"},
+                   {"location": "finished stock", "action": "quarantined", "qty": 360, "by": "Stores", "date": "2026-10-02"},
+                   {"location": "in transit", "action": "none shipped since 2026-09-26", "qty": 0, "by": "Logistics", "date": "2026-10-02"},
+                   {"location": "customer", "action": "customer stock checked by phone, 0 suspect", "qty": 0, "by": "Quality engineer", "date": "2026-10-03"}],
+   "disposition": "scrap", "disposition_by": "Quality engineer (MRB)", "capa_ref": "CA-118", "repeat": false},
+  {"ncr_id": "NCR-2614", "date": "2026-10-05", "detected_by": "", "detection_point": "customer",
+   "part_number": "VB-3100", "description": "Parts are defective",
+   "containment": [{"location": "finished stock", "action": "quarantined"}],
+   "disposition": "use as is"}
+]

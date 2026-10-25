@@ -1,0 +1,5 @@
+objective,function,metric,baseline,target,due,owner,resources,evaluation,policy_link
+Improve on-time delivery,Planning,OTD % (customer request date),88%,>= 95%,2027-03-31,Planning manager,Capacity model; weekly S&OP meeting,Weekly KPI board; quarterly MR,On time
+Reduce internal scrap,Production,Scrap % of machined parts,2.4%,< 1.5%,2027-06-30,Production manager,SPC on 3 critical features; tool life study,Monthly scrap Pareto,Meet every drawing requirement
+Cut customer complaints,Quality,Complaints per quarter,6,8,2026-06-30,,,,
+Better supplier quality,Purchasing,Supplier PPM,,good,next year,Buyer,,,

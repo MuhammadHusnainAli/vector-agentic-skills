@@ -1,0 +1,15 @@
+{
+  "title": "Reduce bore scrap on VB-2210",
+  "business_case": "Bore scrap and rework on VB-2210 cost GBP 86k in FY2026 and caused 2 customer complaints; supports the plant objective of scrap < 1.5%.",
+  "problem_statement": "From January to September 2026, 3.1% of VB-2210 valve bodies machined on lathes 1-4 were scrapped or reworked for bore diameter outside 12.000-12.018 mm, versus 0.8% on similar parts.",
+  "goal_statement": "Reduce VB-2210 bore scrap and rework from 3.1% to 0.8% by 2027-04-30 without increasing cycle time.",
+  "customer_ctq": "Bore diameter 12.000 +0.018 mm (seal leak test)",
+  "primary_metric": {"name": "bore scrap + rework rate", "unit": "%", "baseline": 3.1, "target": 0.8, "direction": "lower"},
+  "secondary_metric": "OP20 cycle time must stay <= 94 s",
+  "scope": {"in": "OP20 finish boring on lathes 1-4, all shifts", "out": "Casting supplier, other part numbers"},
+  "champion": "Operations director", "process_owner": "Machining manager", "belt": "Green belt - process engineer",
+  "team": ["Setter", "Quality engineer", "Maintenance technician"],
+  "start": "2026-11-02",
+  "phases": {"define": "2026-11-20", "measure": "2026-12-18", "analyze": "2027-02-05", "improve": "2027-03-19", "control": "2027-04-30"},
+  "financial_benefit": "GBP 64k per year hard savings"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "8D-C31", "opened": "2026-08-22", "champion": "Operations director",
+  "team": ["Quality engineer (lead)", "Process engineer", "Production supervisor", "Logistics"],
+  "d2": {"what": "Scratches 5-12 mm on face A of HS-110 heat sinks", "where": "Found at customer receiving inspection, Plant 2",
+         "when": "Lots shipped 2026-08-10 to 2026-08-20", "how_many": "60 of 400 parts in 2 lots", "how_detected": "Customer visual inspection",
+         "is_not": "Not on face B; not on lots packed on line 1; not on parts before packing (checked 50)"},
+  "d3": {"actions": "Sorted 1,200 parts in stock and at customer; clean-point label from lot L2608-22", "date": "2026-08-23", "verified": "0 scratches in 1,140 sorted good parts; customer confirmed"},
+  "d4": {"date": "2026-08-30", "method": "Is/is-not, fishbone, packing trial",
+         "occurrence_cause": "Line 2 packing tray has no dividers; parts slide and rub face A during forklift transport",
+         "occurrence_verified": "Transport trial: 14 of 40 parts scratched without dividers, 0 of 40 with dividers",
+         "escape_cause": "Final visual inspection is before packing; no check after packing",
+         "escape_verified": "Process flow review; scratches appear only after packing"},
+  "d5": {"actions": [{"action": "Divider trays (one cavity per part) for HS-110", "addresses": "occurrence"},
+                     {"action": "Audit 5 parts per pallet after packing, added to control plan", "addresses": "escape"}],
+         "verified": "Trial 3 pallets, 0 scratches in 600 parts"},
+  "d6": {"date": "2026-09-15", "validation": "6 weeks, 4,800 parts, 0 customer rejects", "containment_removed": "2026-10-27"},
+  "d7": {"fmea_updated": "PFMEA packing step: new failure mode, D 7->4", "control_plan_updated": "CP-110 rev E", "similar_products": "HS-120 and HS-130 moved to divider trays", "lessons_learned": "Packaging review added to APQP checklist"},
+  "d8": {"date": "2026-10-30", "recognition": "Team presented at plant meeting"}
+}

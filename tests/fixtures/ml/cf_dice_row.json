@@ -1,0 +1,10 @@
+{
+  "tenure_months": 15,
+  "monthly_charges": 101.37,
+  "total_charges": 1520.55,
+  "support_calls": 2,
+  "last_login_days": 5,
+  "plan": "premium",
+  "region": "west",
+  "payment_method": "bank"
+}

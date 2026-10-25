@@ -1,0 +1,8 @@
+step,function,failure_mode,effect,S,cause,prevention,O,detection,D,special,action,owner,due
+OP20 Bore,Bore to 12.000 +0.018,Bore oversize,Valve leaks at customer test; field leak,8,Insert worn beyond limit,Tool change every 400 parts,6,Bore gauge 1 in 50,6,SC,Tool-life interlock at 220 parts,Process engineer,2026-11-15
+OP20 Bore,Bore to 12.000 +0.018,Bore oversize,Valve leaks at customer test; field leak,8,Wrong offset after insert change,Setup sheet,4,First-off bore check,5,SC,,,
+OP30 Thread,Thread M8 to depth 12,Thread missing,Bolt cannot be fitted; line stop,7,Tap broken,Tap life counter,3,Thread presence sensor (automatic),2,,,,
+OP40 Weld,Weld bracket,Weld crack,Bracket detaches; vehicle loss of control,10,Weld current too low,,3,Visual inspection,2,,,,
+OP45 Crimp,Crimp terminal,Low pull-out force,Loss of signal; airbag warning,9,Crimp height drift,Crimp height check at setup,5,Pull test 1 per shift,6,CC,,,
+OP50 Pack,Pack in trays,Scratches face A,Cosmetic reject,4,Parts touch in tray,Divider trays,2,Audit 5 per pallet,6,,,,
+OP60 Wash,Wash,Residue,Contamination,5,Detergent concentration,,1,Visual,11,,,,

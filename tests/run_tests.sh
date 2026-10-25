@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Smoke-test every helper script that ships inside a skill.
 #
-#   1. Every skills/*/*/*/scripts/* entry point (.py, .sh, .rs with fn main)
+#   1. Every skills/*/*/*/scripts/* entry point (.py, .sh, .rs with fn main;
+#      files named _*.py are helper modules)
 #      must run `--help` successfully and print "usage".
 #   2. Every entry point needs at least one case in tests/cases/*.sh: it runs
 #      against the fixtures in tests/fixtures and must exit with the expected
@@ -48,7 +49,9 @@ SQL=skills/programming/sql
 XL=skills/productivity/excel
 PY=skills/programming/python
 RS=skills/programming/rust
-export FX SQL XL PY RS
+ML=skills/ai-ml/classical-ml
+QM=skills/manufacturing/quality-management
+export FX SQL XL PY RS ML QM
 
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
@@ -69,7 +72,8 @@ for f in tests/cases/*.sh; do source "$f"; done
 matches() { [[ -z $FILTER || $1 == *"$FILTER"* ]]; }
 
 # ---------------------------------------------------------------- entry points
-is_entry() {  # Rust files without fn main are modules shared by the scripts
+is_entry() {  # Rust files without fn main and _private.py helpers are modules shared by the scripts
+  [[ $(basename "$1") != _* ]] || return 1
   [[ $1 != *.rs ]] || grep -qE '^[[:space:]]*(pub[[:space:]]+)?fn[[:space:]]+main[[:space:]]*\(' "$1"
 }
 SCRIPTS=()

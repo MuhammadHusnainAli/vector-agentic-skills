@@ -1,0 +1,4 @@
+0:	learn: 0.6500	test: 0.6600	best: 0.6600 (0)	total: 5ms
+50:	learn: 0.3000	test: 0.3500	best: 0.3500 (50)
+100:	learn: 0.2000	test: 0.3400	best: 0.3400 (100)
+150:	learn: 0.1200	test: 0.3600	best: 0.3400 (100)

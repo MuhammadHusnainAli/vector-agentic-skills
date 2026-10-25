@@ -14,6 +14,7 @@ Each skill is a folder with a `SKILL.md` (YAML frontmatter + instructions), `ref
 | [Programming](skills/programming/README.md) | [Python](skills/programming/python/README.md) | 13 | Idiomatic code review, comprehensions, type hints, dataclasses, exception design, context managers, asyncio, threads, multiprocessing, the GIL, deadlocks, Trio/AnyIO, beginner tutoring (for AI engineers) |
 | [Programming](skills/programming/README.md) | [Rust](skills/programming/rust/README.md) | 7 | Borrow-checker errors, lifetimes, trait design, thiserror/anyhow error handling, unsafe audits, Tokio/axum services, Cargo workspaces |
 | [Productivity](skills/productivity/README.md) | [Excel](skills/productivity/excel/README.md) | 3 | Formulas, advanced formulas (LAMBDA, LET, dynamic arrays, regex), workbook fundamentals |
+| [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | Problem framing, feature engineering, scikit-learn/XGBoost/LightGBM/CatBoost, clustering, validation, SHAP/PDP/LIME/counterfactuals, model cards, forecasting, survival, recommenders, ranking, fraud, uplift |
 
 Every skill ships at least one helper script, written in the skill's language (Rust skills ship std-only `.rs` files compiled with `rustc`) and smoke-tested in CI by `tests/run_tests.sh`:
 
@@ -54,6 +55,51 @@ Every skill ships at least one helper script, written in the skill's language (R
 | excel-formulas | `check_formula.py` | Lints formulas: parentheses, strings, unknown and volatile functions |
 | excel-advanced-formulas | `check_compat.py` | Reports the minimum Excel version a formula needs |
 | excel-fundamentals | `inspect_workbook.py` | Reports an .xlsx's sheets, tables, names, validation and links |
+| ml-problem-framing-advisor | `frame_check.py`, `target_profile.py` | Checks a problem framing for decision, label windows, leakage-by-framing; profiles the target |
+| ml-feasibility-assessor | `feasibility_scan.py`, `sample_size.py` | GO / NO-GO scan: volume, label quality, single-feature signal, leaks; sample-size arithmetic |
+| ml-baseline-model-builder | `baseline_scores.py`, `scaffold_baseline.py` | Dummy, rule and OneR baselines with honest metrics; scaffolds a leak-free first model |
+| ml-success-metric-selector | `metric_report.py`, `pick_metric.py` | Picks the metric from the decision; full metric panel and cost-optimal threshold (sklearn-identical) |
+| ml-vs-rules-decision-advisor | `rule_learner.py`, `rules_vs_ml.py` | Scores rules vs ML on 12 factors; learns a readable rule set and emits it as SQL |
+| ml-project-scoping-writer | `scope_doc.py`, `scope_lint.py` | Writes the ML scoping doc from a JSON spec; lints scope docs for vague commitments |
+| feature-engineering-idea-generator | `profile_columns.py`, `suggest_features.py` | Infers column roles and proposes ranked, leakage-aware features with pandas code |
+| categorical-encoding-selector | `encoding_plan.py`, `te_leakage_check.py` | Per-column encoding plan and ColumnTransformer; measures target-encoding leakage |
+| feature-scaling-advisor | `scale_impact.py`, `scaling_plan.py` | Scaling/transform plan per column; measures the effect on a k-NN model |
+| feature-selection-analyzer | `filter_select.py`, `importance_stability.py` | Filter selection with redundancy groups; importance stability across folds |
+| target-leakage-detector | `code_leak_lint.py`, `leakage_scan.py` | Out-of-fold single-feature and missingness leak scan; AST linter for pipeline leaks |
+| time-based-feature-builder | `gen_window_sql.py`, `pit_features.py` | Point-in-time window, recency and RFM features; matching SQL for 4 warehouses |
+| feature-store-schema-designer | `gen_feast_repo.py`, `lint_feature_spec.py` | Lints feature specs for 12 design errors; generates a working Feast repo |
+| scikit-learn-pipeline-builder | `gen_pipeline.py`, `pipeline_lint.py` | Generates a runnable Pipeline/ColumnTransformer script; lints sklearn API misuse |
+| classification-model-selector | `bakeoff_scaffold.py`, `select_classifier.py` | Ranks classifiers for the data and constraints; scaffolds a fair bake-off |
+| regression-model-trainer | `residual_report.py`, `target_diagnostics.py` | Target diagnostics to pick the loss; residual report with calibration and segment bias |
+| xgboost-lightgbm-tuner | `gbm_param_advisor.py`, `parse_gbm_log.py` | Data-sized GBM parameters; parses training logs for best iteration and overfitting |
+| catboost-model-builder | `catboost_params_check.py`, `catboost_plan.py` | Plans cat/text/numeric columns and a training script; checks CatBoost parameter conflicts |
+| imbalanced-class-handler | `imbalance_report.py`, `threshold_tuner.py` | Imbalance severity and strategy ladder; thresholds under six policies with prior correction |
+| ml-model-comparison-reporter | `compare_models.py`, `paired_predictions.py` | Corrected t-test, Wilcoxon, Bayesian, Friedman on CV folds; DeLong, McNemar, bootstrap on one test set |
+| clustering-algorithm-selector | `cluster_tendency.py`, `select_clustering.py` | Hopkins tendency check; recommends a clustering algorithm for the data shape |
+| kmeans-cluster-count-finder | `cluster_profile.py`, `k_sweep.py` | Elbow, silhouette, CH, DB and gap statistic sweep; profiles the clusters |
+| dbscan-parameter-tuner | `dbscan_grid.py`, `kdist.py` | k-distance knee for eps; stability-checked eps/min_samples grid |
+| pca-dimensionality-reducer | `pca_outliers.py`, `pca_report.py` | Explained variance, components to keep, loadings; reconstruction-error outliers |
+| umap-tsne-embedding-visualizer | `embedding_trust.py`, `gen_embedding_plot.py` | Trustworthiness and neighbour preservation of 2-D embeddings; plot script generator |
+| anomaly-detection-model-builder | `anomaly_eval.py`, `anomaly_scores.py` | Pure-Python Isolation Forest / robust scores; evaluates detectors against labels |
+| cross-validation-strategy-designer | `cv_advisor.py`, `fold_preview.py` | Recommends the splitter (grouped, temporal, stratified); previews folds |
+| train-test-split-auditor | `near_duplicates.py`, `split_audit.py` | Audits splits for overlap, drift and leakage; finds near-duplicates across splits |
+| hyperparameter-search-planner | `analyze_search.py`, `search_planner.py` | Search strategy and spaces from the budget; analyses results for boundaries and 1-SE picks |
+| optuna-study-writer | `gen_optuna_study.py`, `optuna_lint.py` | Generates resumable, prunable Optuna studies for 6 model families; lints Optuna code |
+| learning-curve-diagnoser | `diagnose_curve.py`, `gen_learning_curve.py` | Variance/bias/data-limited verdict with a capped power-law extrapolation; curve script generator |
+| overfitting-underfitting-diagnoser | `training_history.py`, `validation_curve_report.py` | Training-history verdicts and patience; validation-curve zones and the 1-SE pick |
+| shap-value-explainer | `explain_row.py`, `gen_shap_script.py`, `shap_summary.py` | Computes SHAP correctly per model type; global summary with interactions; text waterfalls |
+| feature-importance-reporter | `compare_importances.py`, `gen_importance_script.py` | Gain, held-out permutation, grouped permutation and SHAP; explains where methods disagree |
+| partial-dependence-plot-builder | `gen_pdp_script.py`, `ice_analysis.py` | PDP/ICE/ALE plots; finds subgroups and interactions hidden by the average |
+| lime-explanation-generator | `gen_lime_script.py`, `lime_stability.py` | Repeated-seed LIME runs; stability, fidelity and agreement with SHAP |
+| model-card-writer | `card_lint.py`, `model_card.py`, `slice_metrics.py` | Slice metrics with CIs and fairness gaps; writes and lints model cards |
+| counterfactual-explanation-generator | `cf_validate.py`, `gen_dice_script.py`, `linear_counterfactual.py` | Exact minimal-cost recourse for linear models; DiCE generator; validates any counterfactuals |
+| time-series-forecasting-model-builder | `gen_forecast_script.py`, `ts_backtest.py`, `ts_profile.py` | Series profile, rolling-origin baseline backtest (MASE/RMSSE), leak-free LightGBM forecaster |
+| survival-analysis-model-builder | `cox_fit.py`, `gen_survival_script.py`, `km_report.py` | Kaplan-Meier, log-rank, RMST; stdlib Cox with PH test (lifelines-identical); model comparison script |
+| recommendation-system-designer | `interaction_profile.py`, `rec_eval.py`, `temporal_split.py` | Interaction profile, temporal splits, top-k evaluation vs popularity with beyond-accuracy metrics |
+| collaborative-filtering-implementer | `gen_mf_script.py`, `itemknn.py` | Explainable item-kNN; NumPy ALS, BPR and EASE tuned on a temporal validation split |
+| learning-to-rank-model-builder | `gen_ltr_script.py`, `ltr_data_check.py`, `rank_eval.py` | LTR data checks, LightGBM/XGBoost rankers, per-query NDCG/MAP/ERR with significance |
+| fraud-detection-model-designer | `fraud_eval.py`, `fraud_velocity_features.py`, `gen_fraud_model_script.py` | Point-in-time velocity features, out-of-time fraud model, alert-budget and cost evaluation |
+| uplift-model-builder | `gen_uplift_script.py`, `rct_check.py`, `uplift_eval.py` | RCT checks, S/T/X-learners and class transformation, Qini/AUUC (scikit-uplift-identical) and targeting value |
 
 See [SITEMAP.md](SITEMAP.md) for every file, or [catalog.json](catalog.json) for a machine-readable index.
 
@@ -78,6 +124,7 @@ Each sub-category is a plugin:
 /plugin install python-skills@vector-agentic-skills
 /plugin install rust-skills@vector-agentic-skills
 /plugin install excel-skills@vector-agentic-skills
+/plugin install classical-ml-skills@vector-agentic-skills
 ```
 
 ### curl

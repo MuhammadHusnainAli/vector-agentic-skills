@@ -76,8 +76,12 @@ def build_catalog():
         subs = []
         for sub, info in sorted(data["subcategories"].items(), key=lambda kv: kv[1].get("order", 99)):
             members = [s["name"] for s in skills if s["category"] == cat and s["subcategory"] == sub]
-            subs.append({"name": sub, "title": info["title"], "description": info["description"],
-                         "plugin": f"{sub}-skills", "skill_count": len(members), "skills": members})
+            entry = {"name": sub, "title": info["title"], "description": info["description"],
+                     "plugin": f"{sub}-skills", "skill_count": len(members), "skills": members}
+            if info.get("groups"):  # validated to cover every member exactly once; keep the group order
+                entry["groups"] = [{"title": g["title"], "skills": list(g["skills"])} for g in info["groups"]]
+                entry["skills"] = [n for g in entry["groups"] for n in g["skills"]]
+            subs.append(entry)
         categories.append({"name": cat, "title": data["info"]["title"], "description": data["info"]["description"],
                            "skill_count": sum(s["skill_count"] for s in subs), "subcategories": subs})
     return {
@@ -132,18 +136,24 @@ def render_category_readme(cat):
 """
 
 
-def render_sub_readme(cat, sub, skills):
+def skill_table(names, skills):
     rows = "\n".join(f"| [{n}]({n}/SKILL.md) | {summary(skills[n]['description'])} | "
-                     f"{', '.join('`' + f.split('/', 1)[1] + '`' for f in skills[n]['scripts'])} |" for n in sub["skills"])
+                     f"{', '.join('`' + f.split('/', 1)[1] + '`' for f in skills[n]['scripts'])} |" for n in names)
+    return f"| Skill | What it does | Scripts |\n|-------|--------------|---------|\n{rows}"
+
+
+def render_sub_readme(cat, sub, skills):
+    if sub.get("groups"):
+        tables = "\n\n".join(f"## {g['title']}\n\n{skill_table(g['skills'], skills)}" for g in sub["groups"])
+    else:
+        tables = skill_table(sub["skills"], skills)
     return f"""{GENERATED_NOTE}
 
 # {cat['title']} / {sub['title']}
 
 {sub['description']}
 
-| Skill | What it does | Scripts |
-|-------|--------------|---------|
-{rows}
+{tables}
 
 ## Install
 

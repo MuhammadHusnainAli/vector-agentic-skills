@@ -1,0 +1,4 @@
+tenure_months,monthly_charges,total_charges,support_calls,last_login_days,plan,region,payment_method,pred_prob
+15,101.37,515.55,2,5,premium,west,paypal,0.5357150411811972
+15,101.37,515.55,2,5,premium,west,bank,0.5595862421278808
+15,101.37,534.21,2,5,premium,west,card,0.5090371497715563

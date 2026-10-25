@@ -1,0 +1,7 @@
+{
+  "id": "8D-C40", "opened": "2026-10-01", "team": ["Quality"],
+  "d2": {"what": "Wrong torque because operator used the wrong tool", "how_many": "unknown"},
+  "d3": {"actions": "Sorted stock", "date": "2026-10-06"},
+  "d4": {"occurrence_cause": "Operator error"},
+  "d5": {"actions": [{"action": "Retrain operator", "addresses": "occurrence"}]}
+}

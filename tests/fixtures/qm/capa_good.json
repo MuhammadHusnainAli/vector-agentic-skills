@@ -1,0 +1,16 @@
+{
+  "capa_id": "CA-118", "source": "NCR-2590, NCR-2597, NCR-2611",
+  "problem": "Bore on VB-2210 oversize (12.021-12.030 mm vs 12.018 max) in 3 lots since July 2026",
+  "correction": "Scrapped 77 parts; 100% bore check on stock",
+  "root_causes": [
+    {"id": "RC1", "cause": "Boring bar insert wears past offset limit before the 400-part tool change interval; wear rate doubled with the new insert grade", "verified": true, "evidence": "Wear study: bore grows 0.004 mm per 50 parts after part 250; reproduced on lathe 3"},
+    {"id": "RC2", "cause": "In-process check frequency (1 in 50) cannot detect drift before 50 parts are oversize", "verified": true, "evidence": "Control chart of lots L2609-14"}
+  ],
+  "actions": [
+    {"action": "Set tool life counter to 220 parts with machine interlock that stops the cycle at the limit", "type": "corrective", "cause_id": "RC1", "owner": "Process engineer", "due": "2026-11-15"},
+    {"action": "Add in-process air gauge on every 10th part with SPC chart and reaction plan in control plan CP-2210", "type": "corrective", "cause_id": "RC2", "owner": "Quality engineer", "due": "2026-11-30"}
+  ],
+  "effectiveness": {"criteria": "0 bore NCRs and bore Cpk >= 1.33 over 3 months / 6 lots", "method": "NCR log and SPC review", "due": "2027-03-01"},
+  "similar_check": "Lathes 1, 2, 4 run the same insert grade: tool-life limit applied to all",
+  "updates": ["PFMEA line 7 occurrence 6->3", "Control plan CP-2210 rev D", "Setup sheet SS-2210"]
+}

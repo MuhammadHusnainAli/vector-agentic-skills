@@ -1,0 +1,20 @@
+Two-Sample T-Test and CI: Diameter_L1, Diameter_L2
+
+Descriptive Statistics
+
+Sample        N     Mean    StDev  SE Mean
+Diameter_L1  30  12.00921  0.00207  0.00038
+Diameter_L2  30  12.01062  0.00178  0.00033
+
+Estimation for Difference
+
+ Difference  95% CI for Difference
+  -0.00141   (-0.00240, -0.00041)
+
+Test
+
+Null hypothesis        H0: mu1 - mu2 = 0
+Alternative hypothesis H1: mu1 - mu2 != 0
+
+T-Value  DF  P-Value
+  -2.82  56    0.007

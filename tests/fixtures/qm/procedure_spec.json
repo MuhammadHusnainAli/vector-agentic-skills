@@ -1,0 +1,16 @@
+{
+  "id": "QP-07", "title": "Control of Nonconforming Product", "owner": "Quality manager",
+  "purpose": "Prevent nonconforming parts from being used or shipped and decide what happens to them.",
+  "scope": "All raw material, work in progress and finished parts at the Leeds site, including customer returns.",
+  "clauses": ["8.7", "10.2"],
+  "definitions": {"MRB": "Material Review Board: quality engineer, production manager and, for use-as-is, the customer"},
+  "steps": [
+    {"actor": "Inspector", "action": "Attach a red HOLD tag and move the parts to the quarantine cage within 1 hour", "record": "NCR form QF-07"},
+    {"actor": "Quality engineer", "action": "Review the NCR and decide disposition (rework, repair, scrap, return, use-as-is) within 2 working days", "consulted": ["Production manager"]},
+    {"actor": "Quality engineer", "action": "Request a customer concession before any use-as-is or repair disposition", "informed": ["Customer"], "record": "Concession QF-07B"},
+    {"actor": "Production manager", "action": "Carry out rework to the approved instruction and return the parts for re-inspection"},
+    {"actor": "Quality manager", "action": "Raise a corrective action (QP-08) for repeat or customer-impacting nonconformities", "record": "CAPA log"}
+  ],
+  "records": [{"name": "NCR form QF-07", "retention": "10 years", "location": "QMS database"}, {"name": "Concession QF-07B", "retention": "10 years", "location": "QMS database"}],
+  "references": ["QP-08 Corrective action", "WI-20 Quarantine area"]
+}

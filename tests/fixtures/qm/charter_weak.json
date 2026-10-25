@@ -1,0 +1,9 @@
+{
+  "title": "Fix quality",
+  "business_case": "Quality is important.",
+  "problem_statement": "Scrap is high because of poor operator training; we need to implement a new SPC system.",
+  "goal_statement": "Improve quality significantly.",
+  "primary_metric": {"name": "scrap", "baseline": 3.1, "target": 3.5, "direction": "lower"},
+  "scope": {"in": "machining"},
+  "phases": {"define": "2026-11-20", "measure": "2026-11-10", "analyze": "2027-02-05", "improve": "2027-08-19", "control": "2027-12-30"}
+}

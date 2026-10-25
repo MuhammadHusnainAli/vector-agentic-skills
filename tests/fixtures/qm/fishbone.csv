@@ -1,0 +1,9 @@
+category,cause,subcause,status,evidence
+Method,Open trays with no dividers on line 2,,verified,Transport trial 14/40 scratched without dividers
+Method,Visual inspection before packing not after,,likely,
+Machine,Forklift vibration over floor joints,,untested,
+Material,Softer anodising on new heat-sink batch,,ruled-out,Hardness same as previous batches
+People,Packer careless,,untested,
+Measurement,Inspection light below 1000 lux at packing,,untested,
+Method,Need a vision system,,untested,
+Machine,Open trays with no dividers on line 2,,untested,

@@ -1,0 +1,20 @@
+Regression Analysis: Ra versus Feed, Nose, Speed, Coolant, Humidity
+
+Coefficients
+
+Term        Coef  SE Coef  T-Value  P-Value   VIF
+Constant   0.412    0.188     2.19    0.041
+Feed        9.31     0.92    10.12    0.000  1.12
+Nose      -1.552    0.310    -5.01    0.000  1.05
+Speed    0.00031  0.00021     1.48    0.155  6.84
+Coolant   -0.012    0.020    -0.60    0.556  6.51
+Humidity   0.004    0.006     0.67    0.511  1.30
+
+Model Summary
+
+        S    R-sq  R-sq(adj)  R-sq(pred)
+0.08812  87.40%     84.10%      71.20%
+
+Regression Equation
+
+Ra = 0.412 + 9.31 Feed - 1.552 Nose + 0.00031 Speed - 0.012 Coolant + 0.004 Humidity

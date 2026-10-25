@@ -1,0 +1,9 @@
+doc_id,title,type,revision,status,owner,approved_by,approval_date,last_review,review_months,retention,locations
+QM-001,Quality manual,QM,C,approved,Quality manager,Managing director,2026-01-10,2026-01-10,12,,QMS portal
+QP-002,Contract review,QP,B,approved,Sales manager,Sales manager,2024-03-01,2024-03-01,24,,QMS portal
+QP-007,Nonconforming product,QP,D,approved,Quality manager,Ops director,2026-05-02,2026-05-02,24,,QMS portal
+QP-007,Nonconforming product,QP,C,approved,Quality manager,Ops director,2025-02-11,2025-02-11,24,,QMS portal
+WI-010,CNC setup lathe 3,WI,A,obsolete,Production manager,Quality manager,2023-06-01,,24,,Lathe 3 station
+WI-011,CNC setup lathe 4,WI,,approved,Production manager,,,,24,,Lathe 4 station
+REC-001,Inspection reports,REC,A,approved,Quality manager,Ops director,2026-01-10,2026-01-10,36,,QMS database
+EXT-001,ISO 2768-1 general tolerances,EXT,1989,approved,Quality manager,Quality manager,2023-01-01,2023-01-01,12,,Quality office

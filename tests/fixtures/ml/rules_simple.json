@@ -1,0 +1,4 @@
+{"decision": "Send an invoice reminder when payment is overdue", "regulated": false,
+ "data_volume": 3, "labels": 3, "signal_complexity": 1, "change_rate": 1, "rule_maintenance": 1,
+ "scale": 2, "error_cost_tolerance": 4, "explainability": 4, "latency_budget": 2,
+ "team_ml_maturity": 2, "personalization": 1, "feedback_speed": 3}

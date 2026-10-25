@@ -1,0 +1,101 @@
+{
+  "name": "churn-risk-gbm",
+  "version": "3.1.0",
+  "date": "2026-10-01",
+  "owners": [
+    {
+      "name": "Retention Analytics",
+      "contact": "retention-ml@example.com"
+    }
+  ],
+  "model_type": "LightGBM binary classifier (300 trees, 31 leaves)",
+  "task": "binary-classification",
+  "framework": "lightgbm 4.7, scikit-learn 1.9",
+  "license": "proprietary",
+  "description": "Scores active subscribers each Monday with the probability of cancelling within the next 60 days. Customers above the threshold are offered a retention call.",
+  "intended_use": {
+    "primary_uses": [
+      "Prioritising weekly retention calls for consumer subscribers"
+    ],
+    "primary_users": [
+      "Retention team leads"
+    ],
+    "out_of_scope": [
+      "Pricing or credit decisions",
+      "Business customers (not in the training data)",
+      "Any decision without human review"
+    ]
+  },
+  "training_data": {
+    "source": "subscriptions warehouse, snapshot table churn_features_v4",
+    "period": "2024-01 to 2025-12",
+    "rows": "412,000 customer-weeks",
+    "label_definition": "cancelled within 60 days after the snapshot date"
+  },
+  "evaluation_data": {
+    "source": "same pipeline, out-of-time",
+    "period": "2026-01 to 2026-06",
+    "rows": "1,200 customers (one snapshot week per customer)"
+  },
+  "metrics": [
+    {
+      "name": "ROC AUC",
+      "value": 0.795,
+      "ci": [
+        0.765,
+        0.821
+      ],
+      "split": "out-of-time 2026H1"
+    },
+    {
+      "name": "Average precision",
+      "value": 0.609,
+      "ci": [
+        0.56,
+        0.65
+      ],
+      "split": "out-of-time 2026H1"
+    }
+  ],
+  "baseline": {
+    "name": "rule: support_calls >= 3",
+    "metrics": {
+      "ROC AUC": 0.68
+    }
+  },
+  "threshold": {
+    "value": 0.4,
+    "rationale": "the call team handles about 39% of flagged customers per week"
+  },
+  "fairness": {
+    "attributes": [
+      "group (self-reported segment)",
+      "age band"
+    ],
+    "assessment": "Recall is lower for group B; see the table and the mitigation below."
+  },
+  "limitations": [
+    "Customers with under 2 months of tenure have few signals; scores are close to the base rate",
+    "Age band 'unknown' has too few rows to evaluate"
+  ],
+  "risks": [
+    {
+      "risk": "Group B customers are under-served by retention offers",
+      "mitigation": "Group-specific threshold under review; monthly recall report by group"
+    }
+  ],
+  "monitoring": {
+    "metrics": [
+      "weekly AUC on matured labels",
+      "score PSI",
+      "positive rate by group"
+    ],
+    "retraining": "quarterly, or when PSI > 0.2",
+    "owner": "Retention Analytics"
+  },
+  "ethical_considerations": [
+    "Scores influence who receives retention offers: lower recall for group B means fewer offers to that group",
+    "No protected attributes are model inputs; zip-code-derived features were removed as potential proxies"
+  ],
+  "explainability": "Global drivers from permutation importance and SHAP: tenure, support calls, days since last login. Per-customer reason codes use SHAP with a fixed background of 500 retained customers."
+}

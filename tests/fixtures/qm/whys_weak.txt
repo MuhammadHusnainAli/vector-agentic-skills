@@ -1,0 +1,4 @@
+Problem: Parts scratched because of packing
+Why: Parts were packed badly
+Why: Parts were packed badly by the packer
+Why: The operator forgot to use the foam sheets

@@ -4,7 +4,8 @@
 Checks the Agent Skills format used by Claude Code and other agents, plus this
 repo's quality bar:
   - every category has category.json and every sub-category has subcategory.json
-    (each with "title" and "description")
+    (each with "title" and "description"); optional sub-category "groups" list
+    every skill exactly once
   - SKILL.md starts with YAML frontmatter containing `name` and `description`
   - `name` is lowercase-hyphenated, <= 64 chars, matches its folder, and is unique
   - `description` is non-empty and <= 1024 chars
@@ -69,6 +70,20 @@ def load_skills():
         yield skill_md.parents[2].name, skill_md.parents[1].name, skill_md.parent, meta, body
 
 
+def check_groups(sub_rel, groups):
+    """Optional "groups" in subcategory.json must list every skill folder exactly once."""
+    where = f"{sub_rel}/subcategory.json"
+    if not isinstance(groups, list) or not all(
+            isinstance(g, dict) and isinstance(g.get("title"), str) and isinstance(g.get("skills"), list) for g in groups):
+        return [f"{where}: 'groups' must be a list of {{\"title\": str, \"skills\": [str]}}"]
+    listed = [n for g in groups for n in g["skills"]]
+    folders = {p.parent.name for p in (ROOT / sub_rel).glob("*/SKILL.md")}
+    errors = [f"{where}: skill {n!r} is listed in more than one group" for n in sorted({n for n in listed if listed.count(n) > 1})]
+    errors += [f"{where}: group lists {n!r} but there is no such skill folder" for n in sorted(set(listed) - folders)]
+    errors += [f"{where}: skill {n!r} is not in any group" for n in sorted(folders - set(listed))]
+    return errors
+
+
 def validate():
     errors, warnings = [], []
     for cat, data in load_categories().items():
@@ -77,6 +92,8 @@ def validate():
         for sub, info in data["subcategories"].items():
             if not info or not {"title", "description"} <= info.keys():
                 errors.append(f"skills/{cat}/{sub}/subcategory.json: missing, or lacks 'title' and 'description'")
+            elif "groups" in info:
+                errors += check_groups(f"skills/{cat}/{sub}", info["groups"])
 
     seen = {}
     for skill_md in sorted(SKILLS_DIR.glob("*/*/*/SKILL.md")):

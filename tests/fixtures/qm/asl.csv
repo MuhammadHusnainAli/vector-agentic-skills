@@ -1,0 +1,7 @@
+supplier,status,scope,risk,certification,cert_expiry,last_evaluation,approved_by,condition_until,single_source,backup
+MetalCo,approved,aluminium bar;steel bar,high,ISO 9001:2015,2027-05-01,2026-02-10,Purchasing manager,,no,
+CastCorp,probation,aluminium castings,high,ISO 9001:2015,2026-11-15,2025-08-01,Purchasing manager,2026-09-30,yes,
+PlastiForm,approved,injection moulding,medium,ISO 9001:2015,2026-03-31,2025-01-20,Purchasing manager,,no,
+AnodTech,conditional,anodising,high,none,,2026-06-01,,,yes,
+FastenAll,approved,fasteners,low,ISO 9001:2015,2028-01-01,2024-06-01,Purchasing manager,,no,
+OldSupply,disqualified,machining,medium,,,2023-01-01,Purchasing manager,,no,

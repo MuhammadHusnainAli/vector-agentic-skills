@@ -1,0 +1,130 @@
+{
+  "title": "Churn retention targeting",
+  "owner": "Data Science - Retention",
+  "date": "2026-11-01",
+  "status": "draft",
+  "summary": "Rank active subscribers weekly by risk of cancelling in the next 30 days so the retention team calls the 400 most at-risk customers.",
+  "problem": "Voluntary churn is 2.1% per month; the retention team calls customers whose contract ends this month, which misses most churners.",
+  "decision": "Which 400 customers the retention team calls each Monday",
+  "users": [
+    "Retention team leads (consume the list)",
+    "Retention analysts (review weekly)"
+  ],
+  "success": {
+    "primary_metric": "recall@400 of customers cancelling within 30 days",
+    "target": ">= 0.45 on the latest 3-month time holdout",
+    "baseline": "0.30 for the current contract-end rule on the same holdout",
+    "guardrails": [
+      "complaint rate of called customers <= 1.5%",
+      "recall@400 per region >= 0.35"
+    ],
+    "online_metric": "saves per 400 calls vs a 5% untreated random holdout over 6 weeks"
+  },
+  "data": {
+    "sources": [
+      {
+        "name": "billing.subscriptions",
+        "owner": "finance",
+        "freshness": "hourly",
+        "available_at_prediction": true
+      },
+      {
+        "name": "support.tickets",
+        "owner": "support",
+        "freshness": "daily",
+        "available_at_prediction": true
+      }
+    ],
+    "label": "voluntary cancellation within 30 days after the Monday scoring date",
+    "history": "24 months of weekly snapshots, ~50k active customers per week",
+    "known_issues": [
+      "cancellation_reason is written after cancellation (excluded)"
+    ]
+  },
+  "approach": [
+    {
+      "phase": "Baseline",
+      "work": "current rule, dummy, logistic regression on a time holdout"
+    },
+    {
+      "phase": "Model",
+      "work": "LightGBM with point-in-time features; calibrate; pick K=400"
+    },
+    {
+      "phase": "Shadow",
+      "work": "score live for 4 weeks without acting; check drift and latency"
+    },
+    {
+      "phase": "Test",
+      "work": "randomised test: model top-400 vs rule top-400, 6 weeks"
+    }
+  ],
+  "in_scope": [
+    "weekly batch scoring",
+    "voluntary churn",
+    "consumer plans"
+  ],
+  "out_of_scope": [
+    "involuntary churn (failed payments)",
+    "real-time scoring",
+    "offer personalisation"
+  ],
+  "milestones": [
+    {
+      "name": "Baseline table",
+      "date": "2026-11-15",
+      "exit": "rule, dummy and logistic regression measured"
+    },
+    {
+      "name": "Model ready",
+      "date": "2026-12-13",
+      "exit": "recall@400 >= 0.45 offline with CI"
+    },
+    {
+      "name": "Shadow complete",
+      "date": "2027-01-17",
+      "exit": "feature availability >= 98%, PSI < 0.2"
+    },
+    {
+      "name": "Test readout",
+      "date": "2027-03-07",
+      "exit": "go/no-go decision"
+    }
+  ],
+  "risks": [
+    {
+      "risk": "calling customers changes their labels (feedback loop)",
+      "likelihood": "high",
+      "impact": "medium",
+      "mitigation": "5% random untreated holdout; log calls"
+    },
+    {
+      "risk": "support tickets arrive with a 24 h delay",
+      "likelihood": "medium",
+      "impact": "low",
+      "mitigation": "use ticket counts up to the previous day only"
+    }
+  ],
+  "team": [
+    {
+      "role": "Data scientist",
+      "fte": 1.0
+    },
+    {
+      "role": "Data engineer",
+      "fte": 0.5
+    },
+    {
+      "role": "Retention lead (product owner)",
+      "fte": 0.1
+    }
+  ],
+  "costs": "about 4 person-months to the test readout; serving on the existing batch platform",
+  "go_no_go": [
+    "offline recall@400 >= 0.45 with the 95% CI above the rule",
+    "online: +5 saves per week vs the rule with the CI excluding 0"
+  ],
+  "open_questions": [
+    "Can the retention team handle 500 calls in December?"
+  ]
+}

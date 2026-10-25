@@ -1,0 +1,33 @@
+clause,title,requirement,core,status,evidence
+5.1.2,Customer focus,Product and service conformity and on-time delivery performance measured and acted on,,met,see QMS
+5.3,Management representative,A management representative appointed with authority over the QMS,,n/a,
+7.1.5.2,Measurement traceability,"Register of monitoring and measuring equipment with calibration method, frequency and acceptance; recall process",,met,see QMS
+7.2,Competence,Competence including product safety and human factors where relevant,,met,see QMS
+7.3,Awareness,"Awareness of contribution to product conformity, product safety and ethical behaviour",,met,see QMS
+7.5.1,QMS documentation,"Documented information describing interested parties, scope, processes and their interaction, responsibilities",,met,see QMS
+7.5.3.2,Data protection,"Protect documented information from loss, unauthorized changes, corruption; control of data",,met,see QMS
+8.1,Operational planning,"Plan for personal and product safety, producibility, inspectability, reliability, maintainability; key characteristics; work transfer control",,met,see QMS
+8.1.1,Operational risk management,"Process to identify, assess, mitigate, accept and communicate operational risks",yes,met,see QMS
+8.1.2,Configuration management,"Process for configuration identification, change control, status accounting and audits",yes,met,
+8.1.3,Product safety,"Process to assure product safety across the life cycle: hazards, critical items, reporting of events",yes,met,see QMS
+8.1.4,Prevention of counterfeit parts,"Process for counterfeit-part prevention: training, sourcing from OEM/authorized channels, verification, reporting, quarantine",yes,not-met,
+8.2.2,Special requirements and critical items,"Identify special requirements, critical items and key characteristics in requirements review",,met,see QMS
+8.2.3,Review of requirements,Review includes special requirements and risks; coordinate with customer on unresolved items,,met,see QMS
+8.3.4.1,Verification and validation testing,"Test plans, specifications and acceptance criteria for design verification and validation",,met,see QMS
+8.3.5,Design outputs,"Outputs specify key characteristics, critical items and data to produce, inspect, install and maintain",,met,see QMS
+8.4.1,External providers,"Register of external providers with approval status and scope; periodic performance review (conformity, OTD); customer-designated sources",yes,met,see QMS
+8.4.2,Verification of external provision,"Verification including source inspection, test report validation, and customer verification at provider",,met,see QMS
+8.4.3,Information for external providers,"Flow-down of requirements: key characteristics, test specs, right of access, records retention, counterfeit prevention, ethics",,met,see QMS
+8.5.1,Production control - FOD,"Prevention, detection and removal of foreign objects (FOD); control of tooling, critical items and environment",yes,met,see QMS
+8.5.1.1,"Equipment, tools and software programs","Validate and control production equipment, tools and NC programs; storage and periodic inspection",,met,see QMS
+8.5.1.2,Special processes,"Validate special processes: qualified equipment and people, approved methods, records, revalidation",yes,met,see QMS
+8.5.1.3,Production process verification (FAI),First article inspection per AS9102 on the first production run and after changes,yes,partial,"FAI done on new parts, not after process changes"
+8.5.2,Identification and traceability,"Traceability through product life: lot/serial, as-built configuration, records",,met,see QMS
+8.5.4,Preservation,"Includes FOD prevention, shelf-life control, hazardous material handling, special handling",,met,see QMS
+8.5.5,Post-delivery activities,Collect and analyse in-service data; technical documentation; repairs and maintenance,,n/a,"build-to-print, no in-service responsibility"
+8.5.6,Control of changes,Persons authorized to approve production process changes; customer notification where required,,met,see QMS
+8.6,Release of products,"Authorized release, required documentation accompanies product, inspection and test records",,met,see QMS
+8.7.1,Nonconforming outputs,MRB authority; customer approval for use-as-is or repair on customer designs; scrap made unusable; counterfeit or suspect parts controlled and reported,yes,met,see QMS
+9.1.2,Customer satisfaction,"Monitor conformity, on-time delivery, complaints and corrective action requests; improvement plans",,met,see QMS
+9.3.2,Management review inputs,On-time delivery performance included,,not-met,
+10.2.1,Corrective action,Flow corrective action to providers when they are responsible; human factors in root cause; act when actions are not timely or effective,,met,see QMS

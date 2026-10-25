@@ -1,0 +1,7 @@
+capa_id,source,owner,opened,stage,stage_since,due,closed
+CA-110,Audit IA-2026-03,Quality manager,2026-04-02,closed,2026-08-01,2026-07-31,2026-08-01
+CA-112,NCR-2593,Production manager,2026-07-20,closed,2026-07-28,2026-08-20,2026-07-28
+CA-115,Complaint C-31,Quality engineer,2026-08-22,verification,2026-09-30,2027-01-15,
+CA-118,NCR-2611,Process engineer,2026-10-03,action,2026-10-10,2026-11-30,
+CA-119,Audit IA-2026-07,Buyer,2026-07-01,root-cause,2026-07-01,2026-09-30,
+CA-120,NCR-2608,Quality engineer,2026-10-20,containment,2026-10-20,2026-11-20,

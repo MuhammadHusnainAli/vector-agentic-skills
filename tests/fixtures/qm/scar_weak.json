@@ -1,0 +1,9 @@
+{
+  "scar_id": "SCAR-031", "supplier": "CastCorp", "part": "CA-77", "issued": "2026-09-12", "ncr_ref": "NCR-2608",
+  "problem": {"requirement": "No porosity > 0.5 mm on machined faces (spec CS-14 rev B)", "actual": "Pores 0.8-1.5 mm on face B", "quantity": "8 of 150", "evidence": "NCR-2608 photos, section report"},
+  "due": {"containment": "2026-09-14", "root_cause": "2026-09-26", "closure": "2026-11-10"},
+  "response": {"containment": "Sorted stock at supplier", "containment_date": "2026-09-16",
+               "occurrence_cause": "Operator error during pouring", "escape_cause": "",
+               "actions": [{"action": "Retrain pouring operators", "addresses": "occurrence"}],
+               "root_cause_date": "2026-10-02"}
+}

@@ -1,0 +1,9 @@
+feature,gain,permutation,mean_abs_shap
+tenure_months,1450.2,0.081,0.92
+total_charges,1310.9,0.004,0.31
+support_calls,990.4,0.062,0.71
+last_login_days,870.0,0.04,0.48
+monthly_charges,640.3,0.003,0.12
+customer_id_hash,520.8,-0.001,0.05
+plan_basic,120.5,0.018,0.25
+region_north,40.1,0.0,0.01

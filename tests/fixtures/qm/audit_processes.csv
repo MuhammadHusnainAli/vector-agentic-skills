@@ -1,0 +1,8 @@
+process,department,clauses,risk,last_result,changed,last_audit
+Leadership and planning,Management,4;5;6;9.3,medium,good,no,2026-03-10
+Sales and contract review,Sales,8.2,medium,minor,no,2025-09-15
+Purchasing,Purchasing,8.4,high,major,no,2026-06-01
+Machining,Production,8.5;8.6;7.1.5,high,minor,yes,2026-04-20
+Inspection and NCR,Quality,8.6;8.7,high,good,no,2026-02-02
+Training,HR,7.2;7.3,low,good,no,2026-01-15
+Maintenance,Production,7.1.3,low,good,no,

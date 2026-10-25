@@ -1,0 +1,5 @@
+step,units_in,defective_units
+Machining,1000,20
+Deburr,980,49
+Wash,931,5
+Assembly,926,28

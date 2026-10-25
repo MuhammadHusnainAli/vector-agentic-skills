@@ -1,0 +1,14 @@
+{
+  "title": "Classical Machine Learning",
+  "description": "Frame ML problems, engineer and select features, train and tune scikit-learn, XGBoost, LightGBM and CatBoost models, cluster and reduce dimensions, validate without leakage, explain models with SHAP, PDP, LIME and counterfactuals, and build forecasting, survival, recommendation, ranking, fraud and uplift models.",
+  "order": 1,
+  "groups": [
+    {"title": "Problem framing", "skills": ["ml-problem-framing-advisor", "ml-feasibility-assessor", "ml-baseline-model-builder", "ml-success-metric-selector", "ml-vs-rules-decision-advisor", "ml-project-scoping-writer"]},
+    {"title": "Feature engineering", "skills": ["feature-engineering-idea-generator", "categorical-encoding-selector", "feature-scaling-advisor", "feature-selection-analyzer", "target-leakage-detector", "time-based-feature-builder", "feature-store-schema-designer"]},
+    {"title": "Supervised learning", "skills": ["scikit-learn-pipeline-builder", "classification-model-selector", "regression-model-trainer", "xgboost-lightgbm-tuner", "catboost-model-builder", "imbalanced-class-handler", "ml-model-comparison-reporter"]},
+    {"title": "Unsupervised learning", "skills": ["clustering-algorithm-selector", "kmeans-cluster-count-finder", "dbscan-parameter-tuner", "pca-dimensionality-reducer", "umap-tsne-embedding-visualizer", "anomaly-detection-model-builder"]},
+    {"title": "Model validation", "skills": ["cross-validation-strategy-designer", "train-test-split-auditor", "hyperparameter-search-planner", "optuna-study-writer", "learning-curve-diagnoser", "overfitting-underfitting-diagnoser"]},
+    {"title": "Model interpretation", "skills": ["shap-value-explainer", "feature-importance-reporter", "partial-dependence-plot-builder", "lime-explanation-generator", "model-card-writer", "counterfactual-explanation-generator"]},
+    {"title": "Specialized ML", "skills": ["time-series-forecasting-model-builder", "survival-analysis-model-builder", "recommendation-system-designer", "collaborative-filtering-implementer", "learning-to-rank-model-builder", "fraud-detection-model-designer", "uplift-model-builder"]}
+  ]
+}

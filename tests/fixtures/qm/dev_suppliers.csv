@@ -1,0 +1,6 @@
+supplier,spend,score,ppm,otd,risk,strategic,single_source,gaps
+CastCorp,1200000,52,7600,81,high,yes,yes,process control;capability;problem solving
+PlastiForm,800000,78,886,96,medium,yes,no,msa;process control
+MetalCo,1500000,97,146,100,high,yes,no,
+SmallParts,60000,61,4200,88,low,no,no,delivery;process control
+AnodTech,300000,70,2100,92,high,no,yes,special processes;quality system

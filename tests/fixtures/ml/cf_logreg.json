@@ -1,0 +1,40 @@
+{
+  "model": "logistic",
+  "intercept": -1.847977,
+  "coefficients": {
+    "tenure_months": -0.055572,
+    "support_calls": 0.479927,
+    "last_login_days": 0.063804,
+    "monthly_charges": 0.002334,
+    "plan_basic": 0.720055
+  },
+  "features": {
+    "tenure_months": {
+      "mutable": false,
+      "scale": 14.5
+    },
+    "support_calls": {
+      "direction": "decrease",
+      "min": 0,
+      "integer": true,
+      "scale": 1.0
+    },
+    "last_login_days": {
+      "direction": "decrease",
+      "min": 0,
+      "integer": true,
+      "scale": 6.0
+    },
+    "monthly_charges": {
+      "direction": "decrease",
+      "min": 20,
+      "max": 120,
+      "scale": 28.675000000000004,
+      "cost_multiplier": 2.0
+    },
+    "plan_basic": {
+      "binary": true,
+      "scale": 1.0
+    }
+  }
+}

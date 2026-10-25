@@ -1,0 +1,17 @@
+{
+  "company": "Acme Precision Ltd",
+  "sites": ["Unit 4, Ring Road, Leeds, UK"],
+  "products": "CNC-machined aluminium and steel components to customer drawings for the pump and valve industry.",
+  "exclusions": [{"clause": "8.3", "justification": "All parts are made to customer-owned designs; Acme has no design responsibility."}],
+  "policy": "Acme Precision supplies machined parts that meet every drawing requirement, on time. We meet customer and legal requirements, set measurable objectives each year and improve our processes continually.",
+  "processes": [
+    {"name": "Sales and contract review", "type": "core", "owner": "Sales manager", "inputs": "RFQ, drawings", "outputs": "Accepted order", "kpi": "Quote turnaround < 3 days", "documents": ["QP-02"], "clauses": ["8.2"]},
+    {"name": "Production planning", "type": "core", "owner": "Planner", "inputs": "Accepted order", "outputs": "Released job", "kpi": "OTD >= 95%", "documents": ["QP-04"], "clauses": ["8.1", "8.5"]},
+    {"name": "Machining", "type": "core", "owner": "Production manager", "inputs": "Released job, material", "outputs": "Machined parts", "kpi": "Scrap < 1.5%", "documents": ["WI-10", "WI-11"], "clauses": ["8.5"]},
+    {"name": "Inspection and release", "type": "core", "owner": "Quality manager", "inputs": "Machined parts", "outputs": "Released parts, CoC", "kpi": "Customer PPM < 500", "documents": ["QP-06"], "clauses": ["8.6", "8.7"]},
+    {"name": "Purchasing", "type": "support", "owner": "Buyer", "inputs": "Material requirements", "outputs": "Conforming material", "kpi": "Supplier OTD >= 95%", "documents": ["QP-03"], "clauses": ["8.4"]},
+    {"name": "Management review and improvement", "type": "management", "owner": "Managing director", "inputs": "KPIs, audits", "outputs": "Decisions, objectives", "kpi": "Objectives met", "documents": ["QP-09"], "clauses": ["9", "10"]}
+  ],
+  "approved_by": "Managing Director",
+  "revision": "A"
+}

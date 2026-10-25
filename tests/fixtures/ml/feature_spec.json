@@ -1,0 +1,100 @@
+{
+  "project": "churn_features",
+  "entities": [
+    {
+      "name": "customer",
+      "join_keys": [
+        "customer_id"
+      ],
+      "description": "A subscriber account"
+    }
+  ],
+  "sources": [
+    {
+      "name": "customer_daily_activity",
+      "type": "file",
+      "path": "data/customer_daily_activity.parquet",
+      "timestamp_field": "event_ts",
+      "created_timestamp_field": "created_ts",
+      "cadence": "daily"
+    },
+    {
+      "name": "customer_profile",
+      "type": "file",
+      "path": "data/customer_profile.parquet",
+      "timestamp_field": "updated_ts",
+      "cadence": "daily"
+    }
+  ],
+  "feature_views": [
+    {
+      "name": "customer_activity",
+      "entities": [
+        "customer"
+      ],
+      "source": "customer_daily_activity",
+      "ttl": "2d",
+      "online": true,
+      "freshness_sla": "1d",
+      "owner": "retention-ds@example.com",
+      "description": "Rolling engagement aggregates, recomputed nightly",
+      "features": [
+        {
+          "name": "logins_7d",
+          "dtype": "int64",
+          "description": "Logins in the 7 days before event_ts"
+        },
+        {
+          "name": "logins_30d",
+          "dtype": "int64",
+          "description": "Logins in the 30 days before event_ts"
+        },
+        {
+          "name": "spend_30d",
+          "dtype": "float64",
+          "description": "Spend in the 30 days before event_ts"
+        },
+        {
+          "name": "days_since_last_login",
+          "dtype": "float32",
+          "description": "Days from last login to event_ts"
+        }
+      ]
+    },
+    {
+      "name": "customer_profile",
+      "entities": [
+        "customer"
+      ],
+      "source": "customer_profile",
+      "ttl": "400d",
+      "online": true,
+      "freshness_sla": "1d",
+      "owner": "retention-ds@example.com",
+      "description": "Slowly changing account attributes",
+      "features": [
+        {
+          "name": "plan",
+          "dtype": "string",
+          "description": "Current plan as of updated_ts"
+        },
+        {
+          "name": "tenure_days",
+          "dtype": "int64",
+          "description": "Days since signup as of updated_ts"
+        }
+      ]
+    }
+  ],
+  "feature_services": [
+    {
+      "name": "churn_model_v1",
+      "description": "Features for the weekly churn model",
+      "features": [
+        "customer_activity:*",
+        "customer_profile:plan",
+        "customer_profile:tenure_days"
+      ]
+    }
+  ]
+}

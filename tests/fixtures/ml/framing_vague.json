@@ -1,0 +1,13 @@
+{
+  "problem": "Use AI to reduce churn",
+  "target": "improve retention",
+  "task_type": "binary_classification",
+  "unit_of_prediction": "customer",
+  "features": [
+    {"name": "tenure_months", "available_at": "prediction_time"},
+    {"name": "cancellation_reason"},
+    {"name": "refund_issued", "available_at": "after_cancellation"}
+  ],
+  "success_metric": "accuracy",
+  "prediction_affects_label": true
+}

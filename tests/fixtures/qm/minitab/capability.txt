@@ -1,0 +1,29 @@
+Process Capability Report for Bore
+
+Process Data
+LSL              12.00000
+Target           *
+USL              12.01800
+Sample Mean      12.00921
+Sample N         125
+StDev(Overall)   0.0025653
+StDev(Within)    0.0021702
+
+Overall Capability
+Pp     1.17
+PPL    1.20
+PPU    1.14
+Ppk    1.14
+Cpm    *
+
+Potential (Within) Capability
+Cp     1.38
+CPL    1.41
+CPU    1.35
+Cpk    1.35
+
+Performance
+           Observed  Expected Overall  Expected Within
+PPM < LSL      0.00           158.41            11.43
+PPM > USL   8000.00           312.06            24.80
+PPM Total   8000.00           470.47            36.23

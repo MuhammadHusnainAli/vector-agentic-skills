@@ -1,0 +1,16 @@
+{
+  "decision": "Flag card transactions for manual review",
+  "regulated": false,
+  "data_volume": 4,
+  "labels": 4,
+  "signal_complexity": 4,
+  "change_rate": 5,
+  "rule_maintenance": 4,
+  "scale": 5,
+  "error_cost_tolerance": 3,
+  "explainability": 2,
+  "latency_budget": 3,
+  "team_ml_maturity": 3,
+  "personalization": 3,
+  "feedback_speed": 3
+}

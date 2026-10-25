@@ -1,0 +1,34 @@
+{
+  "problem": "Reduce voluntary churn of monthly subscribers",
+  "decision": "Which customers get a retention call this week",
+  "action": "Retention team calls the top-scored customers",
+  "action_capacity": "400 calls per week",
+  "owner": "Head of Retention",
+  "unit_of_prediction": "one active subscriber on the scoring date",
+  "prediction_time": "every Monday 06:00 UTC",
+  "target": "customer cancels within 30 days after the scoring date",
+  "task_type": "binary_classification",
+  "horizon_days": 30,
+  "time_to_act_days": 7,
+  "label_delay_days": 30,
+  "label_is_proxy": false,
+  "proxy_risk": "",
+  "features": [
+    {
+      "name": "tenure_months",
+      "available_at": "prediction_time"
+    },
+    {
+      "name": "support_calls_90d",
+      "available_at": "prediction_time"
+    }
+  ],
+  "baseline": "Call customers whose contract ends this month (current rule)",
+  "success_metric": "Recall of churners in the top 400 per week vs the current rule",
+  "guardrail_metrics": [
+    "calls per saved customer",
+    "complaint rate"
+  ],
+  "prediction_affects_label": true,
+  "holdout_plan": "5% random holdout never called, to measure uplift and retrain on unbiased labels"
+}

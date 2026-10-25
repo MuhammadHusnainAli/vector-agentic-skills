@@ -1,0 +1,9 @@
+part,characteristic,class,supplier,supplier_grade,accepted_lots,lot_size,new_part,coc,scar
+CB-400,Material grade,critical,MetalCo,A,25,500,no,yes,
+CB-400,Outside diameter,major,MetalCo,A,25,500,no,yes,
+HS-110,Anodise thickness,major,PlastiForm,B,8,2000,no,yes,
+HS-110,Cosmetic,minor,PlastiForm,A,30,2000,no,yes,
+CA-77,Porosity,critical,CastCorp,D,4,150,no,no,
+CA-77,Bore position,major,CastCorp,D,4,150,no,no,
+NX-01,All drawing characteristics,major,NewTech,B,0,300,yes,yes,
+FS-08,Thread gauge,minor,FastenAll,A,15,20000,no,no,

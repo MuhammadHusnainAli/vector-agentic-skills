@@ -1,0 +1,9 @@
+{
+  "capa_id": "CA-121", "problem": "Customer found scratches on HS-110 face A",
+  "root_causes": "Operator error - not careful when packing",
+  "actions": [
+    {"action": "Sorted and replaced customer stock", "type": "corrective", "owner": "Quality", "due": "2026-09-05"},
+    {"action": "Retrain packing operators and remind them to be careful", "type": "corrective"}
+  ],
+  "effectiveness": {"criteria": "No more complaints"}
+}

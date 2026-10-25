@@ -1,0 +1,53 @@
+clause,title,requirement,documented_process,status,evidence
+4.3.2,Customer-specific requirements,Evaluate CSRs and include them in the QMS scope (CSR matrix),,met,see QMS
+4.4.1.2,Product safety,Documented process for product-safety related products and processes,yes,met,see QMS
+5.1.1.1,Corporate responsibility,"Anti-bribery policy, code of conduct, ethics escalation (whistle-blowing) policy",,met,see QMS
+5.3.2,Responsibility for product requirements,Persons responsible for conformity can stop shipment and production,,n/a,
+6.1.2.1,Risk analysis,"Risk analysis includes lessons learned from recalls, audits, field returns, complaints, scrap",,met,see QMS
+6.1.2.2,Preventive action,Documented process to reduce the impact of risks and prevent recurrence,yes,met,see QMS
+6.1.2.3,Contingency plans,"Documented contingency plans for key equipment, supply, utilities, labour, IT/cyber-attack; tested; reviewed",yes,not-met,
+6.2.2.1,Quality objectives - supplemental,"Objectives cover customer requirements at relevant functions, levels and processes",,met,see QMS
+7.1.3.1,"Plant, facility and equipment planning","Multidisciplinary planning with risk, lean principles and capacity re-evaluation",,met,see QMS
+7.1.5.1.1,Measurement system analysis,"Statistical MSA for every inspection, measurement and test system in the control plan",,met,see QMS
+7.1.5.2.1,Calibration / verification records,"Documented process for calibration records, out-of-tolerance reaction and customer notification",yes,met,see QMS
+7.1.5.3,Laboratory requirements,Internal lab scope and competence; external labs ISO/IEC 17025 accredited or customer-approved,,met,see QMS
+7.2.1,Competence - supplemental,"Documented process to identify training needs, including awareness of customer requirements",yes,met,see QMS
+7.2.2,On-the-job training,"OJT for new or changed jobs, including contract and agency staff",,met,see QMS
+7.2.3,Internal auditor competency,"Documented process to verify internal auditor competence (core tools, CSRs, process approach)",yes,met,see QMS
+7.2.4,Second-party auditor competency,Competence of auditors who audit suppliers,,n/a,no supplier audits
+7.3.2,Employee motivation and empowerment,Documented process to motivate employees and promote innovation,yes,met,see QMS
+7.5.1.1,QMS documentation,"Quality manual with processes, interactions, and a CSR matrix showing where CSRs are addressed",,met,see QMS
+7.5.3.2.1,Record retention,"Retain PPAP, tooling, design and PO records for the active part life plus one calendar year",,met,see QMS
+7.5.3.2.2,Engineering specifications,Documented process to review customer engineering standards within 10 working days,yes,met,see QMS
+8.2.3.1.2,Customer-designated special characteristics,Comply with customer requirements for designating and controlling special characteristics,,met,see QMS
+8.2.3.1.3,Manufacturing feasibility,Multidisciplinary feasibility analysis for new or changed products and processes,,met,see QMS
+8.3.1.1,Design and development - supplemental,Documented design process for product and manufacturing process design,yes,met,see QMS
+8.3.3.3,Special characteristics,"Documented process to identify, document and control special characteristics",yes,met,see QMS
+8.3.4.4,Product approval process,Product and manufacturing approval process conforming to the customer's (e.g. PPAP),yes,met,see QMS
+8.4.1.2,Supplier selection process,Documented supplier selection process with risk assessment,yes,met,see QMS
+8.4.2.1,Type and extent of control,Documented process to identify outsourced processes and select controls,yes,met,see QMS
+8.4.2.2,Statutory and regulatory requirements,Documented process so purchased products meet statutory requirements in receiving and destination countries,yes,met,see QMS
+8.4.2.3,Supplier QMS development,"Suppliers certified to ISO 9001 at minimum, developing toward IATF 16949",,met,see QMS
+8.4.2.4,Supplier monitoring,"Documented process and criteria: delivered quality, disruptions, delivery, special status",yes,met,see QMS
+8.5.1.1,Control plan,Control plans for pre-launch and production with reaction plans; updated on changes,,met,see QMS
+8.5.1.3,Verification of job set-ups,Set-up verification with documented instructions and first/last-off comparison,,met,see QMS
+8.5.1.5,Total productive maintenance,"Documented TPM system: maintenance objectives, spare parts, predictive and preventive maintenance",yes,partial,"PM only, no TPM objectives"
+8.5.2.1,Identification and traceability,Traceability analysis and plan for all automotive products,,met,see QMS
+8.5.6.1,Control of changes - supplemental,Documented change-control process with validation and customer notification,yes,met,see QMS
+8.5.6.1.1,Temporary change of process controls,"Documented process and list of approved alternate controls, with verification and restart criteria",yes,met,see QMS
+8.6.2,Layout inspection and functional testing,Layout and functional tests per control plan (typically annually),,met,see QMS
+8.7.1.4,Control of reworked product,Documented rework process with risk analysis and customer approval where required,yes,met,see QMS
+8.7.1.5,Control of repaired product,Documented repair process with customer concession,yes,met,see QMS
+8.7.1.7,Nonconforming product disposition,Documented process for disposition of nonconforming product not subject to rework or repair,yes,met,see QMS
+9.1.1.1,Monitoring manufacturing processes,Process studies on new processes; maintain capability per customer requirements,,met,see QMS
+9.1.2.1,Customer satisfaction - supplemental,"Monitor delivered quality, disruptions, field returns, delivery, premium freight, customer notifications",,met,see QMS
+9.2.2.1,Internal audit programme,"Documented audit programme covering QMS, manufacturing process and product audits over 3 years",yes,met,see QMS
+9.2.2.3,Manufacturing process audit,"Audit every manufacturing process over 3 years, covering all shifts, using the process approach",,not-met,
+9.2.2.4,Product audit,Audit products at appropriate stages for conformity to all requirements,,met,see QMS
+9.3.2.1,Management review inputs - supplemental,"Cost of poor quality, process effectiveness, field failures, warranty, potential failures from FMEA",,met,see QMS
+10.2.3,Problem solving,"Documented problem-solving process with containment, root cause, verified actions and lessons learned",yes,met,see QMS
+10.2.4,Error-proofing,"Documented process for error-proofing methodology, tested at defined intervals",yes,partial,"poka-yoke list exists, no verification frequency"
+10.2.5,Warranty management systems,"Documented warranty management process when warranty applies, including no-trouble-found",yes,met,see QMS
+10.3.1,Continual improvement - supplemental,Documented continual improvement process with methodologies and objectives,yes,met,see QMS
+CSR:Ford,Ford customer-specific requirements,"Latest CSR document reviewed, mapped in the CSR matrix and implemented",,met,see QMS
+CSR:Stellantis,Stellantis customer-specific requirements,"Latest CSR document reviewed, mapped in the CSR matrix and implemented",,partial,CSR doc 2023 edition

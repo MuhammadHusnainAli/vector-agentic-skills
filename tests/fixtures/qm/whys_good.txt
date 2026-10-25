@@ -1,0 +1,10 @@
+Problem: 40 of 200 VB-2210 parts had bore 12.021-12.030 mm (drawing max 12.018) in lot L2609-14
+## Occurrence
+Why: The boring insert wore beyond the size limit before the tool change
+Why: Tool change interval is 400 parts but the new insert grade wears out at about 250 parts
+Why: The interval was not re-validated when the insert grade changed in August
+Why: Tooling grade changes are not covered by the change-control procedure QP-11
+## Escape
+Why: Only 1 in 50 parts gets an in-process bore check
+Why: The check frequency was set from the old insert wear rate and never reviewed
+Why: The control plan has no trigger to review frequencies after process changes

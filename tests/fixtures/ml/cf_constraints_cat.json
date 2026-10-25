@@ -1,0 +1,1 @@
+{"features": {"tenure_months": {"mutable": false}, "region": {"mutable": false}, "support_calls": {"direction": "decrease", "min": 0, "integer": true}, "last_login_days": {"direction": "decrease", "min": 0, "integer": true}}}

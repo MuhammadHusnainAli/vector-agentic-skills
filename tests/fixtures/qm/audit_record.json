@@ -1,0 +1,16 @@
+{
+  "audit_id": "IA-2026-07", "type": "internal", "organization": "Acme Precision Ltd", "site": "Leeds",
+  "objectives": "Verify that purchasing and machining conform to ISO 9001:2015 and QP-03/QP-05, and that last audit's corrective actions are effective.",
+  "scope": "Purchasing (supplier selection, POs, receiving) and CNC machining cells 1-4, day and night shift.",
+  "criteria": ["ISO 9001:2015 clauses 7.1.5, 8.4, 8.5.1, 8.5.2", "QP-03 Purchasing rev D", "QP-05 Production control rev C"],
+  "start": "2026-10-13", "end": "2026-10-14", "lead_auditor": "A. Khan", "team": ["C. Weber (trainee)"],
+  "auditees": ["Buyer", "Production manager", "Cell 3 setter", "Night-shift inspector"],
+  "sampled": ["8 POs from Sept 2026", "6 supplier evaluations", "4 job travellers", "8 gauges at lathe 4"],
+  "strengths": ["Supplier scorecards reviewed monthly with OTD and PPM trends", "First-off approval consistently recorded on all 4 travellers"],
+  "findings": [
+    {"id": "NC-01", "grade": "minor", "clause": "7.1.5.2", "requirement": "Measuring equipment calibrated at specified intervals.", "evidence": "Micrometer M-112 at lathe 4 in use with calibration due 2026-08-01; 1 of 8 gauges sampled.", "statement": "Measuring equipment used for acceptance was not always within its calibration interval."},
+    {"id": "OFI-01", "grade": "ofi", "clause": "8.4.1", "evidence": "2 of 6 evaluations used a superseded form.", "statement": "Consider withdrawing the old evaluation form from the shared drive."}
+  ],
+  "distribution": ["Managing director", "Quality manager", "Process owners"],
+  "response_due_days": 30
+}

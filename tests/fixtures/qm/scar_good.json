@@ -1,0 +1,12 @@
+{
+  "scar_id": "SCAR-029", "supplier": "MetalCo", "part": "CB-400", "issued": "2026-08-09", "ncr_ref": "NCR-2601",
+  "problem": {"requirement": "Material EN AW-6082 T6 per PO 88120", "actual": "Mill certificate shows T4 temper", "quantity": "1 lot of 500", "evidence": "NCR-2601, certificate copy"},
+  "due": {"containment": "2026-08-11", "root_cause": "2026-08-23", "closure": "2026-10-08"},
+  "response": {"containment": "Stock at supplier quarantined (1,200 bars), in transit none, customer stock replaced", "containment_date": "2026-08-10", "clean_point": "Lots from L-8841 labelled CERT-OK",
+               "occurrence_cause": "Mill order template defaulted to T4 for the 6082 grade", "escape_cause": "Certificate check compared grade only, not temper",
+               "cause_verification": "3 other orders with the template default found; template audit",
+               "actions": [{"action": "ERP order template made mandatory temper field with validation interlock", "addresses": "occurrence", "due": "2026-08-30"},
+                           {"action": "Automated certificate check against PO in receiving software (grade and temper)", "addresses": "escape", "due": "2026-09-15"}],
+               "effectiveness": "0 certificate mismatches over 60 lots by 2026-12-31", "fmea_control_plan": "PFMEA receiving step updated; control plan CP-R03 rev C",
+               "read_across": "All 6xxx grades and the second mill checked", "root_cause_date": "2026-08-20", "closure_date": "2026-10-01"}
+}

@@ -1,0 +1,2 @@
+{"iterations": 5000, "learning_rate": 0.05, "depth": 6, "l2_leaf_reg": 3, "loss_function": "Logloss",
+ "eval_metric": "AUC", "od_type": "Iter", "od_wait": 200, "use_best_model": true, "random_seed": 0}

@@ -1,0 +1,14 @@
+{
+  "title": "Quality Management & ISO 9001",
+  "description": "Build and certify an ISO 9001 QMS, plan and run audits, write NCRs, CAPAs and 8Ds, meet IATF 16949, APQP, PPAP and AS9100 requirements, run SPC, capability, MSA and acceptance sampling, apply Six Sigma DMAIC, DOE and hypothesis tests, and manage supplier quality.",
+  "order": 1,
+  "groups": [
+    {"title": "ISO 9001 QMS", "skills": ["iso-9001-gap-analyzer", "iso-9001-quality-manual-writer", "quality-policy-objectives-drafter", "qms-procedure-writer", "iso-9001-clause-explainer", "document-control-system-designer", "iso-9001-certification-roadmap-planner"]},
+    {"title": "Auditing", "skills": ["internal-audit-schedule-planner", "iso-audit-checklist-generator", "qms-audit-finding-writer", "supplier-audit-questionnaire-builder", "layered-process-audit-designer", "audit-report-writer"]},
+    {"title": "Nonconformance and CAPA", "skills": ["ncr-nonconformance-report-writer", "capa-plan-writer", "8d-problem-solving-report-writer", "five-whys-analysis-facilitator", "quality-fishbone-diagram-builder", "capa-effectiveness-checker"]},
+    {"title": "Automotive and aerospace quality", "skills": ["iatf-16949-requirement-checker", "apqp-phase-planner", "ppap-submission-package-builder", "as9100-gap-analyzer", "control-plan-writer", "process-fmea-builder"]},
+    {"title": "Statistical quality control", "skills": ["manufacturing-spc-chart-builder", "manufacturing-cpk-capability-calculator", "gage-rr-msa-analyzer", "acceptance-sampling-plan-selector", "western-electric-rules-checker", "pareto-defect-analyzer"]},
+    {"title": "Six Sigma", "skills": ["manufacturing-dmaic-charter-writer", "six-sigma-dpmo-calculator", "design-of-experiments-planner", "hypothesis-test-selector", "minitab-analysis-interpreter", "green-belt-exam-tutor"]},
+    {"title": "Supplier quality", "skills": ["supplier-quality-scorecard-builder", "incoming-inspection-plan-writer", "supplier-corrective-action-request-writer", "approved-supplier-list-manager", "supplier-development-plan-writer"]}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "project": "fraud",
+  "entities": [{"name": "card", "join_keys": []}],
+  "sources": [{"name": "txn_agg", "type": "file", "path": "x.parquet", "cadence": "daily"}],
+  "feature_views": [
+    {"name": "CardVelocity", "entities": ["card", "merchant"], "source": "txn_agg", "ttl": "6h", "online": true,
+     "features": [
+       {"name": "txn_count", "dtype": "int64"},
+       {"name": "txn_count", "dtype": "integer"},
+       {"name": "email", "dtype": "string", "description": "customer email"},
+       {"name": "is_fraud", "dtype": "bool", "description": "label"}
+     ]}
+  ],
+  "feature_services": [{"name": "fraud_v1", "features": ["card_velocity:*", "CardVelocity:amount_24h"]}]
+}
