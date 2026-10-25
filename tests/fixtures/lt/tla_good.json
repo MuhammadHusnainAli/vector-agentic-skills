@@ -1,0 +1,11 @@
+{
+  "context": "Anna describes her childhood in a village",
+  "items": [
+    {"item": "used to + infinitive", "meaning": "past habit or state that is no longer true",
+     "form": "subject + used to + base verb; negative didn't use to; question Did you use to...?",
+     "pronunciation": "/ˈjuːstə/ weak form, no /d/ sound; stress on the main verb",
+     "ccqs": ["Did Anna live in a village in the past? (yes)", "Once or for a long time? (a long time)", "Does she live there now? (no)"]}
+  ],
+  "controlled": "Gap-fill: complete Anna's story with used to / didn't use to",
+  "freer": "Pairs: tell your partner three things you used to do as a child and do not do now"
+}

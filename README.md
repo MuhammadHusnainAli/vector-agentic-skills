@@ -15,6 +15,7 @@ Each skill is a folder with a `SKILL.md` (YAML frontmatter + instructions), `ref
 | [Programming](skills/programming/README.md) | [Rust](skills/programming/rust/README.md) | 7 | Borrow-checker errors, lifetimes, trait design, thiserror/anyhow error handling, unsafe audits, Tokio/axum services, Cargo workspaces |
 | [Productivity](skills/productivity/README.md) | [Excel](skills/productivity/excel/README.md) | 3 | Formulas, advanced formulas (LAMBDA, LET, dynamic arrays, regex), workbook fundamentals |
 | [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | Problem framing, feature engineering, scikit-learn/XGBoost/LightGBM/CatBoost, clustering, validation, SHAP/PDP/LIME/counterfactuals, model cards, forecasting, survival, recommenders, ranking, fraud, uplift |
+| [Languages, Linguistics & Translation](skills/languages/README.md) | [Language Teaching](skills/languages/language-teaching/README.md) | 38 | Lesson planning (PPP, TBL), worksheets, text adaptation, listening and dialogues, CEFR/ACTFL syllabuses and can-dos, placement tests, rubrics, quizzes, error correction, pronunciation, reports, CELTA/Delta, observation, classroom management, online teaching, ESP, EAP, young learners, adult literacy, refugee support |
 
 Every skill ships at least one helper script, written in the skill's language (Rust skills ship std-only `.rs` files compiled with `rustc`) and smoke-tested in CI by `tests/run_tests.sh`:
 
@@ -100,6 +101,44 @@ Every skill ships at least one helper script, written in the skill's language (R
 | learning-to-rank-model-builder | `gen_ltr_script.py`, `ltr_data_check.py`, `rank_eval.py` | LTR data checks, LightGBM/XGBoost rankers, per-query NDCG/MAP/ERR with significance |
 | fraud-detection-model-designer | `fraud_eval.py`, `fraud_velocity_features.py`, `gen_fraud_model_script.py` | Point-in-time velocity features, out-of-time fraud model, alert-budget and cost evaluation |
 | uplift-model-builder | `gen_uplift_script.py`, `rct_check.py`, `uplift_eval.py` | RCT checks, S/T/X-learners and class transformation, Qini/AUUC (scikit-uplift-identical) and targeting value |
+| language-lesson-plan-builder | `plan_check.py`, `plan_scaffold.py` | Turns a lesson outline into a timed plan; checks aims, timing, teacher talk, feedback and freer practice |
+| ppp-lesson-structure-planner | `ppp_check.py`, `ppp_timing.py` | Times PPP stages by level; checks meaning/form/pronunciation, CCQs and practice tasks |
+| task-based-language-lesson-designer | `task_check.py` | Checks a task against Ellis's criteria and the Willis TBL cycle |
+| communicative-activity-generator | `activity_picker.py` | Filters a 38-activity bank by level, skill, class size, time, prep and online use |
+| warm-up-icebreaker-generator | `warmer_picker.py` | Picks warmers by purpose, level, size and time, seeded, without repeats |
+| language-lesson-differentiation-planner | `group_learners.py` | Builds mixed-level or same-level groups, spreads L1s, flags outliers |
+| esl-worksheet-generator | `gap_fill.py`, `matching.py` | Gap-fills and cloze with word banks and keys; shuffled matching exercises |
+| reading-comprehension-text-adapter | `question_mix.py`, `text_level.py` | Estimates a text's CEFR level and what to adapt; checks question staging and balance |
+| vocabulary-game-generator | `bingo_cards.py`, `wordsearch.py` | Word searches with solutions; unique bingo cards with a caller list |
+| authentic-material-lesson-adapter | `vocab_extract.py` | Pre-teach, gloss and ignore lists, cultural references and reading time for real texts |
+| listening-task-builder | `transcript_stats.py` | Speech rate, length and speakers vs level; pause points with timestamps |
+| dialogue-for-classroom-writer | `dialogue_check.py` | Checks target phrases, role balance, turn length and natural spoken features |
+| cefr-aligned-syllabus-builder | `cefr_hours.py`, `syllabus_check.py` | Guided hours between CEFR levels; syllabus coverage against a core grammar inventory |
+| language-course-scope-sequence-planner | `pacing.py`, `sequence_check.py` | Prerequisite order and recycling checks; unit pacing over a term calendar |
+| can-do-statement-writer | `cando_lint.py` | Lints can-do statements for observable, contextualised outcomes and mode coverage |
+| actfl-proficiency-curriculum-mapper | `level_map.py`, `mode_coverage.py` | ACTFL-CEFR-ILR lookups; three-mode and IPA coverage per unit |
+| language-program-review-writer | `program_metrics.py` | Retention, pass rate, level gain, attendance and satisfaction by course |
+| language-placement-test-builder | `item_analysis.py`, `placement_cutoffs.py` | Item facility, discrimination, distractors, KR-20; placement with borderline bands |
+| speaking-rubric-builder | `rater_agreement.py`, `rubric_check.py` | Checks band descriptors; two-rater agreement and weighted kappa |
+| writing-rubric-for-l2-builder | `essay_profile.py`, `writing_score.py` | Profiles learner texts (length, linkers, register); weighted rubric totals and levels |
+| language-quiz-generator | `quiz_build.py`, `quiz_check.py` | Seeded quizzes with keys from a tagged bank; item-writing flaw checks |
+| formative-assessment-for-language-planner | `exit_ticket_tally.py` | Exit-ticket results to reteach, group or move-on decisions |
+| l2-error-correction-strategy-advisor | `error_log.py` | Error log by category and pattern, persistent errors, strategy per category |
+| student-writing-feedback-generator | `correction_codes.py` | Summarises correction-coded texts and writes a learner summary |
+| pronunciation-feedback-for-teachers-tool | `l1_issues.py`, `minimal_pairs.py` | Likely difficulties for 18 L1s; minimal pairs and listening drills |
+| recast-and-prompt-technique-coach | `feedback_coder.py` | Codes teacher feedback moves in a transcript with uptake and repair |
+| student-progress-report-writer | `comment_check.py`, `progress_summary.py` | Progress by skill and term; checks report comments for pasted names, vagueness, jargon |
+| tefl-celta-prep-tutor | `quiz.py` | CELTA/TESOL practice quizzes with grading and weak domains |
+| delta-assignment-planner | `citation_check.py`, `word_count.py` | Section word counts against limits; citation vs reference list checks |
+| language-teacher-observation-form-builder | `observation_form.py`, `observation_trends.py` | Observation forms from a criteria bank; rating trends per teacher |
+| classroom-management-for-esl-coach | `instruction_check.py`, `seating_plan.py` | Checks task instructions and ICQs; seating plans with constraints |
+| online-language-teaching-setup-advisor | `setup_check.py` | Checks bandwidth, audio, platform features, safeguarding and consent |
+| language-teacher-cv-writer | `cv_check.py` | Checks ELT CVs for qualifications, evidence, levels, action verbs, regional norms |
+| esp-english-course-designer | `needs_analysis.py` | Ranks needs-analysis tasks by frequency x importance x difficulty |
+| academic-english-eap-course-planner | `academic_style_check.py`, `ielts_gap.py` | IELTS gap to study hours; academic style check with alternatives |
+| young-learner-esl-activity-generator | `yl_lesson_timer.py` | Stir/settle lesson sequence within children's attention span |
+| adult-literacy-esl-lesson-builder | `decodable_check.py` | Decodability of a text against taught graphemes and sight words |
+| refugee-language-support-planner | `learner_pathways.py` | Learner pathways and class groups from intake data |
 
 See [SITEMAP.md](SITEMAP.md) for every file, or [catalog.json](catalog.json) for a machine-readable index.
 
@@ -125,6 +164,7 @@ Each sub-category is a plugin:
 /plugin install rust-skills@vector-agentic-skills
 /plugin install excel-skills@vector-agentic-skills
 /plugin install classical-ml-skills@vector-agentic-skills
+/plugin install language-teaching-skills@vector-agentic-skills
 ```
 
 ### curl

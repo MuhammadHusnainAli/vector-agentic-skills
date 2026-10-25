@@ -1,0 +1,10 @@
+{
+  "title": "Present perfect", "level": "B1", "minutes": 60,
+  "main_aim": "To teach the present perfect for experiences",
+  "stages": [
+    {"name": "Lead-in", "minutes": 5, "interaction": "T-Ss"},
+    {"name": "Presentation", "aim": "Present the grammar", "minutes": 25, "interaction": "T-Ss"},
+    {"name": "Gap-fill", "aim": "Controlled practice", "minutes": 15, "interaction": "S-S", "procedure": "Ss complete the worksheet"},
+    {"name": "Homework", "aim": "Set homework", "minutes": 5, "interaction": "T-Ss"}
+  ]
+}

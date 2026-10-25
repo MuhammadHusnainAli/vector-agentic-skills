@@ -1,0 +1,8 @@
+Receptionist: Good evening, welcome to the Park Hotel. How can I help you?
+Guest: Hi. I have a reservation for two nights. The name is Silva.
+Receptionist: Let me check. Yes, a double room for two nights. Can I see your passport, please?
+Guest: Sure, here you are. What time is breakfast?
+Receptionist: Breakfast is from seven to ten in the restaurant on the first floor.
+Guest: Great. And is there wifi in the room?
+Receptionist: Yes, the password is on your key card. Your room is 214. The lift is on the left.
+Guest: Thank you very much.

@@ -1,0 +1,4 @@
+{"class_size": 6, "age_group": "adults", "upload_mbps": 5, "download_mbps": 50, "connection": "ethernet",
+ "microphone": "headset", "camera": "external", "light": "front",
+ "platform": {"breakout_rooms": true, "screen_share_audio": true, "whiteboard": true, "chat": true, "polls": true},
+ "recording_lessons": false, "backup_plan": "phone hotspot and a second meeting link"}

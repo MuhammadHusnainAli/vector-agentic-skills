@@ -182,6 +182,53 @@
         "./skills/manufacturing/quality-management/approved-supplier-list-manager",
         "./skills/manufacturing/quality-management/supplier-development-plan-writer"
       ]
+    },
+    {
+      "name": "language-teaching-skills",
+      "description": "Plan PPP and task-based language lessons, write worksheets, adapted texts, listening tasks, dialogues and vocabulary games, build CEFR and ACTFL syllabuses and can-do statements, write placement tests, rubrics and quizzes, give corrective feedback and progress reports, prepare for CELTA and Delta, and design ESP, EAP, young learner, adult literacy and refugee courses.",
+      "category": "languages",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/languages/language-teaching/language-lesson-plan-builder",
+        "./skills/languages/language-teaching/ppp-lesson-structure-planner",
+        "./skills/languages/language-teaching/task-based-language-lesson-designer",
+        "./skills/languages/language-teaching/communicative-activity-generator",
+        "./skills/languages/language-teaching/warm-up-icebreaker-generator",
+        "./skills/languages/language-teaching/language-lesson-differentiation-planner",
+        "./skills/languages/language-teaching/esl-worksheet-generator",
+        "./skills/languages/language-teaching/reading-comprehension-text-adapter",
+        "./skills/languages/language-teaching/vocabulary-game-generator",
+        "./skills/languages/language-teaching/authentic-material-lesson-adapter",
+        "./skills/languages/language-teaching/listening-task-builder",
+        "./skills/languages/language-teaching/dialogue-for-classroom-writer",
+        "./skills/languages/language-teaching/cefr-aligned-syllabus-builder",
+        "./skills/languages/language-teaching/language-course-scope-sequence-planner",
+        "./skills/languages/language-teaching/can-do-statement-writer",
+        "./skills/languages/language-teaching/actfl-proficiency-curriculum-mapper",
+        "./skills/languages/language-teaching/language-program-review-writer",
+        "./skills/languages/language-teaching/language-placement-test-builder",
+        "./skills/languages/language-teaching/speaking-rubric-builder",
+        "./skills/languages/language-teaching/writing-rubric-for-l2-builder",
+        "./skills/languages/language-teaching/language-quiz-generator",
+        "./skills/languages/language-teaching/formative-assessment-for-language-planner",
+        "./skills/languages/language-teaching/l2-error-correction-strategy-advisor",
+        "./skills/languages/language-teaching/student-writing-feedback-generator",
+        "./skills/languages/language-teaching/pronunciation-feedback-for-teachers-tool",
+        "./skills/languages/language-teaching/recast-and-prompt-technique-coach",
+        "./skills/languages/language-teaching/student-progress-report-writer",
+        "./skills/languages/language-teaching/tefl-celta-prep-tutor",
+        "./skills/languages/language-teaching/delta-assignment-planner",
+        "./skills/languages/language-teaching/language-teacher-observation-form-builder",
+        "./skills/languages/language-teaching/classroom-management-for-esl-coach",
+        "./skills/languages/language-teaching/online-language-teaching-setup-advisor",
+        "./skills/languages/language-teaching/language-teacher-cv-writer",
+        "./skills/languages/language-teaching/esp-english-course-designer",
+        "./skills/languages/language-teaching/academic-english-eap-course-planner",
+        "./skills/languages/language-teaching/young-learner-esl-activity-generator",
+        "./skills/languages/language-teaching/adult-literacy-esl-lesson-builder",
+        "./skills/languages/language-teaching/refugee-language-support-planner"
+      ]
     }
   ]
 }

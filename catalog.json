@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 121,
+  "skill_count": 159,
   "categories": [
     {
       "name": "programming",
@@ -366,6 +366,136 @@
                 "supplier-corrective-action-request-writer",
                 "approved-supplier-list-manager",
                 "supplier-development-plan-writer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "languages",
+      "title": "Languages, Linguistics & Translation",
+      "description": "Skills for teaching and learning languages, from lesson planning, materials and CEFR or ACTFL curricula to assessment, error correction and teacher development.",
+      "skill_count": 38,
+      "subcategories": [
+        {
+          "name": "language-teaching",
+          "title": "Language Teaching",
+          "description": "Plan PPP and task-based language lessons, write worksheets, adapted texts, listening tasks, dialogues and vocabulary games, build CEFR and ACTFL syllabuses and can-do statements, write placement tests, rubrics and quizzes, give corrective feedback and progress reports, prepare for CELTA and Delta, and design ESP, EAP, young learner, adult literacy and refugee courses.",
+          "plugin": "language-teaching-skills",
+          "skill_count": 38,
+          "skills": [
+            "language-lesson-plan-builder",
+            "ppp-lesson-structure-planner",
+            "task-based-language-lesson-designer",
+            "communicative-activity-generator",
+            "warm-up-icebreaker-generator",
+            "language-lesson-differentiation-planner",
+            "esl-worksheet-generator",
+            "reading-comprehension-text-adapter",
+            "vocabulary-game-generator",
+            "authentic-material-lesson-adapter",
+            "listening-task-builder",
+            "dialogue-for-classroom-writer",
+            "cefr-aligned-syllabus-builder",
+            "language-course-scope-sequence-planner",
+            "can-do-statement-writer",
+            "actfl-proficiency-curriculum-mapper",
+            "language-program-review-writer",
+            "language-placement-test-builder",
+            "speaking-rubric-builder",
+            "writing-rubric-for-l2-builder",
+            "language-quiz-generator",
+            "formative-assessment-for-language-planner",
+            "l2-error-correction-strategy-advisor",
+            "student-writing-feedback-generator",
+            "pronunciation-feedback-for-teachers-tool",
+            "recast-and-prompt-technique-coach",
+            "student-progress-report-writer",
+            "tefl-celta-prep-tutor",
+            "delta-assignment-planner",
+            "language-teacher-observation-form-builder",
+            "classroom-management-for-esl-coach",
+            "online-language-teaching-setup-advisor",
+            "language-teacher-cv-writer",
+            "esp-english-course-designer",
+            "academic-english-eap-course-planner",
+            "young-learner-esl-activity-generator",
+            "adult-literacy-esl-lesson-builder",
+            "refugee-language-support-planner"
+          ],
+          "groups": [
+            {
+              "title": "Lesson planning",
+              "skills": [
+                "language-lesson-plan-builder",
+                "ppp-lesson-structure-planner",
+                "task-based-language-lesson-designer",
+                "communicative-activity-generator",
+                "warm-up-icebreaker-generator",
+                "language-lesson-differentiation-planner"
+              ]
+            },
+            {
+              "title": "Materials creation",
+              "skills": [
+                "esl-worksheet-generator",
+                "reading-comprehension-text-adapter",
+                "vocabulary-game-generator",
+                "authentic-material-lesson-adapter",
+                "listening-task-builder",
+                "dialogue-for-classroom-writer"
+              ]
+            },
+            {
+              "title": "Curriculum and syllabus",
+              "skills": [
+                "cefr-aligned-syllabus-builder",
+                "language-course-scope-sequence-planner",
+                "can-do-statement-writer",
+                "actfl-proficiency-curriculum-mapper",
+                "language-program-review-writer"
+              ]
+            },
+            {
+              "title": "Assessment",
+              "skills": [
+                "language-placement-test-builder",
+                "speaking-rubric-builder",
+                "writing-rubric-for-l2-builder",
+                "language-quiz-generator",
+                "formative-assessment-for-language-planner"
+              ]
+            },
+            {
+              "title": "Feedback and correction",
+              "skills": [
+                "l2-error-correction-strategy-advisor",
+                "student-writing-feedback-generator",
+                "pronunciation-feedback-for-teachers-tool",
+                "recast-and-prompt-technique-coach",
+                "student-progress-report-writer"
+              ]
+            },
+            {
+              "title": "Teacher development",
+              "skills": [
+                "tefl-celta-prep-tutor",
+                "delta-assignment-planner",
+                "language-teacher-observation-form-builder",
+                "classroom-management-for-esl-coach",
+                "online-language-teaching-setup-advisor",
+                "language-teacher-cv-writer"
+              ]
+            },
+            {
+              "title": "Specialized language teaching",
+              "skills": [
+                "esp-english-course-designer",
+                "academic-english-eap-course-planner",
+                "young-learner-esl-activity-generator",
+                "adult-literacy-esl-lesson-builder",
+                "refugee-language-support-planner"
               ]
             }
           ]
@@ -1836,6 +1966,1058 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/xgboost-lightgbm-tuner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/ai-ml/classical-ml/xgboost-lightgbm-tuner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill xgboost-lightgbm-tuner"
+    },
+    {
+      "name": "academic-english-eap-course-planner",
+      "title": "Academic English (EAP) Course Planner",
+      "description": "Plan English for Academic Purposes (EAP) courses: pre-sessional, in-sessional, foundation, IELTS preparation and discipline-specific EAP, with syllabus strands (academic reading, lecture listening and note-taking, essay and report writing, paraphrase, summary and synthesis, referencing and plagiarism, seminars and presentations, academic vocabulary, critical thinking), a 10-week pre-sessional outline, exit assessment, IELTS-CEFR alignment and academic style (formality, hedging, cohesion, reporting verbs). Estimates study hours and weeks to close an IELTS gap from overall or per-skill scores (IELTS rounding, minimum per skill, priority skills, feasibility before a deadline), and checks learner texts for contractions, informal words with academic alternatives, unhedged claims, 'you', And/But/So starts, rhetorical questions and missing citations. Use when designing an EAP or pre-sessional course, advising a student on reaching an IELTS score, or teaching academic writing style.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/academic-english-eap-course-planner",
+      "files": [
+        "SKILL.md",
+        "references/academic-style.md",
+        "references/eap-syllabus.md",
+        "scripts/academic_style_check.py",
+        "scripts/ielts_gap.py"
+      ],
+      "references": [
+        "references/academic-style.md",
+        "references/eap-syllabus.md"
+      ],
+      "scripts": [
+        "scripts/academic_style_check.py",
+        "scripts/ielts_gap.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/academic-english-eap-course-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/academic-english-eap-course-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/academic-english-eap-course-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/academic-english-eap-course-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill academic-english-eap-course-planner"
+    },
+    {
+      "name": "actfl-proficiency-curriculum-mapper",
+      "title": "ACTFL Proficiency Curriculum Mapper",
+      "description": "Map world language curricula to the ACTFL framework: proficiency levels (Novice, Intermediate, Advanced, Superior, Distinguished with sublevels), functions, contexts, text types and accuracy, proficiency vs performance, the three modes of communication (interpretive, interpersonal, presentational), the 5 Cs World-Readiness Standards, backward-designed thematic units with Integrated Performance Assessments, typical programme targets and FSI time estimates. Looks up approximate ACTFL-CEFR-ILR equivalences with what each level can do, and checks a unit map for missing modes, rehearsed skits mislabelled as interpersonal, translation or word lists as interpretive tasks, and units without an integrated performance assessment. Use when designing or auditing a US K-12 or college language curriculum, writing ACTFL-aligned units, or explaining how ACTFL levels relate to CEFR or ILR.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/actfl-proficiency-curriculum-mapper",
+      "files": [
+        "SKILL.md",
+        "references/actfl-framework.md",
+        "references/framework-alignment.md",
+        "scripts/level_map.py",
+        "scripts/mode_coverage.py"
+      ],
+      "references": [
+        "references/actfl-framework.md",
+        "references/framework-alignment.md"
+      ],
+      "scripts": [
+        "scripts/level_map.py",
+        "scripts/mode_coverage.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/actfl-proficiency-curriculum-mapper/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/actfl-proficiency-curriculum-mapper/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/actfl-proficiency-curriculum-mapper.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/actfl-proficiency-curriculum-mapper",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill actfl-proficiency-curriculum-mapper"
+    },
+    {
+      "name": "adult-literacy-esl-lesson-builder",
+      "title": "Adult Literacy ESL Lesson Builder",
+      "description": "Build lessons for adult ESL learners who are developing literacy (LESLLA learners: pre-literate, non-literate, semi-literate, literate in a non-Roman script): learner profiles and sensitive initial assessment, principles (oral language first, known to new, systematic phonics with adult-relevant text, repetition, classroom skills, respect for experience), a lesson routine (oral warm-up, review, new grapheme, blending, segmenting, decodable text, writing, functional literacy, Language Experience Approach), a phonics sequence for adults, sight words, functional literacy targets (forms, signs, medicine labels) and portfolio assessment. Checks whether a reading text is decodable with the letter-sound patterns and sight words taught so far, catching untaught digraphs, listing non-decodable words with the untaught part, and suggesting the most useful next patterns. Use when teaching adults with low or no literacy, writing decodable adult texts, or planning a literacy-focused ESL course.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/adult-literacy-esl-lesson-builder",
+      "files": [
+        "SKILL.md",
+        "references/literacy-learners.md",
+        "references/phonics-sequence.md",
+        "scripts/decodable_check.py"
+      ],
+      "references": [
+        "references/literacy-learners.md",
+        "references/phonics-sequence.md"
+      ],
+      "scripts": [
+        "scripts/decodable_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/adult-literacy-esl-lesson-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/adult-literacy-esl-lesson-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/adult-literacy-esl-lesson-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/adult-literacy-esl-lesson-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill adult-literacy-esl-lesson-builder"
+    },
+    {
+      "name": "authentic-material-lesson-adapter",
+      "title": "Authentic Material Lesson Adapter",
+      "description": "Turn authentic material (news articles, podcasts, videos, songs, menus, timetables, adverts, social media posts, forms, infographics) into language lessons by grading the task rather than the text. Selects texts for interest, relevance, exploitability, coverage, cultural load and rights; finds the 4-6 words to pre-teach, words to gloss on the page and words learners can ignore, plus names and cultural references to explain, with reading time by level; and builds a lesson shape (lead-in, pre-teach, gist or scanning, graded detail task, language focus on chunks and register, response) with task ideas per material type and level from A1 to C1. Covers copyright, fair dealing and fair use, Creative Commons and attribution. Use when a teacher wants to use a real-world text, video or song in class, or asks how to make authentic material work at a low level.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/authentic-material-lesson-adapter",
+      "files": [
+        "SKILL.md",
+        "references/copyright-and-sources.md",
+        "references/exploiting-authentic-texts.md",
+        "references/high-frequency-words.txt",
+        "scripts/vocab_extract.py"
+      ],
+      "references": [
+        "references/copyright-and-sources.md",
+        "references/exploiting-authentic-texts.md",
+        "references/high-frequency-words.txt"
+      ],
+      "scripts": [
+        "scripts/vocab_extract.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/authentic-material-lesson-adapter/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/authentic-material-lesson-adapter/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/authentic-material-lesson-adapter.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/authentic-material-lesson-adapter",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill authentic-material-lesson-adapter"
+    },
+    {
+      "name": "can-do-statement-writer",
+      "title": "Can-Do Statement Writer",
+      "description": "Write and review can-do statements for language courses, units, lessons and learner self-assessment, CEFR or NCSSFL-ACTFL style: action (observable verb) + text or situation + level-specific conditions, learner ('I can') and descriptor ('Can') versions, progressions of one activity from A1 to C1, and coverage of reception, production, interaction and mediation. Includes a verb bank by mode and level and condition and text-type banks. Lints statements for teacher-centred phrasing, knowledge instead of use (learn, know, understand the passive), missing context, two skills in one statement, vague quality words, grammar items as outcomes, overlong statements and missing modes in a set. Use when writing unit outcomes, self-assessment checklists, portfolio descriptors or course objectives for a language programme.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/can-do-statement-writer",
+      "files": [
+        "SKILL.md",
+        "references/can-do-writing-guide.md",
+        "references/verb-bank.md",
+        "scripts/cando_lint.py"
+      ],
+      "references": [
+        "references/can-do-writing-guide.md",
+        "references/verb-bank.md"
+      ],
+      "scripts": [
+        "scripts/cando_lint.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/can-do-statement-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/can-do-statement-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/can-do-statement-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/can-do-statement-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill can-do-statement-writer"
+    },
+    {
+      "name": "cefr-aligned-syllabus-builder",
+      "title": "CEFR-Aligned Syllabus Builder",
+      "description": "Build language course syllabuses aligned to the CEFR (A1-C2, plus levels, Companion Volume 2020): entry and exit levels, guided learning hours and course length (with an L1-distance adjustment), syllabus type (topic, functional-notional, task-based, skills-based, multi-strand), unit-by-unit can-do outcomes, grammar from a core inventory by level, vocabulary, functions, pronunciation, balance of reception, production, interaction and mediation, recycling and assessment points. Checks a syllabus for units without can-do statements, core grammar for the level not covered, items above the course level, skills missing from most units and units with no vocabulary or functions. Use when designing or reviewing a general English (or other language) course, mapping a coursebook to the CEFR, or estimating hours to reach a level.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/cefr-aligned-syllabus-builder",
+      "files": [
+        "SKILL.md",
+        "references/cefr-levels.md",
+        "references/core-inventory-by-level.md",
+        "scripts/cefr_hours.py",
+        "scripts/syllabus_check.py"
+      ],
+      "references": [
+        "references/cefr-levels.md",
+        "references/core-inventory-by-level.md"
+      ],
+      "scripts": [
+        "scripts/cefr_hours.py",
+        "scripts/syllabus_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/cefr-aligned-syllabus-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/cefr-aligned-syllabus-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/cefr-aligned-syllabus-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/cefr-aligned-syllabus-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill cefr-aligned-syllabus-builder"
+    },
+    {
+      "name": "classroom-management-for-esl-coach",
+      "title": "Classroom Management for ESL Coach",
+      "description": "Coach ESL/EFL teachers in classroom management: the instruction sequence (attention, group first, graded imperatives, demonstration, ICQs, hand out, start, check), ICQ examples, online instructions, routines for the first weeks (class agreement, L1 use, phones, lateness, homework, seating), strategies for L1 use in tasks, dominant and quiet learners, mixed levels, large classes, fast finishers, low motivation, disruptive young learners and teens, cultural expectations, classroom language to teach early and teacher presence. Checks planned instructions for length, missing ICQs, useless ICQs like 'Do you understand?', no demonstration, long sentences, filler and missing grouping or timing, and builds seating plans that keep named learners apart, seat learners who need the front, mix first languages and alternate stronger and weaker learners. Use when a teacher struggles with instructions, behaviour, L1 use, participation or seating.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/classroom-management-for-esl-coach",
+      "files": [
+        "SKILL.md",
+        "references/giving-instructions.md",
+        "references/routines-and-behaviour.md",
+        "scripts/instruction_check.py",
+        "scripts/seating_plan.py"
+      ],
+      "references": [
+        "references/giving-instructions.md",
+        "references/routines-and-behaviour.md"
+      ],
+      "scripts": [
+        "scripts/instruction_check.py",
+        "scripts/seating_plan.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/classroom-management-for-esl-coach/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/classroom-management-for-esl-coach/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/classroom-management-for-esl-coach.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/classroom-management-for-esl-coach",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill classroom-management-for-esl-coach"
+    },
+    {
+      "name": "communicative-activity-generator",
+      "title": "Communicative Activity Generator",
+      "description": "Generate communicative language-class activities matched to level, skill, class size, time, preparation, online or face-to-face delivery and target language: information gaps, find someone who, role plays with goal-and-conflict role cards, jigsaw reading, ranking and pyramid discussions, dictogloss, running dictation, taboo, mysteries, surveys, debates and more from a 38-activity bank. Adapts frames to the target grammar or vocabulary, writes A/B cards and role cards, and covers setup, ICQs, monitoring, content-then-language feedback, large classes, fixed seating and breakout rooms. Use when a teacher needs a speaking or practice activity, wants freer practice for a grammar point, or needs ideas for a specific class size or online lesson.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/communicative-activity-generator",
+      "files": [
+        "SKILL.md",
+        "references/activity-bank.md",
+        "references/running-activities.md",
+        "scripts/activity_picker.py"
+      ],
+      "references": [
+        "references/activity-bank.md",
+        "references/running-activities.md"
+      ],
+      "scripts": [
+        "scripts/activity_picker.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/communicative-activity-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/communicative-activity-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/communicative-activity-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/communicative-activity-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill communicative-activity-generator"
+    },
+    {
+      "name": "delta-assignment-planner",
+      "title": "Delta Assignment Planner",
+      "description": "Plan and check Cambridge Delta assignments: the three modules (exam, Module 2 professional practice with PDA and LSAs, Module 3 specialism or management), LSA components (background essay, lesson plan and commentary, observed lesson, post-lesson evaluation), a Module 3 structure, a five-week LSA timeline, background essay structure with matched problem-cause-solution-rationale tables, using sources, core reading by area and common reasons assignments fall short. Counts words per section of a Markdown draft against limits (excluding references and appendices, optionally tables and block quotes) and cross-checks author-date citations with the reference list (cited but not listed, listed but not cited, year mismatches, quotations without page numbers). Use when a teacher is preparing a Delta LSA, PDA or Module 3 assignment, structuring a background essay, or checking word counts and references before submission.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/delta-assignment-planner",
+      "files": [
+        "SKILL.md",
+        "references/delta-modules.md",
+        "references/lsa-essay-structure.md",
+        "scripts/citation_check.py",
+        "scripts/word_count.py"
+      ],
+      "references": [
+        "references/delta-modules.md",
+        "references/lsa-essay-structure.md"
+      ],
+      "scripts": [
+        "scripts/citation_check.py",
+        "scripts/word_count.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/delta-assignment-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/delta-assignment-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/delta-assignment-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/delta-assignment-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill delta-assignment-planner"
+    },
+    {
+      "name": "dialogue-for-classroom-writer",
+      "title": "Dialogue for Classroom Writer",
+      "description": "Write natural model dialogues for language classes that contain the target language, suit the level and sound spoken rather than written: situation, speakers' goals and a small complication, contractions, reactions and backchannels, discourse markers, repair and softening, adjacency pairs, register, turn and dialogue length by CEFR level, balanced roles for pair practice and diverse characters. Checks a dialogue for missing target phrases, unbalanced roles, turns too long for the level, full forms with no contractions, no natural spoken features and wrong length, and plans exploitation: prediction, gist and detail listening, noticing, drilling, disappearing and jumbled dialogues, substitution, role cards and recording. Use when a teacher needs a dialogue or conversation script for a lesson, a listening script to record, or wants a coursebook dialogue made more natural.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/dialogue-for-classroom-writer",
+      "files": [
+        "SKILL.md",
+        "references/dialogue-exploitation.md",
+        "references/natural-dialogue-features.md",
+        "scripts/dialogue_check.py"
+      ],
+      "references": [
+        "references/dialogue-exploitation.md",
+        "references/natural-dialogue-features.md"
+      ],
+      "scripts": [
+        "scripts/dialogue_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/dialogue-for-classroom-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/dialogue-for-classroom-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/dialogue-for-classroom-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/dialogue-for-classroom-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill dialogue-for-classroom-writer"
+    },
+    {
+      "name": "esl-worksheet-generator",
+      "title": "ESL Worksheet Generator",
+      "description": "Create ESL/EFL and other language worksheets that move from recognition to controlled to freer practice: gap-fills with shuffled word banks, distractors and first-letter hints, open cloze, matching (word-definition, sentence halves, question-answer, collocations) with no item left opposite its partner, multiple choice, transformations, word formation, reordering, error correction and personalised tasks, each with an instruction, example, numbered items and an answer key. Covers difficulty dials, item counts and timing by level, layout and dyslexia-friendly accessibility, digital worksheets and copyright. Use when a teacher needs a worksheet, handout or practice exercise for grammar or vocabulary, or wants to turn a text or word list into exercises.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/esl-worksheet-generator",
+      "files": [
+        "SKILL.md",
+        "references/exercise-types.md",
+        "references/worksheet-design.md",
+        "scripts/gap_fill.py",
+        "scripts/matching.py"
+      ],
+      "references": [
+        "references/exercise-types.md",
+        "references/worksheet-design.md"
+      ],
+      "scripts": [
+        "scripts/gap_fill.py",
+        "scripts/matching.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/esl-worksheet-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/esl-worksheet-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/esl-worksheet-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/esl-worksheet-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill esl-worksheet-generator"
+    },
+    {
+      "name": "esp-english-course-designer",
+      "title": "ESP English Course Designer",
+      "description": "Design English for Specific Purposes (ESP) courses for professions and workplaces (medical and nursing, aviation, legal, hospitality, engineering, business): needs analysis (target situation, present situation, learning needs, means analysis) with practitioner interviews, task-list surveys rating frequency, importance and difficulty, triangulation with managers, can-do outcomes for core tasks, task- or genre-based syllabuses, authentic workplace materials, genre analysis of key interactions (e.g. SBAR nursing handover), performance assessment agreed with subject experts and course evaluation. Ranks surveyed tasks by frequency x importance x difficulty into core, secondary and low bands, flags tasks respondents disagree on, and compares priorities by role. Use when a teacher or training manager plans an English course for a specific job, sector or company, or needs a needs-analysis survey.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/esp-english-course-designer",
+      "files": [
+        "SKILL.md",
+        "references/esp-course-design.md",
+        "scripts/needs_analysis.py"
+      ],
+      "references": [
+        "references/esp-course-design.md"
+      ],
+      "scripts": [
+        "scripts/needs_analysis.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/esp-english-course-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/esp-english-course-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/esp-english-course-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/esp-english-course-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill esp-english-course-designer"
+    },
+    {
+      "name": "formative-assessment-for-language-planner",
+      "title": "Formative Assessment for Language Planner",
+      "description": "Plan formative assessment for language lessons and units: Wiliam's five strategies, success criteria, a bank of quick checks (exit tickets, mini whiteboards, ABCD cards, hinge questions with misconception distractors, traffic lights, no-hands-up questioning, monitoring checklists, 3-2-1, self-assessment against can-dos, peer checklists, error logs), where to place checks in a lesson, and feedback that moves learning forward. Turns exit-ticket or quick-check results into next-lesson decisions per objective (reteach the whole class, small-group reteach with named students, or move on), and lists students who missed most objectives and those ready for extension. Use when a teacher wants to check understanding during or after lessons, design exit tickets or hinge questions, or decide what to reteach.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/formative-assessment-for-language-planner",
+      "files": [
+        "SKILL.md",
+        "references/formative-techniques.md",
+        "scripts/exit_ticket_tally.py"
+      ],
+      "references": [
+        "references/formative-techniques.md"
+      ],
+      "scripts": [
+        "scripts/exit_ticket_tally.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/formative-assessment-for-language-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/formative-assessment-for-language-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/formative-assessment-for-language-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/formative-assessment-for-language-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill formative-assessment-for-language-planner"
+    },
+    {
+      "name": "l2-error-correction-strategy-advisor",
+      "title": "L2 Error Correction Strategy Advisor",
+      "description": "Advise language teachers on correcting learner errors: mistakes vs errors vs fossilised errors, what to correct first (global, target, frequent, offensive), immediate vs delayed correction by lesson stage, the six oral corrective feedback types (explicit correction, recast, clarification request, metalinguistic feedback, elicitation, repetition) with examples and research-based guidance on uptake and repair, making recasts noticeable, non-verbal techniques, delayed correction activities, learner preferences, and written correction. Analyses a class error log by category and student, groups errors by pattern, finds persistent (possibly fossilised) errors repeated across dates, and suggests the correction strategy for each category. Use when a teacher asks how or when to correct errors, keeps an error log, or has learners who repeat the same mistakes.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/l2-error-correction-strategy-advisor",
+      "files": [
+        "SKILL.md",
+        "references/corrective-feedback-types.md",
+        "references/when-to-correct.md",
+        "scripts/error_log.py"
+      ],
+      "references": [
+        "references/corrective-feedback-types.md",
+        "references/when-to-correct.md"
+      ],
+      "scripts": [
+        "scripts/error_log.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/l2-error-correction-strategy-advisor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/l2-error-correction-strategy-advisor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/l2-error-correction-strategy-advisor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/l2-error-correction-strategy-advisor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill l2-error-correction-strategy-advisor"
+    },
+    {
+      "name": "language-course-scope-sequence-planner",
+      "title": "Language Course Scope and Sequence Planner",
+      "description": "Plan the scope and sequence of a language course: what is covered and in which order, using sequencing principles (need first, frequency, simple to complex, prerequisites, contrast after both items, learnability, topic coherence, spiral), a recycling plan for every item, a scope and sequence chart, and pacing across a real term calendar with holidays, review lessons, assessment lessons and weighted units. Checks a sequence for items taught before their prerequisites, circular prerequisites, items never recycled and late recycling, prints a valid teaching order, and turns term dates into unit start and end dates. Use when ordering a syllabus or coursebook, planning a term or year, or fixing a course where items are taught once and forgotten.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-course-scope-sequence-planner",
+      "files": [
+        "SKILL.md",
+        "references/scope-and-sequence.md",
+        "scripts/pacing.py",
+        "scripts/sequence_check.py"
+      ],
+      "references": [
+        "references/scope-and-sequence.md"
+      ],
+      "scripts": [
+        "scripts/pacing.py",
+        "scripts/sequence_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-course-scope-sequence-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-course-scope-sequence-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-course-scope-sequence-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-course-scope-sequence-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-course-scope-sequence-planner"
+    },
+    {
+      "name": "language-lesson-differentiation-planner",
+      "title": "Language Lesson Differentiation Planner",
+      "description": "Plan differentiation for mixed-level language classes: tiered tasks (must/should/could, same text with different questions, graded texts, choice boards, open-ended tasks), different outcomes, scaffolds that do not stigmatise, same-level and mixed-level grouping by stage, roles, time and fast-finisher extensions, questioning for different levels, and adjustments for dyslexia, low literacy, anxiety and very strong learners. Groups a class list into mixed-level groups (spreading learners who share an L1) or same-level groups for tiered work, and flags learners far from the class median for support or extension. Use when a teacher has a mixed-ability class, needs a tiered version of a task, or wants to group learners for a lesson.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-lesson-differentiation-planner",
+      "files": [
+        "SKILL.md",
+        "references/differentiation-strategies.md",
+        "scripts/group_learners.py"
+      ],
+      "references": [
+        "references/differentiation-strategies.md"
+      ],
+      "scripts": [
+        "scripts/group_learners.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-lesson-differentiation-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-lesson-differentiation-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-lesson-differentiation-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-lesson-differentiation-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-lesson-differentiation-planner"
+    },
+    {
+      "name": "language-lesson-plan-builder",
+      "title": "Language Lesson Plan Builder",
+      "description": "Build and review staged language lesson plans for ESL/EFL and other languages: class profile, a main aim written as a learner outcome, subsidiary aims, target language analysis, stages with stage aims, timings, interaction patterns and procedure, materials, anticipated problems with solutions and a board plan. Picks a lesson shape (PPP, TTT, guided discovery, receptive or productive skills, TBL, ESA) from the aim, turns an outline into a timed Markdown plan, and checks plans for teacher-centred or vague aims, timings that do not add up, missing stage aims, too much teacher-fronted time, tasks with no feedback, language lessons with no freer practice and over-long stages. Use when planning a language lesson, preparing a CELTA/TESOL teaching practice plan, or reviewing a colleague's plan.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-lesson-plan-builder",
+      "files": [
+        "SKILL.md",
+        "references/lesson-plan-anatomy.md",
+        "references/lesson-shapes.md",
+        "scripts/plan_check.py",
+        "scripts/plan_scaffold.py"
+      ],
+      "references": [
+        "references/lesson-plan-anatomy.md",
+        "references/lesson-shapes.md"
+      ],
+      "scripts": [
+        "scripts/plan_check.py",
+        "scripts/plan_scaffold.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-lesson-plan-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-lesson-plan-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-lesson-plan-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-lesson-plan-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-lesson-plan-builder"
+    },
+    {
+      "name": "language-placement-test-builder",
+      "title": "Language Placement Test Builder",
+      "description": "Build, analyse and calibrate language placement tests: a blueprint (levels to separate, sections, length, items per level, item types, delivery, parallel forms), level-targeted grammar, vocabulary, reading and listening items, a short speaking interview with probes and a level-up push, cut-score setting (contrasting groups, borderline group, modified Angoff, empirical adjustment), SEM-based borderline bands and placement validation. Runs classical item analysis from response data (facility, upper-lower discrimination, distractor analysis, KR-20 reliability, items easier than lower-level items) and places learners from scores and cut scores, flagging borderline learners for an interview. Use when creating a placement test for a language school or programme, checking whether test items work, or setting and reviewing cut scores.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-placement-test-builder",
+      "files": [
+        "SKILL.md",
+        "references/item-analysis-guide.md",
+        "references/placement-test-design.md",
+        "scripts/item_analysis.py",
+        "scripts/placement_cutoffs.py"
+      ],
+      "references": [
+        "references/item-analysis-guide.md",
+        "references/placement-test-design.md"
+      ],
+      "scripts": [
+        "scripts/item_analysis.py",
+        "scripts/placement_cutoffs.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-placement-test-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-placement-test-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-placement-test-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-placement-test-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-placement-test-builder"
+    },
+    {
+      "name": "language-program-review-writer",
+      "title": "Language Programme Review Writer",
+      "description": "Write evidence-based reviews of language programmes and schools: review areas used by quality schemes (aims and design, curriculum and materials, teaching and learning, assessment, learner outcomes, support and welfare, staffing and CPD, resources, management, published information), evidence sources and triangulation, key indicators, findings, prioritised and owned recommendations, an action plan and a report template. Calculates by-course retention, pass rate, median CEFR level gain, attendance and satisfaction from learner records and flags low retention, low pass rates, zero level gain, poor attendance and low satisfaction, with a caution for small groups. Use when preparing a programme or course review, an accreditation self-evaluation, an annual quality report, or a data-based report on a language department.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-program-review-writer",
+      "files": [
+        "SKILL.md",
+        "references/report-template.md",
+        "references/review-framework.md",
+        "scripts/program_metrics.py"
+      ],
+      "references": [
+        "references/report-template.md",
+        "references/review-framework.md"
+      ],
+      "scripts": [
+        "scripts/program_metrics.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-program-review-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-program-review-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-program-review-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-program-review-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-program-review-writer"
+    },
+    {
+      "name": "language-quiz-generator",
+      "title": "Language Quiz Generator",
+      "description": "Generate language quizzes for grammar, vocabulary and comprehension from a tagged question bank: multiple choice with distractors drawn from real learner errors, gap-fills with base forms and all acceptable answers, true/false, balanced sampling across topics, shuffled questions and options by seed for parallel versions, and an answer key with teaching explanations. Checks a bank for MCQs with no or several keys, missing gap or true/false answers, too few or duplicate options, all/none of the above, correct options that stand out by length, gaps with no blank, unmarked negative stems and missing explanations. Covers matching item type to purpose, item-writing rules with flawed and improved examples, quiz length and composition, and using results. Use when a teacher needs a class quiz, exit ticket, test section or parallel versions of a quiz, or wants a question bank reviewed.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-quiz-generator",
+      "files": [
+        "SKILL.md",
+        "references/bank-format.md",
+        "references/item-writing-guide.md",
+        "scripts/quiz_build.py",
+        "scripts/quiz_check.py"
+      ],
+      "references": [
+        "references/bank-format.md",
+        "references/item-writing-guide.md"
+      ],
+      "scripts": [
+        "scripts/quiz_build.py",
+        "scripts/quiz_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-quiz-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-quiz-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-quiz-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-quiz-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-quiz-generator"
+    },
+    {
+      "name": "language-teacher-cv-writer",
+      "title": "Language Teacher CV Writer",
+      "description": "Write and review CVs, cover letters and interview preparation for language teachers (EFL/ESL/TESOL and other languages): one-to-two-page structure, a profile line, qualifications first (CELTA, CertTESOL, Delta, PGCE, MA TESOL), experience bullets with action verbs, levels, ages, scale and results, professional development and skills, tailoring for young learner schools, exam centres, business English, EAP, online platforms and senior roles, regional CV norms (photo, age, nationality, visa information), cover letter outline, interview questions and demo lessons. Checks a CV for a missing teaching qualification, experience without numbers, no levels or age groups, duty phrases instead of action verbs, no exam or specialist teaching, length, personal details that some markets advise against, and a missing email. Use when a teacher is writing or updating a CV, applying for a TEFL or language teaching job, or preparing for an interview and demo lesson.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-teacher-cv-writer",
+      "files": [
+        "SKILL.md",
+        "references/tefl-cv-guide.md",
+        "scripts/cv_check.py"
+      ],
+      "references": [
+        "references/tefl-cv-guide.md"
+      ],
+      "scripts": [
+        "scripts/cv_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-teacher-cv-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-teacher-cv-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-teacher-cv-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-teacher-cv-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-teacher-cv-writer"
+    },
+    {
+      "name": "language-teacher-observation-form-builder",
+      "title": "Language Teacher Observation Form Builder",
+      "description": "Build lesson observation forms for language teachers and track observation results: a criteria bank across planning and aims, classroom management, language clarification, skills development, learner engagement, error correction, assessment for learning, inclusion and differentiation, materials and technology, and rapport, each with observable look-fors; evaluative forms with a 1-4 scale and n/o, developmental (peer and coaching) forms with no ratings and reflection questions, pre- and post-observation practice and action points. Tracks ratings per teacher and area over time, flagging areas that need support, areas that improved and strengths to share. Use when a director of studies, mentor or peer observer needs an observation form, wants to run developmental observations, or wants to follow teachers' development across observations.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/language-teacher-observation-form-builder",
+      "files": [
+        "SKILL.md",
+        "references/observation-criteria.md",
+        "scripts/observation_form.py",
+        "scripts/observation_trends.py"
+      ],
+      "references": [
+        "references/observation-criteria.md"
+      ],
+      "scripts": [
+        "scripts/observation_form.py",
+        "scripts/observation_trends.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/language-teacher-observation-form-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/language-teacher-observation-form-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/language-teacher-observation-form-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/language-teacher-observation-form-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill language-teacher-observation-form-builder"
+    },
+    {
+      "name": "listening-task-builder",
+      "title": "Listening Task Builder",
+      "description": "Build listening lessons and tasks from audio or video transcripts: checks speech rate (words per minute), length, number of speakers and plays against the CEFR level, suggests pause points with approximate timestamps, and stages the lesson (lead-in, pre-teach, gist, specific information and detail tasks set before each play, pair checks, inference, transcript work, language focus, response). Includes task types by sub-skill, rules for writing listening questions, accent variety and recording choice, and bottom-up decoding activities for weak forms, linking, elision, assimilation, contractions and chunks (micro-dictation, word counting, shadowing). Use when a teacher has a recording or video to exploit, needs listening comprehension questions, or wants to know if a recording suits a level.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/listening-task-builder",
+      "files": [
+        "SKILL.md",
+        "references/decoding-activities.md",
+        "references/listening-lesson-stages.md",
+        "scripts/transcript_stats.py"
+      ],
+      "references": [
+        "references/decoding-activities.md",
+        "references/listening-lesson-stages.md"
+      ],
+      "scripts": [
+        "scripts/transcript_stats.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/listening-task-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/listening-task-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/listening-task-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/listening-task-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill listening-task-builder"
+    },
+    {
+      "name": "online-language-teaching-setup-advisor",
+      "title": "Online Language Teaching Setup Advisor",
+      "description": "Advise language teachers on setting up and teaching online: equipment priorities (connection and upload speed, headset microphone, headphones, front lighting, camera, backup), platform features that matter for language classes (breakout rooms, computer-audio sharing, whiteboard and annotation, chat, polls, recording, captions), complementary tools, safeguarding, consent and privacy for young learners and recordings, a first-lesson checklist, online lesson shapes, classroom activities adapted for video calls, one-to-one and young learner online teaching, participation strategies and asynchronous work. Checks a setup description for low upload bandwidth, missing safeguarding or recording consent, no breakout rooms for groups, built-in microphones, no audio sharing, mobile connections, backlighting, no whiteboard, no backup plan and oversized speaking classes. Use when a teacher is starting or improving online lessons, choosing equipment or a platform, or adapting activities for video calls.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/online-language-teaching-setup-advisor",
+      "files": [
+        "SKILL.md",
+        "references/online-activities.md",
+        "references/setup-and-tools.md",
+        "scripts/setup_check.py"
+      ],
+      "references": [
+        "references/online-activities.md",
+        "references/setup-and-tools.md"
+      ],
+      "scripts": [
+        "scripts/setup_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/online-language-teaching-setup-advisor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/online-language-teaching-setup-advisor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/online-language-teaching-setup-advisor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/online-language-teaching-setup-advisor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill online-language-teaching-setup-advisor"
+    },
+    {
+      "name": "ppp-lesson-structure-planner",
+      "title": "PPP Lesson Structure Planner",
+      "description": "Plan presentation-practice-production (PPP) language lessons: a context that makes meaning clear, clarification of meaning, form and pronunciation with concept-checking questions (CCQs), timelines and drills, controlled practice with feedback, personalised freer practice and delayed error correction, timed to the lesson length and level. Includes a CCQ and timeline bank for tenses, modals, conditionals, passive, comparatives, reported speech, relative clauses, lexis and functions. Checks a target language analysis for missing meaning/form/pronunciation, CCQs that repeat the target language or ask 'Do you understand?', no context, and 'freer' tasks that are really gap-fills. Use when teaching new grammar, vocabulary or functional language with PPP, writing CCQs, or timing a PPP lesson.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/ppp-lesson-structure-planner",
+      "files": [
+        "SKILL.md",
+        "references/ccq-bank.md",
+        "references/ppp-stages.md",
+        "scripts/ppp_check.py",
+        "scripts/ppp_timing.py"
+      ],
+      "references": [
+        "references/ccq-bank.md",
+        "references/ppp-stages.md"
+      ],
+      "scripts": [
+        "scripts/ppp_check.py",
+        "scripts/ppp_timing.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/ppp-lesson-structure-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/ppp-lesson-structure-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/ppp-lesson-structure-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/ppp-lesson-structure-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ppp-lesson-structure-planner"
+    },
+    {
+      "name": "pronunciation-feedback-for-teachers-tool",
+      "title": "Pronunciation Feedback for Teachers Tool",
+      "description": "Help teachers diagnose and give feedback on English learners' pronunciation with intelligibility as the goal: Lingua Franca Core priorities, likely difficulties by first language (Spanish, Portuguese, French, German, Italian, Arabic, Mandarin, Cantonese, Japanese, Korean, Vietnamese, Thai, Russian, Polish, Turkish, Hindi/Urdu, Persian, Indonesian) with priority, examples and teaching tips, merged for mixed-L1 classes, and a minimal-pairs bank for vowel, consonant, final-consonant and cluster contrasts with context sentences and seeded 1-or-2 listening drills with keys. Covers diagnosis from recordings, classroom techniques (model and drill, back-chaining, articulation, minimal pairs, stress marking, humming intonation, shadowing, recasts), written feedback on recordings and sensitivity about accent. Use when a teacher asks how to correct pronunciation, what problems their learners' L1 causes, or needs minimal pairs and pronunciation drills.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/pronunciation-feedback-for-teachers-tool",
+      "files": [
+        "SKILL.md",
+        "references/l1-pronunciation-issues.md",
+        "references/minimal-pairs.md",
+        "references/pronunciation-feedback-techniques.md",
+        "scripts/l1_issues.py",
+        "scripts/minimal_pairs.py"
+      ],
+      "references": [
+        "references/l1-pronunciation-issues.md",
+        "references/minimal-pairs.md",
+        "references/pronunciation-feedback-techniques.md"
+      ],
+      "scripts": [
+        "scripts/l1_issues.py",
+        "scripts/minimal_pairs.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/pronunciation-feedback-for-teachers-tool/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/pronunciation-feedback-for-teachers-tool/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/pronunciation-feedback-for-teachers-tool.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/pronunciation-feedback-for-teachers-tool",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill pronunciation-feedback-for-teachers-tool"
+    },
+    {
+      "name": "reading-comprehension-text-adapter",
+      "title": "Reading Comprehension Text Adapter",
+      "description": "Adapt English reading texts to a target CEFR level and write comprehension tasks for them. Estimates text level from average sentence length and coverage by a high-frequency word list (plus Flesch reading ease), lists less frequent words and sentences too long for the target level, and guides simplification vs elaboration: splitting sentences, replacing or glossing rare words, un-nominalising, explaining idioms and cultural references, while keeping ideas, text type and target language. Writes graded versions for mixed classes and staged tasks (prediction, gist, detail, inference, vocabulary in context, personal response), and checks a question set for a missing or misplaced gist task, no inference at B1+, one-sided true/false keys and guessable yes/no questions. Use when a text is too hard or too easy for a class, or when a teacher needs reading comprehension questions.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/reading-comprehension-text-adapter",
+      "files": [
+        "SKILL.md",
+        "references/adaptation-techniques.md",
+        "references/high-frequency-words.txt",
+        "references/reading-task-design.md",
+        "scripts/question_mix.py",
+        "scripts/text_level.py"
+      ],
+      "references": [
+        "references/adaptation-techniques.md",
+        "references/high-frequency-words.txt",
+        "references/reading-task-design.md"
+      ],
+      "scripts": [
+        "scripts/question_mix.py",
+        "scripts/text_level.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/reading-comprehension-text-adapter/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/reading-comprehension-text-adapter/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/reading-comprehension-text-adapter.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/reading-comprehension-text-adapter",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill reading-comprehension-text-adapter"
+    },
+    {
+      "name": "recast-and-prompt-technique-coach",
+      "title": "Recast and Prompt Technique Coach",
+      "description": "Coach language teachers in oral corrective feedback moves: recasts (full, partial, stressed, recast plus prompt, didactic), prompts (elicitation, metalinguistic clues and questions, clarification requests, repetition, gestures) and explicit correction, with teacher language for each, a prompt-to-correction sequence with wait time and learner repair, when to choose recasts or prompts, habits to change, and a self-observation cycle (record, transcribe, code, set a goal, practise, re-record). Codes the teacher's feedback in a classroom transcript where learner error turns are marked, counts each move with learner uptake and repair, and flags over-reliance on recasts, untreated errors in accuracy stages and prompts that rarely lead to repair. Use when a teacher wants to improve how they correct speaking errors, analyse a lesson recording, or practise recasts and prompts.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/recast-and-prompt-technique-coach",
+      "files": [
+        "SKILL.md",
+        "references/feedback-moves.md",
+        "references/self-observation.md",
+        "scripts/feedback_coder.py"
+      ],
+      "references": [
+        "references/feedback-moves.md",
+        "references/self-observation.md"
+      ],
+      "scripts": [
+        "scripts/feedback_coder.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/recast-and-prompt-technique-coach/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/recast-and-prompt-technique-coach/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/recast-and-prompt-technique-coach.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/recast-and-prompt-technique-coach",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill recast-and-prompt-technique-coach"
+    },
+    {
+      "name": "refugee-language-support-planner",
+      "title": "Refugee Language Support Planner",
+      "description": "Plan language support for refugees, asylum seekers and other new arrivals: intake with interpreters and literacy checks, pathways (foundation literacy, script transition for learners literate in non-Roman scripts, settlement ESOL, work and study), a settlement syllabus prioritising personal information, emergencies, health, housing, transport, money, children's schools, work, rights and community with can-do statements, flexible delivery (rolling enrolment, childcare, real local materials, volunteers) and links to literacy, employability and support services. Applies trauma-informed principles (safety, trust, choice, collaboration, empowerment, cultural humility), topic care, classroom practice, signs of distress and referral, and teacher wellbeing. Assigns each learner a pathway from intake data and groups learners into classes by pathway and availability, with childcare and goal summaries. Use when designing or running English classes for refugees or migrants, or organising intake and class grouping.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/refugee-language-support-planner",
+      "files": [
+        "SKILL.md",
+        "references/settlement-language-syllabus.md",
+        "references/trauma-informed-practice.md",
+        "scripts/learner_pathways.py"
+      ],
+      "references": [
+        "references/settlement-language-syllabus.md",
+        "references/trauma-informed-practice.md"
+      ],
+      "scripts": [
+        "scripts/learner_pathways.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/refugee-language-support-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/refugee-language-support-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/refugee-language-support-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/refugee-language-support-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill refugee-language-support-planner"
+    },
+    {
+      "name": "speaking-rubric-builder",
+      "title": "Speaking Rubric Builder",
+      "description": "Build and validate speaking assessment rubrics for language learners: holistic vs analytic vs checklist, criteria (fluency and coherence, lexical resource, grammatical range and accuracy, pronunciation and intelligibility, interactive communication, task achievement), band descriptors written from the middle band out with observable features and consistent frequency words, a sample 4-band B1 rubric, task types that elicit each level, rater standardisation with benchmarks, double rating and rater effects. Checks a rubric for missing bands, near-identical adjacent bands, purely evaluative descriptors, native-speaker benchmarks and too many bands or criteria, and measures two-rater agreement (exact, adjacent, quadratic weighted kappa, severity) listing performances that need a third rating. Use when designing a speaking test or rubric, training raters, or checking marking consistency.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/speaking-rubric-builder",
+      "files": [
+        "SKILL.md",
+        "references/rater-standardisation.md",
+        "references/speaking-criteria.md",
+        "scripts/rater_agreement.py",
+        "scripts/rubric_check.py"
+      ],
+      "references": [
+        "references/rater-standardisation.md",
+        "references/speaking-criteria.md"
+      ],
+      "scripts": [
+        "scripts/rater_agreement.py",
+        "scripts/rubric_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/speaking-rubric-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/speaking-rubric-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/speaking-rubric-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/speaking-rubric-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill speaking-rubric-builder"
+    },
+    {
+      "name": "student-progress-report-writer",
+      "title": "Student Progress Report Writer",
+      "description": "Write language learners' progress reports and report-card comments that are specific, balanced and useful to learners and parents: strength with evidence, measured progress, one or two areas to develop and a concrete next step, a phrase bank by skill, plain-language CEFR level descriptions, tone guidance and what to avoid. Summarises scores by learner, skill and term (latest score, change, strongest and weakest skill, an evidence sentence, and drops that need checking), and checks drafted comments for another learner's name pasted in, missing next steps, vague praise without evidence, no strengths, teacher jargon and length. Use when a language teacher writes end-of-term reports, parent reports, progress comments or learner feedback summaries.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/student-progress-report-writer",
+      "files": [
+        "SKILL.md",
+        "references/report-comment-bank.md",
+        "scripts/comment_check.py",
+        "scripts/progress_summary.py"
+      ],
+      "references": [
+        "references/report-comment-bank.md"
+      ],
+      "scripts": [
+        "scripts/comment_check.py",
+        "scripts/progress_summary.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/student-progress-report-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/student-progress-report-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/student-progress-report-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/student-progress-report-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill student-progress-report-writer"
+    },
+    {
+      "name": "student-writing-feedback-generator",
+      "title": "Student Writing Feedback Generator",
+      "description": "Generate written feedback on language learners' writing: content and task first, then two or three language focus areas, strength-target-action comments, level-appropriate wording, a comment bank for task, organisation, language, register and next steps, learner self- and peer-check checklists, and redraft routines. Uses a correction code key (spelling, tense, verb form, agreement, wrong word, word form, article, preposition, word order, missing and extra words, punctuation, capitals, register, unclear meaning) so learners correct their own errors; summarises a coded text by error type and density, writes a learner-facing summary of the main areas to work on, flags over-marking and unknown codes, and produces a clean copy for redrafting. Use when a teacher needs feedback comments on student writing, a correction code system, or help marking a stack of learner texts efficiently.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/student-writing-feedback-generator",
+      "files": [
+        "SKILL.md",
+        "references/correction-code-key.md",
+        "references/feedback-framing.md",
+        "scripts/correction_codes.py"
+      ],
+      "references": [
+        "references/correction-code-key.md",
+        "references/feedback-framing.md"
+      ],
+      "scripts": [
+        "scripts/correction_codes.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/student-writing-feedback-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/student-writing-feedback-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/student-writing-feedback-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/student-writing-feedback-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill student-writing-feedback-generator"
+    },
+    {
+      "name": "task-based-language-lesson-designer",
+      "title": "Task-Based Language Lesson Designer",
+      "description": "Design task-based language teaching (TBLT) lessons that pass Ellis's task criteria (focus on meaning, an information, opinion or reasoning gap, learners' own resources, a non-linguistic outcome) and follow the Willis framework: pre-task, task, planning, report and language focus with analysis and practice. Covers the six task types (listing, ordering, comparing, problem solving, sharing experiences, creative) with examples from A1 to C1, real-world vs pedagogic tasks, task complexity, focus on form, and turning coursebook exercises into tasks. Checks a lesson for disguised grammar exercises, missing gap or outcome, pre-teaching the structure, missing or misordered stages and no planning time. Use when planning a TBL lesson, converting an exercise into a task, or checking whether an activity is really a task.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/task-based-language-lesson-designer",
+      "files": [
+        "SKILL.md",
+        "references/task-types.md",
+        "references/willis-framework.md",
+        "scripts/task_check.py"
+      ],
+      "references": [
+        "references/task-types.md",
+        "references/willis-framework.md"
+      ],
+      "scripts": [
+        "scripts/task_check.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/task-based-language-lesson-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/task-based-language-lesson-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/task-based-language-lesson-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/task-based-language-lesson-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill task-based-language-lesson-designer"
+    },
+    {
+      "name": "tefl-celta-prep-tutor",
+      "title": "TEFL / CELTA Prep Tutor",
+      "description": "Tutor trainees preparing for CELTA, Trinity CertTESOL and other initial TEFL/TESOL courses: course structure and assessment (teaching practice, assignments, grades, the five CELTA syllabus topics), what trainers assess in teaching practice, a pre-course study plan, grammar and phonology essentials, ELT terminology, and practice quizzes from an original question bank across language analysis, phonology, methodology, planning, classroom management and skills, with seeded reproducible quizzes, shuffled options, grading with explanations and weak-domain reports. Explains concepts like CCQs, ICQs, PPP, TTT, TBL, guided discovery, recasts, gist and scanning, schwa and minimal pairs, and helps with pre-interview tasks, lesson plans and assignment structure. Use when someone is applying for or taking a CELTA or TESOL course, wants practice questions on ELT knowledge, or a trainer needs a quiz.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/tefl-celta-prep-tutor",
+      "files": [
+        "SKILL.md",
+        "references/course-guide.md",
+        "references/question-bank.md",
+        "references/terminology.md",
+        "scripts/quiz.py"
+      ],
+      "references": [
+        "references/course-guide.md",
+        "references/question-bank.md",
+        "references/terminology.md"
+      ],
+      "scripts": [
+        "scripts/quiz.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/tefl-celta-prep-tutor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/tefl-celta-prep-tutor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/tefl-celta-prep-tutor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/tefl-celta-prep-tutor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill tefl-celta-prep-tutor"
+    },
+    {
+      "name": "vocabulary-game-generator",
+      "title": "Vocabulary Game Generator",
+      "description": "Generate vocabulary games for language classes from a word list: printable word searches (easy, medium and hard directions, solution grid and positions), unique bingo cards with free squares and a shuffled caller list, and 20 classroom games (back to the board, taboo, pelmanism, dominoes, word-formation races, sentence auction, running dictation of definitions, info-gap crosswords and more) with the language each practises. Covers making games learning-rich (recall over recognition, production, recycling), spacing encounters across lessons, and choosing and grouping words. Use when a teacher wants a vocabulary game, review activity, bingo, word search or fun way to recycle a word list.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/vocabulary-game-generator",
+      "files": [
+        "SKILL.md",
+        "references/game-bank.md",
+        "scripts/bingo_cards.py",
+        "scripts/wordsearch.py"
+      ],
+      "references": [
+        "references/game-bank.md"
+      ],
+      "scripts": [
+        "scripts/bingo_cards.py",
+        "scripts/wordsearch.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/vocabulary-game-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/vocabulary-game-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/vocabulary-game-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/vocabulary-game-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill vocabulary-game-generator"
+    },
+    {
+      "name": "warm-up-icebreaker-generator",
+      "title": "Warm-up and Icebreaker Generator",
+      "description": "Suggest and write warmers and icebreakers for language classes by purpose (icebreaker for new groups, energiser, settler, review of last lesson's language, lead-in to today's topic), CEFR level, class size, time and online or in-person delivery, from a 34-warmer bank with seeded shuffling and an exclude list so warmers do not repeat across a term. Covers first-lesson routines, name learning, cultural and personal sensitivity, online versions with chat and polls, linking the warmer to the lesson, and adapting for level and class size. Use when a teacher needs a warmer, first-day icebreaker, energiser, review game or lead-in activity.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/warm-up-icebreaker-generator",
+      "files": [
+        "SKILL.md",
+        "references/warmer-bank.md",
+        "references/warmer-principles.md",
+        "scripts/warmer_picker.py"
+      ],
+      "references": [
+        "references/warmer-bank.md",
+        "references/warmer-principles.md"
+      ],
+      "scripts": [
+        "scripts/warmer_picker.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/warm-up-icebreaker-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/warm-up-icebreaker-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/warm-up-icebreaker-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/warm-up-icebreaker-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill warm-up-icebreaker-generator"
+    },
+    {
+      "name": "writing-rubric-for-l2-builder",
+      "title": "Writing Rubric for L2 Builder",
+      "description": "Build analytic and holistic rubrics for second-language writing and score scripts with them: criteria (task achievement and content, organisation and coherence, lexical range and accuracy, grammatical range and accuracy, register), band descriptors, a sample 0-5 B1 email rubric, genre-specific checks (emails, letters, essays, reports, reviews, stories), word counts by level, a scoring procedure with an off-task gate, and feedback from jagged profiles. Profiles a learner's text (word count against the task, paragraphs, sentence length, linker variety and overuse, lexical variety, repetition, informal language in formal tasks) and combines criterion bands into weighted totals and levels, flagging off-task scripts, jagged profiles and borderline totals. Use when designing a writing test or rubric, marking L2 essays or emails consistently, or preparing feedback on learner writing.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/writing-rubric-for-l2-builder",
+      "files": [
+        "SKILL.md",
+        "references/writing-criteria.md",
+        "scripts/essay_profile.py",
+        "scripts/writing_score.py"
+      ],
+      "references": [
+        "references/writing-criteria.md"
+      ],
+      "scripts": [
+        "scripts/essay_profile.py",
+        "scripts/writing_score.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/writing-rubric-for-l2-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/writing-rubric-for-l2-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/writing-rubric-for-l2-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/writing-rubric-for-l2-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill writing-rubric-for-l2-builder"
+    },
+    {
+      "name": "young-learner-esl-activity-generator",
+      "title": "Young Learner ESL Activity Generator",
+      "description": "Generate activities and lesson sequences for young language learners aged 3-12: songs, chants, TPR, Simon says, flashcard games, run and touch, what's missing, stories and acting out, colouring dictation, crafts, puppets, bingo, board games, treasure hunts, mini books and routines, each typed as stir (lively) or settle (calm) with ages, timing and target language. Builds a timed lesson that alternates stir and settle activities within the children's attention span, opening and closing with routines. Covers characteristics by age (pre-school, 6-8, 9-12), principles (here and now, routines, repetition, listening first, multisensory, context, positive atmosphere, L1 use), a sample lesson shape, classroom management with children, assessment and Cambridge Young Learners exams, and safeguarding. Use when a teacher plans English (or other language) lessons for children or needs a song, game or activity for a young learner class.",
+      "category": "languages",
+      "subcategory": "language-teaching",
+      "version": "1.0.0",
+      "path": "skills/languages/language-teaching/young-learner-esl-activity-generator",
+      "files": [
+        "SKILL.md",
+        "references/yl-activity-bank.md",
+        "references/yl-principles.md",
+        "scripts/yl_lesson_timer.py"
+      ],
+      "references": [
+        "references/yl-activity-bank.md",
+        "references/yl-principles.md"
+      ],
+      "scripts": [
+        "scripts/yl_lesson_timer.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/young-learner-esl-activity-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/languages/language-teaching/young-learner-esl-activity-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/young-learner-esl-activity-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/languages/language-teaching/young-learner-esl-activity-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill young-learner-esl-activity-generator"
     },
     {
       "name": "8d-problem-solving-report-writer",

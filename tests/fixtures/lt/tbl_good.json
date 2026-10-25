@@ -1,0 +1,13 @@
+{
+  "title": "Plan a class trip",
+  "instructions": "In groups, agree on one day trip for the class within a 30 euro budget per person",
+  "gap": "opinion",
+  "outcome": "One trip plan per group, presented to the class, then a class vote",
+  "stages": [
+    {"name": "Pre-task", "minutes": 8, "procedure": "Topic intro, brainstorm places, listen to a model recording"},
+    {"name": "Task", "minutes": 12},
+    {"name": "Planning", "minutes": 8},
+    {"name": "Report", "minutes": 10},
+    {"name": "Language focus", "minutes": 15, "procedure": "Ss find suggestion phrases in the transcript"}
+  ]
+}

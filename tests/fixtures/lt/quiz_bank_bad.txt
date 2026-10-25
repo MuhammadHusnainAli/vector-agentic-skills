@@ -1,0 +1,18 @@
+## articles | A1 | mcq
+Q: I have ___ apple.
+A) a *
+B) an *
+C) the
+
+## modals | B1 | mcq
+Q: Which sentence is not correct?
+A) You must go.
+B) All of the above
+C) You should to go, because it is a very important meeting for everyone in the team *
+
+## past simple | A2 | gap
+Q: She went to school.
+
+## present perfect | B1 | tf
+Q: "I've finished" means the action is complete.
+ANS: maybe

@@ -1,0 +1,21 @@
+student,course,status,start_level,end_level,passed,attendance,satisfaction
+S00,General A2,completed,A2,B1,yes,85,4
+S01,General A2,completed,A2,B1,yes,86,5
+S02,General A2,completed,A2,B1,yes,87,4
+S03,General A2,completed,A2,B1,yes,88,5
+S04,General A2,completed,A2,B1,yes,89,4
+S05,General A2,completed,A2,B1,yes,90,5
+S06,General A2,completed,A2,A2+,yes,91,4
+S07,General A2,completed,A2,A2+,yes,92,5
+S08,General A2,completed,A2,A2+,yes,93,4
+S09,General A2,completed,A2,A2+,no,94,5
+S10,General A2,withdrawn,A2,,no,85,4
+S11,General A2,withdrawn,A2,,no,86,5
+E00,Evening B1,completed,B1,B1,yes,60,3
+E01,Evening B1,completed,B1,B1,yes,63,3
+E02,Evening B1,completed,B1,B1,yes,66,3
+E03,Evening B1,completed,B1,B1,no,69,3
+E04,Evening B1,completed,B1,B1,no,72,3
+E05,Evening B1,withdrawn,B1,,no,75,3
+E06,Evening B1,withdrawn,B1,,no,78,3
+E07,Evening B1,withdrawn,B1,,no,81,3

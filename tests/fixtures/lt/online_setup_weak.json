@@ -1,0 +1,4 @@
+{"class_size": 12, "age_group": "teens", "upload_mbps": 1.2, "download_mbps": 10, "connection": "mobile",
+ "microphone": "built-in", "camera": "built-in", "light": "behind",
+ "platform": {"breakout_rooms": false, "screen_share_audio": false, "whiteboard": false, "chat": true},
+ "recording_lessons": true, "recording_consent": false, "safeguarding_policy": false, "backup_plan": ""}

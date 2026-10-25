@@ -1,0 +1,4 @@
+Customer: Good morning. I would like to buy a ticket to Manchester, please. I am travelling today and I do not have a railcard, and I would also like to know which platform the train leaves from because I am not familiar with this station.
+Clerk: Single or return?
+Customer: Return.
+Clerk: That is 45 pounds.

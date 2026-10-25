@@ -1,0 +1,12 @@
+criterion,band,descriptor
+Fluency,1,Poor
+Fluency,2,Some hesitation; often stops to search for words; short turns
+Fluency,3,Speaks at length with some hesitation; uses simple linkers
+Fluency,4,Speaks at length with some hesitation; uses simple linkers and some
+Grammar,1,Many errors in basic structures; meaning often unclear
+Grammar,2,Good grammar
+Grammar,3,Uses a range of structures; errors rarely impede meaning
+Grammar,4,Native-like accuracy
+Pronunciation,1,Frequently unintelligible
+Pronunciation,2,Generally intelligible; L1 features cause occasional strain
+Pronunciation,3,Intelligible throughout; uses stress and intonation to convey meaning

@@ -1,0 +1,79 @@
+# High-frequency English words (about 1,000 base forms and common irregular forms).
+# Compiled for text_level.py: words a learner around A2 is likely to know. One or more words per line;
+# lines starting with # are comments. text_level.py strips regular endings (-s, -ed, -ing, -ly, -er, -est)
+# before looking words up, so list base forms; add irregular forms explicitly.
+
+# function words
+a an the this that these those some any no every each all both either neither much many more most few little
+less least other another such what which who whom whose where when why how whether if because so but and or nor
+than as like then there here not very too also only just even still already yet again ever never always often
+sometimes usually really quite almost enough perhaps maybe of in on at by for with about against between into
+through during before after above below to from up down out off over under around near behind beside across along
+among past since until till without within upon toward towards onto per via
+i me my mine myself you your yours yourself yourselves he him his himself she her hers herself it its itself we us
+our ours ourselves they them their theirs themselves one ones someone somebody something somewhere anyone anybody
+anything anywhere everyone everybody everything everywhere nobody nothing nowhere none
+be am is are was were been being have has had having do does did done doing will would shall should can could may
+might must ought need dare
+yes no ok okay please thank thanks hello hi goodbye bye sorry oh well now today tonight tomorrow yesterday
+ago soon later early late once twice
+
+# numbers and time
+zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen
+eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion first
+second third fourth fifth last next half quarter double
+monday tuesday wednesday thursday friday saturday sunday january february march april may june july august
+september october november december spring summer autumn fall winter morning afternoon evening night day week
+month year hour minute moment time weekend century date age
+
+# common verbs (with irregular forms)
+go goes went gone come came get got gotten make made take took taken see saw seen know knew known think thought
+say said tell told give gave given find found leave left feel felt bring brought begin began begun keep kept hold
+held write wrote written stand stood hear heard let mean meant set meet met run ran pay paid sit sat speak spoke
+spoken lie lay lain lead led read grow grew grown lose lost fall fell fallen send sent build built understand
+understood draw drew drawn break broke broken spend spent cut rise rose risen drive drove driven buy bought wear
+wore worn choose chose chosen eat ate eaten drink drank drunk sleep slept sell sold teach taught catch caught
+fight fought fly flew flown forget forgot forgotten win won throw threw thrown sing sang sung swim swam swum
+ride rode ridden wake woke woken hide hid hidden shoot shot steal stole stolen hang hung light lit put
+use want look work call try ask need seem help show play move live believe happen include continue change watch
+follow stop create open walk offer remember love consider appear wait serve die expect stay reach kill remain
+suggest raise pass report decide pull return explain hope develop carry receive agree support produce allow add
+learn talk turn start end close enjoy finish answer travel visit cook clean wash study like hate prefer listen
+arrive plan stay rest pick fill join miss share check count cost hurt dance laugh smile cry shout jump climb
+improve increase reduce describe discuss compare complete prepare practise practice order provide require
+protect save spell repeat point need marry fix fit belong borrow lend book call carry worry hurry kiss hug touch
+push pull post email text phone type print copy paste download upload search click
+
+# common nouns
+people person man men woman women child children boy girl baby family mother father mum mom dad parent brother
+sister son daughter husband wife friend partner grandmother grandfather aunt uncle cousin neighbour neighbor
+guest student teacher doctor nurse driver worker boss manager police officer farmer artist singer player team
+group class school college university lesson course exam test homework question answer problem idea example
+fact reason result way thing part place area world country city town village street road house home room
+kitchen bedroom bathroom garden door window wall floor table chair bed desk office shop store market bank
+hospital hotel restaurant cafe station airport park beach sea river lake mountain hill island forest tree flower
+grass animal dog cat bird fish horse cow food water bread milk coffee tea juice meat chicken egg rice fruit apple
+banana orange vegetable potato tomato salad soup cake chocolate sugar salt breakfast lunch dinner meal money price
+job business company game sport football ball music song film movie book story news paper letter page word
+language name number size colour color shape side top bottom middle centre center end start beginning life
+health body head face eye ear nose mouth hair hand arm leg foot feet heart back car bus train plane bike bicycle
+boat ticket trip holiday vacation journey weather sun rain snow wind cloud sky air fire light dark noise sound
+picture photo camera computer phone internet website email message video clothes shirt shoes dress coat hat bag
+box key cup glass plate bottle money pen pencil table map clock watch party birthday present gift festival
+church museum cinema theatre theater library zoo farm factory hall building bridge corner side line list kind
+type sort group member government state law war peace power history art science nature problem plan rule
+mind body view experience education information service system program programme project interest point case
+level quality chance choice decision effect change difference fact matter
+
+# common adjectives
+good better best bad worse worst big bigger small little large long short tall high low old new young great
+nice fine happy sad angry tired hungry thirsty hot cold warm cool wet dry easy difficult hard soft heavy light
+fast slow quick early late full empty open closed free busy quiet loud clean dirty rich poor cheap expensive
+beautiful pretty ugly strong weak important interesting boring funny serious true false real right wrong same
+different possible impossible ready sure certain clear simple special famous popular favourite favorite
+dangerous safe healthy ill sick well dead alive black white red blue green yellow brown grey gray pink purple
+orange dark bright lovely wonderful terrible horrible excellent perfect amazing kind friendly nervous afraid
+worried surprised excited bored lucky local national international public private main whole own able
+available different general human natural normal personal social early modern recent single several various
+although however apartment flat wild ill 
+huge tiny wide narrow deep thick thin fresh sweet sour delicious careful careless honest polite strange

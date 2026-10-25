@@ -1,0 +1,7 @@
+item,unit,requires,recycled_in
+present simple,1,,2;3
+past simple,3,present simple,4;5
+present perfect,4,past simple,8
+present perfect vs past simple,2,present perfect;past simple,6
+comparatives,5,,
+superlatives,6,comparatives,7

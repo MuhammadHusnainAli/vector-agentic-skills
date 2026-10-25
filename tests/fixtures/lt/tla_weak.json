@@ -1,0 +1,10 @@
+{
+  "items": [
+    {"item": "used to + infinitive", "meaning": "past habit", "form": "used to + verb",
+     "pronunciation": "say it clearly",
+     "ccqs": ["Did Anna used to live in a village?", "Do you understand?"]},
+    {"item": "be used to + -ing", "meaning": "familiar with something"}
+  ],
+  "controlled": "Gap-fill",
+  "freer": "Gap-fill with used to and be used to"
+}

@@ -51,7 +51,8 @@ PY=skills/programming/python
 RS=skills/programming/rust
 ML=skills/ai-ml/classical-ml
 QM=skills/manufacturing/quality-management
-export FX SQL XL PY RS ML QM
+LT=skills/languages/language-teaching
+export FX SQL XL PY RS ML QM LT
 
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT

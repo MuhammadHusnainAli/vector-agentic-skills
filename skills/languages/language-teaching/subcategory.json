@@ -1,0 +1,14 @@
+{
+  "title": "Language Teaching",
+  "description": "Plan PPP and task-based language lessons, write worksheets, adapted texts, listening tasks, dialogues and vocabulary games, build CEFR and ACTFL syllabuses and can-do statements, write placement tests, rubrics and quizzes, give corrective feedback and progress reports, prepare for CELTA and Delta, and design ESP, EAP, young learner, adult literacy and refugee courses.",
+  "order": 1,
+  "groups": [
+    {"title": "Lesson planning", "skills": ["language-lesson-plan-builder", "ppp-lesson-structure-planner", "task-based-language-lesson-designer", "communicative-activity-generator", "warm-up-icebreaker-generator", "language-lesson-differentiation-planner"]},
+    {"title": "Materials creation", "skills": ["esl-worksheet-generator", "reading-comprehension-text-adapter", "vocabulary-game-generator", "authentic-material-lesson-adapter", "listening-task-builder", "dialogue-for-classroom-writer"]},
+    {"title": "Curriculum and syllabus", "skills": ["cefr-aligned-syllabus-builder", "language-course-scope-sequence-planner", "can-do-statement-writer", "actfl-proficiency-curriculum-mapper", "language-program-review-writer"]},
+    {"title": "Assessment", "skills": ["language-placement-test-builder", "speaking-rubric-builder", "writing-rubric-for-l2-builder", "language-quiz-generator", "formative-assessment-for-language-planner"]},
+    {"title": "Feedback and correction", "skills": ["l2-error-correction-strategy-advisor", "student-writing-feedback-generator", "pronunciation-feedback-for-teachers-tool", "recast-and-prompt-technique-coach", "student-progress-report-writer"]},
+    {"title": "Teacher development", "skills": ["tefl-celta-prep-tutor", "delta-assignment-planner", "language-teacher-observation-form-builder", "classroom-management-for-esl-coach", "online-language-teaching-setup-advisor", "language-teacher-cv-writer"]},
+    {"title": "Specialized language teaching", "skills": ["esp-english-course-designer", "academic-english-eap-course-planner", "young-learner-esl-activity-generator", "adult-literacy-esl-lesson-builder", "refugee-language-support-planner"]}
+  ]
+}
