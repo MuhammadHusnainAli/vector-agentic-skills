@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 162,
+  "skill_count": 163,
   "categories": [
     {
       "name": "programming",
@@ -506,18 +506,19 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 3,
+      "skill_count": 4,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 3,
+          "skill_count": 4,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
-            "button-state-variant-designer"
+            "button-state-variant-designer",
+            "form-layout-designer"
           ],
           "groups": [
             {
@@ -525,7 +526,8 @@
               "skills": [
                 "ui-component-spec-writer",
                 "responsive-breakpoint-layout-planner",
-                "button-state-variant-designer"
+                "button-state-variant-designer",
+                "form-layout-designer"
               ]
             }
           ]
@@ -2022,6 +2024,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/button-state-variant-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/button-state-variant-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill button-state-variant-designer"
+    },
+    {
+      "name": "form-layout-designer",
+      "title": "Form Layout Designer",
+      "description": "Design forms people finish: question protocol (why each field exists), single-column layout with labels above fields, field widths that signal expected length, grouping with fieldset and legend, required vs optional marking, the right input type, inputmode and autocomplete token for every field (names, email, phone, address, dates, passwords, one-time codes, payment), validation timing (on blur after first input, on submit with an error summary), error messages that say how to fix it, multi-step and one-thing-per-page flows, progress indicators, conditional questions, save and resume, and the WCAG 2.2 form criteria (1.3.5, 3.3.1-3.3.4, 3.3.7 redundant entry, 3.3.8 accessible authentication). Reviews forms for placeholder-as-label, multi-column layouts, missing or wrong autocomplete, split fields, paste blocking, hidden password rules, vague errors and disabled submit buttons. Use when designing or reviewing a sign-up, checkout, onboarding, settings or data-entry form.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/form-layout-designer",
+      "files": [
+        "SKILL.md",
+        "references/field-patterns.md",
+        "references/form-structure.md",
+        "references/validation-and-errors.md"
+      ],
+      "references": [
+        "references/field-patterns.md",
+        "references/form-structure.md",
+        "references/validation-and-errors.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/form-layout-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/form-layout-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/form-layout-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/form-layout-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill form-layout-designer"
     },
     {
       "name": "responsive-breakpoint-layout-planner",
