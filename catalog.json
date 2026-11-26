@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 173,
+  "skill_count": 174,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 14,
+      "skill_count": 15,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 14,
+          "skill_count": 15,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -528,7 +528,8 @@
             "design-system-governance-process-designer",
             "component-naming-convention-checker",
             "design-system-adoption-tracker",
-            "ios-human-interface-guidelines-checker"
+            "ios-human-interface-guidelines-checker",
+            "material-design-3-compliance-reviewer"
           ],
           "groups": [
             {
@@ -557,7 +558,8 @@
             {
               "title": "Platform guidelines",
               "skills": [
-                "ios-human-interface-guidelines-checker"
+                "ios-human-interface-guidelines-checker",
+                "material-design-3-compliance-reviewer"
               ]
             }
           ]
@@ -2319,6 +2321,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/ios-human-interface-guidelines-checker.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ios-human-interface-guidelines-checker",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ios-human-interface-guidelines-checker"
+    },
+    {
+      "name": "material-design-3-compliance-reviewer",
+      "title": "Material Design 3 Compliance Reviewer",
+      "description": "Review Android and web designs against Material Design 3 (Material You, including M3 Expressive) like a senior Android design lead: colour roles and tonal palettes (primary, on-primary, containers, surface containers, outline, inverse), light/dark schemes and dynamic colour from the wallpaper, contrast by tone difference, the type scale (Display to Label), shape scale, elevation by tonal surfaces, state layers, 48dp touch targets, components (buttons, FABs, top app bars, navigation bar, rail and drawer, chips, cards, dialogs, bottom sheets, snackbars, lists, text fields), window size classes and canonical layouts (list-detail, supporting pane, feed), edge-to-edge and predictive back on Android 15+, themed icons, and motion. Also checks Jetpack Compose code for hard-coded colours, sizes and styles that bypass MaterialTheme. Use when designing or reviewing an Android app or a Material-based web app, building a Material theme, or adapting a design for tablets and foldables.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/material-design-3-compliance-reviewer",
+      "files": [
+        "SKILL.md",
+        "references/m3-color-system.md",
+        "references/m3-components-and-layout.md",
+        "references/m3-type-shape-motion.md"
+      ],
+      "references": [
+        "references/m3-color-system.md",
+        "references/m3-components-and-layout.md",
+        "references/m3-type-shape-motion.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/material-design-3-compliance-reviewer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/material-design-3-compliance-reviewer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/material-design-3-compliance-reviewer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/material-design-3-compliance-reviewer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill material-design-3-compliance-reviewer"
     },
     {
       "name": "navigation-pattern-selector",
