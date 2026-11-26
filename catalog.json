@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 182,
+  "skill_count": 183,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 23,
+      "skill_count": 24,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 23,
+          "skill_count": 24,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -537,7 +537,8 @@
             "ui-spacing-scale-consistency-checker",
             "icon-pixel-grid-aligner",
             "dark-mode-palette-designer",
-            "elevation-shadow-system-designer"
+            "elevation-shadow-system-designer",
+            "empty-state-illustration-planner"
           ],
           "groups": [
             {
@@ -580,7 +581,8 @@
                 "ui-spacing-scale-consistency-checker",
                 "icon-pixel-grid-aligner",
                 "dark-mode-palette-designer",
-                "elevation-shadow-system-designer"
+                "elevation-shadow-system-designer",
+                "empty-state-illustration-planner"
               ]
             }
           ]
@@ -2371,6 +2373,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/elevation-shadow-system-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/elevation-shadow-system-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill elevation-shadow-system-designer"
+    },
+    {
+      "name": "empty-state-illustration-planner",
+      "title": "Empty State & Illustration Planner",
+      "description": "Plan empty states that move people forward instead of decorating a blank screen: inventory every place content can be missing and classify each (first use, no data yet, user cleared, no search or filter results, error or failed to load, offline, no permission, feature locked by plan), then write the state with a headline, one-sentence explanation, one primary action and an optional help link, decide whether it earns an illustration and at what size, and keep a consistent illustration system (style, palette, sizes for full-page, panel and inline, dark-mode variants, no embedded text, accessible as decorative). Includes copy formulas per type, starter content and sample data patterns, and an illustration brief template. Reviews empty states for dead ends, blaming or jokey error copy, illustrated errors, no-results confused with no-data, missing filter resets and text baked into images. Use when designing or auditing empty, zero, no-results, error or onboarding states.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/empty-state-illustration-planner",
+      "files": [
+        "SKILL.md",
+        "references/copy-patterns.md",
+        "references/empty-state-types.md",
+        "references/illustration-system.md"
+      ],
+      "references": [
+        "references/copy-patterns.md",
+        "references/empty-state-types.md",
+        "references/illustration-system.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/empty-state-illustration-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/empty-state-illustration-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/empty-state-illustration-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/empty-state-illustration-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill empty-state-illustration-planner"
     },
     {
       "name": "form-layout-designer",
