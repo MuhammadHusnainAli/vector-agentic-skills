@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 195,
+  "skill_count": 196,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 36,
+      "skill_count": 37,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 36,
+          "skill_count": 37,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -550,7 +550,8 @@
             "design-qa-visual-diff-checker",
             "asset-export-naming-planner",
             "design-to-code-gap-auditor",
-            "accessibility-annotation-writer"
+            "accessibility-annotation-writer",
+            "ecommerce-checkout-ui-designer"
           ],
           "groups": [
             {
@@ -617,6 +618,12 @@
                 "asset-export-naming-planner",
                 "design-to-code-gap-auditor",
                 "accessibility-annotation-writer"
+              ]
+            },
+            {
+              "title": "Specialized UI domains",
+              "skills": [
+                "ecommerce-checkout-ui-designer"
               ]
             }
           ]
@@ -2543,6 +2550,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-token-architecture-builder.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-token-architecture-builder",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-token-architecture-builder"
+    },
+    {
+      "name": "ecommerce-checkout-ui-designer",
+      "title": "E-commerce Checkout UI Designer",
+      "description": "Design and audit e-commerce cart and checkout flows for conversion and trust: total cost visible early (shipping, tax, duties), guest checkout as the default path, express wallets (Apple Pay, Google Pay, PayPal, Shop Pay) placed first, the fewest form fields possible with address lookup and correct autocomplete, delivery options shown as dates and prices, payment fields with live formatting and brand detection, strong customer authentication (3-D Secure, PSD2) handled in flow, order summary always reachable on mobile, coupon fields that don't send people hunting, recoverable errors, post-purchase account creation, and dark patterns that are illegal or harmful (pre-ticked add-ons, drip pricing, fake urgency, forced continuity). Includes funnel analysis (step drop-off, revenue at stake) and experiment design. Reviews checkouts for forced accounts, late costs, excess fields and lost input. Use when designing, auditing or optimising a cart or checkout.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/ecommerce-checkout-ui-designer",
+      "files": [
+        "SKILL.md",
+        "references/checkout-patterns.md",
+        "references/funnel-and-experiments.md",
+        "references/payment-and-trust.md"
+      ],
+      "references": [
+        "references/checkout-patterns.md",
+        "references/funnel-and-experiments.md",
+        "references/payment-and-trust.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/ecommerce-checkout-ui-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/ecommerce-checkout-ui-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/ecommerce-checkout-ui-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ecommerce-checkout-ui-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ecommerce-checkout-ui-designer"
     },
     {
       "name": "elevation-shadow-system-designer",
