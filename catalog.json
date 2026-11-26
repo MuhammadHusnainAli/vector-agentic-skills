@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 205,
+  "skill_count": 206,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 34,
+      "skill_count": 35,
       "subcategories": [
         {
           "name": "sql",
@@ -73,11 +73,12 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 3,
+          "skill_count": 4,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
-            "rest-api-versioning-strategist"
+            "rest-api-versioning-strategist",
+            "api-pagination-designer"
           ],
           "groups": [
             {
@@ -85,7 +86,8 @@
               "skills": [
                 "rest-api-endpoint-designer",
                 "openapi-spec-writer",
-                "rest-api-versioning-strategist"
+                "rest-api-versioning-strategist",
+                "api-pagination-designer"
               ]
             }
           ]
@@ -5592,6 +5594,30 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/excel-fundamentals.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/productivity/excel/excel-fundamentals",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill excel-fundamentals"
+    },
+    {
+      "name": "api-pagination-designer",
+      "title": "API Pagination Designer",
+      "description": "Design list endpoints that stay fast and correct at any depth and traffic: cursor (keyset) pagination as the default with opaque, versioned, tamper-proof cursors, stable ordering with a unique tiebreaker, matching composite indexes and row-value SQL, page size defaults and caps, total counts (avoid, approximate or separate), bidirectional paging, consistency under inserts and deletes, filters bound to cursors, sync endpoints with updated_after watermarks, Link headers (RFC 8288) and GraphQL Relay connections, plus pagination over shards, search engines (search_after with point-in-time) and caches. Explains why OFFSET pagination collapses at depth and scale and when it is still acceptable. Use when designing or reviewing any list, search, feed or export endpoint.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/api-pagination-designer",
+      "files": [
+        "SKILL.md",
+        "references/keyset-implementation.md",
+        "references/pagination-at-scale.md"
+      ],
+      "references": [
+        "references/keyset-implementation.md",
+        "references/pagination-at-scale.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/api-pagination-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/api-pagination-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/api-pagination-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/api-pagination-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill api-pagination-designer"
     },
     {
       "name": "openapi-spec-writer",
