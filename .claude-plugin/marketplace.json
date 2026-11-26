@@ -80,7 +80,8 @@
         "./skills/programming/backend-apis/http-status-code-advisor",
         "./skills/programming/backend-apis/api-error-response-designer",
         "./skills/programming/backend-apis/rest-api-naming-reviewer",
-        "./skills/programming/backend-apis/graphql-schema-designer"
+        "./skills/programming/backend-apis/graphql-schema-designer",
+        "./skills/programming/backend-apis/graphql-resolver-writer"
       ]
     },
     {
