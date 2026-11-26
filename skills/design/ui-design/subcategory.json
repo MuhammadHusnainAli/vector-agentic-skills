@@ -4,6 +4,6 @@
   "order": 1,
   "scripts_optional": true,
   "groups": [
-    {"title": "Interface layout and components", "skills": ["ui-component-spec-writer"]}
+    {"title": "Interface layout and components", "skills": ["ui-component-spec-writer", "responsive-breakpoint-layout-planner"]}
   ]
 }

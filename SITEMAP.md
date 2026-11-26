@@ -2,7 +2,7 @@
 
 # Sitemap
 
-Index of all 160 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
+Index of all 161 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
 
 | Category | Sub-category | Skills | Plugin |
 |----------|--------------|--------|--------|
@@ -13,7 +13,7 @@ Index of all 160 skills. Browse them at [agenticskills.vector-ai-lab.com](https:
 | [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | `classical-ml-skills` |
 | [Manufacturing & Industrial Operations](skills/manufacturing/README.md) | [Quality Management & ISO 9001](skills/manufacturing/quality-management/README.md) | 42 | `quality-management-skills` |
 | [Languages, Linguistics & Translation](skills/languages/README.md) | [Language Teaching](skills/languages/language-teaching/README.md) | 38 | `language-teaching-skills` |
-| [Design & Visual Arts](skills/design/README.md) | [UI Design](skills/design/ui-design/README.md) | 1 | `ui-design-skills` |
+| [Design & Visual Arts](skills/design/README.md) | [UI Design](skills/design/ui-design/README.md) | 2 | `ui-design-skills` |
 
 ## Programming / SQL
 
@@ -230,6 +230,7 @@ Specify components and layouts, build design tokens and govern design systems, c
 | Skill | Description | Files |
 |-------|-------------|-------|
 | **ui-component-spec-writer** | Write UI component specifications that engineering can build and QA can test without a follow-up meeting: purpose and when not to use, anatomy, props API (variants vs booleans vs slots, controlled vs uncontrolled), variant x state matrix with token references, sizes and touch targets (WCAG 2.5.8, 44pt, 48dp), keyboard model and ARIA from the WAI-ARIA Authoring Practices pattern (button, tabs, dialog, combobox, menu, switch, checkbox, radio group, accordion, tooltip, disclosure, listbox, slider, text field, toast, card), focus movement, content limits and overflow, tokens, motion and edge cases (long text, translation growth, 200% zoom, RTL, forced colors, reduced motion). Reviews existing specs against a 14-point checklist (no focus state or keyboard model, wrong pattern, hover-only behaviour, raw values, small targets). | [SKILL.md](skills/design/ui-design/ui-component-spec-writer/SKILL.md), [apg-patterns.md](skills/design/ui-design/ui-component-spec-writer/references/apg-patterns.md), [component-api-design.md](skills/design/ui-design/ui-component-spec-writer/references/component-api-design.md), [edge-case-catalogue.md](skills/design/ui-design/ui-component-spec-writer/references/edge-case-catalogue.md), [spec-anatomy.md](skills/design/ui-design/ui-component-spec-writer/references/spec-anatomy.md), [spec-review-checklist.md](skills/design/ui-design/ui-component-spec-writer/references/spec-review-checklist.md), [spec-template.md](skills/design/ui-design/ui-component-spec-writer/references/spec-template.md) |
+| **responsive-breakpoint-layout-planner** | Plan responsive layouts the way senior product designers do: breakpoints set where the content breaks rather than at device widths, a column grid per range (columns, gutters, margins, max content width) with the column-width math, mobile-first min-width media queries vs container queries for components, fluid type and spacing with clamp() that still respects browser zoom, Material 3 window size classes, Bootstrap/Tailwind/Apple size-class mapping, layout patterns (column drop, layout shifter, off-canvas, list-detail, supporting pane), responsive tables, navigation and images (srcset, sizes, art direction), pointer and hover media features, and WCAG 1.4.10 reflow at 320 CSS px. Reviews breakpoint sets and CSS for overlapping or gapped ranges, device-named breakpoints, horizontal scroll and hover-only interactions. | [SKILL.md](skills/design/ui-design/responsive-breakpoint-layout-planner/SKILL.md), [breakpoint-systems.md](skills/design/ui-design/responsive-breakpoint-layout-planner/references/breakpoint-systems.md), [grid-math.md](skills/design/ui-design/responsive-breakpoint-layout-planner/references/grid-math.md), [responsive-patterns.md](skills/design/ui-design/responsive-breakpoint-layout-planner/references/responsive-patterns.md) |
 
 ## Tree
 
@@ -408,5 +409,6 @@ skills/
 │       └── refugee-language-support-planner/  SKILL.md + references/ + scripts/
 └── design/
     └── ui-design/
-        └── ui-component-spec-writer/  SKILL.md + references/
+        ├── ui-component-spec-writer/  SKILL.md + references/
+        └── responsive-breakpoint-layout-planner/  SKILL.md + references/
 ```

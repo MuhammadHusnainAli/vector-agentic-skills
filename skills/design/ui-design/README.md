@@ -9,12 +9,13 @@ Specify components and layouts, build design tokens and govern design systems, c
 | Skill | What it does | Scripts |
 |-------|--------------|---------|
 | [ui-component-spec-writer](ui-component-spec-writer/SKILL.md) | Write UI component specifications that engineering can build and QA can test without a follow-up meeting: purpose and when not to use, anatomy, props API (variants vs booleans vs slots, controlled vs uncontrolled), variant x state matrix with token references, sizes and touch targets (WCAG 2.5.8, 44pt, 48dp), keyboard model and ARIA from the WAI-ARIA Authoring Practices pattern (button, tabs, dialog, combobox, menu, switch, checkbox, radio group, accordion, tooltip, disclosure, listbox, slider, text field, toast, card), focus movement, content limits and overflow, tokens, motion and edge cases (long text, translation growth, 200% zoom, RTL, forced colors, reduced motion). Reviews existing specs against a 14-point checklist (no focus state or keyboard model, wrong pattern, hover-only behaviour, raw values, small targets). | - |
+| [responsive-breakpoint-layout-planner](responsive-breakpoint-layout-planner/SKILL.md) | Plan responsive layouts the way senior product designers do: breakpoints set where the content breaks rather than at device widths, a column grid per range (columns, gutters, margins, max content width) with the column-width math, mobile-first min-width media queries vs container queries for components, fluid type and spacing with clamp() that still respects browser zoom, Material 3 window size classes, Bootstrap/Tailwind/Apple size-class mapping, layout patterns (column drop, layout shifter, off-canvas, list-detail, supporting pane), responsive tables, navigation and images (srcset, sizes, art direction), pointer and hover media features, and WCAG 1.4.10 reflow at 320 CSS px. Reviews breakpoint sets and CSS for overlapping or gapped ranges, device-named breakpoints, horizontal scroll and hover-only interactions. | - |
 
 ## Install
 
 ```bash
 # Any agent (Claude Code, Codex, Cursor, ...)
-npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer
+npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer --skill responsive-breakpoint-layout-planner
 
 # Claude Code plugin with every UI Design skill
 /plugin marketplace add MuhammadHusnainAli/vector-agentic-skills

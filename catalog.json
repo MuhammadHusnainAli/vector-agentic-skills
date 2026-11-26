@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 160,
+  "skill_count": 161,
   "categories": [
     {
       "name": "programming",
@@ -506,22 +506,24 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 1,
+      "skill_count": 2,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 1,
+          "skill_count": 2,
           "skills": [
-            "ui-component-spec-writer"
+            "ui-component-spec-writer",
+            "responsive-breakpoint-layout-planner"
           ],
           "groups": [
             {
               "title": "Interface layout and components",
               "skills": [
-                "ui-component-spec-writer"
+                "ui-component-spec-writer",
+                "responsive-breakpoint-layout-planner"
               ]
             }
           ]
@@ -1992,6 +1994,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/xgboost-lightgbm-tuner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/ai-ml/classical-ml/xgboost-lightgbm-tuner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill xgboost-lightgbm-tuner"
+    },
+    {
+      "name": "responsive-breakpoint-layout-planner",
+      "title": "Responsive Breakpoint & Layout Planner",
+      "description": "Plan responsive layouts the way senior product designers do: breakpoints set where the content breaks rather than at device widths, a column grid per range (columns, gutters, margins, max content width) with the column-width math, mobile-first min-width media queries vs container queries for components, fluid type and spacing with clamp() that still respects browser zoom, Material 3 window size classes, Bootstrap/Tailwind/Apple size-class mapping, layout patterns (column drop, layout shifter, off-canvas, list-detail, supporting pane), responsive tables, navigation and images (srcset, sizes, art direction), pointer and hover media features, and WCAG 1.4.10 reflow at 320 CSS px. Reviews breakpoint sets and CSS for overlapping or gapped ranges, device-named breakpoints, horizontal scroll and hover-only interactions. Use when defining breakpoints or a grid, designing a screen across sizes, converting a desktop design to mobile, or reviewing responsive behaviour before handoff.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/responsive-breakpoint-layout-planner",
+      "files": [
+        "SKILL.md",
+        "references/breakpoint-systems.md",
+        "references/grid-math.md",
+        "references/responsive-patterns.md"
+      ],
+      "references": [
+        "references/breakpoint-systems.md",
+        "references/grid-math.md",
+        "references/responsive-patterns.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/responsive-breakpoint-layout-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/responsive-breakpoint-layout-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/responsive-breakpoint-layout-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/responsive-breakpoint-layout-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill responsive-breakpoint-layout-planner"
     },
     {
       "name": "ui-component-spec-writer",

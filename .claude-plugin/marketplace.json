@@ -237,7 +237,8 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/design/ui-design/ui-component-spec-writer"
+        "./skills/design/ui-design/ui-component-spec-writer",
+        "./skills/design/ui-design/responsive-breakpoint-layout-planner"
       ]
     }
   ]
