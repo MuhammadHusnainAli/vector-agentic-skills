@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 194,
+  "skill_count": 195,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 35,
+      "skill_count": 36,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 35,
+          "skill_count": 36,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -549,7 +549,8 @@
             "redline-annotation-writer",
             "design-qa-visual-diff-checker",
             "asset-export-naming-planner",
-            "design-to-code-gap-auditor"
+            "design-to-code-gap-auditor",
+            "accessibility-annotation-writer"
           ],
           "groups": [
             {
@@ -614,7 +615,8 @@
                 "redline-annotation-writer",
                 "design-qa-visual-diff-checker",
                 "asset-export-naming-planner",
-                "design-to-code-gap-auditor"
+                "design-to-code-gap-auditor",
+                "accessibility-annotation-writer"
               ]
             }
           ]
@@ -2085,6 +2087,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/xgboost-lightgbm-tuner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/ai-ml/classical-ml/xgboost-lightgbm-tuner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill xgboost-lightgbm-tuner"
+    },
+    {
+      "name": "accessibility-annotation-writer",
+      "title": "Accessibility Annotation Writer",
+      "description": "Annotate designs with the accessibility decisions engineers can't see in a mockup: heading levels and page structure, landmarks, reading and focus order, accessible names for icon buttons and ambiguous links, roles and states for custom components, alt text decisions (informative, decorative, functional, complex), form labels, instructions, required fields and error associations, live-region announcements, keyboard interactions and shortcuts, focus management on open, close, delete and route change, target sizes, motion and reduced-motion notes, colour independence, tables, language changes, and gesture alternatives. Maps each annotation to the WCAG 2.2 criterion it satisfies and uses a consistent numbered notation with a legend. Reviews annotations for unnamed icon buttons, broken heading outlines, wrong focus order, missing announcements and focus plans, and missing alt decisions. Use when preparing designs for handoff, building an annotation kit, or reviewing a design for accessibility before build.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/accessibility-annotation-writer",
+      "files": [
+        "SKILL.md",
+        "references/alt-text-decisions.md",
+        "references/annotation-categories.md",
+        "references/focus-and-announcements.md"
+      ],
+      "references": [
+        "references/alt-text-decisions.md",
+        "references/annotation-categories.md",
+        "references/focus-and-announcements.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/accessibility-annotation-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/accessibility-annotation-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/accessibility-annotation-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/accessibility-annotation-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill accessibility-annotation-writer"
     },
     {
       "name": "android-adaptive-icon-designer",
