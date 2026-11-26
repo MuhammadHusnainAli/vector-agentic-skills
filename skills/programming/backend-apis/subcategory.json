@@ -5,6 +5,6 @@
   "scripts_optional": true,
   "groups": [
     {"title": "REST API design", "skills": ["rest-api-endpoint-designer", "openapi-spec-writer", "rest-api-versioning-strategist", "api-pagination-designer", "http-status-code-advisor", "api-error-response-designer", "rest-api-naming-reviewer"]},
-    {"title": "GraphQL and gRPC", "skills": ["graphql-schema-designer", "graphql-resolver-writer"]}
+    {"title": "GraphQL and gRPC", "skills": ["graphql-schema-designer", "graphql-resolver-writer", "graphql-dataloader-n-plus-one-fixer"]}
   ]
 }

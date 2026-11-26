@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 211,
+  "skill_count": 212,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 40,
+      "skill_count": 41,
       "subcategories": [
         {
           "name": "sql",
@@ -73,7 +73,7 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 9,
+          "skill_count": 10,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
@@ -83,7 +83,8 @@
             "api-error-response-designer",
             "rest-api-naming-reviewer",
             "graphql-schema-designer",
-            "graphql-resolver-writer"
+            "graphql-resolver-writer",
+            "graphql-dataloader-n-plus-one-fixer"
           ],
           "groups": [
             {
@@ -102,7 +103,8 @@
               "title": "GraphQL and gRPC",
               "skills": [
                 "graphql-schema-designer",
-                "graphql-resolver-writer"
+                "graphql-resolver-writer",
+                "graphql-dataloader-n-plus-one-fixer"
               ]
             }
           ]
@@ -5657,6 +5659,30 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/api-pagination-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/api-pagination-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill api-pagination-designer"
+    },
+    {
+      "name": "graphql-dataloader-n-plus-one-fixer",
+      "title": "GraphQL DataLoader N+1 Fixer",
+      "description": "Find and fix N+1 query problems in GraphQL (and ORM-backed REST) APIs with DataLoader-style batching: how N+1 arises from per-field resolvers, detecting it (query counts per operation, tracing spans, SQL logs, tests that assert query counts), writing batch functions that return results in key order with nulls for misses, one-to-many and many-to-many loaders, loaders with arguments (pagination per parent, filters) via composite keys, per-request caching versus shared caches, priming loaders, max batch size, batching across services (batch endpoints, gRPC batch RPCs, federation entity resolution), and language-specific implementations (dataloader for JavaScript, strawberry and aiodataloader for Python, dataloadgen for Go, java-dataloader, GreenDonut for .NET). Reviews code for per-item queries in resolvers, loaders created globally, batch functions returning misaligned results and unbounded batches. Use when GraphQL queries are slow, database query counts explode on lists, or when adding relationship fields.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/graphql-dataloader-n-plus-one-fixer",
+      "files": [
+        "SKILL.md",
+        "references/detecting-n-plus-one.md",
+        "references/loader-recipes.md"
+      ],
+      "references": [
+        "references/detecting-n-plus-one.md",
+        "references/loader-recipes.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/graphql-dataloader-n-plus-one-fixer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/graphql-dataloader-n-plus-one-fixer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/graphql-dataloader-n-plus-one-fixer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/graphql-dataloader-n-plus-one-fixer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill graphql-dataloader-n-plus-one-fixer"
     },
     {
       "name": "graphql-resolver-writer",

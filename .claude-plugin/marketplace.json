@@ -81,7 +81,8 @@
         "./skills/programming/backend-apis/api-error-response-designer",
         "./skills/programming/backend-apis/rest-api-naming-reviewer",
         "./skills/programming/backend-apis/graphql-schema-designer",
-        "./skills/programming/backend-apis/graphql-resolver-writer"
+        "./skills/programming/backend-apis/graphql-resolver-writer",
+        "./skills/programming/backend-apis/graphql-dataloader-n-plus-one-fixer"
       ]
     },
     {
