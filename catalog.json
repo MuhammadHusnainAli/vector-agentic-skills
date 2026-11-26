@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 161,
+  "skill_count": 162,
   "categories": [
     {
       "name": "programming",
@@ -506,24 +506,26 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 2,
+      "skill_count": 3,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 2,
+          "skill_count": 3,
           "skills": [
             "ui-component-spec-writer",
-            "responsive-breakpoint-layout-planner"
+            "responsive-breakpoint-layout-planner",
+            "button-state-variant-designer"
           ],
           "groups": [
             {
               "title": "Interface layout and components",
               "skills": [
                 "ui-component-spec-writer",
-                "responsive-breakpoint-layout-planner"
+                "responsive-breakpoint-layout-planner",
+                "button-state-variant-designer"
               ]
             }
           ]
@@ -1994,6 +1996,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/xgboost-lightgbm-tuner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/ai-ml/classical-ml/xgboost-lightgbm-tuner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill xgboost-lightgbm-tuner"
+    },
+    {
+      "name": "button-state-variant-designer",
+      "title": "Button State & Variant Designer",
+      "description": "Design a button system that holds up across a product: emphasis hierarchy (primary, secondary, tertiary, danger, link-style) with one primary per region, sizes on the spacing scale with 24px / 44pt / 48dp targets, the full state model (default, hover, pressed, focus-visible, disabled, loading, toggled) as semantic tokens or Material-style state layers, contrast per state (text 4.5:1, boundaries and focus indicators 3:1, WCAG 1.4.3, 1.4.11, 2.4.7, 2.4.11, 2.4.13), focus rings that work on any background, disabled vs aria-disabled, loading without layout shift, destructive actions with confirm or undo, button vs link, icon placement, label writing and button-group order per platform. Reviews button sets and CSS for missing focus states, outline:none, opacity-only disabled, hover-only affordances, low-contrast states, small targets and competing primaries. Use when designing or auditing buttons, defining button tokens, or fixing inconsistent buttons across a product.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/button-state-variant-designer",
+      "files": [
+        "SKILL.md",
+        "references/contrast-for-states.md",
+        "references/state-tokens.md",
+        "references/variant-hierarchy.md"
+      ],
+      "references": [
+        "references/contrast-for-states.md",
+        "references/state-tokens.md",
+        "references/variant-hierarchy.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/button-state-variant-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/button-state-variant-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/button-state-variant-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/button-state-variant-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill button-state-variant-designer"
     },
     {
       "name": "responsive-breakpoint-layout-planner",
