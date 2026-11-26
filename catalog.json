@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 213,
+  "skill_count": 214,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 42,
+      "skill_count": 43,
       "subcategories": [
         {
           "name": "sql",
@@ -73,7 +73,7 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 11,
+          "skill_count": 12,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
@@ -85,7 +85,8 @@
             "graphql-schema-designer",
             "graphql-resolver-writer",
             "graphql-dataloader-n-plus-one-fixer",
-            "grpc-protobuf-definition-writer"
+            "grpc-protobuf-definition-writer",
+            "grpc-service-scaffolder"
           ],
           "groups": [
             {
@@ -106,7 +107,8 @@
                 "graphql-schema-designer",
                 "graphql-resolver-writer",
                 "graphql-dataloader-n-plus-one-fixer",
-                "grpc-protobuf-definition-writer"
+                "grpc-protobuf-definition-writer",
+                "grpc-service-scaffolder"
               ]
             }
           ]
@@ -5765,6 +5767,30 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/grpc-protobuf-definition-writer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/grpc-protobuf-definition-writer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill grpc-protobuf-definition-writer"
+    },
+    {
+      "name": "grpc-service-scaffolder",
+      "title": "gRPC Service Scaffolder",
+      "description": "Scaffold production-ready gRPC services in Go, Java/Kotlin, Python, Node.js/TypeScript, .NET and Rust: project layout with generated code from Buf, server bootstrap, interceptors (authentication, logging, metrics, tracing with OpenTelemetry, panic recovery, validation with protovalidate), deadlines and cancellation, the standard health checking protocol and reflection, graceful shutdown with draining, keepalive and max message settings, error mapping to canonical status codes with rich details, client channels with retries and hedging via service config, load balancing for long-lived HTTP/2 connections (L7 proxies, xDS, client-side), browser access with gRPC-Web or Connect, REST transcoding, and testing with in-process servers. Reviews services for missing deadlines, no health checks, L4 load balancing that pins traffic, unbounded streams, per-call channel creation and leaked internal errors. Use when creating, hardening or reviewing a gRPC service or client.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/grpc-service-scaffolder",
+      "files": [
+        "SKILL.md",
+        "references/production-grpc.md",
+        "references/server-skeletons.md"
+      ],
+      "references": [
+        "references/production-grpc.md",
+        "references/server-skeletons.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/grpc-service-scaffolder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/grpc-service-scaffolder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/grpc-service-scaffolder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/grpc-service-scaffolder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill grpc-service-scaffolder"
     },
     {
       "name": "http-status-code-advisor",
