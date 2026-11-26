@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 198,
+  "skill_count": 199,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 39,
+      "skill_count": 40,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 39,
+          "skill_count": 40,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -553,7 +553,8 @@
             "accessibility-annotation-writer",
             "ecommerce-checkout-ui-designer",
             "fintech-app-ui-trust-reviewer",
-            "automotive-hmi-ui-designer"
+            "automotive-hmi-ui-designer",
+            "game-hud-ui-designer"
           ],
           "groups": [
             {
@@ -627,7 +628,8 @@
               "skills": [
                 "ecommerce-checkout-ui-designer",
                 "fintech-app-ui-trust-reviewer",
-                "automotive-hmi-ui-designer"
+                "automotive-hmi-ui-designer",
+                "game-hud-ui-designer"
               ]
             }
           ]
@@ -2736,6 +2738,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/form-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/form-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill form-layout-designer"
+    },
+    {
+      "name": "game-hud-ui-designer",
+      "title": "Game HUD UI Designer",
+      "description": "Design game HUDs and in-game UI that support play instead of covering it: the diegetic, non-diegetic, spatial and meta taxonomy, information hierarchy by what the player needs at each moment (critical, situational, ambient), placement in screen corners and the periphery, safe areas for TVs and consoles, scaling across resolutions and aspect ratios (16:9, 21:9 ultrawide, 16:10 handhelds like Steam Deck), text size from viewing distance, legibility over busy scenes (outlines, backing plates), contextual and fading elements, input prompts that match the active controller, damage and direction indicators, subtitles, colour-blind support, HUD customisation (scale, opacity, toggles, presets), photosensitivity and motion options, and platform requirements. Reviews HUDs for clutter, colour-only cues, small text, unsafe-area elements, stretched ultrawide layouts and missing accessibility options. Use when designing, reviewing or porting a game HUD, menus or in-game UI.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/game-hud-ui-designer",
+      "files": [
+        "SKILL.md",
+        "references/game-ui-accessibility.md",
+        "references/hud-taxonomy-and-hierarchy.md",
+        "references/layout-safe-areas-scaling.md"
+      ],
+      "references": [
+        "references/game-ui-accessibility.md",
+        "references/hud-taxonomy-and-hierarchy.md",
+        "references/layout-safe-areas-scaling.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/game-hud-ui-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/game-hud-ui-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/game-hud-ui-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/game-hud-ui-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill game-hud-ui-designer"
     },
     {
       "name": "icon-pixel-grid-aligner",

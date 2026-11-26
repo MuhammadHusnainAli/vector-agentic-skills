@@ -275,7 +275,8 @@
         "./skills/design/ui-design/accessibility-annotation-writer",
         "./skills/design/ui-design/ecommerce-checkout-ui-designer",
         "./skills/design/ui-design/fintech-app-ui-trust-reviewer",
-        "./skills/design/ui-design/automotive-hmi-ui-designer"
+        "./skills/design/ui-design/automotive-hmi-ui-designer",
+        "./skills/design/ui-design/game-hud-ui-designer"
       ]
     }
   ]
