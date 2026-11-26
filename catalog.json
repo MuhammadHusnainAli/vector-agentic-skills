@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 176,
+  "skill_count": 177,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 17,
+      "skill_count": 18,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 17,
+          "skill_count": 18,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -531,7 +531,8 @@
             "ios-human-interface-guidelines-checker",
             "material-design-3-compliance-reviewer",
             "android-adaptive-icon-designer",
-            "watchos-ui-layout-advisor"
+            "watchos-ui-layout-advisor",
+            "tv-10-foot-ui-designer"
           ],
           "groups": [
             {
@@ -563,7 +564,8 @@
                 "ios-human-interface-guidelines-checker",
                 "material-design-3-compliance-reviewer",
                 "android-adaptive-icon-designer",
-                "watchos-ui-layout-advisor"
+                "watchos-ui-layout-advisor",
+                "tv-10-foot-ui-designer"
               ]
             }
           ]
@@ -2429,6 +2431,30 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/responsive-breakpoint-layout-planner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/responsive-breakpoint-layout-planner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill responsive-breakpoint-layout-planner"
+    },
+    {
+      "name": "tv-10-foot-ui-designer",
+      "title": "TV 10-Foot UI Designer",
+      "description": "Design TV and living-room interfaces viewed from about 3 metres and driven by a remote: text and target sizes from visual angle (screen size, resolution and viewing distance to minimum font px), overscan and safe areas (tvOS, Android TV / Google TV, title-safe and action-safe), the focus model (one focused element, unmistakable focus state with scale, glow or outline, predictable D-pad movement, no traps, focus memory per row), press-count budgets, rows and side navigation, back behaviour, text entry alternatives (QR code sign-in, voice), playback controls, colour on TVs and accessibility. Reviews TV designs for small text, hover-dependent UI, weak focus states, focus traps, long press paths, unsafe-area content and keyboard-heavy flows. Use when designing or reviewing apps for Apple TV, Android TV / Google TV, Fire TV, Roku, smart TVs or game consoles.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/tv-10-foot-ui-designer",
+      "files": [
+        "SKILL.md",
+        "references/tv-layout-and-focus.md",
+        "references/tv-sizing.md"
+      ],
+      "references": [
+        "references/tv-layout-and-focus.md",
+        "references/tv-sizing.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/tv-10-foot-ui-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/tv-10-foot-ui-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/tv-10-foot-ui-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/tv-10-foot-ui-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill tv-10-foot-ui-designer"
     },
     {
       "name": "ui-component-spec-writer",
