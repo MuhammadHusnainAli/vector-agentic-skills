@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 192,
+  "skill_count": 193,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 33,
+      "skill_count": 34,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 33,
+          "skill_count": 34,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -547,7 +547,8 @@
             "prototype-demo-script-writer",
             "design-handoff-spec-generator",
             "redline-annotation-writer",
-            "design-qa-visual-diff-checker"
+            "design-qa-visual-diff-checker",
+            "asset-export-naming-planner"
           ],
           "groups": [
             {
@@ -610,7 +611,8 @@
               "skills": [
                 "design-handoff-spec-generator",
                 "redline-annotation-writer",
-                "design-qa-visual-diff-checker"
+                "design-qa-visual-diff-checker",
+                "asset-export-naming-planner"
               ]
             }
           ]
@@ -2107,6 +2109,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/android-adaptive-icon-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/android-adaptive-icon-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill android-adaptive-icon-designer"
+    },
+    {
+      "name": "asset-export-naming-planner",
+      "title": "Asset Export & Naming Planner",
+      "description": "Plan how design assets are exported, named and delivered for web, iOS and Android so engineers drop them in without renaming or re-exporting: asset inventory by type (icons, illustrations, photos, logos, app icons, favicons, social images), the right format per type and platform (SVG, PDF, vector drawable, PNG, WebP, AVIF, JPEG), scales and densities (@1x-@3x, mdpi-xxxhdpi, srcset widths), a naming convention with prefixes, descriptors, variants, sizes, states and themes that satisfies every platform's rules (Android resource names lowercase with underscores), folder structure, Figma export presets and slice setup, optimisation (SVGO, compression quality), dark-mode and RTL variants, and versioning. Reviews asset folders and lists for illegal or inconsistent names, missing densities or variants, wrong formats, oversized files, text baked into images and duplicates. Use when preparing assets for handoff, setting up an asset naming convention or auditing an asset folder.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/asset-export-naming-planner",
+      "files": [
+        "SKILL.md",
+        "references/export-pipeline.md",
+        "references/naming-convention.md",
+        "references/platform-asset-specs.md"
+      ],
+      "references": [
+        "references/export-pipeline.md",
+        "references/naming-convention.md",
+        "references/platform-asset-specs.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/asset-export-naming-planner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/asset-export-naming-planner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/asset-export-naming-planner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/asset-export-naming-planner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill asset-export-naming-planner"
     },
     {
       "name": "button-state-variant-designer",
