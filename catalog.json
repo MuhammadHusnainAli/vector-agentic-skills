@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 184,
+  "skill_count": 185,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 25,
+      "skill_count": 26,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 25,
+          "skill_count": 26,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -539,7 +539,8 @@
             "dark-mode-palette-designer",
             "elevation-shadow-system-designer",
             "empty-state-illustration-planner",
-            "ui-microinteraction-designer"
+            "ui-microinteraction-designer",
+            "clickable-prototype-flow-builder"
           ],
           "groups": [
             {
@@ -585,6 +586,12 @@
                 "elevation-shadow-system-designer",
                 "empty-state-illustration-planner",
                 "ui-microinteraction-designer"
+              ]
+            },
+            {
+              "title": "Prototyping",
+              "skills": [
+                "clickable-prototype-flow-builder"
               ]
             }
           ]
@@ -2133,6 +2140,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/card-component-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/card-component-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill card-component-designer"
+    },
+    {
+      "name": "clickable-prototype-flow-builder",
+      "title": "Clickable Prototype Flow Builder",
+      "description": "Plan and build clickable prototypes that answer a question rather than show every screen: start from the tasks to test or demo, map the flow as a graph (screens as nodes, interactions as edges) in Mermaid, cover the happy path plus the alternates and error states that matter, decide what is clickable and what happens on off-path clicks, keep data and state consistent across screens (same user, same cart, same numbers), set entry points per task, and QA the flow for dead ends, unreachable screens, missing back paths, broken links and inconsistent state before anyone sees it. Covers tool-agnostic build steps (Figma, ProtoPie, Framer, code prototypes), realistic content, device framing and sharing, task-to-screen coverage matrices and press/click counts per task, and readiness for usability testing or stakeholder demos. Use when turning designs into a clickable prototype, planning a prototype for user testing, or reviewing a prototype before a test or demo.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/clickable-prototype-flow-builder",
+      "files": [
+        "SKILL.md",
+        "references/build-checklist.md",
+        "references/flow-mapping.md",
+        "references/test-and-demo-readiness.md"
+      ],
+      "references": [
+        "references/build-checklist.md",
+        "references/flow-mapping.md",
+        "references/test-and-demo-readiness.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/clickable-prototype-flow-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/clickable-prototype-flow-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/clickable-prototype-flow-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/clickable-prototype-flow-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill clickable-prototype-flow-builder"
     },
     {
       "name": "component-library-inventory-auditor",
