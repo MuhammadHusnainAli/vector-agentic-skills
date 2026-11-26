@@ -138,7 +138,7 @@ def render_category_readme(cat):
 
 def skill_table(names, skills):
     rows = "\n".join(f"| [{n}]({n}/SKILL.md) | {summary(skills[n]['description'])} | "
-                     f"{', '.join('`' + f.split('/', 1)[1] + '`' for f in skills[n]['scripts'])} |" for n in names)
+                     f"{', '.join('`' + f.split('/', 1)[1] + '`' for f in skills[n]['scripts']) or '-'} |" for n in names)
     return f"| Skill | What it does | Scripts |\n|-------|--------------|---------|\n{rows}"
 
 

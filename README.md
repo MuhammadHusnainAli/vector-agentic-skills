@@ -17,7 +17,7 @@ Each skill is a folder with a `SKILL.md` (YAML frontmatter + instructions), `ref
 | [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | Problem framing, feature engineering, scikit-learn/XGBoost/LightGBM/CatBoost, clustering, validation, SHAP/PDP/LIME/counterfactuals, model cards, forecasting, survival, recommenders, ranking, fraud, uplift |
 | [Languages, Linguistics & Translation](skills/languages/README.md) | [Language Teaching](skills/languages/language-teaching/README.md) | 38 | Lesson planning (PPP, TBL), worksheets, text adaptation, listening and dialogues, CEFR/ACTFL syllabuses and can-dos, placement tests, rubrics, quizzes, error correction, pronunciation, reports, CELTA/Delta, observation, classroom management, online teaching, ESP, EAP, young learners, adult literacy, refugee support |
 
-Every skill ships at least one helper script, written in the skill's language (Rust skills ship std-only `.rs` files compiled with `rustc`) and smoke-tested in CI by `tests/run_tests.sh`:
+Skills for people who write code ship at least one helper script, written in the skill's language (Rust skills ship std-only `.rs` files compiled with `rustc`) and smoke-tested in CI by `tests/run_tests.sh`. UI Design skills are Markdown-first, because designers don't run scripts: templates, reference tables and review checklists the agent applies itself, plus dependency-free Node `.mjs` scripts only where a skill works on code or needs exact math:
 
 | Skill | Script | What it does |
 |-------|--------|--------------|

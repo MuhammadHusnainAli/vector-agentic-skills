@@ -10,7 +10,8 @@ repo's quality bar:
   - `name` is lowercase-hyphenated, <= 64 chars, matches its folder, and is unique
   - `description` is non-empty and <= 1024 chars
   - `metadata.category` / `metadata.subcategory` match the folders
-  - each skill ships at least one script in scripts/ and every script parses
+  - each skill ships at least one script in scripts/ (unless its subcategory.json sets
+    "scripts_optional": true, for audiences who do not run code) and every script parses
   - every relative Markdown link inside the skill resolves to a file
   - SKILL.md stays under 500 lines (warning) and has references/ (warning)
 
@@ -128,7 +129,8 @@ def validate():
 
         scripts = sorted((skill_dir / "scripts").glob("*")) if (skill_dir / "scripts").is_dir() else []
         scripts = [s for s in scripts if s.is_file() and s.suffix in (".py", ".sh", ".js", ".mjs", ".rs")]
-        if not scripts:
+        sub_info = read_json(skill_dir.parent / "subcategory.json") or {}
+        if not scripts and not sub_info.get("scripts_optional"):
             errors.append(f"{rel}: skill must ship at least one helper script in scripts/")
         for s in scripts:
             if s.suffix == ".py":

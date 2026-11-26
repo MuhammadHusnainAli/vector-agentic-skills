@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Smoke-test every helper script that ships inside a skill.
 #
-#   1. Every skills/*/*/*/scripts/* entry point (.py, .sh, .rs with fn main;
+#   1. Every skills/*/*/*/scripts/* entry point (.py, .sh, .mjs, .rs with fn main;
 #      files named _*.py are helper modules)
 #      must run `--help` successfully and print "usage".
 #   2. Every entry point needs at least one case in tests/cases/*.sh: it runs
@@ -23,7 +23,7 @@
 #   STDIN=$'text\n' t ...            # feed text on stdin
 #   STDIN_FILE=path t ...            # feed a file on stdin
 #
-# Requires: bash 4.3+, python3 (Python scripts), rustc (Rust scripts).
+# Requires: bash 4.3+, python3 (Python scripts), node (.mjs scripts), rustc (Rust scripts).
 # Exit code: 0 all passed, 1 any failure, 2 usage error.
 
 set -uo pipefail
@@ -52,7 +52,8 @@ RS=skills/programming/rust
 ML=skills/ai-ml/classical-ml
 QM=skills/manufacturing/quality-management
 LT=skills/languages/language-teaching
-export FX SQL XL PY RS ML QM LT
+UI=skills/design/ui-design
+export FX SQL XL PY RS ML QM LT UI
 
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
@@ -73,12 +74,12 @@ for f in tests/cases/*.sh; do source "$f"; done
 matches() { [[ -z $FILTER || $1 == *"$FILTER"* ]]; }
 
 # ---------------------------------------------------------------- entry points
-is_entry() {  # Rust files without fn main and _private.py helpers are modules shared by the scripts
+is_entry() {  # Rust files without fn main and _private.py/_private.mjs helpers are modules shared by the scripts
   [[ $(basename "$1") != _* ]] || return 1
   [[ $1 != *.rs ]] || grep -qE '^[[:space:]]*(pub[[:space:]]+)?fn[[:space:]]+main[[:space:]]*\(' "$1"
 }
 SCRIPTS=()
-for s in skills/*/*/*/scripts/*.{py,sh,rs}; do is_entry "$s" && SCRIPTS+=("$s"); done
+for s in skills/*/*/*/scripts/*.{py,sh,rs,mjs}; do is_entry "$s" && SCRIPTS+=("$s"); done
 mapfile -t SCRIPTS < <(printf '%s\n' "${SCRIPTS[@]}" | sort)
 
 hash_of() { if command -v sha256sum >/dev/null; then sha256sum | cut -c1-16; else shasum -a 256 | cut -c1-16; fi; }
@@ -131,6 +132,7 @@ run_script() {  # run_script SCRIPT [ARGS...]
   case $s in
     *.py) timeout "$TIMEOUT" python3 "$s" "$@" ;;
     *.sh) timeout "$TIMEOUT" bash "$s" "$@" ;;
+    *.mjs) timeout "$TIMEOUT" node "$s" "$@" ;;
     *.rs) [[ -n ${BIN[$s]-} ]] || { echo "not compiled: $s"; return 127; }; timeout "$TIMEOUT" "${BIN[$s]}" "$@" ;;
     *) echo "unknown script type: $s"; return 127 ;;
   esac
