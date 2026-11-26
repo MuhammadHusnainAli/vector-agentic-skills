@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 179,
+  "skill_count": 180,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 20,
+      "skill_count": 21,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 20,
+          "skill_count": 21,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -534,7 +534,8 @@
             "watchos-ui-layout-advisor",
             "tv-10-foot-ui-designer",
             "windows-fluent-design-reviewer",
-            "ui-spacing-scale-consistency-checker"
+            "ui-spacing-scale-consistency-checker",
+            "icon-pixel-grid-aligner"
           ],
           "groups": [
             {
@@ -574,7 +575,8 @@
             {
               "title": "Visual UI polish",
               "skills": [
-                "ui-spacing-scale-consistency-checker"
+                "ui-spacing-scale-consistency-checker",
+                "icon-pixel-grid-aligner"
               ]
             }
           ]
@@ -2336,6 +2338,33 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/form-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/form-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill form-layout-designer"
+    },
+    {
+      "name": "icon-pixel-grid-aligner",
+      "title": "Icon Pixel Grid Aligner",
+      "description": "Draw and fix UI icons so they render crisply and read as one family: icon grids and keylines (16, 20, 24, 32 with 1-2px padding and live area, keyline shapes for circles, squares and rectangles), pixel snapping rules (fills on whole pixels, odd strokes on half pixels, even strokes on whole pixels), stroke width, caps, joins and corner radius consistency, optical size and weight balance, sizes that scale cleanly (designing per size vs scaling), SVG export settings (flatten transforms, outline or keep strokes, no stray groups, rounded coordinates, currentColor), and icon font vs SVG sprite delivery. Ships svg_grid_check.mjs (Node, no dependencies) that checks SVG icons or folders for off-grid edges (with snapped values), wrong stroke widths, viewBox and transform problems, geometry outside the live area and mixed caps and joins across a set. Use when designing an icon set, reviewing icons that look blurry or inconsistent, or preparing icons for export.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/icon-pixel-grid-aligner",
+      "files": [
+        "SKILL.md",
+        "references/export-and-delivery.md",
+        "references/icon-grid-and-keylines.md",
+        "scripts/svg_grid_check.mjs"
+      ],
+      "references": [
+        "references/export-and-delivery.md",
+        "references/icon-grid-and-keylines.md"
+      ],
+      "scripts": [
+        "scripts/svg_grid_check.mjs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/icon-pixel-grid-aligner/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/icon-pixel-grid-aligner/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/icon-pixel-grid-aligner.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/icon-pixel-grid-aligner",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill icon-pixel-grid-aligner"
     },
     {
       "name": "ios-human-interface-guidelines-checker",

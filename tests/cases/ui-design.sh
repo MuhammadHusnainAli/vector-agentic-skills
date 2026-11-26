@@ -41,3 +41,11 @@ t 'spacing_audit: clean file passes' 0 '100% on scale, 0 off-scale value(s)' "$S
 t 'spacing_audit: --base 2 accepts even values' 1 '88.2% on scale, 2 off-scale value(s)' "$SA" "$FX/ui/spacing" --base 2
 t 'spacing_audit: --min threshold passes' 0 '58.8% on scale' "$SA" "$FX/ui/spacing" --min 50
 t 'spacing_audit: bad scale exits 2' 2 '--scale must be' "$SA" "$FX/ui/spacing" --scale 4,x
+GC="$UI/icon-pixel-grid-aligner/scripts/svg_grid_check.mjs"
+t 'svg_grid_check: 1px stroke on whole pixels blurs' 1 'IG002 [warn] 5 off-grid edge(s): x=4 -> 4.5, x=20 -> 20.5' "$GC" "$FX/ui/icons/blurry.svg"
+t 'svg_grid_check: fills on half pixels' 1 'x=20.5 -> 21, y=5.5 -> 6, x=3.5 -> 4' "$GC" "$FX/ui/icons/filled.svg"
+t 'svg_grid_check: transform flagged' 1 'IG004 [warn] transform attribute found' "$GC" "$FX/ui/icons/filled.svg"
+t 'svg_grid_check: fractional stroke and viewBox' 1 'IG003 [warn] fractional stroke width 1.5' "$GC" "$FX/ui/icons/wide.svg"
+t 'svg_grid_check: set mixes caps' 1 'SET IG007 [warn] mixed stroke caps: butt (1), round (2), square (1)' "$GC" "$FX/ui/icons"
+t 'svg_grid_check: clean icons pass' 0 '2 icon(s), 0 warning(s)' "$GC" "$FX/ui/icons/menu.svg" "$FX/ui/icons/check.svg" --stroke 2 --padding 2
+t 'svg_grid_check: invalid path exits 2' 2 'path data must start with M' "$GC" "$FX/ui/icon_bad_path.svg"
