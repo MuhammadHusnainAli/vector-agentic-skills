@@ -1,0 +1,4 @@
+.btn { background: var(--color-action-primary); color: #fff; }
+.btn:hover { background: #1d4ed8; }
+.btn--danger { background: #dc2828; }
+.link { color: var(--color-link); }

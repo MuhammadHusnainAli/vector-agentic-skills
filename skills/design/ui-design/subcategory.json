@@ -9,6 +9,6 @@
     {"title": "Platform guidelines", "skills": ["ios-human-interface-guidelines-checker", "material-design-3-compliance-reviewer", "android-adaptive-icon-designer", "watchos-ui-layout-advisor", "tv-10-foot-ui-designer", "windows-fluent-design-reviewer"]},
     {"title": "Visual UI polish", "skills": ["ui-spacing-scale-consistency-checker", "icon-pixel-grid-aligner", "dark-mode-palette-designer", "elevation-shadow-system-designer", "empty-state-illustration-planner", "ui-microinteraction-designer"]},
     {"title": "Prototyping", "skills": ["clickable-prototype-flow-builder", "figma-prototype-interaction-setup-guide", "prototype-fidelity-level-advisor", "protopie-interaction-recipe-writer", "prototype-demo-script-writer"]},
-    {"title": "Design handoff", "skills": ["design-handoff-spec-generator", "redline-annotation-writer", "design-qa-visual-diff-checker", "asset-export-naming-planner"]}
+    {"title": "Design handoff", "skills": ["design-handoff-spec-generator", "redline-annotation-writer", "design-qa-visual-diff-checker", "asset-export-naming-planner", "design-to-code-gap-auditor"]}
   ]
 }

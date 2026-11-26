@@ -270,7 +270,8 @@
         "./skills/design/ui-design/design-handoff-spec-generator",
         "./skills/design/ui-design/redline-annotation-writer",
         "./skills/design/ui-design/design-qa-visual-diff-checker",
-        "./skills/design/ui-design/asset-export-naming-planner"
+        "./skills/design/ui-design/asset-export-naming-planner",
+        "./skills/design/ui-design/design-to-code-gap-auditor"
       ]
     }
   ]

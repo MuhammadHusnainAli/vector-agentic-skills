@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 193,
+  "skill_count": 194,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 34,
+      "skill_count": 35,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 34,
+          "skill_count": 35,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -548,7 +548,8 @@
             "design-handoff-spec-generator",
             "redline-annotation-writer",
             "design-qa-visual-diff-checker",
-            "asset-export-naming-planner"
+            "asset-export-naming-planner",
+            "design-to-code-gap-auditor"
           ],
           "groups": [
             {
@@ -612,7 +613,8 @@
                 "design-handoff-spec-generator",
                 "redline-annotation-writer",
                 "design-qa-visual-diff-checker",
-                "asset-export-naming-planner"
+                "asset-export-naming-planner",
+                "design-to-code-gap-auditor"
               ]
             }
           ]
@@ -2455,6 +2457,35 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-system-governance-process-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-system-governance-process-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-system-governance-process-designer"
+    },
+    {
+      "name": "design-to-code-gap-auditor",
+      "title": "Design-to-Code Gap Auditor",
+      "description": "Audit how far the built product has drifted from the design system and design files, then plan how to close the gap: token drift (raw colours in code that equal a token, nearly match one or are off-palette; unused tokens; var() references to undeclared tokens), component parity (Figma variants and properties vs code props and values, components that exist on one side only), state coverage, behaviour, content and responsive gaps, and the root causes behind them (missing tokens, unclear specs, old forks, no lint rules). Ships token_drift.mjs (Node, no dependencies) that reads DTCG JSON, flat JSON or CSS-variable token files with aliases and scans CSS, SCSS, JSX/TSX, Vue, Svelte and HTML for hex, rgb() and hsl() colours, matching them to tokens with perceptual OKLab deltaE and preferring semantic aliases in its fixes. Use when the product no longer matches the design system, before a redesign or token migration, or when setting up guardrails against drift.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/design-to-code-gap-auditor",
+      "files": [
+        "SKILL.md",
+        "references/closing-and-preventing-drift.md",
+        "references/component-parity.md",
+        "references/gap-audit-method.md",
+        "scripts/token_drift.mjs"
+      ],
+      "references": [
+        "references/closing-and-preventing-drift.md",
+        "references/component-parity.md",
+        "references/gap-audit-method.md"
+      ],
+      "scripts": [
+        "scripts/token_drift.mjs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/design-to-code-gap-auditor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/design-to-code-gap-auditor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-to-code-gap-auditor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-to-code-gap-auditor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-to-code-gap-auditor"
     },
     {
       "name": "design-token-architecture-builder",
