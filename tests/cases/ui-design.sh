@@ -76,3 +76,15 @@ t 'token_drift: unknown var reference' 1 'TD005 [info] var(--color-link) matches
 t 'token_drift: alias use counts as use' 1 '4 info' "$TD" "$FX/ui/drift/tokens.json" "$FX/ui/drift/src"
 t 'token_drift: css token file' 1 '2 files, 3 colour tokens' "$TD" "$FX/ui/drift/tokens.css" "$FX/ui/drift/src"
 t 'token_drift: missing tokens file exits 2' 2 'does not exist' "$TD" "$FX/ui/drift/nope.json" "$FX/ui/drift/src"
+
+# ---- AI slop redesign
+SS="$UI/ai-slop-ui-redesigner/scripts/slop_scan.mjs"
+t 'slop_scan: template landing page is severe' 1 'Slop score 100/100: severe' "$SS" "$FX/ui/slop/Landing.tsx" "$FX/ui/slop/styles.css"
+t 'slop_scan: gradient text located' 1 'AS001 [gradient text] x1: tests/fixtures/ui/slop/Landing.tsx:5 "bg-clip-text"' "$SS" "$FX/ui/slop/Landing.tsx"
+t 'slop_scan: hype copy counted' 1 'AS005 [hype marketing copy] x9' "$SS" "$FX/ui/slop/Landing.tsx"
+t 'slop_scan: template social proof' 1 'AS011 [template social proof] x6' "$SS" "$FX/ui/slop/Landing.tsx"
+t 'slop_scan: css purple gradient by hue' 0 'linear-gradient (purple hue)' "$SS" "$FX/ui/slop/styles.css"
+t 'slop_scan: redesign scores clean' 0 'Slop score 0/100: clean' "$SS" "$FX/ui/slop/after"
+t 'slop_scan: hand-built page scores clean' 0 'Slop score 0/100: clean' "$SS" "$FX/ui/slop/clean"
+t 'slop_scan: --max threshold' 1 'Slop score 19/100' "$SS" "$FX/ui/slop/styles.css" --max 10
+t 'slop_scan: missing path exits 2' 2 'does not exist' "$SS" "$FX/ui/slop/nope"

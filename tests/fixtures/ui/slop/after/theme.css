@@ -1,0 +1,8 @@
+:root {
+  --font-display: "Fraunces", Georgia, serif;   /* editorial display face */
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --paper: #faf8f3; --surface: #ffffff; --ink: #1c1b18; --ink-subtle: #5b5850; --rule: #e4dfd3;
+  --accent: #1f5f4a; --accent-strong: #174a39;
+}
+body { font-family: var(--font-sans); }
+.font-display { font-family: var(--font-display); }

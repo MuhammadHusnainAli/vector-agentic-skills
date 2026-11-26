@@ -1,0 +1,5 @@
+:root { --ink: #1b1a17; --paper: #f6f3ec; --accent: #b4451f; }
+body { font-family: "Source Serif 4", Georgia, serif; color: var(--ink); background: var(--paper); }
+.button { background: var(--accent); color: #fff; border-radius: 4px; padding: 12px 20px; }
+.button:hover { background: #95391a; }
+.masthead { border-bottom: 1px solid #d9d3c4; }
