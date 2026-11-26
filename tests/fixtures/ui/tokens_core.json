@@ -1,0 +1,11 @@
+{
+  "core": {
+    "color": {
+      "$type": "color",
+      "blue": { "600": { "$value": "#2563EB" }, "700": { "$value": "#1D4ED8" } },
+      "white": { "$value": { "colorSpace": "srgb", "components": [1, 1, 1], "hex": "#ffffff" } },
+      "slate": { "900": { "$value": "#0F172A" }, "400": { "$value": "#94A3B8" } }
+    },
+    "space": { "$type": "dimension", "2": { "$value": { "value": 8, "unit": "px" } }, "4": { "$value": "16px" } }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "component": {
+    "button": {
+      "primary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic.color.action.primary.bg}"
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{semantic.color.action.primary.fg}"
+        },
+        "padding": {
+          "$type": "dimension",
+          "$value": "{semantic.space.inset.md}"
+        }
+      }
+    }
+  }
+}

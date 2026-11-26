@@ -1,0 +1,30 @@
+{
+  "semantic": {
+    "color": {
+      "$type": "color",
+      "action": {
+        "primary": {
+          "bg": {
+            "$value": "{core.color.blue.600}"
+          },
+          "fg": {
+            "$value": "{core.color.white}"
+          }
+        }
+      },
+      "text": {
+        "default": {
+          "$value": "{core.color.slate.900}"
+        }
+      }
+    },
+    "space": {
+      "inset": {
+        "md": {
+          "$type": "dimension",
+          "$value": "{core.space.4}"
+        }
+      }
+    }
+  }
+}

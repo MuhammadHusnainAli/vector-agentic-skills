@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 166,
+  "skill_count": 167,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 7,
+      "skill_count": 8,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 7,
+          "skill_count": 8,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -521,7 +521,8 @@
             "form-layout-designer",
             "navigation-pattern-selector",
             "dashboard-layout-designer",
-            "card-component-designer"
+            "card-component-designer",
+            "design-token-architecture-builder"
           ],
           "groups": [
             {
@@ -534,6 +535,12 @@
                 "navigation-pattern-selector",
                 "dashboard-layout-designer",
                 "card-component-designer"
+              ]
+            },
+            {
+              "title": "Design systems",
+              "skills": [
+                "design-token-architecture-builder"
               ]
             }
           ]
@@ -2082,6 +2089,35 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/dashboard-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/dashboard-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill dashboard-layout-designer"
+    },
+    {
+      "name": "design-token-architecture-builder",
+      "title": "Design Token Architecture Builder",
+      "description": "Design and audit a design token architecture that scales across themes, brands and platforms: three tiers (primitive -> semantic -> component) and when the component tier is worth it, naming taxonomy (namespace, category, concept, property, variant, state, scale), W3C Design Tokens Format (DTCG 2025.10) structure with $type, $value, aliases and groups, modes for light/dark/high-contrast/density, multi-brand setups, Figma variable collections and modes that mirror the code tokens, and a build pipeline with Style Dictionary v4 that keeps aliases as CSS var() references. Ships token_lint.mjs (Node, no dependencies) that lints DTCG JSON for broken aliases, alias cycles, invalid colour/dimension/duration values, type mismatches, component tokens that skip the semantic tier, hard-coded values in semantic tokens, and tokens missing from one mode file. Use when creating tokens for a design system, restructuring a messy token set, adding dark mode or a second brand, or connecting Figma variables to code.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/design-token-architecture-builder",
+      "files": [
+        "SKILL.md",
+        "references/build-and-figma.md",
+        "references/dtcg-format.md",
+        "references/tiers-and-naming.md",
+        "scripts/token_lint.mjs"
+      ],
+      "references": [
+        "references/build-and-figma.md",
+        "references/dtcg-format.md",
+        "references/tiers-and-naming.md"
+      ],
+      "scripts": [
+        "scripts/token_lint.mjs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/design-token-architecture-builder/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/design-token-architecture-builder/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-token-architecture-builder.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-token-architecture-builder",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-token-architecture-builder"
     },
     {
       "name": "form-layout-designer",

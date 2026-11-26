@@ -1,0 +1,16 @@
+{
+  "core": { "color": { "$type": "color", "red": { "$value": "#GG0000" }, "blue": { "$value": "{semantic.brand}" } },
+            "duration": { "$type": "duration", "fast": { "$value": "fast" } } },
+  "semantic": {
+    "$type": "color",
+    "brand": { "$value": "{core.color.blue}" },
+    "danger": { "$value": "#DC2626" },
+    "loop-a": { "$value": "{semantic.loop-b}" },
+    "loop-b": { "$value": "{semantic.loop-a}" },
+    "gap": { "$type": "dimension", "$value": "{core.color.red}" }
+  },
+  "component": {
+    "alert": { "$type": "color", "bg": { "$value": "{core.color.red}" }, "border": { "$value": "{semantic.missing}" },
+               "fg": { "$value": "#fff", "hover": { "$value": "#eee" } } }
+  }
+}
