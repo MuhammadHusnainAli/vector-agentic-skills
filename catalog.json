@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 175,
+  "skill_count": 176,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 16,
+      "skill_count": 17,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 16,
+          "skill_count": 17,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -530,7 +530,8 @@
             "design-system-adoption-tracker",
             "ios-human-interface-guidelines-checker",
             "material-design-3-compliance-reviewer",
-            "android-adaptive-icon-designer"
+            "android-adaptive-icon-designer",
+            "watchos-ui-layout-advisor"
           ],
           "groups": [
             {
@@ -561,7 +562,8 @@
               "skills": [
                 "ios-human-interface-guidelines-checker",
                 "material-design-3-compliance-reviewer",
-                "android-adaptive-icon-designer"
+                "android-adaptive-icon-designer",
+                "watchos-ui-layout-advisor"
               ]
             }
           ]
@@ -2459,6 +2461,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/ui-component-spec-writer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ui-component-spec-writer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer"
+    },
+    {
+      "name": "watchos-ui-layout-advisor",
+      "title": "watchOS UI Layout Advisor",
+      "description": "Design Apple Watch interfaces for seconds-long use: decide what belongs on the wrist at all, design for a 2-second glance, lay out for every case size (41mm to 49mm and older 38-46mm) in points with full-width controls and the Digital Crown, use watchOS 10+ structure (vertical page TabView, NavigationStack and NavigationSplitView, toolbar button placements, full-screen colour backgrounds), SF Compact text styles and Dynamic Type, black OLED backgrounds, always-on display states, double tap, haptics, notifications (short and long look), and complications and Smart Stack widgets (accessoryCircular, Rectangular, Inline, Corner). Reviews watch designs for phone screens shrunk down, text-heavy screens, small targets, deep navigation, horizontal swiping between unrelated pages, missing always-on treatment and complications that don't update. Use when designing or reviewing a watchOS app, companion watch experience, complication, widget or watch notification.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/watchos-ui-layout-advisor",
+      "files": [
+        "SKILL.md",
+        "references/complications-and-widgets.md",
+        "references/watch-navigation-and-interaction.md",
+        "references/watch-sizes-and-layout.md"
+      ],
+      "references": [
+        "references/complications-and-widgets.md",
+        "references/watch-navigation-and-interaction.md",
+        "references/watch-sizes-and-layout.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/watchos-ui-layout-advisor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/watchos-ui-layout-advisor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/watchos-ui-layout-advisor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/watchos-ui-layout-advisor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill watchos-ui-layout-advisor"
     },
     {
       "name": "academic-english-eap-course-planner",
