@@ -1,0 +1,194 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "Orders API",
+  "version": "1.0.0"
+ },
+ "security": [
+  {
+   "bearerAuth": []
+  }
+ ],
+ "paths": {
+  "/orders": {
+   "get": {
+    "operationId": "listOrders",
+    "summary": "List orders",
+    "parameters": [
+     {
+      "name": "cursor",
+      "in": "query",
+      "schema": {
+       "type": "string",
+       "maxLength": 200
+      }
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "schema": {
+       "type": "integer",
+       "maximum": 100
+      }
+     },
+     {
+      "name": "region",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/OrderPage"
+        },
+        "example": {
+         "data": [],
+         "nextCursor": null
+        }
+       }
+      }
+     },
+     "429": {
+      "$ref": "#/components/responses/Problem"
+     },
+     "default": {
+      "$ref": "#/components/responses/Problem"
+     }
+    }
+   },
+   "post": {
+    "operationId": "placeOrder",
+    "summary": "Create an order",
+    "parameters": [
+     {
+      "name": "Idempotency-Key",
+      "in": "header",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "maxLength": 64
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/NewOrder"
+       },
+       "example": {
+        "sku": "A1",
+        "quantity": 2
+       }
+      }
+     }
+    },
+    "responses": {
+     "201": {
+      "description": "Created",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/Order"
+        }
+       }
+      }
+     },
+     "429": {
+      "$ref": "#/components/responses/Problem"
+     },
+     "default": {
+      "$ref": "#/components/responses/Problem"
+     }
+    }
+   }
+  },
+  "/customers": {
+   "get": {
+    "operationId": "listCustomers",
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "securitySchemes": {
+   "bearerAuth": {
+    "type": "http",
+    "scheme": "bearer"
+   }
+  },
+  "responses": {
+   "Problem": {
+    "description": "Error",
+    "content": {
+     "application/problem+json": {
+      "schema": {
+       "type": "object"
+      }
+     }
+    }
+   }
+  },
+  "schemas": {
+   "Order": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "total": {
+      "type": "integer"
+     }
+    }
+   },
+   "OrderPage": {
+    "type": "object",
+    "properties": {
+     "data": {
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/Order"
+      }
+     },
+     "nextCursor": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   },
+   "NewOrder": {
+    "type": "object",
+    "properties": {
+     "sku": {
+      "type": "string",
+      "maxLength": 20
+     },
+     "quantity": {
+      "type": "string"
+     },
+     "customerId": {
+      "type": "string",
+      "maxLength": 40
+     }
+    },
+    "required": [
+     "customerId"
+    ]
+   }
+  }
+ }
+}

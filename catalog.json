@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 204,
+  "skill_count": 205,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 33,
+      "skill_count": 34,
       "subcategories": [
         {
           "name": "sql",
@@ -73,17 +73,19 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 2,
+          "skill_count": 3,
           "skills": [
             "rest-api-endpoint-designer",
-            "openapi-spec-writer"
+            "openapi-spec-writer",
+            "rest-api-versioning-strategist"
           ],
           "groups": [
             {
               "title": "REST API design",
               "skills": [
                 "rest-api-endpoint-designer",
-                "openapi-spec-writer"
+                "openapi-spec-writer",
+                "rest-api-versioning-strategist"
               ]
             }
           ]
@@ -5648,6 +5650,35 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/rest-api-endpoint-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/rest-api-endpoint-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-endpoint-designer"
+    },
+    {
+      "name": "rest-api-versioning-strategist",
+      "title": "REST API Versioning Strategist",
+      "description": "Choose and run an API versioning strategy that lets the API evolve without breaking clients: what counts as a breaking change, evolving compatibly first (additive changes, tolerant readers, expand-and-contract), when a new version is justified, and the strategies with their trade-offs (URI major versions, header or media-type versions, date-based versions with per-account pinning and version transformers as Stripe does), plus deprecation and sunset policy (Deprecation and Sunset headers, timelines, usage telemetry, migration guides, brownouts). Ships openapi_diff.py, which compares two OpenAPI 3.x specs and classifies changes as breaking (removed operations or fields, type changes, new required inputs, tightened constraints, renamed operationIds), potentially breaking (new response enum values, properties becoming optional) or safe. Use when changing a public or partner API, choosing a versioning scheme, deprecating endpoints or adding a breaking-change gate to CI.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/rest-api-versioning-strategist",
+      "files": [
+        "SKILL.md",
+        "references/breaking-changes.md",
+        "references/deprecation-and-sunset.md",
+        "references/versioning-strategies.md",
+        "scripts/openapi_diff.py"
+      ],
+      "references": [
+        "references/breaking-changes.md",
+        "references/deprecation-and-sunset.md",
+        "references/versioning-strategies.md"
+      ],
+      "scripts": [
+        "scripts/openapi_diff.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rest-api-versioning-strategist/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/rest-api-versioning-strategist/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rest-api-versioning-strategist.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/rest-api-versioning-strategist",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-versioning-strategist"
     },
     {
       "name": "python-async-deadlock-debugger",
