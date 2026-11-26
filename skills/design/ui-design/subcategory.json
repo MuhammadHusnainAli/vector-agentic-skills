@@ -5,6 +5,6 @@
   "scripts_optional": true,
   "groups": [
     {"title": "Interface layout and components", "skills": ["ui-component-spec-writer", "responsive-breakpoint-layout-planner", "button-state-variant-designer", "form-layout-designer", "navigation-pattern-selector", "dashboard-layout-designer", "card-component-designer"]},
-    {"title": "Design systems", "skills": ["design-token-architecture-builder", "component-library-inventory-auditor"]}
+    {"title": "Design systems", "skills": ["design-token-architecture-builder", "component-library-inventory-auditor", "design-system-documentation-writer"]}
   ]
 }

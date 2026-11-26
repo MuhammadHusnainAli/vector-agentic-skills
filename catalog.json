@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 168,
+  "skill_count": 169,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 9,
+      "skill_count": 10,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 9,
+          "skill_count": 10,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -523,7 +523,8 @@
             "dashboard-layout-designer",
             "card-component-designer",
             "design-token-architecture-builder",
-            "component-library-inventory-auditor"
+            "component-library-inventory-auditor",
+            "design-system-documentation-writer"
           ],
           "groups": [
             {
@@ -542,7 +543,8 @@
               "title": "Design systems",
               "skills": [
                 "design-token-architecture-builder",
-                "component-library-inventory-auditor"
+                "component-library-inventory-auditor",
+                "design-system-documentation-writer"
               ]
             }
           ]
@@ -2118,6 +2120,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/dashboard-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/dashboard-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill dashboard-layout-designer"
+    },
+    {
+      "name": "design-system-documentation-writer",
+      "title": "Design System Documentation Writer",
+      "description": "Write design system documentation that designers and engineers actually use: component pages (summary, when to use and when not, anatomy, variants with reasons, behaviour, content guidelines, accessibility with keyboard and screen-reader notes, props table, do and don't pairs with images, related components, status and changelog), foundation pages (colour, type, spacing, elevation, motion, iconography), pattern pages (forms, empty states, errors, navigation), and the docs site structure (foundations, components, patterns, content, accessibility, resources, what's new). Covers status labels, writing style (decisions with reasons, no marketing tone), code examples and keeping docs in sync with releases. Reviews pages for missing usage limits, unpaired do/don't, vague guidance, incomplete props, missing accessibility notes and stale examples. Use when writing or reviewing design system docs, component guidelines or a docs site.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/design-system-documentation-writer",
+      "files": [
+        "SKILL.md",
+        "references/docs-site-structure.md",
+        "references/page-templates.md",
+        "references/writing-style.md"
+      ],
+      "references": [
+        "references/docs-site-structure.md",
+        "references/page-templates.md",
+        "references/writing-style.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/design-system-documentation-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/design-system-documentation-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-system-documentation-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-system-documentation-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-system-documentation-writer"
     },
     {
       "name": "design-token-architecture-builder",
