@@ -240,7 +240,8 @@
         "./skills/design/ui-design/ui-component-spec-writer",
         "./skills/design/ui-design/responsive-breakpoint-layout-planner",
         "./skills/design/ui-design/button-state-variant-designer",
-        "./skills/design/ui-design/form-layout-designer"
+        "./skills/design/ui-design/form-layout-designer",
+        "./skills/design/ui-design/navigation-pattern-selector"
       ]
     }
   ]

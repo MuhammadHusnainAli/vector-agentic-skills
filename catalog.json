@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 163,
+  "skill_count": 164,
   "categories": [
     {
       "name": "programming",
@@ -506,19 +506,20 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 4,
+      "skill_count": 5,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 4,
+          "skill_count": 5,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
             "button-state-variant-designer",
-            "form-layout-designer"
+            "form-layout-designer",
+            "navigation-pattern-selector"
           ],
           "groups": [
             {
@@ -527,7 +528,8 @@
                 "ui-component-spec-writer",
                 "responsive-breakpoint-layout-planner",
                 "button-state-variant-designer",
-                "form-layout-designer"
+                "form-layout-designer",
+                "navigation-pattern-selector"
               ]
             }
           ]
@@ -2050,6 +2052,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/form-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/form-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill form-layout-designer"
+    },
+    {
+      "name": "navigation-pattern-selector",
+      "title": "Navigation Pattern Selector",
+      "description": "Choose and design the navigation system for an app or site from its information architecture rather than taste: number and frequency of top-level destinations, depth, platform and window size, and the user's main tasks decide between bottom tab bar, navigation rail, sidebar, drawer, top navigation, mega menu, hub-and-spoke, tabs, breadcrumbs, search-first and command palette. Covers iOS tab bars and sidebars, Material 3 navigation bar / rail / drawer by window size class, Fluent NavigationView, web header and sidebar patterns, responsive transitions between them, wayfinding (where am I, where can I go, how do I get back), label writing, and validating the IA with card sorting, tree testing and first-click tests. Reviews navigation for hidden primary destinations, too many top-level items, mixed tabs and links, vague or jargon labels, no current-location indicator, deep nesting and inconsistent back behaviour. Use when designing or restructuring an app's or site's navigation or information architecture.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/navigation-pattern-selector",
+      "files": [
+        "SKILL.md",
+        "references/ia-validation.md",
+        "references/pattern-catalogue.md",
+        "references/platform-navigation.md"
+      ],
+      "references": [
+        "references/ia-validation.md",
+        "references/pattern-catalogue.md",
+        "references/platform-navigation.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/navigation-pattern-selector/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/navigation-pattern-selector/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/navigation-pattern-selector.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/navigation-pattern-selector",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill navigation-pattern-selector"
     },
     {
       "name": "responsive-breakpoint-layout-planner",
