@@ -70,3 +70,14 @@ t 'proto_diff: rpc signature' 1 'PE008 [error] OrderService.GetOrder: request/re
 t 'proto_diff: summary' 1 '6 breaking, 1 risky, 2 safe change(s)' "$PD2" "$FX/be/orders_good.proto" "$FX/be/orders_v2_breaking.proto"
 t 'proto_diff: reserved removal and additions are safe' 0 'PI002 [info] Order.total_minor (3): removed and reserved' "$PD2" "$FX/be/orders_good.proto" "$FX/be/orders_v2_safe.proto"
 t 'proto_diff: missing file exits 2' 2 'error:' "$PD2" "$FX/be/orders_good.proto" "$FX/be/nope.proto"
+
+# ---- Authentication and authorization
+JI="$BE/jwt-auth-flow-implementer/scripts/jwt_inspect.py"
+t 'jwt_inspect: valid hmac token' 0 'size: 251 bytes; signature: verified' "$JI" "$FX/be/jwt_good.txt" --secret s3cret-key-0123456789 --audience orders-api --now 1767226000
+t 'jwt_inspect: wrong secret' 1 'JW004 [error] HS256 signature does not verify' "$JI" "$FX/be/jwt_good.txt" --secret wrong --now 1767226000
+t 'jwt_inspect: expired token' 1 'JW003 [error] expired at 2026-01-01 00:15:00 UTC' "$JI" "$FX/be/jwt_good.txt" --now 1767300000
+t 'jwt_inspect: alg none' 1 "JW001 [error] alg is 'none'" "$JI" "$FX/be/jwt_bad.txt" --now 1767226000
+t 'jwt_inspect: sensitive claim' 1 "JW009 [warn] claim 'password' looks sensitive" "$JI" "$FX/be/jwt_bad.txt" --now 1767226000
+t 'jwt_inspect: long lifetime and size' 1 'JW011 [warn] token is 3035 bytes' "$JI" "$FX/be/jwt_long.txt" --now 1767226000
+t 'jwt_inspect: missing kid' 1 'JW008 [warn] asymmetric alg without kid' "$JI" "$FX/be/jwt_long.txt" --now 1767226000
+t 'jwt_inspect: not a jwt exits 2' 2 'not a JWT' "$JI" abc.def

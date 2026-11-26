@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 215,
+  "skill_count": 216,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 44,
+      "skill_count": 45,
       "subcategories": [
         {
           "name": "sql",
@@ -73,7 +73,7 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 13,
+          "skill_count": 14,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
@@ -87,7 +87,8 @@
             "graphql-dataloader-n-plus-one-fixer",
             "grpc-protobuf-definition-writer",
             "grpc-service-scaffolder",
-            "protobuf-schema-evolution-checker"
+            "protobuf-schema-evolution-checker",
+            "jwt-auth-flow-implementer"
           ],
           "groups": [
             {
@@ -111,6 +112,12 @@
                 "grpc-protobuf-definition-writer",
                 "grpc-service-scaffolder",
                 "protobuf-schema-evolution-checker"
+              ]
+            },
+            {
+              "title": "Authentication and authorization",
+              "skills": [
+                "jwt-auth-flow-implementer"
               ]
             }
           ]
@@ -5817,6 +5824,33 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/http-status-code-advisor.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/http-status-code-advisor",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill http-status-code-advisor"
+    },
+    {
+      "name": "jwt-auth-flow-implementer",
+      "title": "JWT Auth Flow Implementer",
+      "description": "Implement JWT-based authentication correctly and at scale: when JWTs fit (stateless verification across many services) and when opaque tokens or sessions are better, short-lived access tokens with rotating refresh tokens and reuse detection, signing with RS256/ES256/EdDSA and published JWKS with kid-based key rotation, strict verification (algorithm allow-list, iss, aud, exp, nbf, typ, clock leeway), claims design and size budgets, token storage per client type (backend-for-frontend with HttpOnly cookies for browsers, secure storage on mobile), revocation (short TTLs, deny lists, token versions), logout, and the attacks to prevent. Ships jwt_inspect.py, which decodes a token, prints claims with UTC times, verifies HS256/384/512 signatures with the standard library and flags alg none, expiry problems, missing aud/iss/kid, sensitive claims and oversized tokens. Use when building or reviewing JWT authentication or debugging token problems.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/jwt-auth-flow-implementer",
+      "files": [
+        "SKILL.md",
+        "references/token-flows.md",
+        "references/verification.md",
+        "scripts/jwt_inspect.py"
+      ],
+      "references": [
+        "references/token-flows.md",
+        "references/verification.md"
+      ],
+      "scripts": [
+        "scripts/jwt_inspect.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/jwt-auth-flow-implementer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/jwt-auth-flow-implementer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/jwt-auth-flow-implementer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/jwt-auth-flow-implementer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill jwt-auth-flow-implementer"
     },
     {
       "name": "openapi-spec-writer",
