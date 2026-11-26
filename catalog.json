@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 216,
+  "skill_count": 217,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 45,
+      "skill_count": 46,
       "subcategories": [
         {
           "name": "sql",
@@ -73,7 +73,7 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 14,
+          "skill_count": 15,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
@@ -88,7 +88,8 @@
             "grpc-protobuf-definition-writer",
             "grpc-service-scaffolder",
             "protobuf-schema-evolution-checker",
-            "jwt-auth-flow-implementer"
+            "jwt-auth-flow-implementer",
+            "oauth2-oidc-integration-guide"
           ],
           "groups": [
             {
@@ -117,7 +118,8 @@
             {
               "title": "Authentication and authorization",
               "skills": [
-                "jwt-auth-flow-implementer"
+                "jwt-auth-flow-implementer",
+                "oauth2-oidc-integration-guide"
               ]
             }
           ]
@@ -5851,6 +5853,30 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/jwt-auth-flow-implementer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/jwt-auth-flow-implementer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill jwt-auth-flow-implementer"
+    },
+    {
+      "name": "oauth2-oidc-integration-guide",
+      "title": "OAuth2 / OIDC Integration Guide",
+      "description": "Integrate OAuth 2.x and OpenID Connect correctly, following the OAuth 2.0 Security Best Current Practice (RFC 9700) and OAuth 2.1: choosing the flow per client (authorization code with PKCE for web, mobile and SPAs via a backend-for-frontend, client credentials for services, device authorization for TVs and CLIs, token exchange for delegation), why implicit and password grants are out, state, nonce and exact redirect URI matching, ID token vs access token, discovery and JWKS, scopes and consent design, refresh token rotation, logout (RP-initiated, back-channel), Pushed Authorization Requests, DPoP and mTLS sender-constrained tokens, multi-tenant and B2B setups, and provider specifics (Auth0, Okta, Entra ID, Cognito, Keycloak, Google). Reviews integrations for missing PKCE or state, leaked tokens, wildcard redirects and unvalidated audiences. Use when adding login, SSO, API authorization or machine-to-machine auth with an identity provider.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/oauth2-oidc-integration-guide",
+      "files": [
+        "SKILL.md",
+        "references/flows-in-detail.md",
+        "references/provider-setup.md"
+      ],
+      "references": [
+        "references/flows-in-detail.md",
+        "references/provider-setup.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/oauth2-oidc-integration-guide/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/oauth2-oidc-integration-guide/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/oauth2-oidc-integration-guide.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/oauth2-oidc-integration-guide",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill oauth2-oidc-integration-guide"
     },
     {
       "name": "openapi-spec-writer",
