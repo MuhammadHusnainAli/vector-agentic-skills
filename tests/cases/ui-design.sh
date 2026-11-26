@@ -49,3 +49,12 @@ t 'svg_grid_check: fractional stroke and viewBox' 1 'IG003 [warn] fractional str
 t 'svg_grid_check: set mixes caps' 1 'SET IG007 [warn] mixed stroke caps: butt (1), round (2), square (1)' "$GC" "$FX/ui/icons"
 t 'svg_grid_check: clean icons pass' 0 '2 icon(s), 0 warning(s)' "$GC" "$FX/ui/icons/menu.svg" "$FX/ui/icons/check.svg" --stroke 2 --padding 2
 t 'svg_grid_check: invalid path exits 2' 2 'path data must start with M' "$GC" "$FX/ui/icon_bad_path.svg"
+CM="$UI/dark-mode-palette-designer/scripts/contrast_matrix.mjs"
+t 'contrast_matrix: wcag failure in dark mode' 1 'DM001 [error] dark: action.primary.fg on action.primary.bg (body): 3.67:1, needs 4.5:1' "$CM" "$FX/ui/palette.json"
+t 'contrast_matrix: apca polarity value' 1 '| text.default | surface.default | body | 21.00:1 | -107.9 | pass |' "$CM" "$FX/ui/palette.json"
+t 'contrast_matrix: apca warning' 1 'DM002 [warn] light: text.subtle on surface.raised (body): APCA Lc 69.9, needs 75' "$CM" "$FX/ui/palette.json"
+t 'contrast_matrix: missing token per mode' 1 'DM003 [error] light: text.link missing in light' "$CM" "$FX/ui/palette.json"
+t 'contrast_matrix: pure black surface' 1 'DM004 [info] dark: surface.default is pure black' "$CM" "$FX/ui/palette.json"
+t 'contrast_matrix: oklch conversion' 1 '| action.primary.bg | #2563eb | oklch(54.6% 0.215 263) |' "$CM" "$FX/ui/palette.json"
+STDIN='{"modes":{"light":{"a":"#000","b":"#fff"}},"pairs":[["a","b","body"]]}' t 'contrast_matrix: black on white passes' 0 '| a | b | body | 21.00:1 | 106 | pass |' "$CM" /dev/stdin
+STDIN='{"modes":{"light":{"a":"blue"}},"pairs":[]}' t 'contrast_matrix: unreadable colour exits 2' 2 "unreadable colour 'blue'" "$CM" /dev/stdin

@@ -1,0 +1,14 @@
+{
+  "modes": {
+    "light": { "surface.default": "#ffffff", "surface.raised": "#f8fafc", "text.default": "#0f172a", "text.subtle": "#64748b",
+               "text.placeholder": "#94a3b8", "border.default": "#cbd5e1", "action.primary.bg": "#2563eb", "action.primary.fg": "#ffffff" },
+    "dark":  { "surface.default": "#000000", "surface.raised": "#1e293b", "text.default": "#ffffff", "text.subtle": "#94a3b8",
+               "text.placeholder": "#475569", "border.default": "#334155", "action.primary.bg": "#3b82f6", "action.primary.fg": "#ffffff",
+               "text.link": "#ff00ff" }
+  },
+  "pairs": [
+    ["text.default", "surface.default", "body"], ["text.subtle", "surface.raised", "body"],
+    ["text.placeholder", "surface.default", "body"], ["border.default", "surface.default", "non-text"],
+    ["action.primary.fg", "action.primary.bg", "body"], ["text.link", "surface.default", "body"]
+  ]
+}
