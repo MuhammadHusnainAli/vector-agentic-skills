@@ -264,7 +264,8 @@
         "./skills/design/ui-design/ui-microinteraction-designer",
         "./skills/design/ui-design/clickable-prototype-flow-builder",
         "./skills/design/ui-design/figma-prototype-interaction-setup-guide",
-        "./skills/design/ui-design/prototype-fidelity-level-advisor"
+        "./skills/design/ui-design/prototype-fidelity-level-advisor",
+        "./skills/design/ui-design/protopie-interaction-recipe-writer"
       ]
     }
   ]

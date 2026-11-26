@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 187,
+  "skill_count": 188,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 28,
+      "skill_count": 29,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 28,
+          "skill_count": 29,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -542,7 +542,8 @@
             "ui-microinteraction-designer",
             "clickable-prototype-flow-builder",
             "figma-prototype-interaction-setup-guide",
-            "prototype-fidelity-level-advisor"
+            "prototype-fidelity-level-advisor",
+            "protopie-interaction-recipe-writer"
           ],
           "groups": [
             {
@@ -595,7 +596,8 @@
               "skills": [
                 "clickable-prototype-flow-builder",
                 "figma-prototype-interaction-setup-guide",
-                "prototype-fidelity-level-advisor"
+                "prototype-fidelity-level-advisor",
+                "protopie-interaction-recipe-writer"
               ]
             }
           ]
@@ -2595,6 +2597,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/navigation-pattern-selector.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/navigation-pattern-selector",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill navigation-pattern-selector"
+    },
+    {
+      "name": "protopie-interaction-recipe-writer",
+      "title": "ProtoPie Interaction Recipe Writer",
+      "description": "Write step-by-step ProtoPie recipes for interactions that Figma can't prototype convincingly: real text input and validation, OTP fields, sliders and dials tied to values, swipe-to-delete, drag and drop with snapping, pull to refresh, carousels with paging, conditional flows, counters and carts with variables, timers, sensors (tilt, sound, voice), keyboard and gamepad input, and multi-device or hardware prototypes (phone + TV, car HMI) with Send/Receive and ProtoPie Connect. Each recipe lists layers and containers, the trigger, responses with values, conditions, variables (local or global), formulas, and how to test in ProtoPie Player. Covers ProtoPie building blocks (scenes, layers, components, interactions, triggers, responses, conditions, variables, formulas, Chain, Range, Detect), naming and structure for maintainable pies, and debugging (Debug panel, variables that don't update, conflicting triggers). Use when building or fixing a ProtoPie prototype, or deciding how to prototype an advanced interaction.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/protopie-interaction-recipe-writer",
+      "files": [
+        "SKILL.md",
+        "references/formulas-and-debugging.md",
+        "references/protopie-building-blocks.md",
+        "references/protopie-recipes.md"
+      ],
+      "references": [
+        "references/formulas-and-debugging.md",
+        "references/protopie-building-blocks.md",
+        "references/protopie-recipes.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/protopie-interaction-recipe-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/protopie-interaction-recipe-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/protopie-interaction-recipe-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/protopie-interaction-recipe-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill protopie-interaction-recipe-writer"
     },
     {
       "name": "prototype-fidelity-level-advisor",
