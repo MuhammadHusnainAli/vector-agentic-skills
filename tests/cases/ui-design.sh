@@ -23,3 +23,11 @@ t 'inventory_scan: hard-coded colour hotspot' 1 'IN004 [warn] components/Card.ts
 t 'inventory_scan: vue kebab usage counted' 1 '| UserAvatar | components/user-avatar.vue | 1 | 1 | user-avatar |' "$IS" "$FX/ui/app_src"
 t 'inventory_scan: csv output' 1 '"Card","components/Card.tsx","2","1","card",""' "$IS" "$FX/ui/app_src" --csv
 t 'inventory_scan: missing dir exits 2' 2 'error:' "$IS" "$FX/ui/nope"
+AS="$UI/design-system-adoption-tracker/scripts/adoption_scan.mjs"
+t 'adoption_scan: per-app adoption' 0 '| apps/web | 80% | - | 4 | 1 | 0 | 0 | 75% | 1 | ^3.1.0 |' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2
+t 'adoption_scan: below target fails' 1 'AD001 [warn] apps/admin: adoption 14.3% is below the 50% target' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2 --min 50
+t 'adoption_scan: version lag' 0 'AD003 [warn] apps/admin: on @acme/ui ^2.4.0, latest major is 3' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2 --latest 3.2.0
+t 'adoption_scan: raw html list' 0 'AD002 [info] apps/admin: raw HTML the design system replaces: <button> x1, <input> x1, <table> x1' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2
+t 'adoption_scan: change since baseline' 0 '| apps/web | 80% | +10 pts |' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2 --baseline "$FX/ui/adoption_baseline.json"
+t 'adoption_scan: csv history row' 0 ',apps/admin,14.3,1,2,1,3,0,2,^2.4.0' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2 --csv
+t 'adoption_scan: --ds required' 2 'name the design-system package with --ds' "$AS" "$FX/ui/monorepo"

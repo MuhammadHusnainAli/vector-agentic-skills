@@ -1,0 +1,1 @@
+{ "date": "2026-08-01", "overall": 30, "groups": [ { "group": "apps/admin", "adoption": 10 }, { "group": "apps/web", "adoption": 70 } ] }

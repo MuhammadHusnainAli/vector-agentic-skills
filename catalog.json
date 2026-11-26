@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 171,
+  "skill_count": 172,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 12,
+      "skill_count": 13,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 12,
+          "skill_count": 13,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -526,7 +526,8 @@
             "component-library-inventory-auditor",
             "design-system-documentation-writer",
             "design-system-governance-process-designer",
-            "component-naming-convention-checker"
+            "component-naming-convention-checker",
+            "design-system-adoption-tracker"
           ],
           "groups": [
             {
@@ -548,7 +549,8 @@
                 "component-library-inventory-auditor",
                 "design-system-documentation-writer",
                 "design-system-governance-process-designer",
-                "component-naming-convention-checker"
+                "component-naming-convention-checker",
+                "design-system-adoption-tracker"
               ]
             }
           ]
@@ -2150,6 +2152,33 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/dashboard-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/dashboard-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill dashboard-layout-designer"
+    },
+    {
+      "name": "design-system-adoption-tracker",
+      "title": "Design System Adoption Tracker",
+      "description": "Measure and grow design system adoption with numbers leadership trusts: adoption defined per app or team as the share of UI elements coming from the design system (vs local components, third-party UI libraries and raw HTML the system replaces), token share vs hard-coded colours, design-system version lag, Figma library insertions and detach rate, snapshot history and trend, targets and OKRs, and an adoption plan (blockers interviews, migration support, codemods, lint rules, champions). Ships adoption_scan.mjs (Node, no dependencies) that scans a monorepo or several repos per folder and reports adoption %, change since a baseline snapshot, raw HTML elements the system replaces, token share, version per app, groups below a target and apps on an old major version, as a table, CSV for history, or JSON for the next baseline. Use when reporting design system adoption, setting adoption targets, finding lagging teams, or planning a migration push.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/design-system-adoption-tracker",
+      "files": [
+        "SKILL.md",
+        "references/adoption-playbook.md",
+        "references/metrics-and-targets.md",
+        "scripts/adoption_scan.mjs"
+      ],
+      "references": [
+        "references/adoption-playbook.md",
+        "references/metrics-and-targets.md"
+      ],
+      "scripts": [
+        "scripts/adoption_scan.mjs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/design-system-adoption-tracker/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/design-system-adoption-tracker/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-system-adoption-tracker.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-system-adoption-tracker",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-system-adoption-tracker"
     },
     {
       "name": "design-system-documentation-writer",

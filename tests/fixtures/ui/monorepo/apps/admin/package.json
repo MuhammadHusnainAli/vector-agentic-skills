@@ -1,0 +1,1 @@
+{ "name": "admin", "dependencies": { "@acme/ui": "^2.4.0", "@mui/material": "^6.0.0" } }

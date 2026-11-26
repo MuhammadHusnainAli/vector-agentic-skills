@@ -1,0 +1,1 @@
+{ "name": "web", "dependencies": { "@acme/ui": "^3.1.0", "react": "^19.0.0" } }
