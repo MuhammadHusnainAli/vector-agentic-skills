@@ -260,7 +260,8 @@
         "./skills/design/ui-design/icon-pixel-grid-aligner",
         "./skills/design/ui-design/dark-mode-palette-designer",
         "./skills/design/ui-design/elevation-shadow-system-designer",
-        "./skills/design/ui-design/empty-state-illustration-planner"
+        "./skills/design/ui-design/empty-state-illustration-planner",
+        "./skills/design/ui-design/ui-microinteraction-designer"
       ]
     }
   ]

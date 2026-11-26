@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 183,
+  "skill_count": 184,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 24,
+      "skill_count": 25,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 24,
+          "skill_count": 25,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -538,7 +538,8 @@
             "icon-pixel-grid-aligner",
             "dark-mode-palette-designer",
             "elevation-shadow-system-designer",
-            "empty-state-illustration-planner"
+            "empty-state-illustration-planner",
+            "ui-microinteraction-designer"
           ],
           "groups": [
             {
@@ -582,7 +583,8 @@
                 "icon-pixel-grid-aligner",
                 "dark-mode-palette-designer",
                 "elevation-shadow-system-designer",
-                "empty-state-illustration-planner"
+                "empty-state-illustration-planner",
+                "ui-microinteraction-designer"
               ]
             }
           ]
@@ -2612,6 +2614,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/ui-component-spec-writer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ui-component-spec-writer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer"
+    },
+    {
+      "name": "ui-microinteraction-designer",
+      "title": "UI Microinteraction Designer",
+      "description": "Design and specify microinteractions that make a product feel responsive and clear: Dan Saffer's model (trigger, rules, feedback, loops and modes), response-time limits (0.1 s instant, 1 s flow, 10 s attention), feedback for every action (pressed states, optimistic updates, progress, success, undo), motion with purpose (orientation, continuity, attention, feedback), duration by distance and size, easing (ease-out to enter, ease-in to exit, standard for moves), motion tokens, choreography and stagger, haptics and sound, loading patterns (spinner delay and minimum time, skeletons, progress), performance (transform and opacity only), and accessibility (prefers-reduced-motion alternatives, WCAG 2.2.2, 2.3.1, 2.3.3). Writes engineer-ready specs and reviews motion for purposeless decoration, slow or inconsistent timing, layout-property animation, missing reduced-motion handling and silent actions. Use when designing interaction details, writing motion specs, defining motion tokens or reviewing how a UI feels.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/ui-microinteraction-designer",
+      "files": [
+        "SKILL.md",
+        "references/microinteraction-spec.md",
+        "references/motion-accessibility-and-performance.md",
+        "references/motion-tokens.md"
+      ],
+      "references": [
+        "references/microinteraction-spec.md",
+        "references/motion-accessibility-and-performance.md",
+        "references/motion-tokens.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/ui-microinteraction-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/ui-microinteraction-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/ui-microinteraction-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ui-microinteraction-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ui-microinteraction-designer"
     },
     {
       "name": "ui-spacing-scale-consistency-checker",
