@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 189,
+  "skill_count": 190,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 30,
+      "skill_count": 31,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 30,
+          "skill_count": 31,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -544,7 +544,8 @@
             "figma-prototype-interaction-setup-guide",
             "prototype-fidelity-level-advisor",
             "protopie-interaction-recipe-writer",
-            "prototype-demo-script-writer"
+            "prototype-demo-script-writer",
+            "design-handoff-spec-generator"
           ],
           "groups": [
             {
@@ -600,6 +601,12 @@
                 "prototype-fidelity-level-advisor",
                 "protopie-interaction-recipe-writer",
                 "prototype-demo-script-writer"
+              ]
+            },
+            {
+              "title": "Design handoff",
+              "skills": [
+                "design-handoff-spec-generator"
               ]
             }
           ]
@@ -2282,6 +2289,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/dashboard-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/dashboard-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill dashboard-layout-designer"
+    },
+    {
+      "name": "design-handoff-spec-generator",
+      "title": "Design Handoff Spec Generator",
+      "description": "Produce design handoff packages engineers can build from without guessing: scope and links, user flows, screens per breakpoint, component map (existing design-system components vs new or modified ones), every state and edge case (empty, loading, error, long content, permissions), interaction and motion specs, responsive behaviour, content and copy with limits, accessibility annotations, data and API needs (fields, formats, validation, sorting, pagination), analytics events, assets, open questions and acceptance criteria written as testable statements. Covers Figma Dev Mode setup (ready-for-dev sections, annotations, variables and tokens visible, Code Connect), the handoff meeting, and design QA during the build. Reviews handoffs for happy-path-only screens, unlabelled new components, raw values, unspecified responsive behaviour and data rules, and untestable criteria. Use when preparing a design for engineering, writing a feature spec from designs, or auditing a handoff before sprint planning.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/design-handoff-spec-generator",
+      "files": [
+        "SKILL.md",
+        "references/figma-dev-mode-and-meeting.md",
+        "references/handoff-package-template.md",
+        "references/states-and-acceptance-criteria.md"
+      ],
+      "references": [
+        "references/figma-dev-mode-and-meeting.md",
+        "references/handoff-package-template.md",
+        "references/states-and-acceptance-criteria.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/design-handoff-spec-generator/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/design-handoff-spec-generator/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-handoff-spec-generator.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-handoff-spec-generator",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-handoff-spec-generator"
     },
     {
       "name": "design-system-adoption-tracker",
