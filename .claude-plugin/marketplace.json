@@ -76,7 +76,8 @@
         "./skills/programming/backend-apis/rest-api-endpoint-designer",
         "./skills/programming/backend-apis/openapi-spec-writer",
         "./skills/programming/backend-apis/rest-api-versioning-strategist",
-        "./skills/programming/backend-apis/api-pagination-designer"
+        "./skills/programming/backend-apis/api-pagination-designer",
+        "./skills/programming/backend-apis/http-status-code-advisor"
       ]
     },
     {

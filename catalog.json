@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 206,
+  "skill_count": 207,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 35,
+      "skill_count": 36,
       "subcategories": [
         {
           "name": "sql",
@@ -73,12 +73,13 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 4,
+          "skill_count": 5,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
             "rest-api-versioning-strategist",
-            "api-pagination-designer"
+            "api-pagination-designer",
+            "http-status-code-advisor"
           ],
           "groups": [
             {
@@ -87,7 +88,8 @@
                 "rest-api-endpoint-designer",
                 "openapi-spec-writer",
                 "rest-api-versioning-strategist",
-                "api-pagination-designer"
+                "api-pagination-designer",
+                "http-status-code-advisor"
               ]
             }
           ]
@@ -5618,6 +5620,30 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/api-pagination-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/api-pagination-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill api-pagination-designer"
+    },
+    {
+      "name": "http-status-code-advisor",
+      "title": "HTTP Status Code Advisor",
+      "description": "Pick the correct HTTP status code for every API outcome according to RFC 9110 and related RFCs, and use status codes as the contract that clients, retries, caches, load balancers and SLOs depend on: 200/201/202/204 for success, 304 and conditional requests, redirects, 400 vs 422 for invalid input, 401 vs 403 vs 404 (and hiding existence), 405, 406, 409 vs 412 for conflicts, 410 for sunset resources, 413, 415, 428, 429 with Retry-After, 500 vs 502 vs 503 vs 504, which codes clients may retry, which are cacheable, and how codes feed error budgets and alerting. Reviews APIs for 200-with-error-body, 500 for client mistakes, 404 vs 403 leaks, wrong retry signals and codes that break caching. Use when designing responses, reviewing an API's error handling or debugging client retry behaviour.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/http-status-code-advisor",
+      "files": [
+        "SKILL.md",
+        "references/scenario-decisions.md",
+        "references/status-code-reference.md"
+      ],
+      "references": [
+        "references/scenario-decisions.md",
+        "references/status-code-reference.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/http-status-code-advisor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/http-status-code-advisor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/http-status-code-advisor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/http-status-code-advisor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill http-status-code-advisor"
     },
     {
       "name": "openapi-spec-writer",
