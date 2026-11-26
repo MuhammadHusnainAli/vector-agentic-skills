@@ -6,4 +6,4 @@ Skills for designers: UI layout and components, design systems and tokens, platf
 
 | Sub-category | Skills | Covers |
 |--------------|--------|--------|
-| [UI Design](ui-design/README.md) | 15 | Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces. |
+| [UI Design](ui-design/README.md) | 16 | Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces. |

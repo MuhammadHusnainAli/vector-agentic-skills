@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 174,
+  "skill_count": 175,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 15,
+      "skill_count": 16,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 15,
+          "skill_count": 16,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -529,7 +529,8 @@
             "component-naming-convention-checker",
             "design-system-adoption-tracker",
             "ios-human-interface-guidelines-checker",
-            "material-design-3-compliance-reviewer"
+            "material-design-3-compliance-reviewer",
+            "android-adaptive-icon-designer"
           ],
           "groups": [
             {
@@ -559,7 +560,8 @@
               "title": "Platform guidelines",
               "skills": [
                 "ios-human-interface-guidelines-checker",
-                "material-design-3-compliance-reviewer"
+                "material-design-3-compliance-reviewer",
+                "android-adaptive-icon-designer"
               ]
             }
           ]
@@ -2030,6 +2032,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/xgboost-lightgbm-tuner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/ai-ml/classical-ml/xgboost-lightgbm-tuner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill xgboost-lightgbm-tuner"
+    },
+    {
+      "name": "android-adaptive-icon-designer",
+      "title": "Android Adaptive Icon Designer",
+      "description": "Design and deliver Android app icons that survive every launcher: adaptive icon structure (108dp foreground and background layers, 72dp visible area, 66dp safe zone for key content, 18dp edge reserved for motion effects), OEM mask shapes (circle, squircle, rounded square, teardrop), monochrome layer for Android 13+ themed icons, legacy mipmap sizes per density, the Google Play 512x512 store icon, splash screen icon sizes (Android 12 SplashScreen API), notification small icons, and delivery as vector drawables or PNGs with the adaptive-icon XML. Covers concept and silhouette, background choices, contrast in themed and dark contexts, parallax-safe composition, and testing across masks and launchers. Reviews icons for content outside the safe zone, detail lost at 48dp, baked-in shapes, missing monochrome layers and wrong export sizes. Use when designing, reviewing or exporting an Android launcher icon, themed icon, Play Store icon or splash icon.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/android-adaptive-icon-designer",
+      "files": [
+        "SKILL.md",
+        "references/adaptive-icon-specs.md",
+        "references/export-and-delivery.md",
+        "references/icon-design-guidance.md"
+      ],
+      "references": [
+        "references/adaptive-icon-specs.md",
+        "references/export-and-delivery.md",
+        "references/icon-design-guidance.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/android-adaptive-icon-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/android-adaptive-icon-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/android-adaptive-icon-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/android-adaptive-icon-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill android-adaptive-icon-designer"
     },
     {
       "name": "button-state-variant-designer",
