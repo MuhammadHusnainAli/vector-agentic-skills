@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 185,
+  "skill_count": 186,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 26,
+      "skill_count": 27,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 26,
+          "skill_count": 27,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -540,7 +540,8 @@
             "elevation-shadow-system-designer",
             "empty-state-illustration-planner",
             "ui-microinteraction-designer",
-            "clickable-prototype-flow-builder"
+            "clickable-prototype-flow-builder",
+            "figma-prototype-interaction-setup-guide"
           ],
           "groups": [
             {
@@ -591,7 +592,8 @@
             {
               "title": "Prototyping",
               "skills": [
-                "clickable-prototype-flow-builder"
+                "clickable-prototype-flow-builder",
+                "figma-prototype-interaction-setup-guide"
               ]
             }
           ]
@@ -2434,6 +2436,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/empty-state-illustration-planner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/empty-state-illustration-planner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill empty-state-illustration-planner"
+    },
+    {
+      "name": "figma-prototype-interaction-setup-guide",
+      "title": "Figma Prototype Interaction Setup Guide",
+      "description": "Set up Figma prototypes that behave like the real product with the least wiring: choose the right mechanism (frame navigation, overlays, interactive components with variants, variables and conditionals, scroll and sticky positioning) for each interaction; triggers (on click, on drag, while hovering, while pressing, key/gamepad, after delay, mouse enter/leave) and actions (navigate, change to, back, scroll to, open/swap/close overlay, set variable, conditional, set variable mode); Smart Animate layer-matching rules, transitions, easing and spring presets; flows and starting points; and step-by-step recipes for tabs, accordions, toggles, dropdowns, bottom sheets, carousels, toasts, hover states, cart counters, form validation and fake text input. Diagnoses broken prototypes: Smart Animate jumps, stuck overlays and hover states, broken scroll and duplicated-screen bloat. Use when building or fixing a Figma prototype or deciding how to prototype an interaction in Figma.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/figma-prototype-interaction-setup-guide",
+      "files": [
+        "SKILL.md",
+        "references/figma-recipes.md",
+        "references/smart-animate-and-transitions.md",
+        "references/troubleshooting.md"
+      ],
+      "references": [
+        "references/figma-recipes.md",
+        "references/smart-animate-and-transitions.md",
+        "references/troubleshooting.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/figma-prototype-interaction-setup-guide/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/figma-prototype-interaction-setup-guide/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/figma-prototype-interaction-setup-guide.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/figma-prototype-interaction-setup-guide",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill figma-prototype-interaction-setup-guide"
     },
     {
       "name": "form-layout-designer",
