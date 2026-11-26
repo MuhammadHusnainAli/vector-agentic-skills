@@ -10,6 +10,6 @@
     {"title": "Visual UI polish", "skills": ["ui-spacing-scale-consistency-checker", "icon-pixel-grid-aligner", "dark-mode-palette-designer", "elevation-shadow-system-designer", "empty-state-illustration-planner", "ui-microinteraction-designer"]},
     {"title": "Prototyping", "skills": ["clickable-prototype-flow-builder", "figma-prototype-interaction-setup-guide", "prototype-fidelity-level-advisor", "protopie-interaction-recipe-writer", "prototype-demo-script-writer"]},
     {"title": "Design handoff", "skills": ["design-handoff-spec-generator", "redline-annotation-writer", "design-qa-visual-diff-checker", "asset-export-naming-planner", "design-to-code-gap-auditor", "accessibility-annotation-writer"]},
-    {"title": "Specialized UI domains", "skills": ["ecommerce-checkout-ui-designer", "fintech-app-ui-trust-reviewer", "automotive-hmi-ui-designer", "game-hud-ui-designer", "kiosk-touchscreen-ui-designer"]}
+    {"title": "Specialized UI domains", "skills": ["ecommerce-checkout-ui-designer", "fintech-app-ui-trust-reviewer", "automotive-hmi-ui-designer", "game-hud-ui-designer", "kiosk-touchscreen-ui-designer", "voice-ui-conversation-designer"]}
   ]
 }

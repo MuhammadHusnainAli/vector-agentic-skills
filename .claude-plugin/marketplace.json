@@ -277,7 +277,8 @@
         "./skills/design/ui-design/fintech-app-ui-trust-reviewer",
         "./skills/design/ui-design/automotive-hmi-ui-designer",
         "./skills/design/ui-design/game-hud-ui-designer",
-        "./skills/design/ui-design/kiosk-touchscreen-ui-designer"
+        "./skills/design/ui-design/kiosk-touchscreen-ui-designer",
+        "./skills/design/ui-design/voice-ui-conversation-designer"
       ]
     }
   ]

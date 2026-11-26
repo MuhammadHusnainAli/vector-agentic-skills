@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 200,
+  "skill_count": 201,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 41,
+      "skill_count": 42,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 41,
+          "skill_count": 42,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -555,7 +555,8 @@
             "fintech-app-ui-trust-reviewer",
             "automotive-hmi-ui-designer",
             "game-hud-ui-designer",
-            "kiosk-touchscreen-ui-designer"
+            "kiosk-touchscreen-ui-designer",
+            "voice-ui-conversation-designer"
           ],
           "groups": [
             {
@@ -631,7 +632,8 @@
                 "fintech-app-ui-trust-reviewer",
                 "automotive-hmi-ui-designer",
                 "game-hud-ui-designer",
-                "kiosk-touchscreen-ui-designer"
+                "kiosk-touchscreen-ui-designer",
+                "voice-ui-conversation-designer"
               ]
             }
           ]
@@ -3136,6 +3138,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/ui-spacing-scale-consistency-checker.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ui-spacing-scale-consistency-checker",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ui-spacing-scale-consistency-checker"
+    },
+    {
+      "name": "voice-ui-conversation-designer",
+      "title": "Voice UI Conversation Designer",
+      "description": "Design voice and conversational interfaces that people can use without a screen: when voice is the right channel, sample dialogs before flows, turn-taking and the cooperative principle, prompts that are short, end with the question and offer no more than three options, intents, slots and entity design with real utterance variety, confirmation strategy by risk (implicit, explicit, none), error handling with escalating no-input and no-match reprompts, help, barge-in and graceful exits, persona, latency and earcons, multimodal devices, LLM voice agents (grounding, interruptions, confirmation), SSML and spoken duration, privacy and speech accessibility. Reviews scripts for long prompts, buried questions, missing error handling, dead ends and unconfirmed risky actions. Use when designing or reviewing a voice assistant, phone IVR, smart speaker skill, in-car voice or voice agent.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/voice-ui-conversation-designer",
+      "files": [
+        "SKILL.md",
+        "references/dialog-design.md",
+        "references/errors-and-confirmation.md",
+        "references/ssml-and-voice-tech.md"
+      ],
+      "references": [
+        "references/dialog-design.md",
+        "references/errors-and-confirmation.md",
+        "references/ssml-and-voice-tech.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/voice-ui-conversation-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/voice-ui-conversation-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/voice-ui-conversation-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/voice-ui-conversation-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill voice-ui-conversation-designer"
     },
     {
       "name": "watchos-ui-layout-advisor",
