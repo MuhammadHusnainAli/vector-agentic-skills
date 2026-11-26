@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 178,
+  "skill_count": 179,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 19,
+      "skill_count": 20,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 19,
+          "skill_count": 20,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -533,7 +533,8 @@
             "android-adaptive-icon-designer",
             "watchos-ui-layout-advisor",
             "tv-10-foot-ui-designer",
-            "windows-fluent-design-reviewer"
+            "windows-fluent-design-reviewer",
+            "ui-spacing-scale-consistency-checker"
           ],
           "groups": [
             {
@@ -568,6 +569,12 @@
                 "watchos-ui-layout-advisor",
                 "tv-10-foot-ui-designer",
                 "windows-fluent-design-reviewer"
+              ]
+            },
+            {
+              "title": "Visual UI polish",
+              "skills": [
+                "ui-spacing-scale-consistency-checker"
               ]
             }
           ]
@@ -2489,6 +2496,33 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/ui-component-spec-writer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ui-component-spec-writer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer"
+    },
+    {
+      "name": "ui-spacing-scale-consistency-checker",
+      "title": "UI Spacing Scale Consistency Checker",
+      "description": "Define a spacing scale and enforce it across design and code: base unit (4 or 8px), linear vs geometric steps, step names and tokens (space.1-12, inset/stack/inline roles), component padding vs layout spacing, proximity and grouping (related items closer than unrelated), density modes, the relation to type line heights and icon sizes, Figma auto layout and variables, and migrating off-scale values. Ships spacing_audit.mjs (Node, no dependencies) that extracts margin, padding, gap and inset values from CSS/SCSS/LESS, JSX/JS style objects (unitless numbers as px), inline styles and Tailwind arbitrary classes like p-[18px], converts rem, and reports every value against the scale with use counts, off-scale values with the nearest steps and file:line locations, on-scale share, and token usage. Use when spacing looks uneven, when defining or tightening a spacing system, before a design-system migration, or when reviewing a design or codebase for spacing consistency.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/ui-spacing-scale-consistency-checker",
+      "files": [
+        "SKILL.md",
+        "references/audit-and-migration.md",
+        "references/spacing-scales.md",
+        "scripts/spacing_audit.mjs"
+      ],
+      "references": [
+        "references/audit-and-migration.md",
+        "references/spacing-scales.md"
+      ],
+      "scripts": [
+        "scripts/spacing_audit.mjs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/ui-spacing-scale-consistency-checker/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/ui-spacing-scale-consistency-checker/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/ui-spacing-scale-consistency-checker.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ui-spacing-scale-consistency-checker",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ui-spacing-scale-consistency-checker"
     },
     {
       "name": "watchos-ui-layout-advisor",

@@ -255,7 +255,8 @@
         "./skills/design/ui-design/android-adaptive-icon-designer",
         "./skills/design/ui-design/watchos-ui-layout-advisor",
         "./skills/design/ui-design/tv-10-foot-ui-designer",
-        "./skills/design/ui-design/windows-fluent-design-reviewer"
+        "./skills/design/ui-design/windows-fluent-design-reviewer",
+        "./skills/design/ui-design/ui-spacing-scale-consistency-checker"
       ]
     }
   ]

@@ -31,3 +31,13 @@ t 'adoption_scan: raw html list' 0 'AD002 [info] apps/admin: raw HTML the design
 t 'adoption_scan: change since baseline' 0 '| apps/web | 80% | +10 pts |' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2 --baseline "$FX/ui/adoption_baseline.json"
 t 'adoption_scan: csv history row' 0 ',apps/admin,14.3,1,2,1,3,0,2,^2.4.0' "$AS" "$FX/ui/monorepo" --ds @acme/ui --depth 2 --csv
 t 'adoption_scan: --ds required' 2 'name the design-system package with --ds' "$AS" "$FX/ui/monorepo"
+
+# ---- Visual UI polish
+SA="$UI/ui-spacing-scale-consistency-checker/scripts/spacing_audit.mjs"
+t 'spacing_audit: off-scale value with locations' 1 'SP001 [warn] 10px used 2x is off scale -> 8 or 12px' "$SA" "$FX/ui/spacing"
+t 'spacing_audit: rem and tailwind arbitrary converted' 1 '| 17.6px | 1 | no -> 16 |' "$SA" "$FX/ui/spacing"
+t 'spacing_audit: on-scale share' 1 '17 raw spacing values in 3 files: 58.8% on scale' "$SA" "$FX/ui/spacing"
+t 'spacing_audit: clean file passes' 0 '100% on scale, 0 off-scale value(s)' "$SA" "$FX/ui/spacing/clean.css"
+t 'spacing_audit: --base 2 accepts even values' 1 '88.2% on scale, 2 off-scale value(s)' "$SA" "$FX/ui/spacing" --base 2
+t 'spacing_audit: --min threshold passes' 0 '58.8% on scale' "$SA" "$FX/ui/spacing" --min 50
+t 'spacing_audit: bad scale exits 2' 2 '--scale must be' "$SA" "$FX/ui/spacing" --scale 4,x

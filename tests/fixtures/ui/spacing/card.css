@@ -1,0 +1,4 @@
+.card { padding: 16px 18px; margin-bottom: 1.5rem; gap: var(--space-3); }
+.card__title { margin: 0 0 10px; }
+.card__body { padding-inline: var(--space-4); row-gap: 12px; }
+.card--compact { padding: 7px 12px !important; }
