@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Adds express payments, delivery options, subscriptions or international shipping
 - Plans checkout experiments or reviews a checkout before launch
 
-Form fields and validation in depth: `form-layout-designer`. Trust in money flows generally: `fintech-app-ui-trust-reviewer`.
-Kiosk checkouts: `kiosk-touchscreen-ui-designer`.
+Form fields and validation in depth: [form-layout-designer](../form-layout-designer/SKILL.md). Trust in money flows generally: [fintech-app-ui-trust-reviewer](../fintech-app-ui-trust-reviewer/SKILL.md).
+Kiosk checkouts: [kiosk-touchscreen-ui-designer](../kiosk-touchscreen-ui-designer/SKILL.md).
 
 ## Workflow
 

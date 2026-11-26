@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Asks how to do something in ProtoPie (slider, OTP, swipe-to-delete, drag and drop, multi-screen)
 - Needs a prototype for a car, TV, kiosk or wearable with real inputs
 
-Simpler click-through flows: `figma-prototype-interaction-setup-guide`. Choosing fidelity: `prototype-fidelity-level-advisor`.
-Car interfaces: `automotive-hmi-ui-designer`.
+Simpler click-through flows: [figma-prototype-interaction-setup-guide](../figma-prototype-interaction-setup-guide/SKILL.md). Choosing fidelity: [prototype-fidelity-level-advisor](../prototype-fidelity-level-advisor/SKILL.md).
+Car interfaces: [automotive-hmi-ui-designer](../automotive-hmi-ui-designer/SKILL.md).
 
 ## Workflow
 

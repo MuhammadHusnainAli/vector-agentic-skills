@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Has uneven card heights, overflowing titles or broken grids at some widths
 - Decides between cards, a list and a table
 
-Dashboard KPI tiles: `dashboard-layout-designer`. Grid ranges: `responsive-breakpoint-layout-planner`. Elevation:
-`elevation-shadow-system-designer`.
+Dashboard KPI tiles: [dashboard-layout-designer](../dashboard-layout-designer/SKILL.md). Grid ranges: [responsive-breakpoint-layout-planner](../responsive-breakpoint-layout-planner/SKILL.md). Elevation:
+[elevation-shadow-system-designer](../elevation-shadow-system-designer/SKILL.md).
 
 ## Workflow
 

@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Defines light/dark colour tokens, or Figma variable modes
 - Wants text/surface pairs checked with WCAG and APCA
 
-Token structure and modes: `design-token-architecture-builder`. Button state colours: `button-state-variant-designer`.
-Elevation in dark mode: `elevation-shadow-system-designer`.
+Token structure and modes: [design-token-architecture-builder](../design-token-architecture-builder/SKILL.md). Button state colours: [button-state-variant-designer](../button-state-variant-designer/SKILL.md).
+Elevation in dark mode: [elevation-shadow-system-designer](../elevation-shadow-system-designer/SKILL.md).
 
 ## Workflow
 

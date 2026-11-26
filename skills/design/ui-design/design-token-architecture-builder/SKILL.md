@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Connects Figma variables / Tokens Studio to code via Style Dictionary or a similar build
 - Has token JSON to review
 
-Finding hard-coded values in code that should be tokens: `design-to-code-gap-auditor`. Dark palette values:
-`dark-mode-palette-designer`. Spacing scale: `ui-spacing-scale-consistency-checker`.
+Finding hard-coded values in code that should be tokens: [design-to-code-gap-auditor](../design-to-code-gap-auditor/SKILL.md). Dark palette values:
+[dark-mode-palette-designer](../dark-mode-palette-designer/SKILL.md). Spacing scale: [ui-spacing-scale-consistency-checker](../ui-spacing-scale-consistency-checker/SKILL.md).
 
 ## Workflow
 

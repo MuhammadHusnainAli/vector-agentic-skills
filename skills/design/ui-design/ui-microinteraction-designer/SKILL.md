@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Says the UI "feels slow", "janky", "flat" or "too animated"
 - Needs reduced-motion handling or loading-state behaviour
 
-Button states: `button-state-variant-designer`. Prototyping motion: `protopie-interaction-recipe-writer`,
-`figma-prototype-interaction-setup-guide`.
+Button states: [button-state-variant-designer](../button-state-variant-designer/SKILL.md). Prototyping motion: [protopie-interaction-recipe-writer](../protopie-interaction-recipe-writer/SKILL.md),
+[figma-prototype-interaction-setup-guide](../figma-prototype-interaction-setup-guide/SKILL.md).
 
 ## Workflow
 

@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Restructures an IA, merges products, or reports that users can't find features
 - Needs navigation to adapt across phone, tablet and desktop
 
-Breakpoints and layout per range: `responsive-breakpoint-layout-planner`. Platform rules in depth:
-`ios-human-interface-guidelines-checker`, `material-design-3-compliance-reviewer`, `windows-fluent-design-reviewer`.
+Breakpoints and layout per range: [responsive-breakpoint-layout-planner](../responsive-breakpoint-layout-planner/SKILL.md). Platform rules in depth:
+[ios-human-interface-guidelines-checker](../ios-human-interface-guidelines-checker/SKILL.md), [material-design-3-compliance-reviewer](../material-design-3-compliance-reviewer/SKILL.md), [windows-fluent-design-reviewer](../windows-fluent-design-reviewer/SKILL.md).
 
 ## Workflow
 

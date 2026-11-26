@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Plans a migration to a shared component library or a new major version
 - Needs evidence of UI debt for a roadmap or business case
 
-Name hygiene: `component-naming-convention-checker`. Tracking migration progress over time: `design-system-adoption-tracker`.
-Token drift between design and code: `design-to-code-gap-auditor`.
+Name hygiene: [component-naming-convention-checker](../component-naming-convention-checker/SKILL.md). Tracking migration progress over time: [design-system-adoption-tracker](../design-system-adoption-tracker/SKILL.md).
+Token drift between design and code: [design-to-code-gap-auditor](../design-to-code-gap-auditor/SKILL.md).
 
 ## Workflow
 

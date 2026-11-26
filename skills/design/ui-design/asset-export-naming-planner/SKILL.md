@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Ships to several platforms (web, iOS, Android) from one design file
 - Audits an asset folder with inconsistent names, missing sizes or heavy files
 
-Icon drawing and SVG hygiene: `icon-pixel-grid-aligner`. Android launcher icons: `android-adaptive-icon-designer`.
-Handoff package: `design-handoff-spec-generator`.
+Icon drawing and SVG hygiene: [icon-pixel-grid-aligner](../icon-pixel-grid-aligner/SKILL.md). Android launcher icons: [android-adaptive-icon-designer](../android-adaptive-icon-designer/SKILL.md).
+Handoff package: [design-handoff-spec-generator](../design-handoff-spec-generator/SKILL.md).
 
 ## Workflow
 

@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Asks about Mica, Acrylic, title bars, NavigationView, Fluent type ramp or contrast themes
 - Shares XAML for a design review
 
-macOS/iOS: `ios-human-interface-guidelines-checker`. Android: `material-design-3-compliance-reviewer`. Button order per
-platform: `button-state-variant-designer`.
+macOS/iOS: [ios-human-interface-guidelines-checker](../ios-human-interface-guidelines-checker/SKILL.md). Android: [material-design-3-compliance-reviewer](../material-design-3-compliance-reviewer/SKILL.md). Button order per
+platform: [button-state-variant-designer](../button-state-variant-designer/SKILL.md).
 
 ## Workflow
 

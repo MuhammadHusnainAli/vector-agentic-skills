@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Sets up an annotation kit or conventions for the team
 - Reviews an annotated file before handoff
 
-Full handoff package: `design-handoff-spec-generator`. Accessibility annotations: `accessibility-annotation-writer`. Spacing
-scale: `ui-spacing-scale-consistency-checker`.
+Full handoff package: [design-handoff-spec-generator](../design-handoff-spec-generator/SKILL.md). Accessibility annotations: [accessibility-annotation-writer](../accessibility-annotation-writer/SKILL.md). Spacing
+scale: [ui-spacing-scale-consistency-checker](../ui-spacing-scale-consistency-checker/SKILL.md).
 
 ## Workflow
 

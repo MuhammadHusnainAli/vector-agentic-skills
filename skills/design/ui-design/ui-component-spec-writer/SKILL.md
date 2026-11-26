@@ -23,9 +23,9 @@ Activate this skill when the user:
 - Asks what states, props, keyboard behaviour or ARIA a component needs
 - Adds a component to a design system, or engineering keeps asking the same questions
 
-Design-system docs page for a component: `design-system-documentation-writer`.
-Per-state button colours: `button-state-variant-designer`. Annotating a whole
-screen: `accessibility-annotation-writer`.
+Design-system docs page for a component: [design-system-documentation-writer](../design-system-documentation-writer/SKILL.md).
+Per-state button colours: [button-state-variant-designer](../button-state-variant-designer/SKILL.md). Annotating a whole
+screen: [accessibility-annotation-writer](../accessibility-annotation-writer/SKILL.md).
 
 ## Workflow
 

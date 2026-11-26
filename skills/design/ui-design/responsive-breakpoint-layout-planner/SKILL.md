@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Asks about container queries, fluid typography or clamp()
 - Reviews responsive behaviour or a handoff that only shows one width
 
-Dashboards: `dashboard-layout-designer`. Card grids: `card-component-designer`. Navigation changes across sizes:
-`navigation-pattern-selector`.
+Dashboards: [dashboard-layout-designer](../dashboard-layout-designer/SKILL.md). Card grids: [card-component-designer](../card-component-designer/SKILL.md). Navigation changes across sizes:
+[navigation-pattern-selector](../navigation-pattern-selector/SKILL.md).
 
 ## Workflow
 

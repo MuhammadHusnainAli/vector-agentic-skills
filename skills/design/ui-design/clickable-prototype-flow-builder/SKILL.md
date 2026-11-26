@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Has a prototype that breaks, dead-ends or confuses test participants
 - Needs a flow diagram of a prototype or a coverage check against test tasks
 
-How much fidelity: `prototype-fidelity-level-advisor`. Figma wiring: `figma-prototype-interaction-setup-guide`. Advanced
-logic: `protopie-interaction-recipe-writer`. Presenting it: `prototype-demo-script-writer`.
+How much fidelity: [prototype-fidelity-level-advisor](../prototype-fidelity-level-advisor/SKILL.md). Figma wiring: [figma-prototype-interaction-setup-guide](../figma-prototype-interaction-setup-guide/SKILL.md). Advanced
+logic: [protopie-interaction-recipe-writer](../protopie-interaction-recipe-writer/SKILL.md). Presenting it: [prototype-demo-script-writer](../prototype-demo-script-writer/SKILL.md).
 
 ## Workflow
 

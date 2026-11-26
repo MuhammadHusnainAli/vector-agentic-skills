@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Aligns a Figma library with a code library (property names, variant values)
 - Is renaming components and needs a migration-safe plan
 
-Token names: `design-token-architecture-builder`. Finding duplicated components: `component-library-inventory-auditor`.
-Figma-vs-code variant gaps: `design-to-code-gap-auditor`.
+Token names: [design-token-architecture-builder](../design-token-architecture-builder/SKILL.md). Finding duplicated components: [component-library-inventory-auditor](../component-library-inventory-auditor/SKILL.md).
+Figma-vs-code variant gaps: [design-to-code-gap-auditor](../design-to-code-gap-auditor/SKILL.md).
 
 ## Workflow
 

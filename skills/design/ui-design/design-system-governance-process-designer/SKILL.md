@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Needs a contribution model, RFC template, release cadence or deprecation policy
 - Has to justify design system staffing or show its health to leadership
 
-Measuring adoption: `design-system-adoption-tracker`. Docs and release notes: `design-system-documentation-writer`.
-Inventory before consolidating: `component-library-inventory-auditor`.
+Measuring adoption: [design-system-adoption-tracker](../design-system-adoption-tracker/SKILL.md). Docs and release notes: [design-system-documentation-writer](../design-system-documentation-writer/SKILL.md).
+Inventory before consolidating: [component-library-inventory-auditor](../component-library-inventory-auditor/SKILL.md).
 
 ## Workflow
 

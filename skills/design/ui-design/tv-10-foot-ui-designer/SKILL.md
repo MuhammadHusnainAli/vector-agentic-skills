@@ -22,7 +22,7 @@ Activate this skill when the user:
 - Asks about TV text sizes, safe areas, focus states or D-pad navigation
 - Has users getting lost, or flows with lots of remote presses or typing
 
-Navigation patterns in general: `navigation-pattern-selector`. Game interfaces: `game-hud-ui-designer`.
+Navigation patterns in general: [navigation-pattern-selector](../navigation-pattern-selector/SKILL.md). Game interfaces: [game-hud-ui-designer](../game-hud-ui-designer/SKILL.md).
 
 ## Workflow
 

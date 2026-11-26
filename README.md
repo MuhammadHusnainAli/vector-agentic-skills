@@ -16,6 +16,7 @@ Each skill is a folder with a `SKILL.md` (YAML frontmatter + instructions), `ref
 | [Productivity](skills/productivity/README.md) | [Excel](skills/productivity/excel/README.md) | 3 | Formulas, advanced formulas (LAMBDA, LET, dynamic arrays, regex), workbook fundamentals |
 | [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | Problem framing, feature engineering, scikit-learn/XGBoost/LightGBM/CatBoost, clustering, validation, SHAP/PDP/LIME/counterfactuals, model cards, forecasting, survival, recommenders, ranking, fraud, uplift |
 | [Languages, Linguistics & Translation](skills/languages/README.md) | [Language Teaching](skills/languages/language-teaching/README.md) | 38 | Lesson planning (PPP, TBL), worksheets, text adaptation, listening and dialogues, CEFR/ACTFL syllabuses and can-dos, placement tests, rubrics, quizzes, error correction, pronunciation, reports, CELTA/Delta, observation, classroom management, online teaching, ESP, EAP, young learners, adult literacy, refugee support |
+| [Design & Visual Arts](skills/design/README.md) | [UI Design](skills/design/ui-design/README.md) | 42 | Component specs, breakpoints, buttons, forms, navigation, dashboards, cards, design tokens, component inventory, docs, governance, naming, adoption, Apple HIG, Material 3, adaptive icons, watchOS, TV, Fluent, spacing, icon grids, dark mode, elevation, empty states, motion, prototyping (Figma, ProtoPie), demos, handoff, redlines, visual QA, assets, design-to-code drift, accessibility annotations, checkout, fintech, automotive HMI, game HUD, kiosks, voice UI |
 
 Skills for people who write code ship at least one helper script, written in the skill's language (Rust skills ship std-only `.rs` files compiled with `rustc`) and smoke-tested in CI by `tests/run_tests.sh`. UI Design skills are Markdown-first, because designers don't run scripts: templates, reference tables and review checklists the agent applies itself, plus dependency-free Node `.mjs` scripts only where a skill works on code or needs exact math:
 
@@ -139,6 +140,14 @@ Skills for people who write code ship at least one helper script, written in the
 | young-learner-esl-activity-generator | `yl_lesson_timer.py` | Stir/settle lesson sequence within children's attention span |
 | adult-literacy-esl-lesson-builder | `decodable_check.py` | Decodability of a text against taught graphemes and sight words |
 | refugee-language-support-planner | `learner_pathways.py` | Learner pathways and class groups from intake data |
+| design-token-architecture-builder | `token_lint.mjs` | Lints DTCG tokens: broken aliases, cycles, invalid values, tier skips, mode parity |
+| component-library-inventory-auditor | `inventory_scan.mjs` | Component definitions and usages, near-duplicates, local copies of design-system components |
+| design-system-adoption-tracker | `adoption_scan.mjs` | Design-system adoption per app with change since a baseline, raw HTML and version lag |
+| ui-spacing-scale-consistency-checker | `spacing_audit.mjs` | Margin/padding/gap values from CSS, style objects and Tailwind checked against the spacing scale |
+| icon-pixel-grid-aligner | `svg_grid_check.mjs` | Off-grid SVG edges with snapped values, stroke and viewBox problems, set consistency |
+| dark-mode-palette-designer | `contrast_matrix.mjs` | WCAG ratio, APCA Lc and OKLCH for every text/surface pair in light and dark |
+| design-qa-visual-diff-checker | `png_diff.mjs` | Pixel diff of design export vs screenshot: regions, colours, diff image (no dependencies) |
+| design-to-code-gap-auditor | `token_drift.mjs` | Raw colours in code vs tokens: exact matches, near-misses by OKLab deltaE, off-palette |
 
 See [SITEMAP.md](SITEMAP.md) for every file, or [catalog.json](catalog.json) for a machine-readable index.
 
@@ -165,6 +174,8 @@ Each sub-category is a plugin:
 /plugin install excel-skills@vector-agentic-skills
 /plugin install classical-ml-skills@vector-agentic-skills
 /plugin install language-teaching-skills@vector-agentic-skills
+/plugin install quality-management-skills@vector-agentic-skills
+/plugin install ui-design-skills@vector-agentic-skills
 ```
 
 ### curl

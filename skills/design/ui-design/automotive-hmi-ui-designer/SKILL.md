@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Sizes text and touch targets for a vehicle display
 - Reviews an HMI for driver distraction, or prepares for distraction testing
 
-TV and other at-a-distance interfaces: `tv-10-foot-ui-designer`. Prototyping with real hardware: `protopie-interaction-recipe-writer`.
-Voice interaction: `voice-ui-conversation-designer`.
+TV and other at-a-distance interfaces: [tv-10-foot-ui-designer](../tv-10-foot-ui-designer/SKILL.md). Prototyping with real hardware: [protopie-interaction-recipe-writer](../protopie-interaction-recipe-writer/SKILL.md).
+Voice interaction: [voice-ui-conversation-designer](../voice-ui-conversation-designer/SKILL.md).
 
 ## Workflow
 

@@ -22,7 +22,7 @@ Activate this skill when the user:
 - Reviews an onboarding flow where new accounts start empty
 - Has support tickets or drop-off from users who "don't know what to do next"
 
-Forms and validation errors: `form-layout-designer`. Dashboard widget states: `dashboard-layout-designer`.
+Forms and validation errors: [form-layout-designer](../form-layout-designer/SKILL.md). Dashboard widget states: [dashboard-layout-designer](../dashboard-layout-designer/SKILL.md).
 
 ## Workflow
 

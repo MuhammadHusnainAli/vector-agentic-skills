@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Audits a codebase or design file for spacing values before a design-system migration
 - Designs density modes (comfortable / compact)
 
-Tokens in general: `design-token-architecture-builder`. Redlines for handoff: `redline-annotation-writer`. Grid and
-breakpoints: `responsive-breakpoint-layout-planner`.
+Tokens in general: [design-token-architecture-builder](../design-token-architecture-builder/SKILL.md). Redlines for handoff: [redline-annotation-writer](../redline-annotation-writer/SKILL.md). Grid and
+breakpoints: [responsive-breakpoint-layout-planner](../responsive-breakpoint-layout-planner/SKILL.md).
 
 ## Workflow
 

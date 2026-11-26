@@ -23,7 +23,7 @@ Activate this skill when the user:
 - Decides intents, slots and confirmations for a voice task
 - Reviews a voice flow or script for usability
 
-Car contexts: `automotive-hmi-ui-designer`. Kiosk audio mode: `kiosk-touchscreen-ui-designer`.
+Car contexts: [automotive-hmi-ui-designer](../automotive-hmi-ui-designer/SKILL.md). Kiosk audio mode: [kiosk-touchscreen-ui-designer](../kiosk-touchscreen-ui-designer/SKILL.md).
 
 ## Workflow
 

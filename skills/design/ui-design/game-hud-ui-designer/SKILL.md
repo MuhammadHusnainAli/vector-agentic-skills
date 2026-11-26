@@ -23,7 +23,7 @@ Activate this skill when the user:
 - Has players missing critical information, or complaining about clutter or small text
 - Adds accessibility options (subtitles, colour-blind modes, HUD scaling)
 
-TV distance sizing: `tv-10-foot-ui-designer`. Motion and flashing guidance: `ui-microinteraction-designer`.
+TV distance sizing: [tv-10-foot-ui-designer](../tv-10-foot-ui-designer/SKILL.md). Motion and flashing guidance: [ui-microinteraction-designer](../ui-microinteraction-designer/SKILL.md).
 
 ## Workflow
 

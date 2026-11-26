@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Has too many button styles, competing primary buttons, or inconsistent states
 - Needs to check button contrast or focus visibility
 
-Full component spec (API, keyboard): `ui-component-spec-writer`. Tokens for every component: `design-token-architecture-builder`.
-Dark palette: `dark-mode-palette-designer`.
+Full component spec (API, keyboard): [ui-component-spec-writer](../ui-component-spec-writer/SKILL.md). Tokens for every component: [design-token-architecture-builder](../design-token-architecture-builder/SKILL.md).
+Dark palette: [dark-mode-palette-designer](../dark-mode-palette-designer/SKILL.md).
 
 ## Workflow
 

@@ -22,7 +22,7 @@ Activate this skill when the user:
 - Exports icons from Figma, Illustrator or another tool for code
 - Reviews icon SVGs before adding them to a library
 
-Android launcher icons: `android-adaptive-icon-designer`. Asset names and formats: `asset-export-naming-planner`.
+Android launcher icons: [android-adaptive-icon-designer](../android-adaptive-icon-designer/SKILL.md). Asset names and formats: [asset-export-naming-planner](../asset-export-naming-planner/SKILL.md).
 
 ## Workflow
 

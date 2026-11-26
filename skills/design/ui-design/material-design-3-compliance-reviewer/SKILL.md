@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Adapts an app for tablets, foldables or ChromeOS (window size classes)
 - Ports an iOS design to Android
 
-iOS equivalent: `ios-human-interface-guidelines-checker`. Navigation choice: `navigation-pattern-selector`. Adaptive
-icons: `android-adaptive-icon-designer`.
+iOS equivalent: [ios-human-interface-guidelines-checker](../ios-human-interface-guidelines-checker/SKILL.md). Navigation choice: [navigation-pattern-selector](../navigation-pattern-selector/SKILL.md). Adaptive
+icons: [android-adaptive-icon-designer](../android-adaptive-icon-designer/SKILL.md).
 
 ## Workflow
 

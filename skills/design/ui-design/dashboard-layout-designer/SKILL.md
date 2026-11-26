@@ -23,7 +23,7 @@ Activate this skill when the user:
 - Reviews a dashboard before build
 
 Visual chart design in depth (colours, marks, axes) belongs to a data-visualisation skill. Grid and breakpoints:
-`responsive-breakpoint-layout-planner`. Card containers: `card-component-designer`.
+[responsive-breakpoint-layout-planner](../responsive-breakpoint-layout-planner/SKILL.md). Card containers: [card-component-designer](../card-component-designer/SKILL.md).
 
 ## Workflow
 

@@ -23,7 +23,7 @@ Activate this skill when the user:
 - Needs accessibility for self-service terminals (ADA, EN 301 549, European Accessibility Act)
 - Has kiosks with long queues, abandoned sessions or staff constantly helping
 
-Checkout logic: `ecommerce-checkout-ui-designer`. Large touch targets and glance design in vehicles: `automotive-hmi-ui-designer`.
+Checkout logic: [ecommerce-checkout-ui-designer](../ecommerce-checkout-ui-designer/SKILL.md). Large touch targets and glance design in vehicles: [automotive-hmi-ui-designer](../automotive-hmi-ui-designer/SKILL.md).
 
 ## Workflow
 

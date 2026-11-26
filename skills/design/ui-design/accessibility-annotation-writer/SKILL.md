@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Builds an accessibility annotation kit or process for a team
 - Reviews a design for accessibility before build
 
-Component-level keyboard and ARIA: `ui-component-spec-writer`. Contrast: `dark-mode-palette-designer`,
-`button-state-variant-designer`. Full handoff: `design-handoff-spec-generator`.
+Component-level keyboard and ARIA: [ui-component-spec-writer](../ui-component-spec-writer/SKILL.md). Contrast: [dark-mode-palette-designer](../dark-mode-palette-designer/SKILL.md),
+[button-state-variant-designer](../button-state-variant-designer/SKILL.md). Full handoff: [design-handoff-spec-generator](../design-handoff-spec-generator/SKILL.md).
 
 ## Workflow
 

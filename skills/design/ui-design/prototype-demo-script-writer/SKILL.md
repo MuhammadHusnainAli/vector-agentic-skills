@@ -22,7 +22,7 @@ Activate this skill when the user:
 - Wants a talk track and click path for a recorded walkthrough
 - Got feedback that past demos were confusing, long, or didn't lead to decisions
 
-Building the prototype: `clickable-prototype-flow-builder`. Framing fidelity: `prototype-fidelity-level-advisor`.
+Building the prototype: [clickable-prototype-flow-builder](../clickable-prototype-flow-builder/SKILL.md). Framing fidelity: [prototype-fidelity-level-advisor](../prototype-fidelity-level-advisor/SKILL.md).
 
 ## Workflow
 

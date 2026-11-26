@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Asks about iOS navigation, sheets, tab bars, Dynamic Type, SF Symbols or system colours
 - Prepares an app for App Store review or an accessibility audit
 
-Android equivalent: `material-design-3-compliance-reviewer`. watchOS: `watchos-ui-layout-advisor`. Navigation choice:
-`navigation-pattern-selector`.
+Android equivalent: [material-design-3-compliance-reviewer](../material-design-3-compliance-reviewer/SKILL.md). watchOS: [watchos-ui-layout-advisor](../watchos-ui-layout-advisor/SKILL.md). Navigation choice:
+[navigation-pattern-selector](../navigation-pattern-selector/SKILL.md).
 
 ## Workflow
 

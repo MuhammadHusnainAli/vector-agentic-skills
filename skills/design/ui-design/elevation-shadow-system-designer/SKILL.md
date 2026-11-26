@@ -24,7 +24,7 @@ Activate this skill when the user:
 - Has z-index bugs (menus under headers, toasts under dialogs)
 - Needs elevation to work in dark mode
 
-Dark surfaces: `dark-mode-palette-designer`. Tokens: `design-token-architecture-builder`. Cards: `card-component-designer`.
+Dark surfaces: [dark-mode-palette-designer](../dark-mode-palette-designer/SKILL.md). Tokens: [design-token-architecture-builder](../design-token-architecture-builder/SKILL.md). Cards: [card-component-designer](../card-component-designer/SKILL.md).
 
 ## Workflow
 

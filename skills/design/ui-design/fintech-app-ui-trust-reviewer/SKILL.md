@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Needs balance displays, transaction lists, statuses or receipts
 - Wants a trust, safety or dark-pattern review before launch
 
-Checkout and card payment fields: `ecommerce-checkout-ui-designer`. Forms: `form-layout-designer`. Dashboards:
-`dashboard-layout-designer`.
+Checkout and card payment fields: [ecommerce-checkout-ui-designer](../ecommerce-checkout-ui-designer/SKILL.md). Forms: [form-layout-designer](../form-layout-designer/SKILL.md). Dashboards:
+[dashboard-layout-designer](../dashboard-layout-designer/SKILL.md).
 
 ## Workflow
 

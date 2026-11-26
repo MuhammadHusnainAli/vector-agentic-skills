@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Wants to know which apps or teams lag and why
 - Plans a migration push to a new major version or away from a third-party UI library
 
-One-time inventory of duplicates: `component-library-inventory-auditor`. Process fixes when adoption stalls:
-`design-system-governance-process-designer`.
+One-time inventory of duplicates: [component-library-inventory-auditor](../component-library-inventory-auditor/SKILL.md). Process fixes when adoption stalls:
+[design-system-governance-process-designer](../design-system-governance-process-designer/SKILL.md).
 
 ## Workflow
 

@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Sets up a Figma file for Dev Mode or a handoff meeting
 - Gets repeated questions from engineers, or bugs from undesigned states
 
-Component-level specs: `ui-component-spec-writer`. Measurements: `redline-annotation-writer`. Accessibility notes:
-`accessibility-annotation-writer`. Asset delivery: `asset-export-naming-planner`. Checking the build: `design-qa-visual-diff-checker`.
+Component-level specs: [ui-component-spec-writer](../ui-component-spec-writer/SKILL.md). Measurements: [redline-annotation-writer](../redline-annotation-writer/SKILL.md). Accessibility notes:
+[accessibility-annotation-writer](../accessibility-annotation-writer/SKILL.md). Asset delivery: [asset-export-naming-planner](../asset-export-naming-planner/SKILL.md). Checking the build: [design-qa-visual-diff-checker](../design-qa-visual-diff-checker/SKILL.md).
 
 ## Workflow
 

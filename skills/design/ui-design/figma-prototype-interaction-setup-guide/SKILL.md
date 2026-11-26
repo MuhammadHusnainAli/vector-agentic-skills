@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Has broken behaviour: Smart Animate jumps, overlays stuck open, hover states that stick, scroll not working
 - Needs variables, conditionals or interactive components explained for prototyping
 
-Planning which flows to build: `clickable-prototype-flow-builder`. Interactions Figma can't do well (real text input,
-sensors, complex logic): `protopie-interaction-recipe-writer`. Fidelity choice: `prototype-fidelity-level-advisor`.
+Planning which flows to build: [clickable-prototype-flow-builder](../clickable-prototype-flow-builder/SKILL.md). Interactions Figma can't do well (real text input,
+sensors, complex logic): [protopie-interaction-recipe-writer](../protopie-interaction-recipe-writer/SKILL.md). Fidelity choice: [prototype-fidelity-level-advisor](../prototype-fidelity-level-advisor/SKILL.md).
 
 ## Choosing the Mechanism
 

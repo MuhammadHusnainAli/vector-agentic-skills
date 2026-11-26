@@ -21,7 +21,7 @@ Activate this skill when the user:
 - Reviews a form for usability, conversion or accessibility
 - Has a form with high abandonment or many support tickets about input errors
 
-Checkout specifically: `ecommerce-checkout-ui-designer`. Text field component spec: `ui-component-spec-writer`.
+Checkout specifically: [ecommerce-checkout-ui-designer](../ecommerce-checkout-ui-designer/SKILL.md). Text field component spec: [ui-component-spec-writer](../ui-component-spec-writer/SKILL.md).
 
 ## Workflow
 

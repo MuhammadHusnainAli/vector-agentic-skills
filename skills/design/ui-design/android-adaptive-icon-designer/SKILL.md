@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Needs a themed (monochrome) icon, a Play Store icon, a splash screen icon or notification icon
 - Exports icon assets for Android developers
 
-iOS app icons: `ios-human-interface-guidelines-checker`. Pixel-aligned small icons: `icon-pixel-grid-aligner`. Asset
-naming: `asset-export-naming-planner`.
+iOS app icons: [ios-human-interface-guidelines-checker](../ios-human-interface-guidelines-checker/SKILL.md). Pixel-aligned small icons: [icon-pixel-grid-aligner](../icon-pixel-grid-aligner/SKILL.md). Asset
+naming: [asset-export-naming-planner](../asset-export-naming-planner/SKILL.md).
 
 ## Workflow
 

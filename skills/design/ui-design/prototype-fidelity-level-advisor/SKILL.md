@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Has limited time and needs to decide what to build
 - Got feedback about the wrong things (visual details in a concept test, or "it's just a sketch" dismissals)
 
-Building the flow: `clickable-prototype-flow-builder`. Tool recipes: `figma-prototype-interaction-setup-guide`,
-`protopie-interaction-recipe-writer`. Demo script: `prototype-demo-script-writer`.
+Building the flow: [clickable-prototype-flow-builder](../clickable-prototype-flow-builder/SKILL.md). Tool recipes: [figma-prototype-interaction-setup-guide](../figma-prototype-interaction-setup-guide/SKILL.md),
+[protopie-interaction-recipe-writer](../protopie-interaction-recipe-writer/SKILL.md). Demo script: [prototype-demo-script-writer](../prototype-demo-script-writer/SKILL.md).
 
 ## Workflow
 

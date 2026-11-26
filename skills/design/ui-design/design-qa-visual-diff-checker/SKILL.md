@@ -22,7 +22,7 @@ Activate this skill when the user:
 - Compares a screenshot with a Figma export, or two builds
 - Sets up visual regression testing for a design system or key screens
 
-Handoff that prevents most QA issues: `design-handoff-spec-generator`. Token drift in code: `design-to-code-gap-auditor`.
+Handoff that prevents most QA issues: [design-handoff-spec-generator](../design-handoff-spec-generator/SKILL.md). Token drift in code: [design-to-code-gap-auditor](../design-to-code-gap-auditor/SKILL.md).
 
 ## Workflow
 

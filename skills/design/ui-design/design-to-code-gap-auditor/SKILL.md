@@ -22,8 +22,8 @@ Activate this skill when the user:
 - Wants to know which hard-coded values to replace and with which tokens
 - Needs guardrails (lint rules, CI checks) to stop drift
 
-One-feature QA against its design: `design-qa-visual-diff-checker`. Duplicate components: `component-library-inventory-auditor`.
-Naming parity: `component-naming-convention-checker`. Token architecture: `design-token-architecture-builder`.
+One-feature QA against its design: [design-qa-visual-diff-checker](../design-qa-visual-diff-checker/SKILL.md). Duplicate components: [component-library-inventory-auditor](../component-library-inventory-auditor/SKILL.md).
+Naming parity: [component-naming-convention-checker](../component-naming-convention-checker/SKILL.md). Token architecture: [design-token-architecture-builder](../design-token-architecture-builder/SKILL.md).
 
 ## Workflow
 

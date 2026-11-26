@@ -23,8 +23,8 @@ Activate this skill when the user:
 - Asks about Apple Watch screen sizes, layout, navigation or the Digital Crown
 - Reviews a watch design that feels cramped or slow
 
-iPhone app review: `ios-human-interface-guidelines-checker`. Glance-time thinking for other small, at-a-distance
-interfaces: `automotive-hmi-ui-designer`, `tv-10-foot-ui-designer`.
+iPhone app review: [ios-human-interface-guidelines-checker](../ios-human-interface-guidelines-checker/SKILL.md). Glance-time thinking for other small, at-a-distance
+interfaces: [automotive-hmi-ui-designer](../automotive-hmi-ui-designer/SKILL.md), [tv-10-foot-ui-designer](../tv-10-foot-ui-designer/SKILL.md).
 
 ## Workflow
 

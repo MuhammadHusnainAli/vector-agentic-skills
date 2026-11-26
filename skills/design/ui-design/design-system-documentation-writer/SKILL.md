@@ -21,8 +21,8 @@ Activate this skill when the user:
 - Reviews existing docs that people don't use, or that disagree with the code
 - Needs do/don't guidance, content guidelines or accessibility notes for a component
 
-Build-ready component spec (states matrix, edge cases): `ui-component-spec-writer`. Contribution and release process:
-`design-system-governance-process-designer`.
+Build-ready component spec (states matrix, edge cases): [ui-component-spec-writer](../ui-component-spec-writer/SKILL.md). Contribution and release process:
+[design-system-governance-process-designer](../design-system-governance-process-designer/SKILL.md).
 
 ## Workflow
 
