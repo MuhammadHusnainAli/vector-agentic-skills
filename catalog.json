@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 191,
+  "skill_count": 192,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 32,
+      "skill_count": 33,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 32,
+          "skill_count": 33,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -546,7 +546,8 @@
             "protopie-interaction-recipe-writer",
             "prototype-demo-script-writer",
             "design-handoff-spec-generator",
-            "redline-annotation-writer"
+            "redline-annotation-writer",
+            "design-qa-visual-diff-checker"
           ],
           "groups": [
             {
@@ -608,7 +609,8 @@
               "title": "Design handoff",
               "skills": [
                 "design-handoff-spec-generator",
-                "redline-annotation-writer"
+                "redline-annotation-writer",
+                "design-qa-visual-diff-checker"
               ]
             }
           ]
@@ -2317,6 +2319,35 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-handoff-spec-generator.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-handoff-spec-generator",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-handoff-spec-generator"
+    },
+    {
+      "name": "design-qa-visual-diff-checker",
+      "title": "Design QA Visual Diff Checker",
+      "description": "Run design QA on built UI against the approved design: capture comparable screenshots (same viewport, device pixel ratio, fonts, data and state, animations off), compare them pixel by pixel, then triage differences by severity (broken, wrong, off, nit) with fixes engineers can act on. Covers the checks a screenshot can't show (hover, focus, motion, responsive ranges, long content, keyboard, screen readers, dark mode), computed-style checks in browser DevTools against tokens, and when to accept differences (platform rendering, real data). Ships png_diff.mjs (Node, no dependencies) that decodes 8-bit PNGs (greyscale, RGB, palette, alpha), reports mismatched pixels with a tolerance, groups differences into regions with bounding boxes and the average colour in each image, ignores anti-aliasing noise, flags size mismatches with a device-pixel-ratio hint, and writes a diff image. Use when reviewing an implementation before release, writing design QA bugs, or setting up visual regression checks.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/design-qa-visual-diff-checker",
+      "files": [
+        "SKILL.md",
+        "references/capture-setup.md",
+        "references/qa-checklist.md",
+        "references/qa-reporting.md",
+        "scripts/png_diff.mjs"
+      ],
+      "references": [
+        "references/capture-setup.md",
+        "references/qa-checklist.md",
+        "references/qa-reporting.md"
+      ],
+      "scripts": [
+        "scripts/png_diff.mjs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/design-qa-visual-diff-checker/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/design-qa-visual-diff-checker/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-qa-visual-diff-checker.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-qa-visual-diff-checker",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-qa-visual-diff-checker"
     },
     {
       "name": "design-system-adoption-tracker",

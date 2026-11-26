@@ -58,3 +58,13 @@ t 'contrast_matrix: pure black surface' 1 'DM004 [info] dark: surface.default is
 t 'contrast_matrix: oklch conversion' 1 '| action.primary.bg | #2563eb | oklch(54.6% 0.215 263) |' "$CM" "$FX/ui/palette.json"
 STDIN='{"modes":{"light":{"a":"#000","b":"#fff"}},"pairs":[["a","b","body"]]}' t 'contrast_matrix: black on white passes' 0 '| a | b | body | 21.00:1 | 106 | pass |' "$CM" /dev/stdin
 STDIN='{"modes":{"light":{"a":"blue"}},"pairs":[]}' t 'contrast_matrix: unreadable colour exits 2' 2 "unreadable colour 'blue'" "$CM" /dev/stdin
+
+# ---- Design handoff
+PD="$UI/design-qa-visual-diff-checker/scripts/png_diff.mjs"
+t 'png_diff: shifted button region' 1 'VD002 [warn] region 1: x=8 y=40 42x16, 672 px differ (design #2f6aec, build #2856da)' "$PD" "$FX/ui/qa_design.png" "$FX/ui/qa_build.png"
+t 'png_diff: anti-alias noise ignored' 1 'VD003 [info] ignored 1 tiny region(s) under 4 px' "$PD" "$FX/ui/qa_design.png" "$FX/ui/qa_build.png"
+t 'png_diff: --max threshold passes' 0 '672 of 6144 px differ (10.94%)' "$PD" "$FX/ui/qa_design.png" "$FX/ui/qa_build.png" --max 11
+t 'png_diff: rgb colour type decodes identical' 0 '0 of 6144 px differ (0%)' "$PD" "$FX/ui/qa_design.png" "$FX/ui/qa_build_rgb.png"
+t 'png_diff: palette colour type decodes identical' 0 '0 of 6144 px differ (0%)' "$PD" "$FX/ui/qa_design.png" "$FX/ui/qa_build_palette.png"
+t 'png_diff: 2x export hint' 1 'design is 2x: export at 1x or capture at DPR 2' "$PD" "$FX/ui/qa_design_2x.png" "$FX/ui/qa_build.png"
+t 'png_diff: not a png exits 2' 2 'not a PNG file' "$PD" "$FX/ui/qa_design.png" "$FX/ui/qa_not_png.png"
