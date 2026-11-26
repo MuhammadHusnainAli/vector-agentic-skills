@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 197,
+  "skill_count": 198,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 38,
+      "skill_count": 39,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 38,
+          "skill_count": 39,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -552,7 +552,8 @@
             "design-to-code-gap-auditor",
             "accessibility-annotation-writer",
             "ecommerce-checkout-ui-designer",
-            "fintech-app-ui-trust-reviewer"
+            "fintech-app-ui-trust-reviewer",
+            "automotive-hmi-ui-designer"
           ],
           "groups": [
             {
@@ -625,7 +626,8 @@
               "title": "Specialized UI domains",
               "skills": [
                 "ecommerce-checkout-ui-designer",
-                "fintech-app-ui-trust-reviewer"
+                "fintech-app-ui-trust-reviewer",
+                "automotive-hmi-ui-designer"
               ]
             }
           ]
@@ -2174,6 +2176,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/asset-export-naming-planner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/asset-export-naming-planner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill asset-export-naming-planner"
+    },
+    {
+      "name": "automotive-hmi-ui-designer",
+      "title": "Automotive HMI UI Designer",
+      "description": "Design in-vehicle infotainment and cluster interfaces that keep eyes on the road: driver-distraction budgets from the NHTSA visual-manual guidelines (single glances of 2 seconds or less, 12 seconds total eyes-off-road per task) and the AAM and European principles, task decomposition into glances, lockouts while driving (text entry, video, long text, deep lists), character height from viewing distance (ISO 15008 visual-angle guidance), touch targets in millimetres for a moving car (Android Automotive's 76dp minimum), physical and steering-wheel controls, voice for complex input, day/night modes, alert priority, interruptibility, cluster and HUD content, and Android Automotive and CarPlay constraints. Reviews HMI designs for over-budget tasks, small type and targets, typing while driving, buried safety controls and colour-only warnings. Use when designing or reviewing a car infotainment system, cluster, HUD or in-car app.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/automotive-hmi-ui-designer",
+      "files": [
+        "SKILL.md",
+        "references/distraction-guidelines.md",
+        "references/input-and-layout.md",
+        "references/platforms-and-alerts.md"
+      ],
+      "references": [
+        "references/distraction-guidelines.md",
+        "references/input-and-layout.md",
+        "references/platforms-and-alerts.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/automotive-hmi-ui-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/automotive-hmi-ui-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/automotive-hmi-ui-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/automotive-hmi-ui-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill automotive-hmi-ui-designer"
     },
     {
       "name": "button-state-variant-designer",
