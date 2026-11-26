@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 203,
+  "skill_count": 204,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 32,
+      "skill_count": 33,
       "subcategories": [
         {
           "name": "sql",
@@ -73,15 +73,17 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 1,
+          "skill_count": 2,
           "skills": [
-            "rest-api-endpoint-designer"
+            "rest-api-endpoint-designer",
+            "openapi-spec-writer"
           ],
           "groups": [
             {
               "title": "REST API design",
               "skills": [
-                "rest-api-endpoint-designer"
+                "rest-api-endpoint-designer",
+                "openapi-spec-writer"
               ]
             }
           ]
@@ -5588,6 +5590,35 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/excel-fundamentals.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/productivity/excel/excel-fundamentals",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill excel-fundamentals"
+    },
+    {
+      "name": "openapi-spec-writer",
+      "title": "OpenAPI Spec Writer",
+      "description": "Write and review OpenAPI 3.0 and 3.1 specifications that serve as the single contract for docs, SDKs, mocks, validation and tests: design-first workflow, document structure, reusable components (schemas, parameters, responses, security schemes), JSON Schema 2020-12 in 3.1, stable operationIds, tags, examples, problem+json errors, cursor pagination, idempotency and rate-limit headers, ETags, security schemes (OAuth2, bearer, API key), webhooks and callbacks, and the CI pipeline around the spec (Spectral rulesets, Prism mocks, contract tests, breaking-change checks, generated SDKs). Ships openapi_lint.py (JSON, or YAML with PyYAML) that resolves local refs and reports missing or duplicate operationIds, unresolved refs, path parameter mismatches, missing error responses and schemas, unbounded list responses and request fields, missing security, POSTs without Idempotency-Key, no 429s and missing examples. Use when writing, generating or reviewing an OpenAPI spec.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/openapi-spec-writer",
+      "files": [
+        "SKILL.md",
+        "references/spec-patterns.md",
+        "references/spec-structure.md",
+        "references/spec-workflow.md",
+        "scripts/openapi_lint.py"
+      ],
+      "references": [
+        "references/spec-patterns.md",
+        "references/spec-structure.md",
+        "references/spec-workflow.md"
+      ],
+      "scripts": [
+        "scripts/openapi_lint.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/openapi-spec-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/openapi-spec-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/openapi-spec-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/openapi-spec-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill openapi-spec-writer"
     },
     {
       "name": "rest-api-endpoint-designer",

@@ -1,0 +1,17 @@
+{
+  "openapi": "3.0.3",
+  "info": {"title": "Legacy API"},
+  "paths": {
+    "/users": {
+      "get": {"responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/User"}}}}}}},
+      "post": {"operationId": "createUser",
+               "requestBody": {"content": {"application/json": {"schema": {"type": "object", "properties": {"name": {"type": "string"}, "tags": {"type": "array", "items": {"type": "string", "maxLength": 20}}}}}}},
+               "responses": {"200": {"description": "OK"}}}
+    },
+    "/users/{id}": {
+      "get": {"operationId": "createUser", "parameters": [{"name": "userId", "in": "path", "required": true, "schema": {"type": "string"}}],
+              "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Missing"}}}}}}
+    }
+  },
+  "components": {"schemas": {"User": {"type": "object", "properties": {"id": {"type": "string"}}}}}
+}

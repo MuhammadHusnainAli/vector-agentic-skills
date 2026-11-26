@@ -9,12 +9,13 @@ Design and build backends that hold up at very high scale: REST endpoints and Op
 | Skill | What it does | Scripts |
 |-------|--------------|---------|
 | [rest-api-endpoint-designer](rest-api-endpoint-designer/SKILL.md) | Design REST endpoints that are correct for clients and hold up at extreme scale (hundreds of thousands to a million requests per second): resource modelling, URIs, methods and their safety and idempotency, request and response shapes, filtering, sorting, sparse fieldsets and expansion, bulk and batch endpoints, long-running operations (202 + status resource), conditional requests (ETag, If-None-Match, If-Match), caching headers for CDNs, compression, idempotency keys, rate-limit headers, and the scale architecture behind them: edge caching, regions and cells, stateless services, sharding by a key, hot keys, load shedding and retry budgets. Ships capacity_plan.py, which turns a peak request rate, latency, cache hit rates and payload sizes into CDN offload, per-region and per-cell traffic, instance counts with headroom, requests in flight (Little's law), database read/write load and bandwidth,. | `capacity_plan.py` |
+| [openapi-spec-writer](openapi-spec-writer/SKILL.md) | Write and review OpenAPI 3.0 and 3.1 specifications that serve as the single contract for docs, SDKs, mocks, validation and tests: design-first workflow, document structure, reusable components (schemas, parameters, responses, security schemes), JSON Schema 2020-12 in 3.1, stable operationIds, tags, examples, problem+json errors, cursor pagination, idempotency and rate-limit headers, ETags, security schemes (OAuth2, bearer, API key), webhooks and callbacks, and the CI pipeline around the spec (Spectral rulesets, Prism mocks, contract tests, breaking-change checks, generated SDKs). Ships openapi_lint.py (JSON, or YAML with PyYAML) that resolves local refs and reports missing or duplicate operationIds, unresolved refs, path parameter mismatches, missing error responses and schemas, unbounded list responses and request fields, missing security, POSTs without Idempotency-Key, no 429s and missing examples. | `openapi_lint.py` |
 
 ## Install
 
 ```bash
 # Any agent (Claude Code, Codex, Cursor, ...)
-npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-endpoint-designer
+npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-endpoint-designer --skill openapi-spec-writer
 
 # Claude Code plugin with every Backend & API Development skill
 /plugin marketplace add MuhammadHusnainAli/vector-agentic-skills

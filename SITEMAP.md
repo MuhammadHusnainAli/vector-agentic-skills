@@ -2,14 +2,14 @@
 
 # Sitemap
 
-Index of all 203 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
+Index of all 204 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
 
 | Category | Sub-category | Skills | Plugin |
 |----------|--------------|--------|--------|
 | [Programming](skills/programming/README.md) | [SQL](skills/programming/sql/README.md) | 11 | `sql-skills` |
 | [Programming](skills/programming/README.md) | [Python](skills/programming/python/README.md) | 13 | `python-skills` |
 | [Programming](skills/programming/README.md) | [Rust](skills/programming/rust/README.md) | 7 | `rust-skills` |
-| [Programming](skills/programming/README.md) | [Backend & API Development](skills/programming/backend-apis/README.md) | 1 | `backend-apis-skills` |
+| [Programming](skills/programming/README.md) | [Backend & API Development](skills/programming/backend-apis/README.md) | 2 | `backend-apis-skills` |
 | [Productivity](skills/productivity/README.md) | [Excel](skills/productivity/excel/README.md) | 3 | `excel-skills` |
 | [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | `classical-ml-skills` |
 | [Manufacturing & Industrial Operations](skills/manufacturing/README.md) | [Quality Management & ISO 9001](skills/manufacturing/quality-management/README.md) | 42 | `quality-management-skills` |
@@ -75,6 +75,7 @@ Design and build backends that hold up at very high scale: REST endpoints and Op
 | Skill | Description | Files |
 |-------|-------------|-------|
 | **rest-api-endpoint-designer** | Design REST endpoints that are correct for clients and hold up at extreme scale (hundreds of thousands to a million requests per second): resource modelling, URIs, methods and their safety and idempotency, request and response shapes, filtering, sorting, sparse fieldsets and expansion, bulk and batch endpoints, long-running operations (202 + status resource), conditional requests (ETag, If-None-Match, If-Match), caching headers for CDNs, compression, idempotency keys, rate-limit headers, and the scale architecture behind them: edge caching, regions and cells, stateless services, sharding by a key, hot keys, load shedding and retry budgets. Ships capacity_plan.py, which turns a peak request rate, latency, cache hit rates and payload sizes into CDN offload, per-region and per-cell traffic, instance counts with headroom, requests in flight (Little's law), database read/write load and bandwidth,. | [SKILL.md](skills/programming/backend-apis/rest-api-endpoint-designer/SKILL.md), [endpoint-design-rules.md](skills/programming/backend-apis/rest-api-endpoint-designer/references/endpoint-design-rules.md), [load-testing-and-slos.md](skills/programming/backend-apis/rest-api-endpoint-designer/references/load-testing-and-slos.md), [scale-playbook-1m-rps.md](skills/programming/backend-apis/rest-api-endpoint-designer/references/scale-playbook-1m-rps.md), [capacity_plan.py](skills/programming/backend-apis/rest-api-endpoint-designer/scripts/capacity_plan.py) |
+| **openapi-spec-writer** | Write and review OpenAPI 3.0 and 3.1 specifications that serve as the single contract for docs, SDKs, mocks, validation and tests: design-first workflow, document structure, reusable components (schemas, parameters, responses, security schemes), JSON Schema 2020-12 in 3.1, stable operationIds, tags, examples, problem+json errors, cursor pagination, idempotency and rate-limit headers, ETags, security schemes (OAuth2, bearer, API key), webhooks and callbacks, and the CI pipeline around the spec (Spectral rulesets, Prism mocks, contract tests, breaking-change checks, generated SDKs). Ships openapi_lint.py (JSON, or YAML with PyYAML) that resolves local refs and reports missing or duplicate operationIds, unresolved refs, path parameter mismatches, missing error responses and schemas, unbounded list responses and request fields, missing security, POSTs without Idempotency-Key, no 429s and missing examples. | [SKILL.md](skills/programming/backend-apis/openapi-spec-writer/SKILL.md), [spec-patterns.md](skills/programming/backend-apis/openapi-spec-writer/references/spec-patterns.md), [spec-structure.md](skills/programming/backend-apis/openapi-spec-writer/references/spec-structure.md), [spec-workflow.md](skills/programming/backend-apis/openapi-spec-writer/references/spec-workflow.md), [openapi_lint.py](skills/programming/backend-apis/openapi-spec-writer/scripts/openapi_lint.py) |
 
 ## Productivity / Excel
 
@@ -322,7 +323,8 @@ skills/
 │   │   ├── rust-trait-design-reviewer/  SKILL.md + references/ + scripts/
 │   │   └── rust-unsafe-block-auditor/  SKILL.md + references/ + scripts/
 │   └── backend-apis/
-│       └── rest-api-endpoint-designer/  SKILL.md + references/ + scripts/
+│       ├── rest-api-endpoint-designer/  SKILL.md + references/ + scripts/
+│       └── openapi-spec-writer/  SKILL.md + references/ + scripts/
 ├── productivity/
 │   └── excel/
 │       ├── excel-advanced-formulas/  SKILL.md + references/ + scripts/
