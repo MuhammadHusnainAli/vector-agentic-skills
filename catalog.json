@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 177,
+  "skill_count": 178,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 18,
+      "skill_count": 19,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 18,
+          "skill_count": 19,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -532,7 +532,8 @@
             "material-design-3-compliance-reviewer",
             "android-adaptive-icon-designer",
             "watchos-ui-layout-advisor",
-            "tv-10-foot-ui-designer"
+            "tv-10-foot-ui-designer",
+            "windows-fluent-design-reviewer"
           ],
           "groups": [
             {
@@ -565,7 +566,8 @@
                 "material-design-3-compliance-reviewer",
                 "android-adaptive-icon-designer",
                 "watchos-ui-layout-advisor",
-                "tv-10-foot-ui-designer"
+                "tv-10-foot-ui-designer",
+                "windows-fluent-design-reviewer"
               ]
             }
           ]
@@ -2513,6 +2515,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/watchos-ui-layout-advisor.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/watchos-ui-layout-advisor",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill watchos-ui-layout-advisor"
+    },
+    {
+      "name": "windows-fluent-design-reviewer",
+      "title": "Windows Fluent Design Reviewer",
+      "description": "Review Windows 11 app designs and WinUI 3 / XAML against Fluent 2 like a Windows design lead: Segoe UI Variable type ramp (Caption to Display), 4px spacing grid, corner radii (4px controls, 8px top-level surfaces), materials used for the right layer (Mica for the base window, Mica Alt for tabbed title bars, Acrylic for transient surfaces, Smoke behind dialogs), light, dark and contrast themes through ThemeResource, Segoe Fluent Icons, custom title bars that keep caption buttons and drag regions, NavigationView (left, top, compact), CommandBar, TabView, ContentDialog, InfoBar, TeachingTip, flyouts, window size breakpoints and snap layouts, keyboard (access keys, accelerators, F6 between panes), pen and touch with 40x40 epx targets, and Narrator through UI Automation names. Reviews XAML for hard-coded colours and sizes, missing automation names, broken contrast themes and fixed layouts. Use when designing, porting or reviewing a Windows desktop app or a Fluent-based product.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/windows-fluent-design-reviewer",
+      "files": [
+        "SKILL.md",
+        "references/fluent-foundations.md",
+        "references/windows-app-patterns.md",
+        "references/xaml-review-notes.md"
+      ],
+      "references": [
+        "references/fluent-foundations.md",
+        "references/windows-app-patterns.md",
+        "references/xaml-review-notes.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/windows-fluent-design-reviewer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/windows-fluent-design-reviewer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/windows-fluent-design-reviewer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/windows-fluent-design-reviewer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill windows-fluent-design-reviewer"
     },
     {
       "name": "academic-english-eap-course-planner",
