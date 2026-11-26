@@ -247,7 +247,8 @@
         "./skills/design/ui-design/design-token-architecture-builder",
         "./skills/design/ui-design/component-library-inventory-auditor",
         "./skills/design/ui-design/design-system-documentation-writer",
-        "./skills/design/ui-design/design-system-governance-process-designer"
+        "./skills/design/ui-design/design-system-governance-process-designer",
+        "./skills/design/ui-design/component-naming-convention-checker"
       ]
     }
   ]

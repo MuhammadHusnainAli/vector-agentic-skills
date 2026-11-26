@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 170,
+  "skill_count": 171,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 11,
+      "skill_count": 12,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 11,
+          "skill_count": 12,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -525,7 +525,8 @@
             "design-token-architecture-builder",
             "component-library-inventory-auditor",
             "design-system-documentation-writer",
-            "design-system-governance-process-designer"
+            "design-system-governance-process-designer",
+            "component-naming-convention-checker"
           ],
           "groups": [
             {
@@ -546,7 +547,8 @@
                 "design-token-architecture-builder",
                 "component-library-inventory-auditor",
                 "design-system-documentation-writer",
-                "design-system-governance-process-designer"
+                "design-system-governance-process-designer",
+                "component-naming-convention-checker"
               ]
             }
           ]
@@ -2096,6 +2098,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/component-library-inventory-auditor.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/component-library-inventory-auditor",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill component-library-inventory-auditor"
+    },
+    {
+      "name": "component-naming-convention-checker",
+      "title": "Component Naming Convention Checker",
+      "description": "Define and check naming conventions across a design system so Figma, code and docs use the same words: component names (purpose not appearance, one term per concept: Dialog vs Modal, Select vs Dropdown, Toast vs Snackbar, Tag vs Chip vs Badge), casing per platform (PascalCase components, camelCase props, kebab-case files and CSS, prefixed custom elements), prop and variant naming (variant enums with semantic values, boolean prop style, on-prefixed events, shared size scale), Figma component sets with Property=Value variants, boolean, instance-swap and text properties that map one-to-one to code props, layer names, token names and CSS class prefixes. Reviews name lists for visual names (BlueButton), abbreviations, wrong casing, mixed size scales, synonyms, negative booleans, Figma-code mismatches and version suffixes. Use when setting naming rules for a design system, auditing names before a release, or aligning a Figma library with the code library.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/component-naming-convention-checker",
+      "files": [
+        "SKILL.md",
+        "references/figma-code-parity.md",
+        "references/naming-rules.md",
+        "references/vocabulary.md"
+      ],
+      "references": [
+        "references/figma-code-parity.md",
+        "references/naming-rules.md",
+        "references/vocabulary.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/component-naming-convention-checker/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/component-naming-convention-checker/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/component-naming-convention-checker.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/component-naming-convention-checker",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill component-naming-convention-checker"
     },
     {
       "name": "dashboard-layout-designer",
