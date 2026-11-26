@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 186,
+  "skill_count": 187,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 27,
+      "skill_count": 28,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 27,
+          "skill_count": 28,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -541,7 +541,8 @@
             "empty-state-illustration-planner",
             "ui-microinteraction-designer",
             "clickable-prototype-flow-builder",
-            "figma-prototype-interaction-setup-guide"
+            "figma-prototype-interaction-setup-guide",
+            "prototype-fidelity-level-advisor"
           ],
           "groups": [
             {
@@ -593,7 +594,8 @@
               "title": "Prototyping",
               "skills": [
                 "clickable-prototype-flow-builder",
-                "figma-prototype-interaction-setup-guide"
+                "figma-prototype-interaction-setup-guide",
+                "prototype-fidelity-level-advisor"
               ]
             }
           ]
@@ -2593,6 +2595,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/navigation-pattern-selector.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/navigation-pattern-selector",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill navigation-pattern-selector"
+    },
+    {
+      "name": "prototype-fidelity-level-advisor",
+      "title": "Prototype Fidelity Level Advisor",
+      "description": "Choose the right prototype fidelity for the question being asked instead of defaulting to polished Figma: fidelity as five independent dimensions (visual refinement, breadth of functionality, depth of functionality, richness of interactivity, richness of data model, after McCurdy et al.), mapped from the research or decision question (concept value, comprehension, task flow usability, interaction feel, visual and brand response, technical feasibility, stakeholder buy-in, engineering handoff), the stage, the audience and the time available. Recommends a profile per dimension, the medium (paper to coded prototype, Wizard of Oz, fake door), what to fake, the effort and the risks of too much or too little fidelity, and reviews prototype plans for mismatches. Use when planning a prototype, a usability test, a concept test or a stakeholder demo, or when a team debates how polished a prototype needs to be.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/prototype-fidelity-level-advisor",
+      "files": [
+        "SKILL.md",
+        "references/fidelity-dimensions.md",
+        "references/media-and-effort.md",
+        "references/question-to-fidelity.md"
+      ],
+      "references": [
+        "references/fidelity-dimensions.md",
+        "references/media-and-effort.md",
+        "references/question-to-fidelity.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/prototype-fidelity-level-advisor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/prototype-fidelity-level-advisor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/prototype-fidelity-level-advisor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/prototype-fidelity-level-advisor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill prototype-fidelity-level-advisor"
     },
     {
       "name": "responsive-breakpoint-layout-planner",
