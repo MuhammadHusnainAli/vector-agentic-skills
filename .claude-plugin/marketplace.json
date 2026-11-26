@@ -244,7 +244,8 @@
         "./skills/design/ui-design/navigation-pattern-selector",
         "./skills/design/ui-design/dashboard-layout-designer",
         "./skills/design/ui-design/card-component-designer",
-        "./skills/design/ui-design/design-token-architecture-builder"
+        "./skills/design/ui-design/design-token-architecture-builder",
+        "./skills/design/ui-design/component-library-inventory-auditor"
       ]
     }
   ]

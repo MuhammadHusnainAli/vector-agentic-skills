@@ -21,12 +21,13 @@ Specify components and layouts, build design tokens and govern design systems, c
 | Skill | What it does | Scripts |
 |-------|--------------|---------|
 | [design-token-architecture-builder](design-token-architecture-builder/SKILL.md) | Design and audit a design token architecture that scales across themes, brands and platforms: three tiers (primitive -> semantic -> component) and when the component tier is worth it, naming taxonomy (namespace, category, concept, property, variant, state, scale), W3C Design Tokens Format (DTCG 2025.10) structure with $type, $value, aliases and groups, modes for light/dark/high-contrast/density, multi-brand setups, Figma variable collections and modes that mirror the code tokens, and a build pipeline with Style Dictionary v4 that keeps aliases as CSS var() references. Ships token_lint.mjs (Node, no dependencies) that lints DTCG JSON for broken aliases, alias cycles, invalid colour/dimension/duration values, type mismatches, component tokens that skip the semantic tier, hard-coded values in semantic tokens, and tokens missing from one mode file. | `token_lint.mjs` |
+| [component-library-inventory-auditor](component-library-inventory-auditor/SKILL.md) | Audit a product's UI components to find what exists, what is duplicated and what to consolidate: interface inventory of live screens by category (buttons, inputs, cards, modals, navigation, typography, colours, icons), code inventory of component definitions and usage counts, near-duplicate detection (Button, Btn, PrimaryButton, CustomButton), local components that shadow design-system ones, unused and one-off components, hard-coded colours, Figma library vs code parity, and a consolidation plan with canonical choices, variant mapping, codemods, deprecation and metrics. Ships inventory_scan.mjs (Node, no dependencies) that scans .jsx/.tsx/.js/.ts/.vue/.svelte sources and reports definitions, usages, duplicate groups, design-system shadows, unused components and colour hard-coding as a table, CSV or JSON. | `inventory_scan.mjs` |
 
 ## Install
 
 ```bash
 # Any agent (Claude Code, Codex, Cursor, ...)
-npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer --skill responsive-breakpoint-layout-planner --skill button-state-variant-designer --skill form-layout-designer --skill navigation-pattern-selector --skill dashboard-layout-designer --skill card-component-designer --skill design-token-architecture-builder
+npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer --skill responsive-breakpoint-layout-planner --skill button-state-variant-designer --skill form-layout-designer --skill navigation-pattern-selector --skill dashboard-layout-designer --skill card-component-designer --skill design-token-architecture-builder --skill component-library-inventory-auditor
 
 # Claude Code plugin with every UI Design skill
 /plugin marketplace add MuhammadHusnainAli/vector-agentic-skills

@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 167,
+  "skill_count": 168,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 8,
+      "skill_count": 9,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 8,
+          "skill_count": 9,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -522,7 +522,8 @@
             "navigation-pattern-selector",
             "dashboard-layout-designer",
             "card-component-designer",
-            "design-token-architecture-builder"
+            "design-token-architecture-builder",
+            "component-library-inventory-auditor"
           ],
           "groups": [
             {
@@ -540,7 +541,8 @@
             {
               "title": "Design systems",
               "skills": [
-                "design-token-architecture-builder"
+                "design-token-architecture-builder",
+                "component-library-inventory-auditor"
               ]
             }
           ]
@@ -2063,6 +2065,33 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/card-component-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/card-component-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill card-component-designer"
+    },
+    {
+      "name": "component-library-inventory-auditor",
+      "title": "Component Library Inventory Auditor",
+      "description": "Audit a product's UI components to find what exists, what is duplicated and what to consolidate: interface inventory of live screens by category (buttons, inputs, cards, modals, navigation, typography, colours, icons), code inventory of component definitions and usage counts, near-duplicate detection (Button, Btn, PrimaryButton, CustomButton), local components that shadow design-system ones, unused and one-off components, hard-coded colours, Figma library vs code parity, and a consolidation plan with canonical choices, variant mapping, codemods, deprecation and metrics. Ships inventory_scan.mjs (Node, no dependencies) that scans .jsx/.tsx/.js/.ts/.vue/.svelte sources and reports definitions, usages, duplicate groups, design-system shadows, unused components and colour hard-coding as a table, CSV or JSON. Use when starting or rescuing a design system, estimating UI debt, planning a component consolidation, or preparing a migration to a shared library.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/component-library-inventory-auditor",
+      "files": [
+        "SKILL.md",
+        "references/consolidation-playbook.md",
+        "references/inventory-method.md",
+        "scripts/inventory_scan.mjs"
+      ],
+      "references": [
+        "references/consolidation-playbook.md",
+        "references/inventory-method.md"
+      ],
+      "scripts": [
+        "scripts/inventory_scan.mjs"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/component-library-inventory-auditor/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/component-library-inventory-auditor/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/component-library-inventory-auditor.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/component-library-inventory-auditor",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill component-library-inventory-auditor"
     },
     {
       "name": "dashboard-layout-designer",
