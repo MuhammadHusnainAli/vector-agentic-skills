@@ -4,6 +4,6 @@
   "order": 4,
   "scripts_optional": true,
   "groups": [
-    {"title": "REST API design", "skills": ["rest-api-endpoint-designer", "openapi-spec-writer", "rest-api-versioning-strategist", "api-pagination-designer", "http-status-code-advisor", "api-error-response-designer"]}
+    {"title": "REST API design", "skills": ["rest-api-endpoint-designer", "openapi-spec-writer", "rest-api-versioning-strategist", "api-pagination-designer", "http-status-code-advisor", "api-error-response-designer", "rest-api-naming-reviewer"]}
   ]
 }

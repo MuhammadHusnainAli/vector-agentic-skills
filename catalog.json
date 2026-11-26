@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 208,
+  "skill_count": 209,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 37,
+      "skill_count": 38,
       "subcategories": [
         {
           "name": "sql",
@@ -73,14 +73,15 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 6,
+          "skill_count": 7,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
             "rest-api-versioning-strategist",
             "api-pagination-designer",
             "http-status-code-advisor",
-            "api-error-response-designer"
+            "api-error-response-designer",
+            "rest-api-naming-reviewer"
           ],
           "groups": [
             {
@@ -91,7 +92,8 @@
                 "rest-api-versioning-strategist",
                 "api-pagination-designer",
                 "http-status-code-advisor",
-                "api-error-response-designer"
+                "api-error-response-designer",
+                "rest-api-naming-reviewer"
               ]
             }
           ]
@@ -5728,6 +5730,31 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/rest-api-endpoint-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/rest-api-endpoint-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-endpoint-designer"
+    },
+    {
+      "name": "rest-api-naming-reviewer",
+      "title": "REST API Naming Reviewer",
+      "description": "Review and standardise naming across REST APIs so they read as one product: plural noun collections, kebab-case path segments, no verbs in paths (methods and action sub-resources instead), consistent path parameter names per resource, shallow nesting, no trailing slashes or file extensions, a single version prefix style, one casing for query parameters and JSON properties, naming of IDs, timestamps, booleans, money and enums, and an API style guide teams can follow. Ships path_naming_lint.py, which reads an OpenAPI spec or a plain route list and reports verbs in paths, casing that differs from the API's dominant style, uppercase segments, singular collections, trailing slashes and extensions, deep nesting, inconsistent parameter names, mixed version prefixes and mixed casing in query parameters and schema properties. Use when reviewing an API's naming, merging APIs from several teams or writing an API style guide.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/rest-api-naming-reviewer",
+      "files": [
+        "SKILL.md",
+        "references/naming-style-guide.md",
+        "scripts/path_naming_lint.py"
+      ],
+      "references": [
+        "references/naming-style-guide.md"
+      ],
+      "scripts": [
+        "scripts/path_naming_lint.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/rest-api-naming-reviewer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/rest-api-naming-reviewer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/rest-api-naming-reviewer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/rest-api-naming-reviewer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-naming-reviewer"
     },
     {
       "name": "rest-api-versioning-strategist",

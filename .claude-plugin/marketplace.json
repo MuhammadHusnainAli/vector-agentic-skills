@@ -78,7 +78,8 @@
         "./skills/programming/backend-apis/rest-api-versioning-strategist",
         "./skills/programming/backend-apis/api-pagination-designer",
         "./skills/programming/backend-apis/http-status-code-advisor",
-        "./skills/programming/backend-apis/api-error-response-designer"
+        "./skills/programming/backend-apis/api-error-response-designer",
+        "./skills/programming/backend-apis/rest-api-naming-reviewer"
       ]
     },
     {

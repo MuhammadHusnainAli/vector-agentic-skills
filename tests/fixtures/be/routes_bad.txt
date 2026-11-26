@@ -1,0 +1,12 @@
+# legacy routes
+GET /v1/users
+GET /v1/user/{id}
+POST /v1/createUser
+POST /v1/users/{userId}/delete
+GET /v1/orders/{order_id}/line-items
+GET /v1/orders/{id}
+GET /v1/shippingAddresses
+GET /v1/users/{userId}/orders/{orderId}/items/{itemId}/notes
+GET /api/v2/reports.json
+GET /v1/products/
+POST /v1/orders/{id}:cancel
