@@ -59,7 +59,7 @@ rule for your organisation and document it.
 ```bash
 python scripts/proto_lint.py api/acme/orders/v1/orders.proto [more.proto] [--json]
 ```
-`_proto.py` is a small standard-library parser (messages, nested types, oneofs, maps, enums, reserved ranges, services,
+`scripts/_proto.py` is a small standard-library parser (messages, nested types, oneofs, maps, enums, reserved ranges, services,
 streaming RPCs). It complements, not replaces, `protoc`/`buf` compilation.
 Exit codes: 0 clean, 1 errors or warnings, 2 unreadable input.
 
