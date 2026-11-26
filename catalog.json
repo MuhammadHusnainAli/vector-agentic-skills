@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 165,
+  "skill_count": 166,
   "categories": [
     {
       "name": "programming",
@@ -506,21 +506,22 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 6,
+      "skill_count": 7,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 6,
+          "skill_count": 7,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
             "button-state-variant-designer",
             "form-layout-designer",
             "navigation-pattern-selector",
-            "dashboard-layout-designer"
+            "dashboard-layout-designer",
+            "card-component-designer"
           ],
           "groups": [
             {
@@ -531,7 +532,8 @@
                 "button-state-variant-designer",
                 "form-layout-designer",
                 "navigation-pattern-selector",
-                "dashboard-layout-designer"
+                "dashboard-layout-designer",
+                "card-component-designer"
               ]
             }
           ]
@@ -2028,6 +2030,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/button-state-variant-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/button-state-variant-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill button-state-variant-designer"
+    },
+    {
+      "name": "card-component-designer",
+      "title": "Card Component Designer",
+      "description": "Design card components and card grids that scan well and work for everyone: when cards beat lists and tables (heterogeneous content you browse vs uniform data you compare), anatomy and content priority (media, eyebrow, title, meta, description, actions), clickable cards done right (one real link stretched over the card, secondary actions above it, no nested interactive elements, correct heading level, focus ring on the whole card), media aspect ratios and missing-image fallbacks, title and description truncation with line-clamp, equal heights with actions pinned to the bottom, responsive grids with auto-fill minmax and column math, density variants, and states (hover without layout shift, focus-visible, selected, loading skeleton, disabled). Reviews cards for whole-card anchor wrappers, nested links and buttons, redundant links, missing alt text, heading misuse, uneven grids and hover-only actions. Use when designing product, content, pricing, dashboard or e-commerce cards, or a card grid.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/card-component-designer",
+      "files": [
+        "SKILL.md",
+        "references/card-anatomy.md",
+        "references/card-grids.md",
+        "references/clickable-cards.md"
+      ],
+      "references": [
+        "references/card-anatomy.md",
+        "references/card-grids.md",
+        "references/clickable-cards.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/card-component-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/card-component-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/card-component-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/card-component-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill card-component-designer"
     },
     {
       "name": "dashboard-layout-designer",
