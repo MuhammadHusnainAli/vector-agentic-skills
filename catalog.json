@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 169,
+  "skill_count": 170,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 10,
+      "skill_count": 11,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 10,
+          "skill_count": 11,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -524,7 +524,8 @@
             "card-component-designer",
             "design-token-architecture-builder",
             "component-library-inventory-auditor",
-            "design-system-documentation-writer"
+            "design-system-documentation-writer",
+            "design-system-governance-process-designer"
           ],
           "groups": [
             {
@@ -544,7 +545,8 @@
               "skills": [
                 "design-token-architecture-builder",
                 "component-library-inventory-auditor",
-                "design-system-documentation-writer"
+                "design-system-documentation-writer",
+                "design-system-governance-process-designer"
               ]
             }
           ]
@@ -2146,6 +2148,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-system-documentation-writer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-system-documentation-writer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-system-documentation-writer"
+    },
+    {
+      "name": "design-system-governance-process-designer",
+      "title": "Design System Governance Process Designer",
+      "description": "Design how a design system is run so it stays trusted and used: operating model (solitary, centralized, federated, hybrid) chosen from org size and product count, team composition and funding, contribution tiers (fix, enhancement, new component, pattern) with an intake RFC, decision criteria for what enters the system (reuse across products, not one team's need), the path from proposal to release (triage, design critique, build, accessibility review, docs, release) with service levels, RACI, definition of done, semantic versioning, release cadence, breaking-change and deprecation policy with migration support, communication (release notes, office hours, champions), and health metrics. Reviews existing governance for no intake path, no decision criteria, central team as bottleneck, breaking changes in minor releases, deprecations without dates or migration, undefined ownership and no feedback loop. Use when setting up or fixing design system governance, contribution, release or deprecation processes.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/design-system-governance-process-designer",
+      "files": [
+        "SKILL.md",
+        "references/contribution-process.md",
+        "references/operating-models.md",
+        "references/release-and-deprecation.md"
+      ],
+      "references": [
+        "references/contribution-process.md",
+        "references/operating-models.md",
+        "references/release-and-deprecation.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/design-system-governance-process-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/design-system-governance-process-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/design-system-governance-process-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/design-system-governance-process-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill design-system-governance-process-designer"
     },
     {
       "name": "design-token-architecture-builder",
