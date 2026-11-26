@@ -84,7 +84,8 @@
         "./skills/programming/backend-apis/graphql-resolver-writer",
         "./skills/programming/backend-apis/graphql-dataloader-n-plus-one-fixer",
         "./skills/programming/backend-apis/grpc-protobuf-definition-writer",
-        "./skills/programming/backend-apis/grpc-service-scaffolder"
+        "./skills/programming/backend-apis/grpc-service-scaffolder",
+        "./skills/programming/backend-apis/protobuf-schema-evolution-checker"
       ]
     },
     {
