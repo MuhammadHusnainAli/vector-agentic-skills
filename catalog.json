@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 196,
+  "skill_count": 197,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 37,
+      "skill_count": 38,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 37,
+          "skill_count": 38,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -551,7 +551,8 @@
             "asset-export-naming-planner",
             "design-to-code-gap-auditor",
             "accessibility-annotation-writer",
-            "ecommerce-checkout-ui-designer"
+            "ecommerce-checkout-ui-designer",
+            "fintech-app-ui-trust-reviewer"
           ],
           "groups": [
             {
@@ -623,7 +624,8 @@
             {
               "title": "Specialized UI domains",
               "skills": [
-                "ecommerce-checkout-ui-designer"
+                "ecommerce-checkout-ui-designer",
+                "fintech-app-ui-trust-reviewer"
               ]
             }
           ]
@@ -2654,6 +2656,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/figma-prototype-interaction-setup-guide.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/figma-prototype-interaction-setup-guide",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill figma-prototype-interaction-setup-guide"
+    },
+    {
+      "name": "fintech-app-ui-trust-reviewer",
+      "title": "Fintech App UI Trust Reviewer",
+      "description": "Review banking, payments, wallet, lending and investing interfaces for the trust signals and safety that money products need: unambiguous balances (available vs current vs pending), money formatting per locale and currency with exact amounts, transaction states and timelines (pending, processing, completed, failed, reversed), confirmation of irreversible actions with recipient, amount, fees, exchange rate and arrival time, fees and FX spreads shown before commit, payee verification and scam warnings, friction proportional to risk, security UX (biometrics, step-up authentication, session timeouts with warning, device management, masked identifiers), error and dispute paths, and disclosures written for comprehension (APR, fees, risks) under regimes such as the UK Consumer Duty, PSD2 and US Regulation E. Flags dark patterns: hidden fees, costly defaults, gamified risky trading, hard cancellation. Use when designing or auditing a fintech, banking, payments, crypto, lending or investing product.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/fintech-app-ui-trust-reviewer",
+      "files": [
+        "SKILL.md",
+        "references/money-display-and-states.md",
+        "references/money-flows-and-safety.md",
+        "references/regulation-and-ethics.md"
+      ],
+      "references": [
+        "references/money-display-and-states.md",
+        "references/money-flows-and-safety.md",
+        "references/regulation-and-ethics.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/fintech-app-ui-trust-reviewer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/fintech-app-ui-trust-reviewer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/fintech-app-ui-trust-reviewer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/fintech-app-ui-trust-reviewer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill fintech-app-ui-trust-reviewer"
     },
     {
       "name": "form-layout-designer",
