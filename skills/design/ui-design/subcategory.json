@@ -7,6 +7,6 @@
     {"title": "Interface layout and components", "skills": ["ui-component-spec-writer", "responsive-breakpoint-layout-planner", "button-state-variant-designer", "form-layout-designer", "navigation-pattern-selector", "dashboard-layout-designer", "card-component-designer"]},
     {"title": "Design systems", "skills": ["design-token-architecture-builder", "component-library-inventory-auditor", "design-system-documentation-writer", "design-system-governance-process-designer", "component-naming-convention-checker", "design-system-adoption-tracker"]},
     {"title": "Platform guidelines", "skills": ["ios-human-interface-guidelines-checker", "material-design-3-compliance-reviewer", "android-adaptive-icon-designer", "watchos-ui-layout-advisor", "tv-10-foot-ui-designer", "windows-fluent-design-reviewer"]},
-    {"title": "Visual UI polish", "skills": ["ui-spacing-scale-consistency-checker", "icon-pixel-grid-aligner", "dark-mode-palette-designer"]}
+    {"title": "Visual UI polish", "skills": ["ui-spacing-scale-consistency-checker", "icon-pixel-grid-aligner", "dark-mode-palette-designer", "elevation-shadow-system-designer"]}
   ]
 }

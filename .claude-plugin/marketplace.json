@@ -258,7 +258,8 @@
         "./skills/design/ui-design/windows-fluent-design-reviewer",
         "./skills/design/ui-design/ui-spacing-scale-consistency-checker",
         "./skills/design/ui-design/icon-pixel-grid-aligner",
-        "./skills/design/ui-design/dark-mode-palette-designer"
+        "./skills/design/ui-design/dark-mode-palette-designer",
+        "./skills/design/ui-design/elevation-shadow-system-designer"
       ]
     }
   ]
