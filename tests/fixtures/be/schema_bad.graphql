@@ -1,0 +1,23 @@
+type Query {
+  getUser(id: String): User
+  users: [User]
+  order(id: ID!): Order
+}
+type User {
+  id: String!
+  name: String
+  orders: [Order!]!
+  managerId: ID
+}
+type Order {
+  id: ID!
+  total_amount: Int
+  status: orderStatus
+  legacyCode: String @deprecated
+}
+enum orderStatus { pending, paid }
+type Mutation {
+  createOrder(userId: ID!, total: Int!): Order
+  cancelOrder(input: CancelOrderInput!): Boolean
+}
+input CancelOrderInput { orderId: ID! }

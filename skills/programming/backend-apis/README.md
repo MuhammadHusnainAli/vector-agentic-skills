@@ -16,11 +16,17 @@ Design and build backends that hold up at very high scale: REST endpoints and Op
 | [api-error-response-designer](api-error-response-designer/SKILL.md) | Design one consistent error format for an API that clients can program against and humans can debug: RFC 9457 Problem Details (type, title, status, detail, instance) extended with a stable machine-readable code, field-level validation errors with JSON Pointers, request and trace IDs, retry hints and documentation links; an error code catalogue with naming rules and owners; mapping internal exceptions to public errors without leaking stack traces, SQL or internal hostnames; localisation; and behaviour at scale (cheap error paths, no error amplification, logging and metrics by error code). Reviews APIs for inconsistent shapes, free-text-only errors, leaked internals, missing request IDs and errors that clients can't branch on. | - |
 | [rest-api-naming-reviewer](rest-api-naming-reviewer/SKILL.md) | Review and standardise naming across REST APIs so they read as one product: plural noun collections, kebab-case path segments, no verbs in paths (methods and action sub-resources instead), consistent path parameter names per resource, shallow nesting, no trailing slashes or file extensions, a single version prefix style, one casing for query parameters and JSON properties, naming of IDs, timestamps, booleans, money and enums, and an API style guide teams can follow. Ships path_naming_lint.py, which reads an OpenAPI spec or a plain route list and reports verbs in paths, casing that differs from the API's dominant style, uppercase segments, singular collections, trailing slashes and extensions, deep nesting, inconsistent parameter names, mixed version prefixes and mixed casing in query parameters and schema properties. | `path_naming_lint.py` |
 
+## GraphQL and gRPC
+
+| Skill | What it does | Scripts |
+|-------|--------------|---------|
+| [graphql-schema-designer](graphql-schema-designer/SKILL.md) | Design GraphQL schemas that model the domain, evolve without versions and survive production traffic: types named for the domain, nullability as a deliberate contract, IDs and global object identification, Relay connections for every list, mutations with a single input and a payload carrying user errors, interfaces and unions, enums, custom scalars, deprecation instead of breaking changes, schema-first review, and the protections a public graph needs at scale (query depth and cost limits, persisted and trusted documents, pagination caps, rate limiting by cost, CDN caching of persisted GET queries, federation boundaries). Ships graphql_schema_lint.py, which parses SDL and reports unbounded lists of objects, nullable list items, mutations without input/payload, identifiers typed String/Int, naming that breaks conventions, RPC-style query names, deprecations without reasons and foreign-key fields without relationships. | `graphql_schema_lint.py` |
+
 ## Install
 
 ```bash
 # Any agent (Claude Code, Codex, Cursor, ...)
-npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-endpoint-designer --skill openapi-spec-writer --skill rest-api-versioning-strategist --skill api-pagination-designer --skill http-status-code-advisor --skill api-error-response-designer --skill rest-api-naming-reviewer
+npx skills add https://agenticskills.vector-ai-lab.com --skill rest-api-endpoint-designer --skill openapi-spec-writer --skill rest-api-versioning-strategist --skill api-pagination-designer --skill http-status-code-advisor --skill api-error-response-designer --skill rest-api-naming-reviewer --skill graphql-schema-designer
 
 # Claude Code plugin with every Backend & API Development skill
 /plugin marketplace add MuhammadHusnainAli/vector-agentic-skills

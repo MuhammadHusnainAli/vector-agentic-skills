@@ -1,0 +1,34 @@
+"The root query."
+type Query {
+  "Look up a user by ID."
+  user(id: ID!): User
+  users(first: Int = 20, after: String): UserConnection!
+}
+"A person with an account."
+type User {
+  id: ID!
+  name: String!
+  manager: User
+  orders(first: Int = 20, after: String): OrderConnection!
+}
+"A paginated list of users."
+type UserConnection { edges: [UserEdge!]! pageInfo: PageInfo! }
+"An edge in a user list."
+type UserEdge { node: User! cursor: String! }
+"A paginated list of orders."
+type OrderConnection { edges: [OrderEdge!]! pageInfo: PageInfo! }
+"An edge in an order list."
+type OrderEdge { node: Order! cursor: String! }
+"Pagination info."
+type PageInfo { hasNextPage: Boolean! endCursor: String }
+"A purchase."
+type Order { id: ID! totalAmount: Int! status: OrderStatus! }
+"Lifecycle states of an order."
+enum OrderStatus { PENDING PAID REFUNDED }
+"Root mutations."
+type Mutation { createOrder(input: CreateOrderInput!): CreateOrderPayload! }
+input CreateOrderInput { userId: ID! totalAmount: Int! clientMutationId: String }
+"Result of createOrder."
+type CreateOrderPayload { order: Order userErrors: [UserError!]! }
+"A problem with the input."
+type UserError { field: [String!] message: String! code: String! }

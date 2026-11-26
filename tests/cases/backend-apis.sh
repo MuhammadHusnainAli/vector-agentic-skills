@@ -43,3 +43,13 @@ t 'path_naming_lint: mixed version prefixes' 1 "NM009 [warn] versions: version p
 t 'path_naming_lint: action suffix and kebab pass' 0 '6 paths, dominant segment style kebab-case: 0 warning(s)' "$NL" "$FX/be/routes_good.txt"
 t 'path_naming_lint: openapi input' 0 '2 paths' "$NL" "$FX/be/openapi_good.json"
 t 'path_naming_lint: missing file exits 2' 2 'error:' "$NL" "$FX/be/nope.txt"
+
+# ---- GraphQL and gRPC
+GL="$BE/graphql-schema-designer/scripts/graphql_schema_lint.py"
+t 'graphql_schema_lint: unbounded list' 1 'GQ001 [warn] Query.users: unbounded list [User]' "$GL" "$FX/be/schema_bad.graphql"
+t 'graphql_schema_lint: mutation input and payload' 1 'GQ003 [warn] Mutation.createOrder: mutations should take one argument: input: XInput!' "$GL" "$FX/be/schema_bad.graphql"
+t 'graphql_schema_lint: id typed string' 1 'GQ004 [warn] User.id: identifier typed String; use ID' "$GL" "$FX/be/schema_bad.graphql"
+t 'graphql_schema_lint: enum value casing' 1 'GQ005 [warn] orderStatus.pending: enum values should be UPPER_SNAKE_CASE' "$GL" "$FX/be/schema_bad.graphql"
+t 'graphql_schema_lint: rpc-style query' 1 'GQ006 [warn] Query.getUser: RPC-style name' "$GL" "$FX/be/schema_bad.graphql"
+t 'graphql_schema_lint: relay schema passes' 0 '13 type(s): 0 warning(s), 0 info' "$GL" "$FX/be/schema_good.graphql"
+t 'graphql_schema_lint: missing file exits 2' 2 'error:' "$GL" "$FX/be/nope.graphql"

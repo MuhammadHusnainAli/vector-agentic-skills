@@ -2,14 +2,14 @@
 
 # Sitemap
 
-Index of all 209 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
+Index of all 210 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
 
 | Category | Sub-category | Skills | Plugin |
 |----------|--------------|--------|--------|
 | [Programming](skills/programming/README.md) | [SQL](skills/programming/sql/README.md) | 11 | `sql-skills` |
 | [Programming](skills/programming/README.md) | [Python](skills/programming/python/README.md) | 13 | `python-skills` |
 | [Programming](skills/programming/README.md) | [Rust](skills/programming/rust/README.md) | 7 | `rust-skills` |
-| [Programming](skills/programming/README.md) | [Backend & API Development](skills/programming/backend-apis/README.md) | 7 | `backend-apis-skills` |
+| [Programming](skills/programming/README.md) | [Backend & API Development](skills/programming/backend-apis/README.md) | 8 | `backend-apis-skills` |
 | [Productivity](skills/productivity/README.md) | [Excel](skills/productivity/excel/README.md) | 3 | `excel-skills` |
 | [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | `classical-ml-skills` |
 | [Manufacturing & Industrial Operations](skills/manufacturing/README.md) | [Quality Management & ISO 9001](skills/manufacturing/quality-management/README.md) | 42 | `quality-management-skills` |
@@ -81,6 +81,7 @@ Design and build backends that hold up at very high scale: REST endpoints and Op
 | **http-status-code-advisor** | Pick the correct HTTP status code for every API outcome according to RFC 9110 and related RFCs, and use status codes as the contract that clients, retries, caches, load balancers and SLOs depend on: 200/201/202/204 for success, 304 and conditional requests, redirects, 400 vs 422 for invalid input, 401 vs 403 vs 404 (and hiding existence), 405, 406, 409 vs 412 for conflicts, 410 for sunset resources, 413, 415, 428, 429 with Retry-After, 500 vs 502 vs 503 vs 504, which codes clients may retry, which are cacheable, and how codes feed error budgets and alerting. Reviews APIs for 200-with-error-body, 500 for client mistakes, 404 vs 403 leaks, wrong retry signals and codes that break caching. | [SKILL.md](skills/programming/backend-apis/http-status-code-advisor/SKILL.md), [scenario-decisions.md](skills/programming/backend-apis/http-status-code-advisor/references/scenario-decisions.md), [status-code-reference.md](skills/programming/backend-apis/http-status-code-advisor/references/status-code-reference.md) |
 | **api-error-response-designer** | Design one consistent error format for an API that clients can program against and humans can debug: RFC 9457 Problem Details (type, title, status, detail, instance) extended with a stable machine-readable code, field-level validation errors with JSON Pointers, request and trace IDs, retry hints and documentation links; an error code catalogue with naming rules and owners; mapping internal exceptions to public errors without leaking stack traces, SQL or internal hostnames; localisation; and behaviour at scale (cheap error paths, no error amplification, logging and metrics by error code). Reviews APIs for inconsistent shapes, free-text-only errors, leaked internals, missing request IDs and errors that clients can't branch on. | [SKILL.md](skills/programming/backend-apis/api-error-response-designer/SKILL.md), [error-catalogue.md](skills/programming/backend-apis/api-error-response-designer/references/error-catalogue.md), [error-middleware.md](skills/programming/backend-apis/api-error-response-designer/references/error-middleware.md) |
 | **rest-api-naming-reviewer** | Review and standardise naming across REST APIs so they read as one product: plural noun collections, kebab-case path segments, no verbs in paths (methods and action sub-resources instead), consistent path parameter names per resource, shallow nesting, no trailing slashes or file extensions, a single version prefix style, one casing for query parameters and JSON properties, naming of IDs, timestamps, booleans, money and enums, and an API style guide teams can follow. Ships path_naming_lint.py, which reads an OpenAPI spec or a plain route list and reports verbs in paths, casing that differs from the API's dominant style, uppercase segments, singular collections, trailing slashes and extensions, deep nesting, inconsistent parameter names, mixed version prefixes and mixed casing in query parameters and schema properties. | [SKILL.md](skills/programming/backend-apis/rest-api-naming-reviewer/SKILL.md), [naming-style-guide.md](skills/programming/backend-apis/rest-api-naming-reviewer/references/naming-style-guide.md), [path_naming_lint.py](skills/programming/backend-apis/rest-api-naming-reviewer/scripts/path_naming_lint.py) |
+| **graphql-schema-designer** | Design GraphQL schemas that model the domain, evolve without versions and survive production traffic: types named for the domain, nullability as a deliberate contract, IDs and global object identification, Relay connections for every list, mutations with a single input and a payload carrying user errors, interfaces and unions, enums, custom scalars, deprecation instead of breaking changes, schema-first review, and the protections a public graph needs at scale (query depth and cost limits, persisted and trusted documents, pagination caps, rate limiting by cost, CDN caching of persisted GET queries, federation boundaries). Ships graphql_schema_lint.py, which parses SDL and reports unbounded lists of objects, nullable list items, mutations without input/payload, identifiers typed String/Int, naming that breaks conventions, RPC-style query names, deprecations without reasons and foreign-key fields without relationships. | [SKILL.md](skills/programming/backend-apis/graphql-schema-designer/SKILL.md), [graphql-at-scale.md](skills/programming/backend-apis/graphql-schema-designer/references/graphql-at-scale.md), [schema-design-rules.md](skills/programming/backend-apis/graphql-schema-designer/references/schema-design-rules.md), [graphql_schema_lint.py](skills/programming/backend-apis/graphql-schema-designer/scripts/graphql_schema_lint.py) |
 
 ## Productivity / Excel
 
@@ -334,7 +335,8 @@ skills/
 │       ├── api-pagination-designer/  SKILL.md + references/
 │       ├── http-status-code-advisor/  SKILL.md + references/
 │       ├── api-error-response-designer/  SKILL.md + references/
-│       └── rest-api-naming-reviewer/  SKILL.md + references/ + scripts/
+│       ├── rest-api-naming-reviewer/  SKILL.md + references/ + scripts/
+│       └── graphql-schema-designer/  SKILL.md + references/ + scripts/
 ├── productivity/
 │   └── excel/
 │       ├── excel-advanced-formulas/  SKILL.md + references/ + scripts/
