@@ -72,6 +72,9 @@ jobs:
         with:
           python-version: "3.12"
       - uses: dtolnay/rust-toolchain@stable # compiles the Rust skills' .rs scripts for tests/run_tests.sh
+      - uses: actions/setup-node@v4 # runs the UI design skills' .mjs scripts for tests/run_tests.sh
+        with:
+          node-version: "22"
 
       - name: Validate skills, test scripts, refresh catalog
         run: |
