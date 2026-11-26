@@ -53,7 +53,9 @@ ML=skills/ai-ml/classical-ml
 QM=skills/manufacturing/quality-management
 LT=skills/languages/language-teaching
 UI=skills/design/ui-design
-export FX SQL XL PY RS ML QM LT UI
+BE=skills/programming/backend-apis
+AR=skills/programming/software-architecture
+export FX SQL XL PY RS ML QM LT UI BE AR
 
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT

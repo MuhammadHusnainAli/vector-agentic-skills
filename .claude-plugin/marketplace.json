@@ -67,6 +67,16 @@
       ]
     },
     {
+      "name": "backend-apis-skills",
+      "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
+      "category": "programming",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/programming/backend-apis/rest-api-endpoint-designer"
+      ]
+    },
+    {
       "name": "excel-skills",
       "description": "Write error-free Excel formulas, use modern LAMBDA and dynamic-array functions, and organise, format and inspect workbooks.",
       "category": "productivity",
