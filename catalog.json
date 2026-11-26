@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 172,
+  "skill_count": 173,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 13,
+      "skill_count": 14,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 13,
+          "skill_count": 14,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -527,7 +527,8 @@
             "design-system-documentation-writer",
             "design-system-governance-process-designer",
             "component-naming-convention-checker",
-            "design-system-adoption-tracker"
+            "design-system-adoption-tracker",
+            "ios-human-interface-guidelines-checker"
           ],
           "groups": [
             {
@@ -551,6 +552,12 @@
                 "design-system-governance-process-designer",
                 "component-naming-convention-checker",
                 "design-system-adoption-tracker"
+              ]
+            },
+            {
+              "title": "Platform guidelines",
+              "skills": [
+                "ios-human-interface-guidelines-checker"
               ]
             }
           ]
@@ -2286,6 +2293,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/form-layout-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/form-layout-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill form-layout-designer"
+    },
+    {
+      "name": "ios-human-interface-guidelines-checker",
+      "title": "iOS Human Interface Guidelines Checker",
+      "description": "Review iPhone and iPad designs and SwiftUI code against Apple's Human Interface Guidelines the way an experienced iOS design lead would: layout with safe areas and layout margins, size classes and iPad multitasking, 44x44pt hit targets, Dynamic Type text styles (Large Title 34pt to Caption 2 11pt) and accessibility sizes, SF Pro and SF Symbols, semantic system colours and dark mode, materials and Liquid Glass bars, navigation (tab bars, navigation stacks, sidebars, search), modality (sheets with detents, alerts, action sheets, full-screen covers), controls (buttons, toggles, pickers, menus, context menus, swipe actions), feedback and haptics, permissions in context, app icons, and accessibility (VoiceOver labels and traits, Reduce Motion, Reduce Transparency, Increase Contrast, Bold Text). Separates platform conventions from taste in its findings. Use when designing or reviewing an iOS or iPadOS app, porting an Android or web design to iOS, or preparing for App Store review.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/ios-human-interface-guidelines-checker",
+      "files": [
+        "SKILL.md",
+        "references/dynamic-type-and-accessibility.md",
+        "references/hig-review-areas.md",
+        "references/swiftui-review-notes.md"
+      ],
+      "references": [
+        "references/dynamic-type-and-accessibility.md",
+        "references/hig-review-areas.md",
+        "references/swiftui-review-notes.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/ios-human-interface-guidelines-checker/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/ios-human-interface-guidelines-checker/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/ios-human-interface-guidelines-checker.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ios-human-interface-guidelines-checker",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ios-human-interface-guidelines-checker"
     },
     {
       "name": "navigation-pattern-selector",
