@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 199,
+  "skill_count": 200,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 40,
+      "skill_count": 41,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 40,
+          "skill_count": 41,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -554,7 +554,8 @@
             "ecommerce-checkout-ui-designer",
             "fintech-app-ui-trust-reviewer",
             "automotive-hmi-ui-designer",
-            "game-hud-ui-designer"
+            "game-hud-ui-designer",
+            "kiosk-touchscreen-ui-designer"
           ],
           "groups": [
             {
@@ -629,7 +630,8 @@
                 "ecommerce-checkout-ui-designer",
                 "fintech-app-ui-trust-reviewer",
                 "automotive-hmi-ui-designer",
-                "game-hud-ui-designer"
+                "game-hud-ui-designer",
+                "kiosk-touchscreen-ui-designer"
               ]
             }
           ]
@@ -2817,6 +2819,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/ios-human-interface-guidelines-checker.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ios-human-interface-guidelines-checker",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ios-human-interface-guidelines-checker"
+    },
+    {
+      "name": "kiosk-touchscreen-ui-designer",
+      "title": "Kiosk Touchscreen UI Designer",
+      "description": "Design self-service kiosks and public touchscreens (ordering, ticketing, check-in, wayfinding, payment, information) for first-time, standing, hurried users of every height and ability: reach ranges from the 2010 ADA Standards (15-48 inches) mapped onto the physical screen, mounting height, tilt and glare, physical touch-target sizes in millimetres, attract loop and start, language choice up front, short linear flows with big choices, no typing where possible, idle timeout with warning and full session reset for privacy, hardware placement, staff help, and accessible modes required for self-service terminals (speech output with headphones, tactile keypad, lowered reach-zone layout, high contrast) under ADA 707, EN 301 549 and the European Accessibility Act. Reviews kiosks for out-of-reach controls, small targets, typing, missing timeouts and resets, no audio path and dead ends. Use when designing or auditing a kiosk, self-checkout, ticket machine, check-in terminal or public touchscreen.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/kiosk-touchscreen-ui-designer",
+      "files": [
+        "SKILL.md",
+        "references/kiosk-accessibility.md",
+        "references/kiosk-flows.md",
+        "references/reach-and-hardware.md"
+      ],
+      "references": [
+        "references/kiosk-accessibility.md",
+        "references/kiosk-flows.md",
+        "references/reach-and-hardware.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/kiosk-touchscreen-ui-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/kiosk-touchscreen-ui-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/kiosk-touchscreen-ui-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/kiosk-touchscreen-ui-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill kiosk-touchscreen-ui-designer"
     },
     {
       "name": "material-design-3-compliance-reviewer",
