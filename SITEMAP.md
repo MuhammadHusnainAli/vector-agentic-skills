@@ -2,7 +2,7 @@
 
 # Sitemap
 
-Index of all 159 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
+Index of all 160 skills. Browse them at [agenticskills.vector-ai-lab.com](https://agenticskills.vector-ai-lab.com).
 
 | Category | Sub-category | Skills | Plugin |
 |----------|--------------|--------|--------|
@@ -13,6 +13,7 @@ Index of all 159 skills. Browse them at [agenticskills.vector-ai-lab.com](https:
 | [AI & Machine Learning](skills/ai-ml/README.md) | [Classical Machine Learning](skills/ai-ml/classical-ml/README.md) | 45 | `classical-ml-skills` |
 | [Manufacturing & Industrial Operations](skills/manufacturing/README.md) | [Quality Management & ISO 9001](skills/manufacturing/quality-management/README.md) | 42 | `quality-management-skills` |
 | [Languages, Linguistics & Translation](skills/languages/README.md) | [Language Teaching](skills/languages/language-teaching/README.md) | 38 | `language-teaching-skills` |
+| [Design & Visual Arts](skills/design/README.md) | [UI Design](skills/design/ui-design/README.md) | 1 | `ui-design-skills` |
 
 ## Programming / SQL
 
@@ -222,6 +223,14 @@ Plan PPP and task-based language lessons, write worksheets, adapted texts, liste
 | **adult-literacy-esl-lesson-builder** | Build lessons for adult ESL learners who are developing literacy (LESLLA learners: pre-literate, non-literate, semi-literate, literate in a non-Roman script): learner profiles and sensitive initial assessment, principles (oral language first, known to new, systematic phonics with adult-relevant text, repetition, classroom skills, respect for experience), a lesson routine (oral warm-up, review, new grapheme, blending, segmenting, decodable text, writing, functional literacy, Language Experience Approach), a phonics sequence for adults, sight words, functional literacy targets (forms, signs, medicine labels) and portfolio assessment. Checks whether a reading text is decodable with the letter-sound patterns and sight words taught so far, catching untaught digraphs, listing non-decodable words with the untaught part, and suggesting the most useful next patterns. | [SKILL.md](skills/languages/language-teaching/adult-literacy-esl-lesson-builder/SKILL.md), [literacy-learners.md](skills/languages/language-teaching/adult-literacy-esl-lesson-builder/references/literacy-learners.md), [phonics-sequence.md](skills/languages/language-teaching/adult-literacy-esl-lesson-builder/references/phonics-sequence.md), [decodable_check.py](skills/languages/language-teaching/adult-literacy-esl-lesson-builder/scripts/decodable_check.py) |
 | **refugee-language-support-planner** | Plan language support for refugees, asylum seekers and other new arrivals: intake with interpreters and literacy checks, pathways (foundation literacy, script transition for learners literate in non-Roman scripts, settlement ESOL, work and study), a settlement syllabus prioritising personal information, emergencies, health, housing, transport, money, children's schools, work, rights and community with can-do statements, flexible delivery (rolling enrolment, childcare, real local materials, volunteers) and links to literacy, employability and support services. Applies trauma-informed principles (safety, trust, choice, collaboration, empowerment, cultural humility), topic care, classroom practice, signs of distress and referral, and teacher wellbeing. Assigns each learner a pathway from intake data and groups learners into classes by pathway and availability, with childcare and goal summaries. | [SKILL.md](skills/languages/language-teaching/refugee-language-support-planner/SKILL.md), [settlement-language-syllabus.md](skills/languages/language-teaching/refugee-language-support-planner/references/settlement-language-syllabus.md), [trauma-informed-practice.md](skills/languages/language-teaching/refugee-language-support-planner/references/trauma-informed-practice.md), [learner_pathways.py](skills/languages/language-teaching/refugee-language-support-planner/scripts/learner_pathways.py) |
 
+## Design & Visual Arts / UI Design
+
+Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.
+
+| Skill | Description | Files |
+|-------|-------------|-------|
+| **ui-component-spec-writer** | Write UI component specifications that engineering can build and QA can test without a follow-up meeting: purpose and when not to use, anatomy, props API (variants vs booleans vs slots, controlled vs uncontrolled), variant x state matrix with token references, sizes and touch targets (WCAG 2.5.8, 44pt, 48dp), keyboard model and ARIA from the WAI-ARIA Authoring Practices pattern (button, tabs, dialog, combobox, menu, switch, checkbox, radio group, accordion, tooltip, disclosure, listbox, slider, text field, toast, card), focus movement, content limits and overflow, tokens, motion and edge cases (long text, translation growth, 200% zoom, RTL, forced colors, reduced motion). Reviews existing specs against a 14-point checklist (no focus state or keyboard model, wrong pattern, hover-only behaviour, raw values, small targets). | [SKILL.md](skills/design/ui-design/ui-component-spec-writer/SKILL.md), [apg-patterns.md](skills/design/ui-design/ui-component-spec-writer/references/apg-patterns.md), [component-api-design.md](skills/design/ui-design/ui-component-spec-writer/references/component-api-design.md), [edge-case-catalogue.md](skills/design/ui-design/ui-component-spec-writer/references/edge-case-catalogue.md), [spec-anatomy.md](skills/design/ui-design/ui-component-spec-writer/references/spec-anatomy.md), [spec-review-checklist.md](skills/design/ui-design/ui-component-spec-writer/references/spec-review-checklist.md), [spec-template.md](skills/design/ui-design/ui-component-spec-writer/references/spec-template.md) |
+
 ## Tree
 
 ```
@@ -357,44 +366,47 @@ skills/
 │       ├── supplier-corrective-action-request-writer/  SKILL.md + references/ + scripts/
 │       ├── approved-supplier-list-manager/  SKILL.md + references/ + scripts/
 │       └── supplier-development-plan-writer/  SKILL.md + references/ + scripts/
-└── languages/
-    └── language-teaching/
-        ├── language-lesson-plan-builder/  SKILL.md + references/ + scripts/
-        ├── ppp-lesson-structure-planner/  SKILL.md + references/ + scripts/
-        ├── task-based-language-lesson-designer/  SKILL.md + references/ + scripts/
-        ├── communicative-activity-generator/  SKILL.md + references/ + scripts/
-        ├── warm-up-icebreaker-generator/  SKILL.md + references/ + scripts/
-        ├── language-lesson-differentiation-planner/  SKILL.md + references/ + scripts/
-        ├── esl-worksheet-generator/  SKILL.md + references/ + scripts/
-        ├── reading-comprehension-text-adapter/  SKILL.md + references/ + scripts/
-        ├── vocabulary-game-generator/  SKILL.md + references/ + scripts/
-        ├── authentic-material-lesson-adapter/  SKILL.md + references/ + scripts/
-        ├── listening-task-builder/  SKILL.md + references/ + scripts/
-        ├── dialogue-for-classroom-writer/  SKILL.md + references/ + scripts/
-        ├── cefr-aligned-syllabus-builder/  SKILL.md + references/ + scripts/
-        ├── language-course-scope-sequence-planner/  SKILL.md + references/ + scripts/
-        ├── can-do-statement-writer/  SKILL.md + references/ + scripts/
-        ├── actfl-proficiency-curriculum-mapper/  SKILL.md + references/ + scripts/
-        ├── language-program-review-writer/  SKILL.md + references/ + scripts/
-        ├── language-placement-test-builder/  SKILL.md + references/ + scripts/
-        ├── speaking-rubric-builder/  SKILL.md + references/ + scripts/
-        ├── writing-rubric-for-l2-builder/  SKILL.md + references/ + scripts/
-        ├── language-quiz-generator/  SKILL.md + references/ + scripts/
-        ├── formative-assessment-for-language-planner/  SKILL.md + references/ + scripts/
-        ├── l2-error-correction-strategy-advisor/  SKILL.md + references/ + scripts/
-        ├── student-writing-feedback-generator/  SKILL.md + references/ + scripts/
-        ├── pronunciation-feedback-for-teachers-tool/  SKILL.md + references/ + scripts/
-        ├── recast-and-prompt-technique-coach/  SKILL.md + references/ + scripts/
-        ├── student-progress-report-writer/  SKILL.md + references/ + scripts/
-        ├── tefl-celta-prep-tutor/  SKILL.md + references/ + scripts/
-        ├── delta-assignment-planner/  SKILL.md + references/ + scripts/
-        ├── language-teacher-observation-form-builder/  SKILL.md + references/ + scripts/
-        ├── classroom-management-for-esl-coach/  SKILL.md + references/ + scripts/
-        ├── online-language-teaching-setup-advisor/  SKILL.md + references/ + scripts/
-        ├── language-teacher-cv-writer/  SKILL.md + references/ + scripts/
-        ├── esp-english-course-designer/  SKILL.md + references/ + scripts/
-        ├── academic-english-eap-course-planner/  SKILL.md + references/ + scripts/
-        ├── young-learner-esl-activity-generator/  SKILL.md + references/ + scripts/
-        ├── adult-literacy-esl-lesson-builder/  SKILL.md + references/ + scripts/
-        └── refugee-language-support-planner/  SKILL.md + references/ + scripts/
+├── languages/
+│   └── language-teaching/
+│       ├── language-lesson-plan-builder/  SKILL.md + references/ + scripts/
+│       ├── ppp-lesson-structure-planner/  SKILL.md + references/ + scripts/
+│       ├── task-based-language-lesson-designer/  SKILL.md + references/ + scripts/
+│       ├── communicative-activity-generator/  SKILL.md + references/ + scripts/
+│       ├── warm-up-icebreaker-generator/  SKILL.md + references/ + scripts/
+│       ├── language-lesson-differentiation-planner/  SKILL.md + references/ + scripts/
+│       ├── esl-worksheet-generator/  SKILL.md + references/ + scripts/
+│       ├── reading-comprehension-text-adapter/  SKILL.md + references/ + scripts/
+│       ├── vocabulary-game-generator/  SKILL.md + references/ + scripts/
+│       ├── authentic-material-lesson-adapter/  SKILL.md + references/ + scripts/
+│       ├── listening-task-builder/  SKILL.md + references/ + scripts/
+│       ├── dialogue-for-classroom-writer/  SKILL.md + references/ + scripts/
+│       ├── cefr-aligned-syllabus-builder/  SKILL.md + references/ + scripts/
+│       ├── language-course-scope-sequence-planner/  SKILL.md + references/ + scripts/
+│       ├── can-do-statement-writer/  SKILL.md + references/ + scripts/
+│       ├── actfl-proficiency-curriculum-mapper/  SKILL.md + references/ + scripts/
+│       ├── language-program-review-writer/  SKILL.md + references/ + scripts/
+│       ├── language-placement-test-builder/  SKILL.md + references/ + scripts/
+│       ├── speaking-rubric-builder/  SKILL.md + references/ + scripts/
+│       ├── writing-rubric-for-l2-builder/  SKILL.md + references/ + scripts/
+│       ├── language-quiz-generator/  SKILL.md + references/ + scripts/
+│       ├── formative-assessment-for-language-planner/  SKILL.md + references/ + scripts/
+│       ├── l2-error-correction-strategy-advisor/  SKILL.md + references/ + scripts/
+│       ├── student-writing-feedback-generator/  SKILL.md + references/ + scripts/
+│       ├── pronunciation-feedback-for-teachers-tool/  SKILL.md + references/ + scripts/
+│       ├── recast-and-prompt-technique-coach/  SKILL.md + references/ + scripts/
+│       ├── student-progress-report-writer/  SKILL.md + references/ + scripts/
+│       ├── tefl-celta-prep-tutor/  SKILL.md + references/ + scripts/
+│       ├── delta-assignment-planner/  SKILL.md + references/ + scripts/
+│       ├── language-teacher-observation-form-builder/  SKILL.md + references/ + scripts/
+│       ├── classroom-management-for-esl-coach/  SKILL.md + references/ + scripts/
+│       ├── online-language-teaching-setup-advisor/  SKILL.md + references/ + scripts/
+│       ├── language-teacher-cv-writer/  SKILL.md + references/ + scripts/
+│       ├── esp-english-course-designer/  SKILL.md + references/ + scripts/
+│       ├── academic-english-eap-course-planner/  SKILL.md + references/ + scripts/
+│       ├── young-learner-esl-activity-generator/  SKILL.md + references/ + scripts/
+│       ├── adult-literacy-esl-lesson-builder/  SKILL.md + references/ + scripts/
+│       └── refugee-language-support-planner/  SKILL.md + references/ + scripts/
+└── design/
+    └── ui-design/
+        └── ui-component-spec-writer/  SKILL.md + references/
 ```

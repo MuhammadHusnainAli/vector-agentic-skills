@@ -1,0 +1,9 @@
+{
+  "title": "UI Design",
+  "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
+  "order": 1,
+  "scripts_optional": true,
+  "groups": [
+    {"title": "Interface layout and components", "skills": ["ui-component-spec-writer"]}
+  ]
+}

@@ -229,6 +229,16 @@
         "./skills/languages/language-teaching/adult-literacy-esl-lesson-builder",
         "./skills/languages/language-teaching/refugee-language-support-planner"
       ]
+    },
+    {
+      "name": "ui-design-skills",
+      "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
+      "category": "design",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/design/ui-design/ui-component-spec-writer"
+      ]
     }
   ]
 }

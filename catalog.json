@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 159,
+  "skill_count": 160,
   "categories": [
     {
       "name": "programming",
@@ -496,6 +496,32 @@
                 "young-learner-esl-activity-generator",
                 "adult-literacy-esl-lesson-builder",
                 "refugee-language-support-planner"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "design",
+      "title": "Design & Visual Arts",
+      "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
+      "skill_count": 1,
+      "subcategories": [
+        {
+          "name": "ui-design",
+          "title": "UI Design",
+          "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
+          "plugin": "ui-design-skills",
+          "skill_count": 1,
+          "skills": [
+            "ui-component-spec-writer"
+          ],
+          "groups": [
+            {
+              "title": "Interface layout and components",
+              "skills": [
+                "ui-component-spec-writer"
               ]
             }
           ]
@@ -1966,6 +1992,38 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/xgboost-lightgbm-tuner.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/ai-ml/classical-ml/xgboost-lightgbm-tuner",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill xgboost-lightgbm-tuner"
+    },
+    {
+      "name": "ui-component-spec-writer",
+      "title": "UI Component Spec Writer",
+      "description": "Write UI component specifications that engineering can build and QA can test without a follow-up meeting: purpose and when not to use, anatomy, props API (variants vs booleans vs slots, controlled vs uncontrolled), variant x state matrix with token references, sizes and touch targets (WCAG 2.5.8, 44pt, 48dp), keyboard model and ARIA from the WAI-ARIA Authoring Practices pattern (button, tabs, dialog, combobox, menu, switch, checkbox, radio group, accordion, tooltip, disclosure, listbox, slider, text field, toast, card), focus movement, content limits and overflow, tokens, motion and edge cases (long text, translation growth, 200% zoom, RTL, forced colors, reduced motion). Reviews existing specs against a 14-point checklist (no focus state or keyboard model, wrong pattern, hover-only behaviour, raw values, small targets). Use when designing a new component, writing or reviewing a component spec, preparing a component for handoff or adding one to a design system.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/ui-component-spec-writer",
+      "files": [
+        "SKILL.md",
+        "references/apg-patterns.md",
+        "references/component-api-design.md",
+        "references/edge-case-catalogue.md",
+        "references/spec-anatomy.md",
+        "references/spec-review-checklist.md",
+        "references/spec-template.md"
+      ],
+      "references": [
+        "references/apg-patterns.md",
+        "references/component-api-design.md",
+        "references/edge-case-catalogue.md",
+        "references/spec-anatomy.md",
+        "references/spec-review-checklist.md",
+        "references/spec-template.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/ui-component-spec-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/ui-component-spec-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/ui-component-spec-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/ui-component-spec-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill ui-component-spec-writer"
     },
     {
       "name": "academic-english-eap-course-planner",
