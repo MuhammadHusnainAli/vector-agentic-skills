@@ -2,13 +2,13 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 212,
+  "skill_count": 213,
   "categories": [
     {
       "name": "programming",
       "title": "Programming",
       "description": "Skills for writing, reviewing, debugging and optimising code and queries, grouped by language and tool.",
-      "skill_count": 41,
+      "skill_count": 42,
       "subcategories": [
         {
           "name": "sql",
@@ -73,7 +73,7 @@
           "title": "Backend & API Development",
           "description": "Design and build backends that hold up at very high scale: REST endpoints and OpenAPI specs with capacity planning to a million requests per second, versioning, pagination, errors, GraphQL and gRPC schemas and evolution, JWT, OAuth2/OIDC, cookies, RBAC, API keys and passkeys, Kafka, RabbitMQ, job queues, Celery, outbox and idempotency, Redis caching and connection pools, resilient third-party integrations, webhooks and Stripe, WebSockets and SSE, and serverless functions and workflows.",
           "plugin": "backend-apis-skills",
-          "skill_count": 10,
+          "skill_count": 11,
           "skills": [
             "rest-api-endpoint-designer",
             "openapi-spec-writer",
@@ -84,7 +84,8 @@
             "rest-api-naming-reviewer",
             "graphql-schema-designer",
             "graphql-resolver-writer",
-            "graphql-dataloader-n-plus-one-fixer"
+            "graphql-dataloader-n-plus-one-fixer",
+            "grpc-protobuf-definition-writer"
           ],
           "groups": [
             {
@@ -104,7 +105,8 @@
               "skills": [
                 "graphql-schema-designer",
                 "graphql-resolver-writer",
-                "graphql-dataloader-n-plus-one-fixer"
+                "graphql-dataloader-n-plus-one-fixer",
+                "grpc-protobuf-definition-writer"
               ]
             }
           ]
@@ -5734,6 +5736,35 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/graphql-schema-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/graphql-schema-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill graphql-schema-designer"
+    },
+    {
+      "name": "grpc-protobuf-definition-writer",
+      "title": "gRPC Protobuf Definition Writer",
+      "description": "Write Protocol Buffers definitions for gRPC services that are idiomatic, efficient on the wire and safe to evolve: proto3 (and editions) syntax, versioned packages, file layout, resource-oriented services following Google API Improvement Proposals (Get, List, Create, Update with field masks, Delete, custom methods), dedicated request/response messages, pagination with page_size/page_token, field numbering (1-15 for hot fields, reserved numbers and names after removals), scalar type choice (int64 vs sint64 vs fixed64), well-known types (Timestamp, Duration, FieldMask, Struct), money and enums with UNSPECIFIED zero values, oneof, maps and optional presence, streaming RPC shapes, rich errors (google.rpc.Status details), and Buf tooling. Ships proto_lint.py (with a stdlib .proto parser) that reports field-number misuse, bad enum zero values, required fields, unversioned packages, naming, shared messages and unpaginated List RPCs. Use when writing or reviewing .proto files.",
+      "category": "programming",
+      "subcategory": "backend-apis",
+      "version": "1.0.0",
+      "path": "skills/programming/backend-apis/grpc-protobuf-definition-writer",
+      "files": [
+        "SKILL.md",
+        "references/field-design.md",
+        "references/proto-style.md",
+        "scripts/_proto.py",
+        "scripts/proto_lint.py"
+      ],
+      "references": [
+        "references/field-design.md",
+        "references/proto-style.md"
+      ],
+      "scripts": [
+        "scripts/_proto.py",
+        "scripts/proto_lint.py"
+      ],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/grpc-protobuf-definition-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/programming/backend-apis/grpc-protobuf-definition-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/grpc-protobuf-definition-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/programming/backend-apis/grpc-protobuf-definition-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill grpc-protobuf-definition-writer"
     },
     {
       "name": "http-status-code-advisor",
