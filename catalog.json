@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 164,
+  "skill_count": 165,
   "categories": [
     {
       "name": "programming",
@@ -506,20 +506,21 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 5,
+      "skill_count": 6,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 5,
+          "skill_count": 6,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
             "button-state-variant-designer",
             "form-layout-designer",
-            "navigation-pattern-selector"
+            "navigation-pattern-selector",
+            "dashboard-layout-designer"
           ],
           "groups": [
             {
@@ -529,7 +530,8 @@
                 "responsive-breakpoint-layout-planner",
                 "button-state-variant-designer",
                 "form-layout-designer",
-                "navigation-pattern-selector"
+                "navigation-pattern-selector",
+                "dashboard-layout-designer"
               ]
             }
           ]
@@ -2026,6 +2028,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/button-state-variant-designer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/button-state-variant-designer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill button-state-variant-designer"
+    },
+    {
+      "name": "dashboard-layout-designer",
+      "title": "Dashboard Layout Designer",
+      "description": "Design dashboards that answer questions instead of displaying data: dashboard type (operational monitoring, analytical, strategic/executive) decides density, refresh and interaction; start from the questions and decisions each viewer has, then KPIs with comparison (target, previous period, benchmark), status thresholds and sparklines, layout in reading order on a 12-column grid with a density budget, global vs local filters and one consistent time range, freshness stamps, drill-down paths, chart choice per question (and when not to use pie, gauge, donut, 3D), per-widget loading, empty, partial and error states, responsive priority stacking, and accessibility (non-colour status, 3:1 graphical contrast, data-table alternatives). Reviews dashboards for KPIs with no comparison, mixed date ranges, no freshness, too many widgets, colour-only status, vanity metrics, misleading axes and unanswerable questions. Use when designing, restructuring or reviewing a product, admin, analytics or executive dashboard.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/dashboard-layout-designer",
+      "files": [
+        "SKILL.md",
+        "references/dashboard-types.md",
+        "references/layout-and-grid.md",
+        "references/widget-guide.md"
+      ],
+      "references": [
+        "references/dashboard-types.md",
+        "references/layout-and-grid.md",
+        "references/widget-guide.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/dashboard-layout-designer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/dashboard-layout-designer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/dashboard-layout-designer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/dashboard-layout-designer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill dashboard-layout-designer"
     },
     {
       "name": "form-layout-designer",
