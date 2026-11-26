@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 190,
+  "skill_count": 191,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 31,
+      "skill_count": 32,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 31,
+          "skill_count": 32,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -545,7 +545,8 @@
             "prototype-fidelity-level-advisor",
             "protopie-interaction-recipe-writer",
             "prototype-demo-script-writer",
-            "design-handoff-spec-generator"
+            "design-handoff-spec-generator",
+            "redline-annotation-writer"
           ],
           "groups": [
             {
@@ -606,7 +607,8 @@
             {
               "title": "Design handoff",
               "skills": [
-                "design-handoff-spec-generator"
+                "design-handoff-spec-generator",
+                "redline-annotation-writer"
               ]
             }
           ]
@@ -2710,6 +2712,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/prototype-fidelity-level-advisor.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/prototype-fidelity-level-advisor",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill prototype-fidelity-level-advisor"
+    },
+    {
+      "name": "redline-annotation-writer",
+      "title": "Redline Annotation Writer",
+      "description": "Write redlines and design annotations that carry the intent Dev Mode can't infer: spacing and sizes as tokens and rules (not pixel soup), sizing behaviour (fixed, hug, fill, min and max widths) translated to CSS flex and grid, alignment and distribution, type styles, colour tokens, truncation and wrapping, responsive changes per breakpoint, z-order and overlap, scroll and sticky behaviour, state differences, and platform notes. Defines a consistent notation (numbered markers, colour-coded annotation categories, legend) and an annotation kit for Figma. Reviews redlines for raw pixel values where tokens exist, measurements Dev Mode already shows, missing behaviour rules, contradictory values between frames, unannotated responsive changes and cluttered annotations that hide the design. Use when annotating a design for engineering, preparing redlines for a complex layout, or reviewing an annotated file before handoff.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/redline-annotation-writer",
+      "files": [
+        "SKILL.md",
+        "references/annotation-types.md",
+        "references/auto-layout-to-css.md",
+        "references/notation-and-kit.md"
+      ],
+      "references": [
+        "references/annotation-types.md",
+        "references/auto-layout-to-css.md",
+        "references/notation-and-kit.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/redline-annotation-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/redline-annotation-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/redline-annotation-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/redline-annotation-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill redline-annotation-writer"
     },
     {
       "name": "responsive-breakpoint-layout-planner",

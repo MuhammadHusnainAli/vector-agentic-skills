@@ -267,7 +267,8 @@
         "./skills/design/ui-design/prototype-fidelity-level-advisor",
         "./skills/design/ui-design/protopie-interaction-recipe-writer",
         "./skills/design/ui-design/prototype-demo-script-writer",
-        "./skills/design/ui-design/design-handoff-spec-generator"
+        "./skills/design/ui-design/design-handoff-spec-generator",
+        "./skills/design/ui-design/redline-annotation-writer"
       ]
     }
   ]
