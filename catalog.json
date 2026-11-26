@@ -2,7 +2,7 @@
   "name": "vector-agentic-skills",
   "repository": "https://github.com/MuhammadHusnainAli/vector-agentic-skills",
   "site": "https://agenticskills.vector-ai-lab.com",
-  "skill_count": 188,
+  "skill_count": 189,
   "categories": [
     {
       "name": "programming",
@@ -506,14 +506,14 @@
       "name": "design",
       "title": "Design & Visual Arts",
       "description": "Skills for designers: UI layout and components, design systems and tokens, platform guidelines, visual polish, prototyping, design handoff and specialised interfaces from checkout to car dashboards.",
-      "skill_count": 29,
+      "skill_count": 30,
       "subcategories": [
         {
           "name": "ui-design",
           "title": "UI Design",
           "description": "Specify components and layouts, build design tokens and govern design systems, check designs against Apple HIG, Material 3 and Fluent, polish spacing, icons, dark mode, elevation and motion, build and demo prototypes, hand off to engineering with redlines, visual QA and accessibility annotations, and design checkout, fintech, automotive, game HUD, kiosk and voice interfaces.",
           "plugin": "ui-design-skills",
-          "skill_count": 29,
+          "skill_count": 30,
           "skills": [
             "ui-component-spec-writer",
             "responsive-breakpoint-layout-planner",
@@ -543,7 +543,8 @@
             "clickable-prototype-flow-builder",
             "figma-prototype-interaction-setup-guide",
             "prototype-fidelity-level-advisor",
-            "protopie-interaction-recipe-writer"
+            "protopie-interaction-recipe-writer",
+            "prototype-demo-script-writer"
           ],
           "groups": [
             {
@@ -597,7 +598,8 @@
                 "clickable-prototype-flow-builder",
                 "figma-prototype-interaction-setup-guide",
                 "prototype-fidelity-level-advisor",
-                "protopie-interaction-recipe-writer"
+                "protopie-interaction-recipe-writer",
+                "prototype-demo-script-writer"
               ]
             }
           ]
@@ -2623,6 +2625,32 @@
       "download_url": "https://agenticskills.vector-ai-lab.com/dl/protopie-interaction-recipe-writer.tar.gz",
       "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/protopie-interaction-recipe-writer",
       "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill protopie-interaction-recipe-writer"
+    },
+    {
+      "name": "prototype-demo-script-writer",
+      "title": "Prototype Demo Script Writer",
+      "description": "Write demo scripts that make a prototype land with its audience: audience and decision first (executive funding, sprint review, customer showcase, engineering kickoff, conference talk), a story arc (who the user is, the problem today with evidence, the new experience as a task, the outcome, the ask), timed beats at a realistic speaking rate, an exact click path with what to say at each step, honest framing of what is real and what is faked, likely questions and objections with answers, and a rehearsal and fallback plan (backup video, screenshots, reset steps, device setup, notifications off). Reviews existing scripts for feature tours without a story, no clear ask, overruns, jargon, unframed fake data or AI, and fragile live demos with no fallback. Use when preparing a design demo, stakeholder presentation, sprint review or customer showcase of a prototype.",
+      "category": "design",
+      "subcategory": "ui-design",
+      "version": "1.0.0",
+      "path": "skills/design/ui-design/prototype-demo-script-writer",
+      "files": [
+        "SKILL.md",
+        "references/delivery-and-fallbacks.md",
+        "references/demo-script-template.md",
+        "references/storytelling-and-audiences.md"
+      ],
+      "references": [
+        "references/delivery-and-fallbacks.md",
+        "references/demo-script-template.md",
+        "references/storytelling-and-audiences.md"
+      ],
+      "scripts": [],
+      "url": "https://agenticskills.vector-ai-lab.com/skills/prototype-demo-script-writer/",
+      "raw_url": "https://agenticskills.vector-ai-lab.com/raw/skills/design/ui-design/prototype-demo-script-writer/SKILL.md",
+      "download_url": "https://agenticskills.vector-ai-lab.com/dl/prototype-demo-script-writer.tar.gz",
+      "source_url": "https://github.com/MuhammadHusnainAli/vector-agentic-skills/tree/main/skills/design/ui-design/prototype-demo-script-writer",
+      "install": "npx skills add https://agenticskills.vector-ai-lab.com --skill prototype-demo-script-writer"
     },
     {
       "name": "prototype-fidelity-level-advisor",
